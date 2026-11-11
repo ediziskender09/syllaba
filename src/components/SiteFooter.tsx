@@ -38,6 +38,9 @@ export function SiteFooter() {
             <Link href="/contact" className="hover:text-paper">
               Contact
             </Link>
+            <a href="mailto:support@getsyllaba.com" className="hover:text-paper">
+              support@getsyllaba.com
+            </a>
           </div>
         </div>
 

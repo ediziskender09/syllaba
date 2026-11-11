@@ -109,7 +109,7 @@ export default function PrivacyPage() {
             Depending on where you live, you may have rights to access, correct, delete, or
             restrict certain personal information, or to object to certain processing. You
             may also have the right to data portability. To make a request, email
-            hello@getsyllaba.com. We may need to verify your identity before fulfilling a
+            support@getsyllaba.com. We may need to verify your identity before fulfilling a
             request.
           </p>
           <p>
@@ -143,7 +143,7 @@ export default function PrivacyPage() {
           <h2>12. Contact</h2>
           <p>
             Questions about privacy can be sent to{" "}
-            <a href="mailto:hello@getsyllaba.com">hello@getsyllaba.com</a>.
+            <a href="mailto:support@getsyllaba.com">support@getsyllaba.com</a>.
           </p>
           <p>
             This policy is written for Syllaba&apos;s current and planned operations, including

@@ -17,9 +17,9 @@ export default function ContactPage() {
           For support, partnerships, or lesson requests, email us at{" "}
           <a
             className="font-semibold text-accent-deep underline"
-            href="mailto:hello@getsyllaba.com"
+            href="mailto:support@getsyllaba.com"
           >
-            hello@getsyllaba.com
+            support@getsyllaba.com
           </a>
           .
         </p>

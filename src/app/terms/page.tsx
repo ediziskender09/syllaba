@@ -27,7 +27,7 @@ export default function TermsPage() {
           <p>
             Syllaba provides educational lessons and related learning materials for personal
             study. References to &quot;Syllaba,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot; mean the operator of
-            the Syllaba Service. Contact: hello@getsyllaba.com.
+            the Syllaba Service. Contact: support@getsyllaba.com.
           </p>
 
           <h2>2. Eligibility</h2>
@@ -70,7 +70,7 @@ export default function TermsPage() {
           </p>
           <p>
             If a technical issue prevents delivery of purchased access, contact
-            hello@getsyllaba.com and we will restore access or provide a refund. Because
+            support@getsyllaba.com and we will restore access or provide a refund. Because
             digital lessons are delivered immediately upon unlock, refunds after successful
             delivery are considered case by case and may be declined when the content has
             already been accessed, except where consumer law requires otherwise.
@@ -185,7 +185,7 @@ export default function TermsPage() {
           <h2>19. Contact</h2>
           <p>
             For questions about these Terms, purchases, or access issues, email{" "}
-            <a href="mailto:hello@getsyllaba.com">hello@getsyllaba.com</a>.
+            <a href="mailto:support@getsyllaba.com">support@getsyllaba.com</a>.
           </p>
         </div>
       </div>
