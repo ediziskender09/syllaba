@@ -49,106 +49,113 @@ async function applyLibraryFromSubscription(data: {
   });
 }
 
-export const POST = Webhook({
-  webhookSecret: process.env.CREEM_WEBHOOK_SECRET!,
-  onCheckoutCompleted: async (data) => {
-    const metadata = (data.metadata ?? {}) as Record<string, unknown>;
-    const type = metaString(metadata, "type");
-    const userId =
-      metaString(metadata, "referenceId") || metaString(metadata, "userId");
-    if (!userId) return;
+function createWebhookHandler() {
+  const webhookSecret = process.env.CREEM_WEBHOOK_SECRET?.trim();
+  if (!webhookSecret) {
+    return async () =>
+      new Response("Webhook not configured", { status: 500 });
+  }
 
-    if (type === "lesson") {
-      const lessonSlug = metaString(metadata, "lessonSlug");
-      if (!lessonSlug) return;
-      const amountFromMeta = Number(metaString(metadata, "amountCents") || "");
-      const amountCents =
-        Number.isFinite(amountFromMeta) && amountFromMeta > 0
-          ? amountFromMeta
-          : data.order?.amount ?? 0;
+  return Webhook({
+    webhookSecret,
+    onCheckoutCompleted: async (data) => {
+      const metadata = (data.metadata ?? {}) as Record<string, unknown>;
+      const type = metaString(metadata, "type");
+      const userId =
+        metaString(metadata, "referenceId") || metaString(metadata, "userId");
+      if (!userId) return;
 
-      await grantLessonPurchase({
-        userId,
-        lessonSlug,
-        amountCents,
-        provider: "creem",
-        providerOrderId: data.order?.id ?? data.id,
+      if (type === "lesson") {
+        const lessonSlug = metaString(metadata, "lessonSlug");
+        if (!lessonSlug) return;
+        const amountFromMeta = Number(metaString(metadata, "amountCents") || "");
+        const amountCents =
+          Number.isFinite(amountFromMeta) && amountFromMeta > 0
+            ? amountFromMeta
+            : data.order?.amount ?? 0;
+
+        await grantLessonPurchase({
+          userId,
+          lessonSlug,
+          amountCents,
+          provider: "creem",
+          providerOrderId: data.order?.id ?? data.id,
+        });
+        return;
+      }
+
+      if (type === "library" || data.subscription) {
+        const subscription = data.subscription as
+          | {
+              id?: string;
+              current_period_end_date?: string;
+              status?: string;
+              cancel_at_period?: boolean;
+              canceled_at?: string;
+              metadata?: Record<string, unknown>;
+            }
+          | undefined;
+
+        await grantLibrarySubscription({
+          userId,
+          provider: "creem",
+          providerSubscriptionId: subscription?.id,
+          amountCents: LIBRARY_PRICE_CENTS,
+          currentPeriodEnd: parseDate(subscription?.current_period_end_date),
+          status: subscription?.status === "trialing" ? "trialing" : "active",
+          cancelAtPeriodEnd: Boolean(subscription?.cancel_at_period),
+          canceledAt: parseDate(subscription?.canceled_at),
+        });
+      }
+    },
+    onGrantAccess: async (data) => {
+      await applyLibraryFromSubscription(data);
+    },
+    onSubscriptionScheduledCancel: async (data) => {
+      const userId =
+        metaString(data.metadata as Record<string, unknown>, "referenceId") ||
+        metaString(data.metadata as Record<string, unknown>, "userId");
+      if (!userId) return;
+
+      await prisma.subscription.updateMany({
+        where: {
+          OR: [{ userId }, { providerSubscriptionId: data.id }],
+        },
+        data: {
+          cancelAtPeriodEnd: true,
+          canceledAt: parseDate(data.canceled_at) ?? new Date(),
+          status: "active",
+          currentPeriodEnd: parseDate(data.current_period_end_date) ?? undefined,
+          provider: "creem",
+          providerSubscriptionId: data.id,
+        },
       });
-      return;
-    }
+    },
+    onRevokeAccess: async (data) => {
+      const userId =
+        metaString(data.metadata as Record<string, unknown>, "referenceId") ||
+        metaString(data.metadata as Record<string, unknown>, "userId");
 
-    if (type === "library" || data.subscription) {
-      const subscription = data.subscription as
-        | {
-            id?: string;
-            current_period_end_date?: string;
-            status?: string;
-            cancel_at_period?: boolean;
-            canceled_at?: string;
-            metadata?: Record<string, unknown>;
-          }
-        | undefined;
-
-      await grantLibrarySubscription({
-        userId,
-        provider: "creem",
-        providerSubscriptionId: subscription?.id,
-        amountCents: LIBRARY_PRICE_CENTS,
-        currentPeriodEnd: parseDate(subscription?.current_period_end_date),
-        status: subscription?.status === "trialing" ? "trialing" : "active",
-        cancelAtPeriodEnd: Boolean(subscription?.cancel_at_period),
-        canceledAt: parseDate(subscription?.canceled_at),
+      await prisma.subscription.updateMany({
+        where: userId
+          ? {
+              OR: [{ userId }, { providerSubscriptionId: data.id }],
+            }
+          : { providerSubscriptionId: data.id },
+        data: {
+          status: "canceled",
+          cancelAtPeriodEnd: false,
+          canceledAt: parseDate(data.canceled_at) ?? new Date(),
+          currentPeriodEnd: parseDate(data.current_period_end_date) ?? new Date(),
+          provider: "creem",
+          providerSubscriptionId: data.id,
+        },
       });
-    }
-  },
-  onGrantAccess: async (data) => {
-    await applyLibraryFromSubscription(data);
-  },
-  onSubscriptionScheduledCancel: async (data) => {
-    const userId =
-      metaString(data.metadata as Record<string, unknown>, "referenceId") ||
-      metaString(data.metadata as Record<string, unknown>, "userId");
-    if (!userId) return;
+    },
+    onSubscriptionPaid: async (data) => {
+      await applyLibraryFromSubscription(data);
+    },
+  });
+}
 
-    await prisma.subscription.updateMany({
-      where: {
-        OR: [
-          { userId },
-          { providerSubscriptionId: data.id },
-        ],
-      },
-      data: {
-        cancelAtPeriodEnd: true,
-        canceledAt: parseDate(data.canceled_at) ?? new Date(),
-        status: "active",
-        currentPeriodEnd: parseDate(data.current_period_end_date) ?? undefined,
-        provider: "creem",
-        providerSubscriptionId: data.id,
-      },
-    });
-  },
-  onRevokeAccess: async (data) => {
-    const userId =
-      metaString(data.metadata as Record<string, unknown>, "referenceId") ||
-      metaString(data.metadata as Record<string, unknown>, "userId");
-
-    await prisma.subscription.updateMany({
-      where: userId
-        ? {
-            OR: [{ userId }, { providerSubscriptionId: data.id }],
-          }
-        : { providerSubscriptionId: data.id },
-      data: {
-        status: "canceled",
-        cancelAtPeriodEnd: false,
-        canceledAt: parseDate(data.canceled_at) ?? new Date(),
-        currentPeriodEnd: parseDate(data.current_period_end_date) ?? new Date(),
-        provider: "creem",
-        providerSubscriptionId: data.id,
-      },
-    });
-  },
-  onSubscriptionPaid: async (data) => {
-    await applyLibraryFromSubscription(data);
-  },
-});
+export const POST = createWebhookHandler();

@@ -6,13 +6,8 @@ import { auth } from "@/auth";
 import {
   getMembershipPhase,
   hasLibraryAccess,
-  lessonPriceToCents,
   type SubscriptionRecord,
 } from "@/lib/commerce";
-import {
-  grantLessonPurchase,
-  grantLibrarySubscription,
-} from "@/lib/commerce-grants";
 import { getContentBySlugMeta } from "@/lib/content";
 import {
   cancelCreemSubscriptionScheduled,
@@ -22,19 +17,18 @@ import {
   resumeCreemSubscription,
 } from "@/lib/creem";
 import { prisma } from "@/lib/prisma";
+import { safeRedirectPath } from "@/lib/safe-redirect";
 
-export { grantLessonPurchase, grantLibrarySubscription };
-
-const PREVIEW_PROVIDER = "preview";
 const CREEM_PROVIDER = "creem";
 
 async function requireUser(callbackPath: string) {
+  const safeCallback = safeRedirectPath(callbackPath, "/account");
   const session = await auth();
   if (!session?.user?.id) {
-    redirect(`/login?callbackUrl=${encodeURIComponent(callbackPath)}`);
+    redirect(`/login?callbackUrl=${encodeURIComponent(safeCallback)}`);
   }
   if (!session.user.email) {
-    redirect(`/login?callbackUrl=${encodeURIComponent(callbackPath)}`);
+    redirect(`/login?callbackUrl=${encodeURIComponent(safeCallback)}`);
   }
   return {
     id: session.user.id,
@@ -69,7 +63,8 @@ function toRecord(sub: {
   };
 }
 
-export async function scheduleLibraryCancellation(userId: string) {
+/** Internal helper — not exported (would become a public Server Action). */
+async function scheduleLibraryCancellation(userId: string) {
   const sub = await prisma.subscription.findUnique({ where: { userId } });
   if (!sub || !hasLibraryAccess(toRecord(sub))) {
     return { ok: false as const, error: "No active library subscription to cancel." };
@@ -91,7 +86,8 @@ export async function scheduleLibraryCancellation(userId: string) {
   return { ok: true as const, subscription: updated };
 }
 
-export async function resumeLibrarySubscription(userId: string) {
+/** Internal helper — not exported (would become a public Server Action). */
+async function resumeLibrarySubscription(userId: string) {
   const sub = await prisma.subscription.findUnique({ where: { userId } });
   if (!sub) {
     return { ok: false as const, error: "No subscription found." };
@@ -161,7 +157,7 @@ export async function unlockLesson(formData: FormData) {
 }
 
 export async function subscribeLibrary(formData: FormData) {
-  const returnTo = String(formData.get("returnTo") || "/account").trim() || "/account";
+  const returnTo = safeRedirectPath(formData.get("returnTo"), "/account");
   const user = await requireUser(returnTo);
 
   const existing = await prisma.subscription.findUnique({ where: { userId: user.id } });
@@ -212,27 +208,4 @@ export async function resumeLibrary(formData: FormData) {
   const result = await resumeLibrarySubscription(user.id);
   revalidateCommerce();
   redirect(result.ok ? "/account?notice=resumed" : "/account?notice=resume-failed");
-}
-
-/** Dev-only fallback when Creem is not configured. */
-export async function previewUnlockLesson(formData: FormData) {
-  if (process.env.NODE_ENV === "production" && isCreemConfigured()) {
-    redirect("/catalog");
-  }
-
-  const slug = String(formData.get("slug") || "").trim();
-  if (!slug) redirect("/catalog");
-  const user = await requireUser(`/learn/${slug}`);
-  const lesson = getContentBySlugMeta(slug);
-  if (!lesson) redirect("/catalog");
-
-  await grantLessonPurchase({
-    userId: user.id,
-    lessonSlug: slug,
-    amountCents: lessonPriceToCents(lesson.price),
-    provider: PREVIEW_PROVIDER,
-  });
-
-  revalidateCommerce([`/learn/${slug}`]);
-  redirect(`/learn/${slug}`);
 }

@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { BrandLogo } from "@/components/BrandLogo";
 import { EmailAuthForm } from "@/components/EmailAuthForm";
 import { auth, signIn } from "@/auth";
+import { safeRedirectPath } from "@/lib/safe-redirect";
 
 export const metadata = {
   title: "Sign in",
@@ -24,7 +25,7 @@ type Props = {
 export default async function LoginPage({ searchParams }: Props) {
   const session = await auth();
   const params = await searchParams;
-  const callbackUrl = params.callbackUrl || "/account";
+  const callbackUrl = safeRedirectPath(params.callbackUrl, "/account");
   const mode = params.mode === "register" ? "register" : "login";
   const checkEmail = params.checkEmail === "1";
   const verified = params.verified === "1";

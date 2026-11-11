@@ -16,7 +16,7 @@ export const metadata = {
 export default async function CheckoutSuccessPage({ searchParams }: Props) {
   const session = await auth();
   if (!session?.user?.id) {
-    redirect("/login?callbackUrl=/checkout/success");
+    redirect("/login?callbackUrl=%2Fcheckout%2Fsuccess");
   }
 
   const params = await searchParams;

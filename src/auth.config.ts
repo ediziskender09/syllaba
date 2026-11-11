@@ -4,7 +4,8 @@ import Google from "next-auth/providers/google";
 export default {
   providers: [
     Google({
-      allowDangerousEmailAccountLinking: true,
+      // Prevent account takeover via unverified email → Google link.
+      allowDangerousEmailAccountLinking: false,
     }),
   ],
   pages: {

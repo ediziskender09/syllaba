@@ -52,8 +52,8 @@ export function EmailAuthForm({
           name="password"
           type="password"
           required
-          minLength={mode === "register" ? 6 : undefined}
-          placeholder={mode === "register" ? "Password (min 6 characters)" : "Password"}
+          minLength={mode === "register" ? 8 : undefined}
+          placeholder={mode === "register" ? "Password (min 8 characters)" : "Password"}
           autoComplete={mode === "register" ? "new-password" : "current-password"}
           className="w-full rounded-xl border border-[var(--line)] bg-paper px-4 py-3 text-sm outline-none ring-accent/30 focus:ring-2"
         />
