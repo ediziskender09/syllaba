@@ -1,43 +1,78 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
+import {
+  SITE_DESCRIPTION,
+  SITE_LOGO_PATH,
+  SITE_NAME,
+  SITE_OG_IMAGE_PATH,
+  SITE_TAGLINE,
+  SITE_URL,
+} from "@/lib/site";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://getsyllaba.com";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Syllaba — Lessons worth sitting with",
-    template: "%s · Syllaba",
+    default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    template: `%s · ${SITE_NAME}`,
   },
-  description:
-    "Warm, structured lessons with worked examples and interactive quizzes across AI, programming, data, business, and creative skills.",
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  keywords: [
+    "Syllaba",
+    "online lessons",
+    "structured courses",
+    "interactive quizzes",
+    "learn programming",
+    "learn data skills",
+    "learn AI",
+    "online learning platform",
+  ],
   icons: {
-    icon: "/brand/syllaba-mark.png",
-    apple: "/brand/syllaba-mark.png",
+    icon: [{ url: SITE_LOGO_PATH, type: "image/png" }],
+    apple: [{ url: SITE_LOGO_PATH }],
   },
   openGraph: {
-    title: "Syllaba",
-    description:
-      "Deep lessons built to study end to end — with previews, unlocks, and interactive quizzes.",
-    url: siteUrl,
-    siteName: "Syllaba",
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/brand/syllaba-wordmark.jpg",
+        url: SITE_OG_IMAGE_PATH,
         width: 1200,
         height: 675,
-        alt: "Syllaba",
+        alt: `${SITE_NAME} wordmark`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Syllaba",
-    description:
-      "Deep lessons built to study end to end — with previews, unlocks, and interactive quizzes.",
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    images: [SITE_OG_IMAGE_PATH],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: SITE_URL,
   },
 };
 
@@ -49,6 +84,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         <div className="relative z-10 flex min-h-screen flex-col">
           <SiteHeader />
           <main className="flex-1">{children}</main>

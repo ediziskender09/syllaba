@@ -5,7 +5,9 @@ import { LessonCheckout } from "@/components/LessonCheckout";
 import { LessonContent } from "@/components/LessonContent";
 import { auth } from "@/auth";
 import { getAccessSnapshot, hasLessonAccess } from "@/lib/access";
+import { JsonLd } from "@/components/JsonLd";
 import { getLessonSegments, getRelatedContent } from "@/lib/content";
+import { buildPageMetadata, courseJsonLd } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -15,10 +17,13 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const result = await getLessonSegments(slug);
   if (!result) return { title: "Lesson not found" };
-  return {
+  return buildPageMetadata({
     title: result.item.title,
     description: result.item.summary,
-  };
+    path: `/learn/${result.item.slug}`,
+    keywords: result.item.tags,
+    type: "article",
+  });
 }
 
 export default async function LearnPage({ params }: Props) {
@@ -40,6 +45,14 @@ export default async function LearnPage({ params }: Props) {
 
   return (
     <div className="shell py-10 md:py-14">
+      <JsonLd
+        data={courseJsonLd({
+          name: item.title,
+          description: item.summary,
+          path: `/learn/${item.slug}`,
+          category: item.category,
+        })}
+      />
       <Link
         href="/catalog"
         className="text-sm font-medium text-accent-deep hover:underline"
