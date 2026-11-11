@@ -73,6 +73,10 @@ export function getFeaturedContent(): ContentMeta[] {
   return getAllContentMeta().filter((item) => item.featured);
 }
 
+export function getContentBySlugMeta(slug: string): ContentMeta | undefined {
+  return getAllContentMeta().find((item) => item.slug === slug);
+}
+
 export function getContentByCategory(category: string): ContentMeta[] {
   return getAllContentMeta().filter(
     (item) => item.category.toLowerCase() === category.toLowerCase(),

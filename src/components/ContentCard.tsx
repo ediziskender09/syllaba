@@ -1,7 +1,13 @@
 import Link from "next/link";
 import type { ContentMeta } from "@/content/types";
 
-export function ContentCard({ item }: { item: ContentMeta }) {
+export function ContentCard({
+  item,
+  badge,
+}: {
+  item: ContentMeta;
+  badge?: string;
+}) {
   return (
     <Link
       href={`/learn/${item.slug}`}
@@ -13,7 +19,13 @@ export function ContentCard({ item }: { item: ContentMeta }) {
           <span className="rounded-lg bg-accent/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-deep">
             {item.category}
           </span>
-          <span className="text-sm font-semibold text-ink">${item.price}</span>
+          {badge ? (
+            <span className="rounded-lg border border-accent/25 bg-accent/5 px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-accent-deep">
+              {badge}
+            </span>
+          ) : (
+            <span className="text-sm font-semibold text-ink">${item.price}</span>
+          )}
         </div>
 
         <h3 className="mt-4 font-[family-name:var(--font-display)] text-[1.28rem] leading-tight tracking-[-0.02em] text-ink transition group-hover:text-accent-deep">
@@ -31,7 +43,7 @@ export function ContentCard({ item }: { item: ContentMeta }) {
               : "Full lesson"}
           </span>
           <span className="font-medium text-accent-deep transition group-hover:underline">
-            View lesson →
+            {badge ? "Continue →" : "View lesson →"}
           </span>
         </div>
       </div>

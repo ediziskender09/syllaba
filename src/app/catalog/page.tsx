@@ -1,4 +1,6 @@
 import { ContentCard } from "@/components/ContentCard";
+import { auth } from "@/auth";
+import { getAccessSnapshot } from "@/lib/access";
 import { getAllContentMeta, getCategories } from "@/lib/content";
 
 type Props = {
@@ -14,6 +16,8 @@ export default async function CatalogPage({ searchParams }: Props) {
   const params = await searchParams;
   const all = getAllContentMeta();
   const categories = getCategories();
+  const session = await auth();
+  const access = session?.user?.id ? await getAccessSnapshot(session.user.id) : null;
 
   const filtered = all.filter((item) => {
     const categoryOk = params.category
@@ -45,6 +49,7 @@ export default async function CatalogPage({ searchParams }: Props) {
           Showing {filtered.length} of {all.length}
           {params.category ? ` in ${params.category}` : ""}
           {params.q ? ` for “${params.q}”` : ""}.
+          {access?.hasLibrary ? " Library membership: all lessons unlocked." : null}
         </p>
       </div>
 
@@ -100,9 +105,14 @@ export default async function CatalogPage({ searchParams }: Props) {
       </div>
 
       <div className="mt-10 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((item) => (
-          <ContentCard key={item.slug} item={item} />
-        ))}
+        {filtered.map((item) => {
+          const badge = access?.hasLibrary
+            ? "In library"
+            : access?.purchasedSlugs.includes(item.slug)
+              ? "Owned"
+              : undefined;
+          return <ContentCard key={item.slug} item={item} badge={badge} />;
+        })}
       </div>
 
       {!filtered.length && (

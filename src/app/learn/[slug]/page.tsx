@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ContentCard } from "@/components/ContentCard";
-import { LessonGate } from "@/components/LessonGate";
+import { LessonCheckout } from "@/components/LessonCheckout";
+import { LessonContent } from "@/components/LessonContent";
+import { auth } from "@/auth";
+import { getAccessSnapshot, hasLessonAccess } from "@/lib/access";
 import { getLessonSegments, getRelatedContent } from "@/lib/content";
 
 type Props = {
@@ -25,6 +28,15 @@ export default async function LearnPage({ params }: Props) {
 
   const { item, segments, outline, highlights, teaserHtml } = result;
   const related = getRelatedContent(item.slug, item.category);
+  const session = await auth();
+  const userId = session?.user?.id;
+  const unlocked = await hasLessonAccess(userId, item.slug);
+  const access = userId ? await getAccessSnapshot(userId) : null;
+  const accessLabel = access?.hasLibrary
+    ? "Library access"
+    : unlocked
+      ? "Purchased"
+      : "Locked";
 
   return (
     <div className="shell py-10 md:py-14">
@@ -35,19 +47,30 @@ export default async function LearnPage({ params }: Props) {
         ← Back to catalog
       </Link>
 
-      <LessonGate
-        title={item.title}
-        summary={item.summary}
-        category={item.category}
-        price={item.price}
-        minutes={item.minutes}
-        quizCount={item.quizzes.length}
-        tags={item.tags}
-        outline={outline}
-        highlights={highlights}
-        teaserHtml={teaserHtml}
-        segments={segments}
-      />
+      {unlocked ? (
+        <LessonContent
+          title={item.title}
+          summary={item.summary}
+          category={item.category}
+          accessLabel={accessLabel}
+          segments={segments}
+        />
+      ) : (
+        <LessonCheckout
+          slug={item.slug}
+          title={item.title}
+          summary={item.summary}
+          category={item.category}
+          price={item.price}
+          minutes={item.minutes}
+          quizCount={item.quizzes.length}
+          tags={item.tags}
+          outline={outline}
+          highlights={highlights}
+          teaserHtml={teaserHtml}
+          signedIn={Boolean(userId)}
+        />
+      )}
 
       {related.length > 0 && (
         <section className="mt-14">
@@ -56,7 +79,17 @@ export default async function LearnPage({ params }: Props) {
           </h2>
           <div className="mt-5 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((rel) => (
-              <ContentCard key={rel.slug} item={rel} />
+              <ContentCard
+                key={rel.slug}
+                item={rel}
+                badge={
+                  access?.hasLibrary
+                    ? "In library"
+                    : access?.purchasedSlugs.includes(rel.slug)
+                      ? "Owned"
+                      : undefined
+                }
+              />
             ))}
           </div>
         </section>
