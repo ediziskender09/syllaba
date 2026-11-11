@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { auth, signOut } from "@/auth";
+import { auth } from "@/auth";
 
 export async function AuthNav() {
   const session = await auth();
@@ -37,19 +37,6 @@ export async function AuthNav() {
         >
           Account
         </Link>
-        <form
-          action={async () => {
-            "use server";
-            await signOut({ redirectTo: "/" });
-          }}
-        >
-          <button
-            type="submit"
-            className="rounded-xl border border-[var(--line)] bg-surface px-3 py-2 text-sm font-medium text-ink-soft transition hover:border-accent/30"
-          >
-            Sign out
-          </button>
-        </form>
       </div>
     );
   }
