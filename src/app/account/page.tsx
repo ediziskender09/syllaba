@@ -55,6 +55,10 @@ const notices: Record<string, { tone: "ok" | "warn" | "err"; text: string }> = {
     tone: "err",
     text: "Could not resume — there was no scheduled cancellation.",
   },
+  "creem-missing": {
+    tone: "err",
+    text: "Payments are not connected yet. Add Creem API keys, then try again.",
+  },
 };
 
 export default async function AccountPage({ searchParams }: Props) {

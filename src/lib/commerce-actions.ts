@@ -6,26 +6,41 @@ import { auth } from "@/auth";
 import {
   getMembershipPhase,
   hasLibraryAccess,
-  LIBRARY_PERIOD_DAYS,
-  LIBRARY_PRICE_CENTS,
   lessonPriceToCents,
   type SubscriptionRecord,
 } from "@/lib/commerce";
+import {
+  grantLessonPurchase,
+  grantLibrarySubscription,
+} from "@/lib/commerce-grants";
 import { getContentBySlugMeta } from "@/lib/content";
+import {
+  cancelCreemSubscriptionScheduled,
+  createLessonCheckout,
+  createLibraryCheckout,
+  isCreemConfigured,
+  resumeCreemSubscription,
+} from "@/lib/creem";
 import { prisma } from "@/lib/prisma";
 
-/**
- * Preview commerce until Creem checkout/webhooks are wired.
- * Grant/cancel helpers stay the same for provider webhooks later.
- */
-const PROVIDER = "preview";
+export { grantLessonPurchase, grantLibrarySubscription };
 
-async function requireUserId(callbackPath: string) {
+const PREVIEW_PROVIDER = "preview";
+const CREEM_PROVIDER = "creem";
+
+async function requireUser(callbackPath: string) {
   const session = await auth();
   if (!session?.user?.id) {
     redirect(`/login?callbackUrl=${encodeURIComponent(callbackPath)}`);
   }
-  return session.user.id;
+  if (!session.user.email) {
+    redirect(`/login?callbackUrl=${encodeURIComponent(callbackPath)}`);
+  }
+  return {
+    id: session.user.id,
+    email: session.user.email,
+    name: session.user.name,
+  };
 }
 
 function revalidateCommerce(paths: string[] = []) {
@@ -54,75 +69,14 @@ function toRecord(sub: {
   };
 }
 
-export async function grantLessonPurchase(input: {
-  userId: string;
-  lessonSlug: string;
-  amountCents: number;
-  provider?: string;
-  providerOrderId?: string;
-}) {
-  return prisma.purchase.upsert({
-    where: {
-      userId_lessonSlug: {
-        userId: input.userId,
-        lessonSlug: input.lessonSlug,
-      },
-    },
-    create: {
-      userId: input.userId,
-      lessonSlug: input.lessonSlug,
-      amountCents: input.amountCents,
-      currency: "usd",
-      provider: input.provider ?? PROVIDER,
-      providerOrderId: input.providerOrderId,
-    },
-    update: {
-      amountCents: input.amountCents,
-      provider: input.provider ?? PROVIDER,
-      providerOrderId: input.providerOrderId,
-    },
-  });
-}
-
-export async function grantLibrarySubscription(input: {
-  userId: string;
-  provider?: string;
-  providerSubscriptionId?: string;
-  periodDays?: number;
-  amountCents?: number;
-}) {
-  const periodDays = input.periodDays ?? LIBRARY_PERIOD_DAYS;
-  const currentPeriodEnd = new Date(Date.now() + periodDays * 24 * 60 * 60 * 1000);
-
-  return prisma.subscription.upsert({
-    where: { userId: input.userId },
-    create: {
-      userId: input.userId,
-      status: "active",
-      provider: input.provider ?? PROVIDER,
-      providerSubscriptionId: input.providerSubscriptionId,
-      amountCents: input.amountCents ?? LIBRARY_PRICE_CENTS,
-      currency: "usd",
-      cancelAtPeriodEnd: false,
-      canceledAt: null,
-      currentPeriodEnd,
-    },
-    update: {
-      status: "active",
-      provider: input.provider ?? PROVIDER,
-      providerSubscriptionId: input.providerSubscriptionId,
-      amountCents: input.amountCents ?? LIBRARY_PRICE_CENTS,
-      cancelAtPeriodEnd: false,
-      canceledAt: null,
-      currentPeriodEnd,
-    },
-  });
-}
-
 export async function scheduleLibraryCancellation(userId: string) {
   const sub = await prisma.subscription.findUnique({ where: { userId } });
   if (!sub || !hasLibraryAccess(toRecord(sub))) {
     return { ok: false as const, error: "No active library subscription to cancel." };
+  }
+
+  if (sub.provider === CREEM_PROVIDER && sub.providerSubscriptionId && isCreemConfigured()) {
+    await cancelCreemSubscriptionScheduled(sub.providerSubscriptionId);
   }
 
   const updated = await prisma.subscription.update({
@@ -130,7 +84,6 @@ export async function scheduleLibraryCancellation(userId: string) {
     data: {
       cancelAtPeriodEnd: true,
       canceledAt: new Date(),
-      // Keep status active until period end so access + UX stay correct.
       status: "active",
     },
   });
@@ -149,6 +102,10 @@ export async function resumeLibrarySubscription(userId: string) {
     return { ok: false as const, error: "There is no scheduled cancellation to resume." };
   }
 
+  if (sub.provider === CREEM_PROVIDER && sub.providerSubscriptionId && isCreemConfigured()) {
+    await resumeCreemSubscription(sub.providerSubscriptionId);
+  }
+
   const updated = await prisma.subscription.update({
     where: { userId },
     data: {
@@ -165,69 +122,117 @@ export async function unlockLesson(formData: FormData) {
   const slug = String(formData.get("slug") || "").trim();
   if (!slug) redirect("/catalog");
 
-  const userId = await requireUserId(`/learn/${slug}`);
+  const user = await requireUser(`/learn/${slug}`);
   const lesson = getContentBySlugMeta(slug);
   if (!lesson) redirect("/catalog");
 
-  const existingSub = await prisma.subscription.findUnique({ where: { userId } });
+  const existingSub = await prisma.subscription.findUnique({ where: { userId: user.id } });
   if (existingSub && hasLibraryAccess(toRecord(existingSub))) {
     revalidateCommerce([`/learn/${slug}`]);
     redirect(`/learn/${slug}`);
   }
 
-  await grantLessonPurchase({
-    userId,
+  const existingPurchase = await prisma.purchase.findUnique({
+    where: { userId_lessonSlug: { userId: user.id, lessonSlug: slug } },
+  });
+  if (existingPurchase) {
+    revalidateCommerce([`/learn/${slug}`]);
+    redirect(`/learn/${slug}`);
+  }
+
+  if (!isCreemConfigured()) {
+    redirect("/account?notice=creem-missing");
+  }
+
+  const checkout = await createLessonCheckout({
+    userId: user.id,
+    email: user.email,
+    name: user.name,
     lessonSlug: slug,
-    amountCents: lessonPriceToCents(lesson.price),
+    priceUsd: lesson.price,
+    lessonTitle: lesson.title,
   });
 
-  revalidateCommerce([`/learn/${slug}`]);
-  redirect(`/learn/${slug}`);
+  if (!checkout.checkoutUrl) {
+    redirect(`/learn/${slug}?error=checkout`);
+  }
+
+  redirect(checkout.checkoutUrl);
 }
 
 export async function subscribeLibrary(formData: FormData) {
   const returnTo = String(formData.get("returnTo") || "/account").trim() || "/account";
-  const userId = await requireUserId(returnTo);
+  const user = await requireUser(returnTo);
 
-  const existing = await prisma.subscription.findUnique({ where: { userId } });
+  const existing = await prisma.subscription.findUnique({ where: { userId: user.id } });
   if (existing) {
     const phase = getMembershipPhase(toRecord(existing));
     if (phase === "active") {
       redirect("/account?notice=already-subscribed");
     }
     if (phase === "canceling") {
-      await resumeLibrarySubscription(userId);
-      revalidateCommerce([returnTo.startsWith("/learn/") ? returnTo : "/account"]);
+      await resumeLibrarySubscription(user.id);
+      revalidateCommerce();
       redirect("/account?notice=resumed");
     }
   }
 
-  await grantLibrarySubscription({ userId });
-
-  const safeReturn = returnTo.startsWith("/") ? returnTo.split("?")[0] : "/account";
-  revalidateCommerce([safeReturn.startsWith("/learn/") ? safeReturn : "/account"]);
-  if (safeReturn === "/account" || safeReturn === "/pricing") {
-    redirect("/account?notice=subscribed");
+  if (!isCreemConfigured()) {
+    redirect("/account?notice=creem-missing");
   }
-  redirect(safeReturn);
+
+  const checkout = await createLibraryCheckout({
+    userId: user.id,
+    email: user.email,
+    name: user.name,
+  });
+
+  if (!checkout.checkoutUrl) {
+    redirect("/pricing?error=checkout");
+  }
+
+  redirect(checkout.checkoutUrl);
 }
 
 export async function cancelLibrary(formData: FormData) {
-  const userId = await requireUserId("/account");
+  const user = await requireUser("/account");
   const confirm = String(formData.get("confirm") || "");
   if (confirm !== "cancel") {
     redirect("/account?notice=cancel-confirm");
   }
 
-  const result = await scheduleLibraryCancellation(userId);
+  const result = await scheduleLibraryCancellation(user.id);
   revalidateCommerce();
   redirect(result.ok ? "/account?notice=cancel-scheduled" : "/account?notice=cancel-failed");
 }
 
 export async function resumeLibrary(formData: FormData) {
   void formData;
-  const userId = await requireUserId("/account");
-  const result = await resumeLibrarySubscription(userId);
+  const user = await requireUser("/account");
+  const result = await resumeLibrarySubscription(user.id);
   revalidateCommerce();
   redirect(result.ok ? "/account?notice=resumed" : "/account?notice=resume-failed");
+}
+
+/** Dev-only fallback when Creem is not configured. */
+export async function previewUnlockLesson(formData: FormData) {
+  if (process.env.NODE_ENV === "production" && isCreemConfigured()) {
+    redirect("/catalog");
+  }
+
+  const slug = String(formData.get("slug") || "").trim();
+  if (!slug) redirect("/catalog");
+  const user = await requireUser(`/learn/${slug}`);
+  const lesson = getContentBySlugMeta(slug);
+  if (!lesson) redirect("/catalog");
+
+  await grantLessonPurchase({
+    userId: user.id,
+    lessonSlug: slug,
+    amountCents: lessonPriceToCents(lesson.price),
+    provider: PREVIEW_PROVIDER,
+  });
+
+  revalidateCommerce([`/learn/${slug}`]);
+  redirect(`/learn/${slug}`);
 }
