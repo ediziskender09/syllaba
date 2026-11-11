@@ -27,16 +27,13 @@ export function BrandLogo({
 
   return (
     <Link href={href} className="group inline-flex items-center gap-2.5">
-      <span
-        className="relative overflow-hidden rounded-[0.7rem] shadow-soft ring-1 ring-black/5"
-        style={{ width: px, height: px }}
-      >
+      <span className="relative overflow-hidden" style={{ width: px, height: px }}>
         <Image
-          src="/brand/syllaba-mark.jpg"
+          src="/brand/syllaba-mark.png"
           alt="Syllaba"
           width={px}
           height={px}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           priority
         />
       </span>

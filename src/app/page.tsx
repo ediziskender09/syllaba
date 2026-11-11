@@ -63,11 +63,11 @@ export default function HomePage() {
             </p>
             <div className="mt-5 flex items-center gap-4">
               <Image
-                src="/brand/syllaba-mark.jpg"
+                src="/brand/syllaba-mark.png"
                 alt="Syllaba logo"
                 width={56}
                 height={56}
-                className="rounded-[0.9rem] shadow-soft ring-1 ring-black/5"
+                className="h-14 w-14 object-contain"
                 priority
               />
               <p className="font-[family-name:var(--font-display)] text-[clamp(2.8rem,6.5vw,4.4rem)] leading-none tracking-[-0.05em] text-ink">

@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   description:
     "Warm, structured lessons with worked examples and interactive quizzes across AI, programming, data, business, and creative skills.",
   icons: {
-    icon: "/brand/syllaba-mark.jpg",
-    apple: "/brand/syllaba-mark.jpg",
+    icon: "/brand/syllaba-mark.png",
+    apple: "/brand/syllaba-mark.png",
   },
   openGraph: {
     title: "Syllaba",
