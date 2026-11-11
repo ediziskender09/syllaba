@@ -10,18 +10,25 @@ import {
 
 const initial: AuthFormState = { ok: false };
 
-export function EmailAuthForm({ mode }: { mode: "login" | "register" }) {
+export function EmailAuthForm({
+  mode,
+  initialEmail = "",
+}: {
+  mode: "login" | "register";
+  initialEmail?: string;
+}) {
   const action = mode === "register" ? registerWithEmail : loginWithEmail;
   const [state, formAction, pending] = useActionState(action, initial);
   const [resendState, resendAction, resendPending] = useActionState(
     resendVerificationEmail,
     initial,
   );
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(initialEmail);
+  const showResend = Boolean(state.needsVerification || resendState.message || resendState.error);
 
   return (
     <div className="space-y-3">
-      <form action={formAction} className="space-y-3">
+      <form action={formAction} className="space-y-3" autoComplete={mode === "login" ? "on" : "on"}>
         {mode === "register" ? (
           <input
             name="name"
@@ -38,15 +45,15 @@ export function EmailAuthForm({ mode }: { mode: "login" | "register" }) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
-          autoComplete="email"
+          autoComplete="username"
           className="w-full rounded-xl border border-[var(--line)] bg-paper px-4 py-3 text-sm outline-none ring-accent/30 focus:ring-2"
         />
         <input
           name="password"
           type="password"
           required
-          minLength={6}
-          placeholder="Password (min 6 characters)"
+          minLength={mode === "register" ? 6 : undefined}
+          placeholder={mode === "register" ? "Password (min 6 characters)" : "Password"}
           autoComplete={mode === "register" ? "new-password" : "current-password"}
           className="w-full rounded-xl border border-[var(--line)] bg-paper px-4 py-3 text-sm outline-none ring-accent/30 focus:ring-2"
         />
@@ -69,14 +76,16 @@ export function EmailAuthForm({ mode }: { mode: "login" | "register" }) {
           className="w-full rounded-xl bg-ink px-4 py-3 text-sm font-semibold text-paper transition hover:bg-accent-deep disabled:opacity-60"
         >
           {pending
-            ? "Please wait..."
+            ? mode === "register"
+              ? "Sending verification..."
+              : "Please wait..."
             : mode === "register"
               ? "Create account"
               : "Sign in with email"}
         </button>
       </form>
 
-      {mode === "login" ? (
+      {mode === "login" && showResend ? (
         <form action={resendAction} className="pt-1">
           <input type="hidden" name="email" value={email} />
           {resendState.error ? (

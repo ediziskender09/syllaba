@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { AuthError } from "next-auth";
 import { BrandLogo } from "@/components/BrandLogo";
+import { signIn } from "@/auth";
 import { consumeEmailVerification } from "@/lib/email-verification";
 
 export const metadata = {
@@ -16,15 +18,27 @@ export default async function VerifyEmailPage({ searchParams }: Props) {
   const token = params.token?.trim();
   const email = params.email?.trim();
 
-  let result:
-    | { ok: true }
-    | { ok: false; error: string } = {
-    ok: false,
-    error: "Missing verification details. Open the link from your email.",
-  };
+  let error = "Missing verification details. Open the link from your email.";
 
   if (token && email) {
-    result = await consumeEmailVerification(email, token);
+    const result = await consumeEmailVerification(email, token);
+    if (result.ok) {
+      try {
+        await signIn("credentials", {
+          email: result.email,
+          loginToken: result.loginToken,
+          redirectTo: "/account",
+        });
+      } catch (err) {
+        if (err instanceof AuthError) {
+          error = "Email verified, but automatic sign-in failed. Please sign in.";
+        } else {
+          throw err;
+        }
+      }
+    } else {
+      error = result.error;
+    }
   }
 
   return (
@@ -35,19 +49,17 @@ export default async function VerifyEmailPage({ searchParams }: Props) {
         </div>
 
         <h1 className="mt-8 font-[family-name:var(--font-display)] text-3xl tracking-[-0.03em] text-ink">
-          {result.ok ? "Email verified" : "Verification failed"}
+          Verification failed
         </h1>
         <p className="mt-3 font-[family-name:var(--font-body)] text-sm leading-relaxed text-ink-soft">
-          {result.ok
-            ? "Your email is confirmed. You can sign in with your password."
-            : result.error}
+          {error}
         </p>
 
         <Link
           href="/login"
           className="mt-8 inline-flex rounded-xl bg-ink px-5 py-3 text-sm font-semibold text-paper transition hover:bg-accent-deep"
         >
-          {result.ok ? "Sign in" : "Back to sign in"}
+          Back to sign in
         </Link>
       </div>
     </div>

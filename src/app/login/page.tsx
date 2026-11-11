@@ -10,7 +10,13 @@ export const metadata = {
 };
 
 type Props = {
-  searchParams: Promise<{ callbackUrl?: string; error?: string; mode?: string }>;
+  searchParams: Promise<{
+    callbackUrl?: string;
+    error?: string;
+    mode?: string;
+    checkEmail?: string;
+    email?: string;
+  }>;
 };
 
 export default async function LoginPage({ searchParams }: Props) {
@@ -18,6 +24,8 @@ export default async function LoginPage({ searchParams }: Props) {
   const params = await searchParams;
   const callbackUrl = params.callbackUrl || "/account";
   const mode = params.mode === "register" ? "register" : "login";
+  const checkEmail = params.checkEmail === "1";
+  const prefillEmail = params.email?.trim() || "";
 
   if (session?.user) {
     redirect("/account");
@@ -57,6 +65,13 @@ export default async function LoginPage({ searchParams }: Props) {
           </Link>
         </div>
 
+        {checkEmail ? (
+          <p className="mt-5 rounded-xl border border-accent/25 bg-accent/10 px-4 py-3 text-center text-sm text-accent-deep">
+            Account created. Check your email and open the verification link — you&apos;ll be
+            signed in automatically.
+          </p>
+        ) : null}
+
         {params.error ? (
           <p className="mt-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-center text-sm text-red-800">
             Sign-in failed. Try again.
@@ -85,7 +100,7 @@ export default async function LoginPage({ searchParams }: Props) {
           <div className="h-px flex-1 bg-[var(--line)]" />
         </div>
 
-        <EmailAuthForm mode={mode} />
+        <EmailAuthForm mode={mode} initialEmail={prefillEmail} />
 
         <p className="mt-6 text-center text-xs leading-relaxed text-ink-soft/80">
           By continuing you agree to our{" "}

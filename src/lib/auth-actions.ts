@@ -2,6 +2,7 @@
 
 import bcrypt from "bcryptjs";
 import { AuthError } from "next-auth";
+import { redirect } from "next/navigation";
 import { z } from "zod";
 import { signIn } from "@/auth";
 import { issueEmailVerification } from "@/lib/email-verification";
@@ -17,6 +18,7 @@ export type AuthFormState = {
   ok: boolean;
   error?: string;
   message?: string;
+  needsVerification?: boolean;
 };
 
 export async function registerWithEmail(
@@ -54,14 +56,11 @@ export async function registerWithEmail(
     return {
       ok: false,
       error:
-        "Account created, but we couldn't send the verification email. Try resending from the sign-in page.",
+        "Account created, but we couldn't send the verification email. Try again from sign in.",
     };
   }
 
-  return {
-    ok: true,
-    message: "Check your inbox for a verification link before signing in.",
-  };
+  redirect(`/login?checkEmail=1&email=${encodeURIComponent(email)}`);
 }
 
 export async function loginWithEmail(
@@ -74,7 +73,7 @@ export async function loginWithEmail(
   });
 
   if (!parsed.success) {
-    return { ok: false, error: "Enter a valid email and password (min 6 characters)." };
+    return { ok: false, error: "Enter a valid email and password." };
   }
 
   const email = parsed.data.email.toLowerCase().trim();
@@ -83,7 +82,8 @@ export async function loginWithEmail(
   if (user?.hashedPassword && !user.emailVerified) {
     return {
       ok: false,
-      error: "Verify your email first. Check your inbox, or resend the link below.",
+      needsVerification: true,
+      error: "Verify your email first. Check your inbox for the link.",
     };
   }
 
