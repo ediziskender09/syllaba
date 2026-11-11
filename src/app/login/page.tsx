@@ -1,21 +1,23 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { BrandLogo } from "@/components/BrandLogo";
+import { EmailAuthForm } from "@/components/EmailAuthForm";
 import { auth, signIn } from "@/auth";
 
 export const metadata = {
   title: "Sign in",
-  description: "Sign in or create your Syllaba account with Google.",
+  description: "Sign in or create your Syllaba account with email or Google.",
 };
 
 type Props = {
-  searchParams: Promise<{ callbackUrl?: string; error?: string }>;
+  searchParams: Promise<{ callbackUrl?: string; error?: string; mode?: string }>;
 };
 
 export default async function LoginPage({ searchParams }: Props) {
   const session = await auth();
   const params = await searchParams;
   const callbackUrl = params.callbackUrl || "/account";
+  const mode = params.mode === "register" ? "register" : "login";
 
   if (session?.user) {
     redirect("/account");
@@ -29,21 +31,49 @@ export default async function LoginPage({ searchParams }: Props) {
         </div>
 
         <h1 className="mt-8 text-center font-[family-name:var(--font-display)] text-3xl tracking-[-0.03em] text-ink">
-          Sign in to Syllaba
+          {mode === "register" ? "Create your account" : "Sign in to Syllaba"}
         </h1>
         <p className="mt-3 text-center font-[family-name:var(--font-body)] text-sm leading-relaxed text-ink-soft">
-          Create an account or sign in with Google. Purchases and library access
-          will connect to this account later.
+          Use email and password, or continue with Google. Purchases will attach to
+          this account.
         </p>
+
+        <div className="mt-6 grid grid-cols-2 gap-2 rounded-xl bg-paper p-1">
+          <Link
+            href="/login"
+            className={`rounded-lg px-3 py-2 text-center text-sm font-semibold ${
+              mode === "login" ? "bg-surface text-ink shadow-soft" : "text-ink-soft"
+            }`}
+          >
+            Sign in
+          </Link>
+          <Link
+            href="/login?mode=register"
+            className={`rounded-lg px-3 py-2 text-center text-sm font-semibold ${
+              mode === "register" ? "bg-surface text-ink shadow-soft" : "text-ink-soft"
+            }`}
+          >
+            Create account
+          </Link>
+        </div>
 
         {params.error ? (
           <p className="mt-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-center text-sm text-red-800">
-            Sign-in failed. Try again with Google.
+            Sign-in failed. Try again.
           </p>
         ) : null}
 
+        <div className="mt-6">
+          <EmailAuthForm mode={mode} />
+        </div>
+
+        <div className="my-6 flex items-center gap-3">
+          <div className="h-px flex-1 bg-[var(--line)]" />
+          <span className="text-xs uppercase tracking-[0.14em] text-ink-soft/60">or</span>
+          <div className="h-px flex-1 bg-[var(--line)]" />
+        </div>
+
         <form
-          className="mt-8"
           action={async () => {
             "use server";
             await signIn("google", { redirectTo: callbackUrl });

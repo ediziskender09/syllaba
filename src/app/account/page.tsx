@@ -51,9 +51,7 @@ export default async function AccountPage() {
           </div>
 
           <div className="mt-8 grid gap-3 border-t border-[var(--line)] pt-6 text-sm text-ink-soft">
-            <p>
-              Signed in with <span className="font-semibold text-ink">Google</span>.
-            </p>
+            <p>You&apos;re signed in. Email and Google both work on this account.</p>
             <p>
               Purchases and library subscription will appear here once payments are
               connected.
