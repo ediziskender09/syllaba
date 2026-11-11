@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "figma-checkpoint-1",
+      "title": "Checkpoint 1 — Process, Frames, and Hierarchy",
+      "intro": "Check design process basics, file structure, and visual hierarchy before components.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What should you clarify before polishing visual decoration?",
+          "options": [
+            { "id": "a", "text": "The exact shadow blur for every card" },
+            { "id": "b", "text": "The user goal, primary action, essential content, and constraints" },
+            { "id": "c", "text": "How many gradients fit above the fold" },
+            { "id": "d", "text": "Which stock illustration pack is trendiest" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Structure and intent come before decoration; otherwise polish hides confusion.",
+          "wrongExplanations": {
+            "a": "Effects are secondary to task clarity.",
+            "c": "Gradient count is not a foundation decision.",
+            "d": "Trends do not define the job of the screen."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why use low-fidelity wireframes early?",
+          "options": [
+            { "id": "a", "text": "To force stakeholders to debate corner radius immediately" },
+            { "id": "b", "text": "To focus critique on structure and flow before visual styling distracts" },
+            { "id": "c", "text": "Because Figma cannot create high-fidelity screens" },
+            { "id": "d", "text": "Because color is forbidden in all final products" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Unfinished looks help people evaluate layout and intent instead of aesthetics.",
+          "wrongExplanations": {
+            "a": "Early reviews should avoid skin-deep debates.",
+            "c": "Figma supports high fidelity; sequencing is the point.",
+            "d": "Color comes later; it is not permanently forbidden."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why rename frames and layers carefully?",
+          "options": [
+            { "id": "a", "text": "Because Figma deletes unnamed layers nightly" },
+            { "id": "b", "text": "Because clear names make collaboration, search, and handoff usable" },
+            { "id": "c", "text": "Because names change the compiled binary of the app automatically" },
+            { "id": "d", "text": "Because prototypes require random names" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A tree full of Rectangle 24 becomes unusable quickly for teams and future you.",
+          "wrongExplanations": {
+            "a": "Figma does not auto-delete unnamed layers on a nightly schedule.",
+            "c": "Layer names do not compile your production app by themselves.",
+            "d": "Prototypes benefit from clear, not random, names."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which practice best establishes visual hierarchy?",
+          "options": [
+            { "id": "a", "text": "Using size, weight, contrast, spacing, and position intentionally" },
+            { "id": "b", "text": "Making every element the same size and contrast" },
+            { "id": "c", "text": "Using as many fonts as possible" },
+            { "id": "d", "text": "Relying only on random bright colors" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Hierarchy is created by controlled differences that guide the eye to what matters.",
+          "wrongExplanations": {
+            "b": "Uniform treatment removes hierarchy.",
+            "c": "Too many fonts create noise, not clarity.",
+            "d": "Color alone without structure is unreliable and often inaccessible."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why design empty and error states early?",
+          "options": [
+            { "id": "a", "text": "Because happy-path screens never ship" },
+            { "id": "b", "text": "Because real products spend time in incomplete and failure conditions that beginners often omit" },
+            { "id": "c", "text": "Because Figma requires exactly three error modals" },
+            { "id": "d", "text": "Because empty states replace navigation permanently" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Flows break in real use when only ideal filled states are designed.",
+          "wrongExplanations": {
+            "a": "Happy paths do ship; they are incomplete alone.",
+            "c": "There is no fixed mandatory modal count.",
+            "d": "Empty states complement, not replace, navigation."
+          }
+        }
+      ]
+    },
+    {
+      "id": "figma-checkpoint-2",
+      "title": "Checkpoint 2 — Auto Layout, Components, and Styles",
+      "intro": "Test reusable structure and layout systems in Figma.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is auto layout mainly for?",
+          "options": [
+            { "id": "a", "text": "Arranging child elements by direction, gap, and padding so UI adapts more predictably" },
+            { "id": "b", "text": "Exporting videos only" },
+            { "id": "c", "text": "Deleting components automatically" },
+            { "id": "d", "text": "Turning off all constraints forever" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Auto layout creates structured, adaptable frames for buttons, lists, cards, and more.",
+          "wrongExplanations": {
+            "b": "Auto layout is about structure, not video export.",
+            "c": "It does not exist to delete components.",
+            "d": "It improves layout control rather than removing it."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is the benefit of components?",
+          "options": [
+            { "id": "a", "text": "They prevent any design from being reused" },
+            { "id": "b", "text": "You build once, reuse instances, and update the source to propagate changes" },
+            { "id": "c", "text": "They force you to detach everything immediately" },
+            { "id": "d", "text": "They replace the need for typography" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Components create reusable, maintainable UI building blocks.",
+          "wrongExplanations": {
+            "a": "Reuse is the point of components.",
+            "c": "Chronic detaching destroys system benefits.",
+            "d": "Typography remains essential inside components."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What are variants used for?",
+          "options": [
+            { "id": "a", "text": "Grouping related component states such as primary/secondary or default/disabled" },
+            { "id": "b", "text": "Randomly renaming pages at midnight" },
+            { "id": "c", "text": "Measuring CPU temperature" },
+            { "id": "d", "text": "Hiding all comments" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Variants package related states into one configurable component set.",
+          "wrongExplanations": {
+            "b": "Variants are design-system structure, not page-renaming automation.",
+            "c": "Hardware metrics are outside Figma variants.",
+            "d": "Comment visibility is a collaboration setting, not a variant purpose."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Why create text and color styles even on small projects?",
+          "options": [
+            { "id": "a", "text": "Because styles make inconsistency mandatory" },
+            { "id": "b", "text": "Because named reusable definitions prevent drift and make global updates easier" },
+            { "id": "c", "text": "Because Figma bans local colors otherwise" },
+            { "id": "d", "text": "Because styles replace frames" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Styles keep visual decisions consistent and maintainable as files grow.",
+          "wrongExplanations": {
+            "a": "Styles reduce inconsistency.",
+            "c": "Local colors are possible; styles are recommended judgment.",
+            "d": "Frames remain the structural containers."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which resizing idea is important in auto layout?",
+          "options": [
+            { "id": "a", "text": "Hug contents, fill container, and fixed sizes as intentional choices" },
+            { "id": "b", "text": "Only fixed sizes forever with no exceptions" },
+            { "id": "c", "text": "Never use padding" },
+            { "id": "d", "text": "Always overlap children randomly" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Choosing hug/fill/fixed correctly is central to adaptable components.",
+          "wrongExplanations": {
+            "b": "Rigid fixed sizing fights responsive UI needs.",
+            "c": "Padding is a core auto layout control.",
+            "d": "Random overlap breaks structured layout."
+          }
+        }
+      ]
+    },
+    {
+      "id": "figma-final",
+      "title": "Final Quiz — Prototypes, Handoff, and Accessibility",
+      "intro": "Apply interaction design, collaboration, and quality judgment.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is the main job of an early click-through prototype?",
+          "options": [
+            { "id": "a", "text": "To impress with maximum animation on every element" },
+            { "id": "b", "text": "To learn whether people can understand and complete the flow" },
+            { "id": "c", "text": "To replace usability testing forever" },
+            { "id": "d", "text": "To avoid designing error paths" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Prototypes are learning tools for flow clarity, not decoration contests.",
+          "wrongExplanations": {
+            "a": "Motion should support orientation, not create noise.",
+            "c": "Prototypes support testing; they do not obsolete it.",
+            "d": "Including alternate paths improves learning."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which handoff practice helps developers most?",
+          "options": [
+            { "id": "a", "text": "Deliver only one happy-path screenshot with unnamed layers" },
+            { "id": "b", "text": "Provide named components, key states, spacing/type clarity, and notes on unfinished areas" },
+            { "id": "c", "text": "Hide responsive behavior on purpose" },
+            { "id": "d", "text": "Detach every component before sharing" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Implementable design includes states, names, and explicit gaps—not mystery polish.",
+          "wrongExplanations": {
+            "a": "Missing states and names create rework.",
+            "c": "Responsive notes prevent implementation guesswork.",
+            "d": "Detaching destroys reusable specs."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which accessibility habit belongs in foundation UI design?",
+          "options": [
+            { "id": "a", "text": "Rely on color alone for all meaning" },
+            { "id": "b", "text": "Ensure sufficient text contrast and visible focus states" },
+            { "id": "c", "text": "Use placeholder-only labeling with no field labels" },
+            { "id": "d", "text": "Make mobile touch targets as tiny as possible" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Contrast and focus visibility are baseline accessible design requirements.",
+          "wrongExplanations": {
+            "a": "Color-only encoding fails many users.",
+            "c": "Fields need persistent labels.",
+            "d": "Tiny targets harm mobile usability and accessibility."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "How should you ask for design feedback?",
+          "options": [
+            { "id": "a", "text": "Only say \"Thoughts?\" with no context" },
+            { "id": "b", "text": "State the user goal and ask a specific question about hierarchy or clarity" },
+            { "id": "c", "text": "Forbid comments on the file" },
+            { "id": "d", "text": "Request feedback only after development ships" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Specific, goal-framed questions produce actionable critique.",
+          "wrongExplanations": {
+            "a": "Vague prompts yield vague responses.",
+            "c": "Comments are a core collaboration channel.",
+            "d": "Feedback is most valuable before expensive implementation."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why avoid chronic component detaching?",
+          "options": [
+            { "id": "a", "text": "Because detached instances stay perfectly synced forever" },
+            { "id": "b", "text": "Because detaching breaks the update/propagation benefits of a design system" },
+            { "id": "c", "text": "Because Figma deletes detached layers instantly" },
+            { "id": "d", "text": "Because variants cannot exist otherwise" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Systems work when instances remain connected to maintainable sources.",
+          "wrongExplanations": {
+            "a": "Detached elements no longer inherit source updates.",
+            "c": "Detaching does not instant-delete layers.",
+            "d": "Variants exist independently of detaching habits."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "A screen looks polished but users cannot find the next step in a prototype test. What should you do?",
+          "options": [
+            { "id": "a", "text": "Add more shadows and declare victory" },
+            { "id": "b", "text": "Revisit hierarchy, labeling, and flow structure before more decoration" },
+            { "id": "c", "text": "Ignore the test because aesthetics are enough" },
+            { "id": "d", "text": "Convert all text to light gray icons only" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "If the flow fails, polish is irrelevant until structure and clarity are fixed.",
+          "wrongExplanations": {
+            "a": "Effects do not solve wayfinding failures.",
+            "c": "User confusion is a design signal, not noise.",
+            "d": "Removing readable text usually worsens comprehension."
+          }
+        }
+      ]
+    }
+  ]
+}

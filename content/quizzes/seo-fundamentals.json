@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "seo-checkpoint-1",
+      "title": "Checkpoint 1 — Search, Intent, and Keywords",
+      "intro": "Check foundational search concepts before on-page and technical SEO.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "In simple terms, what must happen before a page can rank in organic search?",
+          "options": [
+            { "id": "a", "text": "It must be crawled and indexed (discoverable and understood enough to enter the searchable index)" },
+            { "id": "b", "text": "It must buy a featured placement with no URL" },
+            { "id": "c", "text": "It must disable HTTPS" },
+            { "id": "d", "text": "It must remove all headings" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Crawlability and indexability are prerequisites for ranking consideration.",
+          "wrongExplanations": {
+            "b": "Organic ranking is not the same as buying ads without a page.",
+            "c": "HTTPS is a modern foundation, not something to disable.",
+            "d": "Headings help structure; removing them is not a ranking prerequisite."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why does search intent matter so much?",
+          "options": [
+            { "id": "a", "text": "Because every query has the same goal" },
+            { "id": "b", "text": "Because a page targeting the wrong goal mismatches what searchers need and usually underperforms" },
+            { "id": "c", "text": "Because intent replaces the need for content" },
+            { "id": "d", "text": "Because intent only applies to images" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Matching format and substance to the underlying goal is central to SEO success.",
+          "wrongExplanations": {
+            "a": "Intents differ across informational, navigational, commercial, and transactional queries.",
+            "c": "Intent guides content; it does not replace it.",
+            "d": "Intent applies across result types and queries."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What is keyword cannibalization?",
+          "options": [
+            { "id": "a", "text": "Using keywords in conversation with customers" },
+            { "id": "b", "text": "Multiple pages competing for the same intent and confusing users and search engines" },
+            { "id": "c", "text": "Writing a clear H1" },
+            { "id": "d", "text": "Submitting a sitemap" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Near-duplicate pages for tiny variants often dilute performance; clustering is healthier.",
+          "wrongExplanations": {
+            "a": "Customer language research is useful, not cannibalization.",
+            "c": "Clear headings are good practice.",
+            "d": "Sitemaps help discovery; they are unrelated to this definition."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is a practical first step in keyword work?",
+          "options": [
+            { "id": "a", "text": "Publish twenty synonym pages immediately" },
+            { "id": "b", "text": "List core audience topics, expand queries, then cluster related intents into page plans" },
+            { "id": "c", "text": "Ignore customer support language" },
+            { "id": "d", "text": "Choose keywords at random from a dictionary" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Topic expansion plus clustering produces sustainable page strategies.",
+          "wrongExplanations": {
+            "a": "Synonym spam creates cannibalization and thin overlap.",
+            "c": "Support and sales language is valuable research.",
+            "d": "Random selection ignores demand and relevance."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which statement best describes SEO?",
+          "options": [
+            { "id": "a", "text": "A single secret trick that guarantees #1 forever" },
+            { "id": "b", "text": "A set of habits across useful content, site structure, technical health, and reputation" },
+            { "id": "c", "text": "Only meta keyword stuffing" },
+            { "id": "d", "text": "Only buying links in bulk" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Sustainable SEO is multidisciplinary and user-centered, not a single hack.",
+          "wrongExplanations": {
+            "a": "No ethical practice guarantees permanent #1 rankings.",
+            "c": "Meta keywords are not a modern major lever.",
+            "d": "Manipulative link buying is risky and against guidelines."
+          }
+        }
+      ]
+    },
+    {
+      "id": "seo-checkpoint-2",
+      "title": "Checkpoint 2 — On-Page and Technical Foundations",
+      "intro": "Test content clarity, architecture, and technical basics.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What should on-page SEO prioritize?",
+          "options": [
+            { "id": "a", "text": "Writing for humans first with clear titles, structure, and thorough answers" },
+            { "id": "b", "text": "Inserting synonyms into every sentence whether useful or not" },
+            { "id": "c", "text": "Removing internal links" },
+            { "id": "d", "text": "Hiding the main answer below unrelated stories" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Helpful, scannable pages aligned to intent outperform keyword theater.",
+          "wrongExplanations": {
+            "b": "Stuffing harms readability and trust.",
+            "c": "Internal links help users and crawlers navigate.",
+            "d": "Users should confirm they are in the right place quickly."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why is internal linking important?",
+          "options": [
+            { "id": "a", "text": "It helps users continue to related helpful pages and helps crawlers discover structure" },
+            { "id": "b", "text": "It automatically buys backlinks from newspapers" },
+            { "id": "c", "text": "It replaces the need for titles" },
+            { "id": "d", "text": "It forces every page to be identical" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Thoughtful internal links turn a pile of posts into a navigable library.",
+          "wrongExplanations": {
+            "b": "Internal links are within your site; they are not purchased external PR.",
+            "c": "Titles remain essential.",
+            "d": "Linked pages should remain distinct and useful."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which item belongs on a beginner technical SEO checklist?",
+          "options": [
+            { "id": "a", "text": "HTTPS, mobile-friendly pages, sitemaps, and avoiding accidental crawl blocks" },
+            { "id": "b", "text": "Disabling the sitemap forever" },
+            { "id": "c", "text": "Creating soft 404s intentionally for important URLs" },
+            { "id": "d", "text": "Changing URLs weekly with no redirects" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Technical foundations ensure engines can access and understand important pages.",
+          "wrongExplanations": {
+            "b": "Sitemaps help discovery.",
+            "c": "Soft 404s confuse indexing and users.",
+            "d": "Unredirected URL churn breaks equity and bookmarks."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "When is longer content better?",
+          "options": [
+            { "id": "a", "text": "Always, because word count alone ranks pages" },
+            { "id": "b", "text": "Only when additional length adds useful coverage that better satisfies intent" },
+            { "id": "c", "text": "Never; short pages always win" },
+            { "id": "d", "text": "Only when repeating the same paragraph ten times" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Usefulness matters more than raw length; fluff is still thin.",
+          "wrongExplanations": {
+            "a": "Length without value is not a reliable strategy.",
+            "c": "Some intents need depth; brevity is not universally best.",
+            "d": "Repetition without new value is poor practice."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What is a canonical tag used for at a beginner level?",
+          "options": [
+            { "id": "a", "text": "Choosing a preferred URL when duplicate or highly similar versions exist" },
+            { "id": "b", "text": "Increasing font size in SERPs" },
+            { "id": "c", "text": "Paying for ads" },
+            { "id": "d", "text": "Deleting Search Console" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Canonicals help consolidate signals when similar URLs could compete.",
+          "wrongExplanations": {
+            "b": "Canonicals are not typography controls for SERPs.",
+            "c": "Paid ads are a separate channel.",
+            "d": "Search Console remains useful for diagnostics."
+          }
+        }
+      ]
+    },
+    {
+      "id": "seo-final",
+      "title": "Final Quiz — Reputation, Measurement, and Ethics",
+      "intro": "Apply links, metrics, myths, and sustainable SEO judgment.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Which link-building approach aligns with sustainable SEO?",
+          "options": [
+            { "id": "a", "text": "Buying shady bulk links from unrelated networks" },
+            { "id": "b", "text": "Creating citable useful work and earning mentions through genuine value and relationships" },
+            { "id": "c", "text": "Spam-commenting the same URL everywhere" },
+            { "id": "d", "text": "Cloaking different content to bots and humans" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Reputation grows from usefulness and trust, not manipulative schemes.",
+          "wrongExplanations": {
+            "a": "Paid manipulative links are risky and against guidelines.",
+            "c": "Spam comments harm reputation and waste effort.",
+            "d": "Cloaking is deceptive and prohibited."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why are rankings alone an incomplete SEO metric?",
+          "options": [
+            { "id": "a", "text": "Because ranking #1 for a vanity query may produce little business value" },
+            { "id": "b", "text": "Because clicks and conversions never matter" },
+            { "id": "c", "text": "Because Search Console cannot show queries" },
+            { "id": "d", "text": "Because organic search has no landing pages" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Business outcomes and qualified demand matter more than vanity positions.",
+          "wrongExplanations": {
+            "b": "Clicks and conversions are central to evaluating impact.",
+            "c": "Search Console does provide query and page insights.",
+            "d": "Organic results send users to landing pages."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which statement about meta keywords is most accurate for modern beginners?",
+          "options": [
+            { "id": "a", "text": "They remain the primary ranking lever for major search engines" },
+            { "id": "b", "text": "They are not a meaningful major ranking lever the way old myths suggest" },
+            { "id": "c", "text": "They replace title tags completely" },
+            { "id": "d", "text": "They force instant #1 rankings" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Beginners should invest in useful content and technical clarity, not outdated meta-keyword superstition.",
+          "wrongExplanations": {
+            "a": "That belief is outdated for mainstream search.",
+            "c": "Title tags remain important.",
+            "d": "No meta tag guarantees instant #1."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is a healthy beginner SEO roadmap order?",
+          "options": [
+            { "id": "a", "text": "Start with exotic tactics while important pages are blocked and confusing" },
+            { "id": "b", "text": "Fix crawl/index blockers, improve high-potential pages, fill intent gaps, then strengthen links and iterate with data" },
+            { "id": "c", "text": "Change all URLs weekly first" },
+            { "id": "d", "text": "Ignore Search Console permanently" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Foundations and useful pages first; advanced tactics later.",
+          "wrongExplanations": {
+            "a": "Exotic tactics cannot compensate for broken basics.",
+            "c": "URL churn without need creates avoidable damage.",
+            "d": "Diagnostics tools help you learn what is happening."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "How should you treat a tactic whose main purpose is to fool a ranking system?",
+          "options": [
+            { "id": "a", "text": "As a warning sign that the tactic is likely unsustainable or against guidelines" },
+            { "id": "b", "text": "As the gold standard of professional SEO" },
+            { "id": "c", "text": "As required for every informational article" },
+            { "id": "d", "text": "As a replacement for understanding users" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Ethical, durable SEO helps people first rather than treating engines as enemies to trick.",
+          "wrongExplanations": {
+            "b": "Manipulation is not professional best practice.",
+            "c": "Helpful content does not require deception.",
+            "d": "User understanding remains the core."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "A page ranks well but users bounce immediately because it mismatches intent. What should you do?",
+          "options": [
+            { "id": "a", "text": "Celebrate rankings and ignore satisfaction" },
+            { "id": "b", "text": "Rewrite or retarget the page to satisfy the query’s actual goal and format expectations" },
+            { "id": "c", "text": "Stuff more synonyms into the meta keywords field" },
+            { "id": "d", "text": "Remove HTTPS to increase trust" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Sustainable SEO aligns the page with what searchers came to accomplish.",
+          "wrongExplanations": {
+            "a": "Unsatisfied users undermine long-term performance and brand trust.",
+            "c": "Synonym stuffing does not fix intent mismatch.",
+            "d": "Removing HTTPS harms security and trust."
+          }
+        }
+      ]
+    }
+  ]
+}

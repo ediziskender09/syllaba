@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "speaking-checkpoint-1",
+      "title": "Checkpoint 1 — Audience, Spine, and Structure",
+      "intro": "Check whether you understand audience outcomes, core messages, structure, and evidence.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What should you define before opening slide software?",
+          "options": [
+            { "id": "a", "text": "How many animations to use" },
+            { "id": "b", "text": "The audience outcome—what they should understand, decide, or do" },
+            { "id": "c", "text": "Which stock photos feel premium" },
+            { "id": "d", "text": "A list of apologies for being nervous" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Talks are designed backwards from audience change, not forwards from decoration.",
+          "wrongExplanations": {
+            "a": "Animations are secondary to purpose.",
+            "c": "Visual polish cannot replace a clear outcome.",
+            "d": "Apologies train the room to expect little."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is a talk’s spine?",
+          "options": [
+            { "id": "a", "text": "A one-sentence core message that the talk supports" },
+            { "id": "b", "text": "The Wi-Fi password for the room" },
+            { "id": "c", "text": "A list of every topic you might mention" },
+            { "id": "d", "text": "The slide template brand colors" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "The spine is the single core point that keeps the talk coherent.",
+          "wrongExplanations": {
+            "b": "Logistics are not the message spine.",
+            "c": "Too many topics create competing talks.",
+            "d": "Branding is not message structure."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which opening is strongest?",
+          "options": [
+            { "id": "a", "text": "“I did not have much time, but here is a long history dump.”" },
+            { "id": "b", "text": "A stakes-based open that states relevance and the decision path ahead" },
+            { "id": "c", "text": "Reading the agenda slide word for word with no stakes" },
+            { "id": "d", "text": "Starting with unrelated jokes about people in the room" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Strong openings establish why the talk matters now and where it is going.",
+          "wrongExplanations": {
+            "a": "Apologies and history dumps weaken attention.",
+            "c": "Logistics without stakes rarely engage.",
+            "d": "Humor that targets people is unsafe and unprofessional."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "How should workplace storytelling usually work?",
+          "options": [
+            { "id": "a", "text": "Long fiction unrelated to the point" },
+            { "id": "b", "text": "A tight sequence with tension and change that serves the spine" },
+            { "id": "c", "text": "Only statistics with no human context ever" },
+            { "id": "d", "text": "A story that mainly showcases your heroism" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Useful stories are concise, true-to-purpose narratives that make ideas memorable.",
+          "wrongExplanations": {
+            "a": "Unrelated fiction wastes time.",
+            "c": "Evidence matters, but examples often unlock understanding.",
+            "d": "Audience identification beats self-heroics."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What increases credibility when you present claims?",
+          "options": [
+            { "id": "a", "text": "Hiding assumptions and limits" },
+            { "id": "b", "text": "Pairing claims with proof and labeling uncertainty honestly" },
+            { "id": "c", "text": "Using as much jargon as possible" },
+            { "id": "d", "text": "Refusing to give any examples" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Proof plus honest limits builds trust more than fake certainty.",
+          "wrongExplanations": {
+            "a": "Hidden assumptions later destroy trust.",
+            "c": "Jargon often hides unclear thinking.",
+            "d": "Examples help audiences grasp abstract claims."
+          }
+        }
+      ]
+    },
+    {
+      "id": "speaking-checkpoint-2",
+      "title": "Checkpoint 2 — Slides, Delivery, and Nerves",
+      "intro": "Apply slide craft, rehearsal, delivery mechanics, and nerve management.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is a strong default for slide design?",
+          "options": [
+            { "id": "a", "text": "Paragraphs of text you read aloud" },
+            { "id": "b", "text": "One idea per slide with claim-style titles" },
+            { "id": "c", "text": "As many bullet points as possible" },
+            { "id": "d", "text": "Tiny fonts to fit everything" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Slides should support speech with focused visuals and point-driven titles.",
+          "wrongExplanations": {
+            "a": "Teleprompter slides disengage rooms.",
+            "c": "Bullet walls create reading mode.",
+            "d": "Tiny fonts fail accessibility and attention."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which rehearsal approach is most effective?",
+          "options": [
+            { "id": "a", "text": "Only reading the deck silently in your head" },
+            { "id": "b", "text": "Rehearsing out loud with slides, timing, and at least one failure scenario" },
+            { "id": "c", "text": "Memorizing every word and never using cues" },
+            { "id": "d", "text": "Skipping rehearsal if you feel confident" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Out-loud, timed, failure-aware rehearsal improves real performance.",
+          "wrongExplanations": {
+            "a": "Silent reading does not train delivery.",
+            "c": "Over-memorization often sounds brittle.",
+            "d": "Confidence without practice is fragile."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "How should speakers treat pre-talk nerves?",
+          "options": [
+            { "id": "a", "text": "As proof they should never speak" },
+            { "id": "b", "text": "As activation energy managed with preparation, breath, and audience focus" },
+            { "id": "c", "text": "As something that vanishes only after fifty jokes" },
+            { "id": "d", "text": "As a reason to skip the ask at the end" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Nerves are common; systems and outward focus make them manageable.",
+          "wrongExplanations": {
+            "a": "Nerves are normal, not a verdict.",
+            "c": "Jokes are not a nerve strategy.",
+            "d": "The ask is often the point of the talk."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is a good Q&A behavior when you do not know an answer?",
+          "options": [
+            { "id": "a", "text": "Invent a confident guess to protect ego" },
+            { "id": "b", "text": "Say what you know, what you do not, and how you will follow up" },
+            { "id": "c", "text": "Ignore the question and advance slides" },
+            { "id": "d", "text": "Attack the questioner’s motives" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Honest follow-up paths preserve trust better than performance guessing.",
+          "wrongExplanations": {
+            "a": "Guessing destroys credibility when wrong.",
+            "c": "Ignoring questions reads as evasion.",
+            "d": "Hostility escalates and weakens professionalism."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which mistake is common among beginners?",
+          "options": [
+            { "id": "a", "text": "Defining the audience outcome first" },
+            { "id": "b", "text": "Building slides before clarifying the message and stuffing too many points into the timebox" },
+            { "id": "c", "text": "Rehearsing aloud with a clicker" },
+            { "id": "d", "text": "Ending with a clear ask" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Slide-first, overstuffed talks are a classic failure pattern.",
+          "wrongExplanations": {
+            "a": "That is a best practice, not a mistake.",
+            "c": "That rehearsal is recommended.",
+            "d": "Clear asks are strengths."
+          }
+        }
+      ]
+    },
+    {
+      "id": "speaking-final",
+      "title": "Final Quiz — Formats, Ethics, and Follow-Through",
+      "intro": "Use the full lesson. Focus on formats, inclusive delivery, ethics, and professional follow-through.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "How should an executive briefing usually be shaped?",
+          "options": [
+            { "id": "a", "text": "Chronological history with no recommendation" },
+            { "id": "b", "text": "Bottom line first, options, recommendation, and risks" },
+            { "id": "c", "text": "Only jokes and vibes" },
+            { "id": "d", "text": "Every technical log line from the project" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Executives need decision-ready structure, not a tour of raw chronology.",
+          "wrongExplanations": {
+            "a": "History without a point wastes scarce attention.",
+            "c": "Tone without substance fails the format.",
+            "d": "Excess detail belongs in appendix or pre-read."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is an inclusive practice in hybrid talks?",
+          "options": [
+            { "id": "a", "text": "Ignoring chat and only calling on people in the room" },
+            { "id": "b", "text": "Repeating remote questions and pausing to include remote participants" },
+            { "id": "c", "text": "Using idioms that only locals understand for fun" },
+            { "id": "d", "text": "Skipping descriptions of charts" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Hybrid inclusion requires intentional facilitation so remote voices count.",
+          "wrongExplanations": {
+            "a": "Proximity bias excludes remote attendees.",
+            "c": "Insider idioms can alienate.",
+            "d": "Verbal chart description improves accessibility."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which chart behavior is ethically sound?",
+          "options": [
+            { "id": "a", "text": "Cropping axes to manufacture drama without disclosure" },
+            { "id": "b", "text": "Choosing honest chart types, labeling clearly, and avoiding misleading visuals" },
+            { "id": "c", "text": "Hiding definitions so only you can interpret" },
+            { "id": "d", "text": "Cherry-picking only flattering points while denying risks exist" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Ethical persuasion illuminates trade-offs; misleading visuals cost long-term trust.",
+          "wrongExplanations": {
+            "a": "Manufactured drama is misleading.",
+            "c": "Hidden definitions block informed decisions.",
+            "d": "Burying risks is manipulation, not leadership."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What should happen after many workplace talks?",
+          "options": [
+            { "id": "a", "text": "Nothing; speaking ends when you sit down" },
+            { "id": "b", "text": "A short summary with spine, decision, owners, dates, and promised follow-ups" },
+            { "id": "c", "text": "A complete rewrite of history to avoid accountability" },
+            { "id": "d", "text": "Immediate deletion of all questions asked" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Follow-through converts a talk into coordinated action.",
+          "wrongExplanations": {
+            "a": "Handoff failure kills many talks.",
+            "c": "Accountability is part of credibility.",
+            "d": "Questions often contain decisions and risks to track."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "If you go blank during a talk, what is a strong recovery?",
+          "options": [
+            { "id": "a", "text": "Fill the air with rapid apologies and unrelated stories" },
+            { "id": "b", "text": "Pause, check notes, restate the last clear point, or cleanly restart the explanation" },
+            { "id": "c", "text": "End the talk immediately without the ask" },
+            { "id": "d", "text": "Blame the audience for not helping" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Composed resets look professional; filler fog looks worse than a short pause.",
+          "wrongExplanations": {
+            "a": "Rapid filler increases confusion.",
+            "c": "You can recover and still complete the ask.",
+            "d": "Blame destroys rapport."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which statement captures the course’s view of confidence?",
+          "options": [
+            { "id": "a", "text": "Wait until fear disappears before practicing" },
+            { "id": "b", "text": "Confidence often follows competence loops of clarity, rehearsal, delivery, and feedback" },
+            { "id": "c", "text": "Only naturally extroverted people can present well" },
+            { "id": "d", "text": "More slides automatically create more confidence" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Confidence is treated as a byproduct of preparation systems and audience service.",
+          "wrongExplanations": {
+            "a": "Practice precedes confidence for most people.",
+            "c": "Craft is learnable across personalities.",
+            "d": "Slide count is not a confidence engine."
+          }
+        }
+      ]
+    }
+  ]
+}

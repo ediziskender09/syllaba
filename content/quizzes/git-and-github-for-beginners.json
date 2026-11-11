@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "git-checkpoint-1",
+      "title": "Checkpoint 1 — Repos, Staging, and Commits",
+      "intro": "Check core Git mental models before branching and collaboration.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is the staging area for?",
+          "options": [
+            { "id": "a", "text": "Hosting the only copy of project history on GitHub" },
+            { "id": "b", "text": "Preparing a selected set of changes for the next commit" },
+            { "id": "c", "text": "Compiling code automatically" },
+            { "id": "d", "text": "Deleting remote branches" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Staging lets you craft the exact snapshot that the next commit will record.",
+          "wrongExplanations": {
+            "a": "History lives in the repository; remotes are separate.",
+            "c": "Git does not compile your application in the staging area.",
+            "d": "Branch deletion is a different operation."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which command shows whether files are modified, staged, or untracked?",
+          "options": [
+            { "id": "a", "text": "git paint" },
+            { "id": "b", "text": "git status" },
+            { "id": "c", "text": "git merge --abort --please" },
+            { "id": "d", "text": "git password" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "git status is the everyday dashboard for working tree and staging state.",
+          "wrongExplanations": {
+            "a": "That is not a Git command.",
+            "c": "Merge abort is for stopping a merge, not routine status.",
+            "d": "That is not how Git reports file state."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What makes a strong commit message?",
+          "options": [
+            { "id": "a", "text": "A vague label like \"update\" or \"final\"" },
+            { "id": "b", "text": "A clear explanation of why the change exists, often in imperative style" },
+            { "id": "c", "text": "A list of every keystroke you made" },
+            { "id": "d", "text": "No message at all" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Useful messages communicate intent so history remains searchable and reviewable.",
+          "wrongExplanations": {
+            "a": "Vague messages hide intent and hurt debugging.",
+            "c": "Commit messages summarize purpose; they are not keystroke logs.",
+            "d": "Commits require messages for collaboration and clarity."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is the difference between Git and GitHub?",
+          "options": [
+            { "id": "a", "text": "They are identical products with different logos" },
+            { "id": "b", "text": "Git is version control software; GitHub is a hosting/collaboration platform built around Git repos" },
+            { "id": "c", "text": "GitHub replaces the need for commits" },
+            { "id": "d", "text": "Git can only store images, while GitHub stores code" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Git works locally as VCS; GitHub adds remotes, PRs, issues, and team workflows.",
+          "wrongExplanations": {
+            "a": "They are related but not the same thing.",
+            "c": "Commits remain central whether or not you use GitHub.",
+            "d": "Both can store many file types; the distinction is not file-type based."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why inspect git diff before committing?",
+          "options": [
+            { "id": "a", "text": "Because commits are impossible without printing diffs to paper" },
+            { "id": "b", "text": "To review exact changes and catch accidental debug code, secrets, or unrelated edits" },
+            { "id": "c", "text": "Because diff deletes remote history" },
+            { "id": "d", "text": "Because diff renames the default branch" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Reading diffs is a professional safeguard before recording history.",
+          "wrongExplanations": {
+            "a": "Diff review is a habit, not a paper requirement.",
+            "c": "git diff inspects changes; it does not delete remote history.",
+            "d": "Branch renaming is a separate action."
+          }
+        }
+      ]
+    },
+    {
+      "id": "git-checkpoint-2",
+      "title": "Checkpoint 2 — Branches, Remotes, and Safety",
+      "intro": "Test branching, remotes, ignores, and undo judgment.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is a branch in Git?",
+          "options": [
+            { "id": "a", "text": "A movable pointer to a commit used for parallel lines of work" },
+            { "id": "b", "text": "A forced deletion of all history" },
+            { "id": "c", "text": "A GUI-only label with no commit meaning" },
+            { "id": "d", "text": "A replacement for commit messages" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Branches point at commits and let teams develop features in isolation.",
+          "wrongExplanations": {
+            "b": "Creating a branch does not delete history.",
+            "c": "Branches are real Git references, not cosmetic GUI stickers.",
+            "d": "Messages and branches solve different problems."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What should you do if a secret API key appears in git status as a new file?",
+          "options": [
+            { "id": "a", "text": "Commit it quickly so it is backed up" },
+            { "id": "b", "text": "Stop, keep it out of the commit, add it to .gitignore, and protect/rotate credentials as needed" },
+            { "id": "c", "text": "Rename the key file to README.md and commit" },
+            { "id": "d", "text": "Push first, then decide later" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Secrets must not enter history; prevention and rotation beat cleanup.",
+          "wrongExplanations": {
+            "a": "Committing secrets is a security incident waiting to happen.",
+            "c": "Renaming does not make a secret safe to commit.",
+            "d": "Pushing spreads the problem to the remote."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "When is git revert generally safer than rewriting shared history?",
+          "options": [
+            { "id": "a", "text": "When the commit was never created" },
+            { "id": "b", "text": "When a bad commit is already shared and others may depend on it" },
+            { "id": "c", "text": "When you want to delete Git from the computer" },
+            { "id": "d", "text": "When you only need to view status" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Revert adds a new undoing commit and avoids disrupting collaborators who already pulled.",
+          "wrongExplanations": {
+            "a": "There is nothing to revert if no commit exists.",
+            "c": "Revert does not uninstall Git.",
+            "d": "Status viewing does not require revert."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What does git push do?",
+          "options": [
+            { "id": "a", "text": "Downloads and applies remote commits only" },
+            { "id": "b", "text": "Uploads local commits to a remote repository" },
+            { "id": "c", "text": "Creates a .gitignore automatically" },
+            { "id": "d", "text": "Resolves all merge conflicts magically" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Push publishes local commits to the configured remote branch.",
+          "wrongExplanations": {
+            "a": "Fetching/pulling integrate remote updates.",
+            "c": "Ignore files are created manually or by templates.",
+            "d": "Conflicts still need human resolution."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why do teams use feature branches instead of committing unfinished work directly to main?",
+          "options": [
+            { "id": "a", "text": "Because main cannot store commits" },
+            { "id": "b", "text": "To isolate in-progress work and keep the stable line cleaner until review/integration" },
+            { "id": "c", "text": "Because GitHub rejects all commits to any branch named main" },
+            { "id": "d", "text": "Because branches disable git status" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Feature branches separate experiments and unfinished work from the shared stable branch.",
+          "wrongExplanations": {
+            "a": "main stores commits like any branch.",
+            "c": "GitHub does not universally reject main commits; protections are configurable.",
+            "d": "Status works on every branch."
+          }
+        }
+      ]
+    },
+    {
+      "id": "git-final",
+      "title": "Final Quiz — Pull Requests, Conflicts, and Collaboration",
+      "intro": "Apply GitHub collaboration habits and conflict judgment.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is a pull request primarily for?",
+          "options": [
+            { "id": "a", "text": "Proposing that one branch be merged into another with discussion and review" },
+            { "id": "b", "text": "Deleting the remote permanently" },
+            { "id": "c", "text": "Replacing the need for commits" },
+            { "id": "d", "text": "Formatting CSS only" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "PRs are the collaboration unit for reviewing and integrating branch work.",
+          "wrongExplanations": {
+            "b": "PRs integrate changes; they are not remote deletion tools.",
+            "c": "Commits still form the history inside the PR.",
+            "d": "PRs can include any project files, not only CSS."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "A merge conflict appears. What should you do?",
+          "options": [
+            { "id": "a", "text": "Ignore marker lines and push anyway" },
+            { "id": "b", "text": "Edit the file to the intended final content, remove conflict markers, stage, and complete the merge" },
+            { "id": "c", "text": "Delete the repository and start without Git" },
+            { "id": "d", "text": "Assume Git chose correctly and never open the file" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Conflicts require human judgment to produce the correct combined result.",
+          "wrongExplanations": {
+            "a": "Leaving markers breaks code and documents.",
+            "c": "Conflicts are normal and solvable without abandoning Git.",
+            "d": "Git stops precisely because it cannot choose safely."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which quality most improves a pull request for reviewers?",
+          "options": [
+            { "id": "a", "text": "Mixing unrelated refactors, features, and formatting in one giant diff" },
+            { "id": "b", "text": "A focused change with a clear summary and test notes" },
+            { "id": "c", "text": "No title and no description" },
+            { "id": "d", "text": "Force-pushing every minute without explanation" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Reviewers need a coherent story and a manageable diff to give useful feedback.",
+          "wrongExplanations": {
+            "a": "Kitchen-sink PRs hide bugs and exhaust reviewers.",
+            "c": "Context is essential for review quality.",
+            "d": "Noisy history updates without communication hurt collaboration."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Why keep node_modules out of Git with .gitignore in typical JS projects?",
+          "options": [
+            { "id": "a", "text": "Because dependencies can be restored from package manifests and bloating history hurts the repo" },
+            { "id": "b", "text": "Because Git cannot store folders" },
+            { "id": "c", "text": "Because GitHub bans all JavaScript" },
+            { "id": "d", "text": "Because ignored files can never be created locally" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Dependencies are reinstallable; committing them creates huge, noisy repositories.",
+          "wrongExplanations": {
+            "b": "Git can store folders/files; ignoring is a choice.",
+            "c": "JavaScript projects are extremely common on GitHub.",
+            "d": "Ignored files can exist locally; they are simply untracked."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Before experimenting with an unfamiliar undo command, what is a safe habit?",
+          "options": [
+            { "id": "a", "text": "Run reset --hard on main immediately" },
+            { "id": "b", "text": "Create a backup branch or otherwise ensure you can recover, especially if work matters" },
+            { "id": "c", "text": "Delete .git to simplify things" },
+            { "id": "d", "text": "Disable git status forever" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A safety branch preserves a recoverable pointer before risky experiments.",
+          "wrongExplanations": {
+            "a": "Hard resets on shared branches can destroy work.",
+            "c": "Deleting .git removes local history tracking.",
+            "d": "Status is a core safety tool."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "A command completes without error after a merge. What does that guarantee?",
+          "options": [
+            { "id": "a", "text": "The product behavior is definitely correct" },
+            { "id": "b", "text": "Only that Git could complete the operation—not that the combined code meets product intent" },
+            { "id": "c", "text": "All reviewers approved the change" },
+            { "id": "d", "text": "No tests are needed ever again" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Git success means history operations finished; quality still needs human and automated verification.",
+          "wrongExplanations": {
+            "a": "Merged code can still be logically wrong.",
+            "c": "Command success is unrelated to review approvals.",
+            "d": "Testing remains essential after merges."
+          }
+        }
+      ]
+    }
+  ]
+}

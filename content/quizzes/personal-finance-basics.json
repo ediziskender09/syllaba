@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "finance-checkpoint-1",
+      "title": "Checkpoint 1 — Cash Flow, Budgets, and Buffers",
+      "intro": "Check whether you understand cash flow, realistic budgeting, needs versus wants, and emergency savings.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is cash flow in personal finance?",
+          "options": [
+            { "id": "a", "text": "Only the money in your investment account" },
+            { "id": "b", "text": "Money in minus money out over a period" },
+            { "id": "c", "text": "A guaranteed monthly profit from budgeting" },
+            { "id": "d", "text": "Your credit score expressed as dollars" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Cash flow measures income versus spending over time and shows whether you can build buffers or are falling behind.",
+          "wrongExplanations": {
+            "a": "Investments are assets; cash flow is about inflows and outflows.",
+            "c": "Budgets do not guarantee profit.",
+            "d": "Credit scores are separate from cash flow."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why should irregular annual expenses be converted to monthly averages in a budget?",
+          "options": [
+            { "id": "a", "text": "Because banks legally require it" },
+            { "id": "b", "text": "So predictable ‘surprises’ are funded before they hit" },
+            { "id": "c", "text": "Because irregular expenses do not count as spending" },
+            { "id": "d", "text": "To guarantee investment returns" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Averaging irregular costs into monthly plans prevents false surpluses and creates sinking funds.",
+          "wrongExplanations": {
+            "a": "This is a planning practice, not a legal banking rule.",
+            "c": "Irregular expenses still use real money.",
+            "d": "Budgeting averages are unrelated to guaranteed returns—which do not exist here."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which approach best describes a budget that survives real life?",
+          "options": [
+            { "id": "a", "text": "Assume you will never spend on enjoyment" },
+            { "id": "b", "text": "Track real patterns, set ambitious-but-usable limits, and automate savings" },
+            { "id": "c", "text": "Copy a stranger’s viral spreadsheet without changes" },
+            { "id": "d", "text": "Ignore tracking because intuition is enough" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Realistic budgets start from actual behavior, leave room for living, and use automation.",
+          "wrongExplanations": {
+            "a": "Punitive budgets often collapse.",
+            "c": "Templates need personalization.",
+            "d": "Tracking reveals leaks intuition misses."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is the primary purpose of an emergency fund?",
+          "options": [
+            { "id": "a", "text": "Funding vacations without guilt" },
+            { "id": "b", "text": "Covering unexpected necessary expenses and income shocks" },
+            { "id": "c", "text": "Guaranteeing stock market gains" },
+            { "id": "d", "text": "Replacing the need for any insurance" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Emergency funds provide liquid resilience for true shocks, not lifestyle spending.",
+          "wrongExplanations": {
+            "a": "Vacations belong in sinking funds or discretionary savings.",
+            "c": "Cash buffers do not guarantee market returns.",
+            "d": "Insurance still covers catastrophic risks differently."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which statement reflects a healthy money mindset from this lesson?",
+          "options": [
+            { "id": "a", "text": "Every dollar spent on enjoyment is a moral failure" },
+            { "id": "b", "text": "Money is a tool for safety, freedom, and values-based choices within trade-offs" },
+            { "id": "c", "text": "Guaranteed-return schemes are the fastest responsible path" },
+            { "id": "d", "text": "Net worth equals personal worth" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The lesson treats money as a tool with trade-offs, not shame or hype.",
+          "wrongExplanations": {
+            "a": "Values-based wants can be planned without shame.",
+            "c": "Guaranteed-return promises are rejected as hype.",
+            "d": "Financial metrics are not identity scores."
+          }
+        }
+      ]
+    },
+    {
+      "id": "finance-checkpoint-2",
+      "title": "Checkpoint 2 — Debt, Credit, and Saving Goals",
+      "intro": "Apply debt strategy, credit basics, sinking funds, and decision discipline.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is the avalanche debt method?",
+          "options": [
+            { "id": "a", "text": "Paying whichever bill feels luckiest" },
+            { "id": "b", "text": "Putting extra payments toward the highest interest rate first" },
+            { "id": "c", "text": "Ignoring minimum payments to free cash" },
+            { "id": "d", "text": "Investing rent money to outpace interest" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Avalanche prioritizes the costliest debt mathematically while maintaining other minimums.",
+          "wrongExplanations": {
+            "a": "Random focus is not a method.",
+            "c": "Skipping minimums risks fees and credit damage.",
+            "d": "Using essential money for speculation is dangerous."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why can paying only minimums on high-interest revolving debt be problematic?",
+          "options": [
+            { "id": "a", "text": "Because minimums are illegal" },
+            { "id": "b", "text": "Because balances can linger for years while interest costs pile up" },
+            { "id": "c", "text": "Because minimums raise your salary" },
+            { "id": "d", "text": "Because minimums guarantee a perfect credit score" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Minimums keep accounts current but can make payoff slow and expensive.",
+          "wrongExplanations": {
+            "a": "Minimums are allowed; they are just often inefficient.",
+            "c": "Payments do not increase salary.",
+            "d": "Credit outcomes depend on broader behavior."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What are sinking funds best used for?",
+          "options": [
+            { "id": "a", "text": "Gambling on tips" },
+            { "id": "b", "text": "Planned irregular expenses like premiums, travel, or device replacement" },
+            { "id": "c", "text": "Replacing all insurance forever" },
+            { "id": "d", "text": "Hiding spending from yourself" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Sinking funds turn expected irregular costs into monthly savings so they are not emergencies.",
+          "wrongExplanations": {
+            "a": "Speculation is not a sinking fund purpose.",
+            "c": "Insurance remains important for catastrophic risk.",
+            "d": "Good sinking funds increase clarity, not secrecy."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which habit most reliably helps everyday financial control?",
+          "options": [
+            { "id": "a", "text": "Automating savings and bill payments on payday" },
+            { "id": "b", "text": "Checking social media lifestyles for targets" },
+            { "id": "c", "text": "Waiting until a crisis to look at statements" },
+            { "id": "d", "text": "Memorizing get-rich-quick slogans" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Automation makes good defaults easier than relying on memory and mood.",
+          "wrongExplanations": {
+            "b": "Comparison often fuels lifestyle creep.",
+            "c": "Crisis-only attention is reactive and costly.",
+            "d": "Hype slogans are not a control system."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Before a large non-urgent purchase, what does the lesson recommend?",
+          "options": [
+            { "id": "a", "text": "Buy immediately so you do not miss out" },
+            { "id": "b", "text": "Pause and check budget fit, opportunity cost, and total financed cost if any" },
+            { "id": "c", "text": "Finance it regardless of interest" },
+            { "id": "d", "text": "Drain the emergency fund first" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A deliberate pause protects cash flow and values-based choices.",
+          "wrongExplanations": {
+            "a": "Urgency is often a marketing tactic.",
+            "c": "Interest costs matter.",
+            "d": "Emergency funds are for true emergencies."
+          }
+        }
+      ]
+    },
+    {
+      "id": "finance-final",
+      "title": "Final Quiz — Investing Literacy, Risk, and Systems",
+      "intro": "Use the full lesson. Focus on investing concepts, insurance, mistakes, and durable systems—without guaranteed-return thinking.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Which statement about investing is consistent with this course?",
+          "options": [
+            { "id": "a", "text": "Diversification eliminates all chance of loss" },
+            { "id": "b", "text": "Investing involves risk; diversification and time horizon matter; returns are not guaranteed" },
+            { "id": "c", "text": "Hot tips are safer than learning fees and risk" },
+            { "id": "d", "text": "Short-term rent money should be put in speculative bets" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Beginner literacy emphasizes risk, diversification, horizon, and fees—never guaranteed outcomes.",
+          "wrongExplanations": {
+            "a": "Diversification reduces some risks but not all losses.",
+            "c": "Tips without understanding increase danger.",
+            "d": "Money needed soon should not take market risk lightly."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why do investment fees matter over long periods?",
+          "options": [
+            { "id": "a", "text": "They do not matter at all" },
+            { "id": "b", "text": "Costs compound against you and can meaningfully reduce results" },
+            { "id": "c", "text": "Higher fees always guarantee higher returns" },
+            { "id": "d", "text": "Fees replace the need for an emergency fund" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Even small ongoing costs add up over decades.",
+          "wrongExplanations": {
+            "a": "Fees are a real drag on outcomes.",
+            "c": "Higher fees do not guarantee better performance.",
+            "d": "Cash buffers and investing costs are separate issues."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What is a sound way to think about insurance in a money plan?",
+          "options": [
+            { "id": "a", "text": "Insure tiny losses and ignore catastrophic risks" },
+            { "id": "b", "text": "Prioritize coverage that prevents financial disaster, then tune details carefully" },
+            { "id": "c", "text": "Never buy insurance if you budget well" },
+            { "id": "d", "text": "The cheapest policy is always best" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Insurance is risk transfer for ruinous events, not a substitute for every small expense.",
+          "wrongExplanations": {
+            "a": "That priority is backwards.",
+            "c": "Budgets cannot absorb every catastrophe.",
+            "d": "Fit and coverage matter, not only price."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which scenario best matches lifestyle creep?",
+          "options": [
+            { "id": "a", "text": "Automating more savings after a raise" },
+            { "id": "b", "text": "Increasing spending automatically as income rises so savings never grow" },
+            { "id": "c", "text": "Building a sinking fund for annual bills" },
+            { "id": "d", "text": "Reviewing subscriptions quarterly" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Lifestyle creep absorbs raises into higher spending without intentional goal funding.",
+          "wrongExplanations": {
+            "a": "That is intentional progress.",
+            "c": "Sinking funds are healthy planning.",
+            "d": "Audits reduce waste."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What should you do when a message promises sure profits or overnight wealth?",
+          "options": [
+            { "id": "a", "text": "Treat it as trustworthy education" },
+            { "id": "b", "text": "Step back; treat guaranteed-return pressure as a warning sign" },
+            { "id": "c", "text": "Invest emergency funds immediately to not miss out" },
+            { "id": "d", "text": "Skip reading fees because urgency matters more" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "This course explicitly rejects get-rich-quick and guaranteed-return marketing.",
+          "wrongExplanations": {
+            "a": "Guarantees are a red flag, not education.",
+            "c": "Emergency money has a safety job.",
+            "d": "Urgency often hides costs and risk."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which habit best turns finance knowledge into durable skill?",
+          "options": [
+            { "id": "a", "text": "Reading tips once and never looking at statements" },
+            { "id": "b", "text": "Tracking, planning, automating, reviewing monthly, and adjusting without shame" },
+            { "id": "c", "text": "Comparing net worth publicly every day" },
+            { "id": "d", "text": "Chasing a new strategy whenever markets move" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The core loop—track, plan, automate, review, adjust—builds stability over time.",
+          "wrongExplanations": {
+            "a": "Knowledge without review does not change outcomes.",
+            "c": "Public comparison fuels anxiety more than systems.",
+            "d": "Constant strategy hopping is usually behavior risk."
+          }
+        }
+      ]
+    }
+  ]
+}

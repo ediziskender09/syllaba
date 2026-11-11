@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "docker-checkpoint-1",
+      "title": "Checkpoint 1 — Containers, Images, and Run Basics",
+      "intro": "Check whether you understand why containers exist and how images, containers, and basic runs relate.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What problem do containers primarily help reduce?",
+          "options": [
+            { "id": "a", "text": "The need for any application testing" },
+            { "id": "b", "text": "Environment drift by packaging apps with dependencies for more consistent runs" },
+            { "id": "c", "text": "All security vulnerabilities forever" },
+            { "id": "d", "text": "The need to write application code" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Containers improve environment parity by bundling dependencies and isolating process environments.",
+          "wrongExplanations": {
+            "a": "Testing remains essential.",
+            "c": "Containers do not automatically secure reckless apps.",
+            "d": "You still write and maintain application code."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "How do containers typically differ from virtual machines?",
+          "options": [
+            { "id": "a", "text": "Containers always emulate full hardware with a guest OS like a heavy VM" },
+            { "id": "b", "text": "Containers usually share the host kernel and isolate processes more lightly than full VMs" },
+            { "id": "c", "text": "VMs cannot run any operating system" },
+            { "id": "d", "text": "Containers and VMs are identical in every way" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Containers share the host kernel and are generally lighter-weight than full VMs for many app workloads.",
+          "wrongExplanations": {
+            "a": "That description fits VMs more than containers.",
+            "c": "VMs commonly run guest operating systems.",
+            "d": "They differ in isolation model and typical resource cost."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What is the relationship between an image and a container?",
+          "options": [
+            { "id": "a", "text": "An image is a running process; a container is a registry only" },
+            { "id": "b", "text": "An image is a template; a container is a runnable instance created from it" },
+            { "id": "c", "text": "They are unrelated marketing terms" },
+            { "id": "d", "text": "A container builds an image every time it prints logs" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Images template containers; many containers can run from one image.",
+          "wrongExplanations": {
+            "a": "That reverses the meanings.",
+            "c": "They are core technical objects.",
+            "d": "Logging does not redefine image builds."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What does publishing a port with `-p 8080:80` generally do?",
+          "options": [
+            { "id": "a", "text": "Deletes the image permanently" },
+            { "id": "b", "text": "Maps a host port to a container port so you can reach the service" },
+            { "id": "c", "text": "Guarantees encryption automatically" },
+            { "id": "d", "text": "Creates a volume named 8080" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Port publishing creates a pathway from the host into the container’s listening port.",
+          "wrongExplanations": {
+            "a": "Port flags are not delete operations.",
+            "c": "Publishing is not the same as securing traffic.",
+            "d": "Volumes are separate from port maps."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why does a container usually stop when its main process exits?",
+          "options": [
+            { "id": "a", "text": "Because Docker forbids long-running software" },
+            { "id": "b", "text": "Because the container’s lifecycle follows its primary process" },
+            { "id": "c", "text": "Because images cannot contain binaries" },
+            { "id": "d", "text": "Because registries delete it instantly" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Containers are process-centric; when the main process ends, the container stops.",
+          "wrongExplanations": {
+            "a": "Long-running services are common.",
+            "c": "Images routinely contain binaries.",
+            "d": "Registries do not delete containers on process exit."
+          }
+        }
+      ]
+    },
+    {
+      "id": "docker-checkpoint-2",
+      "title": "Checkpoint 2 — Dockerfiles, Volumes, and Compose",
+      "intro": "Apply Dockerfile layering, secrets hygiene, volumes, networking, and Compose basics.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Why does Dockerfile instruction order matter for build speed?",
+          "options": [
+            { "id": "a", "text": "Because Docker ignores caching entirely" },
+            { "id": "b", "text": "Because layers are cached and early changes invalidate later layers" },
+            { "id": "c", "text": "Because the first line must always be CMD" },
+            { "id": "d", "text": "Because order changes the host CPU brand" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Layer caching makes putting stable steps earlier a practical performance habit.",
+          "wrongExplanations": {
+            "a": "Caching is central to Docker builds.",
+            "c": "FROM comes first typically; CMD is later.",
+            "d": "Instruction order does not change hardware identity."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What belongs in `.dockerignore` for many projects?",
+          "options": [
+            { "id": "a", "text": "Nothing; always send the entire disk" },
+            { "id": "b", "text": "Local junk like `.git`, dependencies folders, and secret env files you should not bake in" },
+            { "id": "c", "text": "The Dockerfile itself always" },
+            { "id": "d", "text": "Only the application source you need to run" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Ignoring unnecessary and sensitive files shrinks context and reduces secret accidents.",
+          "wrongExplanations": {
+            "a": "Huge contexts slow builds and raise risk.",
+            "c": "You need the Dockerfile to build.",
+            "d": "You generally need to include required source, not exclude it."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why use volumes for databases in containers?",
+          "options": [
+            { "id": "a", "text": "Because databases cannot run in containers otherwise ever" },
+            { "id": "b", "text": "Because container filesystems are treated as ephemeral and data should persist beyond container lifecycle" },
+            { "id": "c", "text": "Because volumes delete data every second" },
+            { "id": "d", "text": "Because volumes replace the need for passwords" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Volumes persist data outside the container’s ephemeral writable layer expectations.",
+          "wrongExplanations": {
+            "a": "They can run, but data loss is the risk without persistence.",
+            "c": "Volumes exist to retain data.",
+            "d": "Auth is separate from storage."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "On a user-defined Docker network, how do services often address each other?",
+          "options": [
+            { "id": "a", "text": "Only by guessing random IPs with no names" },
+            { "id": "b", "text": "By container/service name DNS such as talking to `db` from another service" },
+            { "id": "c", "text": "By emailing the registry" },
+            { "id": "d", "text": "By publishing every port to the public internet mandatorily" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Docker DNS on user-defined networks resolves service/container names for inter-service traffic.",
+          "wrongExplanations": {
+            "a": "Name resolution is a key convenience.",
+            "c": "Networking is not email-based.",
+            "d": "Internal services often should not be published broadly."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What is Docker Compose mainly for at beginner level?",
+          "options": [
+            { "id": "a", "text": "Declaring and running multi-container applications with YAML" },
+            { "id": "b", "text": "Replacing the need for Dockerfiles forever" },
+            { "id": "c", "text": "Mining cryptocurrency inside registries" },
+            { "id": "d", "text": "Editing the Linux kernel automatically" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Compose declares services, networks, and volumes for multi-container apps.",
+          "wrongExplanations": {
+            "b": "You still build images, often via Dockerfiles.",
+            "c": "Irrelevant and inappropriate.",
+            "d": "Compose does not rewrite kernels."
+          }
+        }
+      ]
+    },
+    {
+      "id": "docker-final",
+      "title": "Final Quiz — Hygiene, Debugging, and Professional Practice",
+      "intro": "Use the full lesson. Focus on secrets, debugging, image hygiene, and durable team habits.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Where should production secrets generally not go?",
+          "options": [
+            { "id": "a", "text": "In approved secret managers or runtime injection patterns" },
+            { "id": "b", "text": "Baked into Dockerfiles or public images via copied `.env` files" },
+            { "id": "c", "text": "In orchestrator-supported secret mechanisms" },
+            { "id": "d", "text": "In private team vaults with access control" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Baking secrets into images and Dockerfiles is a classic beginner disaster.",
+          "wrongExplanations": {
+            "a": "That is a safer direction.",
+            "c": "That is a safer direction.",
+            "d": "That is a safer direction."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "An app in a container is unreachable from the host though the process seems up. A common cause is:",
+          "options": [
+            { "id": "a", "text": "The app binding only to `127.0.0.1` inside the container" },
+            { "id": "b", "text": "Using a Dockerfile at all" },
+            { "id": "c", "text": "Naming a volume" },
+            { "id": "d", "text": "Reading logs" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Inside containers, binding to localhost can block published-port access from the host; bind to `0.0.0.0` when appropriate.",
+          "wrongExplanations": {
+            "b": "Dockerfiles are normal and necessary for builds.",
+            "c": "Volumes are unrelated to this symptom.",
+            "d": "Reading logs is diagnostic, not a cause."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What is a benefit of multi-stage builds?",
+          "options": [
+            { "id": "a", "text": "They force you to include all build tools in the final runtime image" },
+            { "id": "b", "text": "They let you build in one stage and copy artifacts into a smaller runtime image" },
+            { "id": "c", "text": "They remove the need for tags" },
+            { "id": "d", "text": "They disable logging forever" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Multi-stage builds shrink runtime images by leaving compilers and build tools behind.",
+          "wrongExplanations": {
+            "a": "That is the opposite goal.",
+            "c": "Tags remain useful.",
+            "d": "Logging remains important."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Why pin image tags like `node:20-alpine` instead of relying on `latest` in teams?",
+          "options": [
+            { "id": "a", "text": "Because reproducibility suffers when `latest` drifts unexpectedly" },
+            { "id": "b", "text": "Because Docker cannot pull numbered tags" },
+            { "id": "c", "text": "Because alpine images cannot run Node" },
+            { "id": "d", "text": "Because pinning disables networking" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Pinned tags make builds more predictable across time and machines.",
+          "wrongExplanations": {
+            "b": "Numbered and specific tags are normal.",
+            "c": "Alpine Node images are commonly used.",
+            "d": "Tagging does not disable networks."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What should you check early when a container exits unexpectedly?",
+          "options": [
+            { "id": "a", "text": "Only the stock wallpaper on your laptop" },
+            { "id": "b", "text": "Exit status via `ps -a` style listings and the container logs" },
+            { "id": "c", "text": "Whether Compose YAML supports poetry exclusively" },
+            { "id": "d", "text": "If the registry can send physical mail" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Status plus logs are the first-line debugging tools.",
+          "wrongExplanations": {
+            "a": "Irrelevant.",
+            "c": "Nonsensical constraint.",
+            "d": "Registries are not postal services."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which habit best reflects professional beginner Docker practice?",
+          "options": [
+            { "id": "a", "text": "Hand-edit production containers as unique snowflakes and never rebuild" },
+            { "id": "b", "text": "Commit Dockerfiles/Compose, avoid secrets in images, rebuild for lasting changes, and document run steps" },
+            { "id": "c", "text": "Publish every port on the internet by default" },
+            { "id": "d", "text": "Assume containers replace app security reviews" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Declarative files, secret hygiene, rebuild discipline, and docs are the durable path.",
+          "wrongExplanations": {
+            "a": "Snowflake containers fight reproducibility.",
+            "c": "Least exposure is safer.",
+            "d": "Application security still matters."
+          }
+        }
+      ]
+    }
+  ]
+}

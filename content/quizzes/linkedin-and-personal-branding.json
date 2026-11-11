@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "linkedin-checkpoint-1",
+      "title": "Checkpoint 1 — Brand, Positioning, and Profile",
+      "intro": "Check whether you understand personal branding ethics, positioning, and core LinkedIn profile elements.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is a practical definition of personal brand in this course?",
+          "options": [
+            { "id": "a", "text": "A costume you invent with no connection to your work" },
+            { "id": "b", "text": "The reputation you intentionally steer through focus, proof, and consistent communication" },
+            { "id": "c", "text": "A guarantee of viral fame" },
+            { "id": "d", "text": "A substitute for building real skills" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Brand is steered reputation grounded in substance and clarity—not cosplay or hype.",
+          "wrongExplanations": {
+            "a": "Brand should reflect real work.",
+            "c": "Virality is not the goal or a promise.",
+            "d": "Skills remain the root system."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which positioning sentence is strongest?",
+          "options": [
+            { "id": "a", "text": "I am a passionate synergistic professional." },
+            { "id": "b", "text": "I help small e-commerce teams understand weekly sales drivers through clear dashboards and SQL, as shown by cutting report prep dramatically." },
+            { "id": "c", "text": "I do everything for everyone online." },
+            { "id": "d", "text": "Hire me because I want opportunities." }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Strong positioning names audience, outcome, method, and proof.",
+          "wrongExplanations": {
+            "a": "Vague adjectives are forgettable.",
+            "c": "Overly broad focus helps no stranger remember you.",
+            "d": "Need alone is not positioning."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What should a LinkedIn headline often include beyond a bare job title?",
+          "options": [
+            { "id": "a", "text": "Only emojis and ‘open to work’ with no specialty" },
+            { "id": "b", "text": "Value, niche, or outcome signals a stranger can understand quickly" },
+            { "id": "c", "text": "A full autobiography" },
+            { "id": "d", "text": "Invented executive titles you do not hold" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Headlines work as skimmable value signals, not empty slogans or false ranks.",
+          "wrongExplanations": {
+            "a": "Signals without specialty under-explain you.",
+            "c": "Headlines must stay readable.",
+            "d": "Ethics forbid inventing titles."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which About section approach fits the lesson?",
+          "options": [
+            { "id": "a", "text": "First person, who you help, proof points, and a soft call to action" },
+            { "id": "b", "text": "Third-person hype with no proof" },
+            { "id": "c", "text": "A paste of your entire resume with no narrative" },
+            { "id": "d", "text": "Confidential metrics you are not allowed to share" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "About sections teach strangers quickly with proof and a next step.",
+          "wrongExplanations": {
+            "b": "Hype without proof fails trust.",
+            "c": "Resume dumps miss narrative clarity.",
+            "d": "Confidentiality boundaries matter."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which ethical rule is emphasized?",
+          "options": [
+            { "id": "a", "text": "Invent metrics if they sound impressive" },
+            { "id": "b", "text": "Do not invent titles, employers, or credentials; long careers favor claims that survive scrutiny" },
+            { "id": "c", "text": "Buy fake followers for social proof" },
+            { "id": "d", "text": "Leak confidential roadmaps for engagement" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Trust compounds; fabricated claims and leaks destroy careers.",
+          "wrongExplanations": {
+            "a": "Fabrication is forbidden.",
+            "c": "Fake engagement is a trap.",
+            "d": "Confidential leaks are a serious mistake."
+          }
+        }
+      ]
+    },
+    {
+      "id": "linkedin-checkpoint-2",
+      "title": "Checkpoint 2 — Proof, Content, and Networking",
+      "intro": "Apply experience bullets, content habits, and respectful networking.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Which experience bullet best matches the recommended pattern?",
+          "options": [
+            { "id": "a", "text": "Responsible for various duties and passionate teamwork" },
+            { "id": "b", "text": "Automated weekly inventory reconciliation in Python, cutting manual checks from 6 hours to 45 minutes" },
+            { "id": "c", "text": "Worked on stuff with stakeholders" },
+            { "id": "d", "text": "Helped with things as needed" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Action, scope, and result make bullets credible and skimmable.",
+          "wrongExplanations": {
+            "a": "Job-description fog lacks outcomes.",
+            "c": "Too vague to prove value.",
+            "d": "No scope or result."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What kind of LinkedIn content does the course prefer?",
+          "options": [
+            { "id": "a", "text": "Engagement bait demanding ‘comment YES’" },
+            { "id": "b", "text": "Small honest lessons from real work that teach others" },
+            { "id": "c", "text": "Posts claiming work you did not do" },
+            { "id": "d", "text": "Confidential screenshots for clout" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Teaching from real experience beats bait, fakery, and leaks.",
+          "wrongExplanations": {
+            "a": "Bait erodes reputation.",
+            "c": "False claims are unethical.",
+            "d": "Confidentiality comes first."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which outreach message is stronger?",
+          "options": [
+            { "id": "a", "text": "Hi, can we connect? I need a job." },
+            { "id": "b", "text": "A short note with context, why them, a specific small ask, and an easy out" },
+            { "id": "c", "text": "A pasted novel sales pitch sent to hundreds identically" },
+            { "id": "d", "text": "An immediate product dump right after connecting with no context" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Respectful, specific asks convert better and protect reputation.",
+          "wrongExplanations": {
+            "a": "Too abrupt and self-centered.",
+            "c": "Spam damages brand.",
+            "d": "Pitch-slapping after connect is a common mistake."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is a better brand health signal than raw likes alone?",
+          "options": [
+            { "id": "a", "text": "Meaningful conversations, referrals, and opportunities aligned with your positioning" },
+            { "id": "b", "text": "Only emoji reaction counts" },
+            { "id": "c", "text": "Number of arguments won in comments" },
+            { "id": "d", "text": "How often you post confidential drama" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Career-relevant responses matter more than vanity metrics.",
+          "wrongExplanations": {
+            "b": "Reactions are incomplete signals.",
+            "c": "Hostility is not health.",
+            "d": "Drama harms trust."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why can thoughtful commenting build reputation efficiently?",
+          "options": [
+            { "id": "a", "text": "Because saying only ‘Great post’ makes you memorable" },
+            { "id": "b", "text": "Because adding experience, caveats, or resources shows expertise in context" },
+            { "id": "c", "text": "Because comments replace the need for any proof on your profile" },
+            { "id": "d", "text": "Because rude debates always attract recruiters" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Substantive comments demonstrate thinking where audiences already pay attention.",
+          "wrongExplanations": {
+            "a": "Empty praise is invisible.",
+            "c": "Profile proof still matters.",
+            "d": "Rudeness damages brand."
+          }
+        }
+      ]
+    },
+    {
+      "id": "linkedin-final",
+      "title": "Final Quiz — Systems, Boundaries, and Long Game",
+      "intro": "Use the full lesson. Focus on maintenance, ethics, boundaries, and sustainable brand systems.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is a sound weekly branding budget mindset?",
+          "options": [
+            { "id": "a", "text": "Let branding consume all skill-building time" },
+            { "id": "b", "text": "Small blocks for proof/content and thoughtful engagement so branding supports—not replaces—skill growth" },
+            { "id": "c", "text": "Zero maintenance forever after one profile polish" },
+            { "id": "d", "text": "Post constantly even with nothing useful to say" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Sustainable budgets keep substance first and communication consistent.",
+          "wrongExplanations": {
+            "a": "Skills must keep moving.",
+            "c": "Profiles and proof need upkeep.",
+            "d": "Empty volume becomes noise."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "How should career changers brand themselves?",
+          "options": [
+            { "id": "a", "text": "Claim senior titles overnight" },
+            { "id": "b", "text": "Translate transferable wins honestly and show learning proof without exaggeration" },
+            { "id": "c", "text": "Hide all past experience as irrelevant" },
+            { "id": "d", "text": "Invent metrics from thin air" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Bridge narratives with real transferable proof beat fake seniority.",
+          "wrongExplanations": {
+            "a": "Title inflation destroys trust.",
+            "c": "Past wins often translate.",
+            "d": "Fabrication is unethical."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What should you do before posting employer-related details?",
+          "options": [
+            { "id": "a", "text": "Assume everything internal is fair game" },
+            { "id": "b", "text": "Respect policies; prefer generic lessons over confidential roadmaps; ask when unsure" },
+            { "id": "c", "text": "Leak screenshots for authenticity points" },
+            { "id": "d", "text": "Tag competitors with private pricing" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Personal brand should not require burning employer trust.",
+          "wrongExplanations": {
+            "a": "Confidentiality still applies.",
+            "c": "Leaks are a listed mistake.",
+            "d": "Sharing private pricing is harmful and unprofessional."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which statement about AI writing help is aligned with the course?",
+          "options": [
+            { "id": "a", "text": "Publish generic AI posts unchanged as thought leadership" },
+            { "id": "b", "text": "Use AI to edit structure or grammar while you supply facts and keep your voice" },
+            { "id": "c", "text": "Let AI invent credentials" },
+            { "id": "d", "text": "AI removes the need for proof artifacts" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "AI is an assistant for clarity, not a source of fake substance.",
+          "wrongExplanations": {
+            "a": "Generic AI tone damages trust.",
+            "c": "Invented credentials are unethical.",
+            "d": "Proof still matters."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What belongs in a quarterly brand review?",
+          "options": [
+            { "id": "a", "text": "Updating shareable proof, fixing dead links, checking tone, and weeding outdated posts" },
+            { "id": "b", "text": "Buying reactions" },
+            { "id": "c", "text": "Deleting all recommendations on principle" },
+            { "id": "d", "text": "Switching identity claims weekly for fun" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Gardening the profile and content keeps the brand accurate and trustworthy.",
+          "wrongExplanations": {
+            "b": "Fake engagement is rejected.",
+            "c": "Specific recommendations can be valuable.",
+            "d": "Whiplash positioning confuses audiences."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which trio captures the course’s long-game advice?",
+          "options": [
+            { "id": "a", "text": "Be findable, be believable, be kind under pressure" },
+            { "id": "b", "text": "Be invisible, be exaggerated, be hostile in comments" },
+            { "id": "c", "text": "Be viral, be vague, be always selling" },
+            { "id": "d", "text": "Be secretive about all proof, be frantic, be inconsistent" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Findability, credibility, and professionalism compound better than hype tactics.",
+          "wrongExplanations": {
+            "b": "Opposite of the lesson.",
+            "c": "Virality and vagueness are weak strategies here.",
+            "d": "Proof and consistency are required."
+          }
+        }
+      ]
+    }
+  ]
+}

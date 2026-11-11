@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "js-checkpoint-1",
+      "title": "Checkpoint 1 — Values, Variables, and Control Flow",
+      "intro": "Check types, declarations, equality, and basic decision-making before functions and arrays.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Which declaration should you prefer by default for a binding you will not reassign?",
+          "options": [
+            { "id": "a", "text": "var" },
+            { "id": "b", "text": "const" },
+            { "id": "c", "text": "static" },
+            { "id": "d", "text": "define" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "const documents non-reassignment intent and is the modern default when the binding stays fixed.",
+          "wrongExplanations": {
+            "a": "var is legacy, function-scoped, and easier to misuse.",
+            "c": "static is not how ordinary local bindings are declared in beginner JS.",
+            "d": "define is not a JavaScript variable keyword."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why is === usually preferred over == for comparisons?",
+          "options": [
+            { "id": "a", "text": "Because === is slower and therefore safer" },
+            { "id": "b", "text": "Because === avoids the surprising type coercion that == can perform" },
+            { "id": "c", "text": "Because == cannot compare numbers" },
+            { "id": "d", "text": "Because === only works with strings" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Strict equality compares without the loose coercion rules that confuse beginners.",
+          "wrongExplanations": {
+            "a": "Preference is about clarity and correctness, not slowness.",
+            "c": "== can compare numbers, but may coerce other types unexpectedly.",
+            "d": "=== works across comparable types without coercion."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What does undefined usually indicate?",
+          "options": [
+            { "id": "a", "text": "A value was intentionally cleared with a special empty object" },
+            { "id": "b", "text": "A binding has been declared but not assigned a value yet, or a missing property/result" },
+            { "id": "c", "text": "The program crashed permanently" },
+            { "id": "d", "text": "The value is exactly equal to false" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "undefined commonly means no value has been assigned or returned yet.",
+          "wrongExplanations": {
+            "a": "Intentional emptiness is often expressed with null by convention.",
+            "c": "undefined is a value, not automatically a crash.",
+            "d": "undefined is falsy but not the boolean false."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which value is falsy in a conditional?",
+          "options": [
+            { "id": "a", "text": "[]" },
+            { "id": "b", "text": "{}" },
+            { "id": "c", "text": "\"\"" },
+            { "id": "d", "text": "\"0\"" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "An empty string is falsy; empty arrays/objects and the string \"0\" are truthy.",
+          "wrongExplanations": {
+            "a": "Empty arrays are truthy in JavaScript conditionals.",
+            "b": "Empty objects are truthy.",
+            "d": "The non-empty string \"0\" is truthy."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What is the result of \"2\" + 2 in JavaScript?",
+          "options": [
+            { "id": "a", "text": "4" },
+            { "id": "b", "text": "\"22\"" },
+            { "id": "c", "text": "NaN" },
+            { "id": "d", "text": "false" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The + operator concatenates when one operand is a string, producing \"22\".",
+          "wrongExplanations": {
+            "a": "Numeric addition does not happen when a string triggers concatenation.",
+            "c": "NaN appears in invalid numeric operations, not this concatenation.",
+            "d": "This expression returns a string, not a boolean."
+          }
+        }
+      ]
+    },
+    {
+      "id": "js-checkpoint-2",
+      "title": "Checkpoint 2 — Functions, Arrays, and Objects",
+      "intro": "Test reusable functions and collection transformations.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What does Array.map do?",
+          "options": [
+            { "id": "a", "text": "Deletes every element that fails a test" },
+            { "id": "b", "text": "Creates a new array by transforming each element" },
+            { "id": "c", "text": "Sorts an array in place only" },
+            { "id": "d", "text": "Converts an object into JSON text" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "map returns a new array with the results of calling a function on every item.",
+          "wrongExplanations": {
+            "a": "Filtering is the job of filter, not map.",
+            "c": "sort handles ordering and mutates the array; map transforms values.",
+            "d": "JSON.stringify converts values to JSON text."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "If const a = { score: 1 }; const b = a; b.score = 2; what is a.score?",
+          "options": [
+            { "id": "a", "text": "1, because objects are always copied on assignment" },
+            { "id": "b", "text": "2, because a and b reference the same object" },
+            { "id": "c", "text": "undefined" },
+            { "id": "d", "text": "\"2\"" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Object assignment copies the reference, so mutating through b also changes a.",
+          "wrongExplanations": {
+            "a": "Assignment does not deep-copy objects by default.",
+            "c": "score remains a defined number property.",
+            "d": "The value is still a number, not a string."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which statement about arrow functions is most accurate for beginners?",
+          "options": [
+            { "id": "a", "text": "They are the only valid function syntax in JavaScript" },
+            { "id": "b", "text": "They provide concise syntax and are commonly used for short callbacks" },
+            { "id": "c", "text": "They cannot return values" },
+            { "id": "d", "text": "They automatically await all Promises" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Arrow functions are a compact form frequently used for callbacks and small helpers.",
+          "wrongExplanations": {
+            "a": "Traditional function declarations remain fully valid.",
+            "c": "Arrow functions can return values, including via implicit return.",
+            "d": "Await still requires async functions and explicit await."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What does filter return?",
+          "options": [
+            { "id": "a", "text": "A single boolean summarizing the whole array" },
+            { "id": "b", "text": "A new array containing elements that pass the test function" },
+            { "id": "c", "text": "The first matching element only" },
+            { "id": "d", "text": "The original array mutated in place" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "filter keeps items for which the callback returns a truthy value and returns a new array.",
+          "wrongExplanations": {
+            "a": "some/every return booleans; filter returns an array.",
+            "c": "find returns the first match.",
+            "d": "filter does not mutate the source array."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What is destructuring useful for?",
+          "options": [
+            { "id": "a", "text": "Deleting object keys permanently from disk" },
+            { "id": "b", "text": "Extracting values from objects or arrays into named variables cleanly" },
+            { "id": "c", "text": "Compiling TypeScript" },
+            { "id": "d", "text": "Stopping all asynchronous code" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Destructuring unpacks properties or array positions into variables with concise syntax.",
+          "wrongExplanations": {
+            "a": "Destructuring reads values; it is not a disk-deletion tool.",
+            "c": "TypeScript compilation is separate from destructuring syntax.",
+            "d": "Destructuring has no special power over async control flow."
+          }
+        }
+      ]
+    },
+    {
+      "id": "js-final",
+      "title": "Final Quiz — DOM, Async, and Judgment",
+      "intro": "Apply essentials to interaction, asynchronous work, and debugging judgment.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Why prefer textContent over innerHTML when inserting plain text?",
+          "options": [
+            { "id": "a", "text": "Because textContent is the only property that can change the DOM" },
+            { "id": "b", "text": "Because textContent avoids interpreting markup, which is safer for plain text" },
+            { "id": "c", "text": "Because innerHTML cannot update visible text" },
+            { "id": "d", "text": "Because textContent automatically validates emails" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "textContent sets text without parsing HTML, reducing injection risk for untrusted strings.",
+          "wrongExplanations": {
+            "a": "Many APIs can update the DOM.",
+            "c": "innerHTML can update content, but parses HTML.",
+            "d": "Neither property validates emails."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What happens if you forget await on an async function call that returns a Promise?",
+          "options": [
+            { "id": "a", "text": "JavaScript automatically waits forever" },
+            { "id": "b", "text": "You receive a Promise object instead of the resolved value" },
+            { "id": "c", "text": "The Promise is deleted" },
+            { "id": "d", "text": "The program converts it into a string automatically" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Without await (or then), you work with the Promise itself, not the eventual result.",
+          "wrongExplanations": {
+            "a": "Forgetting await does not pause execution for the result.",
+            "c": "The Promise still exists.",
+            "d": "No automatic string conversion of the resolved payload occurs."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which habit best improves debuggability of beginner JavaScript?",
+          "options": [
+            { "id": "a", "text": "Write one giant function that does everything" },
+            { "id": "b", "text": "Keep small functions, inspect values at key points, and test with tiny fixtures" },
+            { "id": "c", "text": "Never read error messages" },
+            { "id": "d", "text": "Prefer == everywhere to reduce typing" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Small units and deliberate inspection make wrong assumptions easier to find.",
+          "wrongExplanations": {
+            "a": "Giant functions hide failure points.",
+            "c": "Error messages and stack traces are primary clues.",
+            "d": "Loose equality often adds confusion."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What does optional chaining (?.) help with?",
+          "options": [
+            { "id": "a", "text": "Forcing every missing property to throw immediately" },
+            { "id": "b", "text": "Safely accessing nested properties that may be null or undefined" },
+            { "id": "c", "text": "Creating new DOM elements" },
+            { "id": "d", "text": "Sorting arrays numerically" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Optional chaining short-circuits to undefined when it hits nullish intermediate values.",
+          "wrongExplanations": {
+            "a": "It reduces throw risk on missing chains rather than forcing throws.",
+            "c": "DOM creation uses other APIs such as createElement.",
+            "d": "Sorting is unrelated to optional chaining."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which check correctly detects an empty array for control flow?",
+          "options": [
+            { "id": "a", "text": "if (!items)" },
+            { "id": "b", "text": "if (items.length === 0)" },
+            { "id": "c", "text": "if (items === empty)" },
+            { "id": "d", "text": "if (items = [])" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Empty arrays are truthy, so check length explicitly.",
+          "wrongExplanations": {
+            "a": "An empty array is truthy, so !items is false.",
+            "c": "empty is not a special JS keyword for this comparison.",
+            "d": "A single equals assigns, and it is not an emptiness test."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "A function runs without throwing, but the UI shows the wrong total. What does that guarantee?",
+          "options": [
+            { "id": "a", "text": "The business logic is correct" },
+            { "id": "b", "text": "Only that the code executed—logic, data shape, or assumptions may still be wrong" },
+            { "id": "c", "text": "All async calls were awaited" },
+            { "id": "d", "text": "The array was never mutated" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Successful execution is not proof of correct results; verify data and logic separately.",
+          "wrongExplanations": {
+            "a": "Wrong logic can still run cleanly.",
+            "c": "Missing awaits can still produce wrong UI without immediate throws.",
+            "d": "Mutation issues can exist without exceptions."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "writing-checkpoint-1",
+      "title": "Checkpoint 1 — Readers, Purpose, and Structure",
+      "intro": "Check whether you understand reader-first writing, the clarity stack, and scannable structure.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "How does workplace writing differ from much school writing?",
+          "options": [
+            { "id": "a", "text": "It rewards maximum length and mystery" },
+            { "id": "b", "text": "It rewards decisions and action for interrupted readers" },
+            { "id": "c", "text": "It forbids any structure" },
+            { "id": "d", "text": "It never becomes a record" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Work writing serves busy readers who must decide or act, and it often becomes institutional memory.",
+          "wrongExplanations": {
+            "a": "Length and mystery are usually liabilities.",
+            "c": "Structure is essential.",
+            "d": "Email and docs often become records."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What should you define before drafting?",
+          "options": [
+            { "id": "a", "text": "How many buzzwords to include" },
+            { "id": "b", "text": "The reader, their job-to-be-done, and the outcome after reading" },
+            { "id": "c", "text": "A sarcastic tone for the archive" },
+            { "id": "d", "text": "Whether to hide the ask forever" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Reader-first planning prevents journaling disguised as communication.",
+          "wrongExplanations": {
+            "a": "Buzzwords create fog.",
+            "c": "Sarcasm is risky in records.",
+            "d": "Asks should be findable."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which sequence best matches the clarity stack?",
+          "options": [
+            { "id": "a", "text": "Purpose, point, proof, ask, next step" },
+            { "id": "b", "text": "Joke, suspense, apology, silence" },
+            { "id": "c", "text": "Attachments first, purpose never" },
+            { "id": "d", "text": "Jargon, ego, buried ask" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Purpose and point lead; proof supports; ask and next step close the loop.",
+          "wrongExplanations": {
+            "b": "That is entertainment, not work clarity.",
+            "c": "Readers need purpose before homework.",
+            "d": "Those are failure modes."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which subject line is strongest?",
+          "options": [
+            { "id": "a", "text": "Quick question" },
+            { "id": "b", "text": "Need approval: vendor quote for staging servers by Thu 3pm" },
+            { "id": "c", "text": "Hi" },
+            { "id": "d", "text": "FYI!!!!!!" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Subject lines should promise the content and often include the ask and timing.",
+          "wrongExplanations": {
+            "a": "Too vague for search and priority.",
+            "c": "Not informative.",
+            "d": "Shouting is not clarity."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why prefer active voice as a default?",
+          "options": [
+            { "id": "a", "text": "Because passive voice is illegal" },
+            { "id": "b", "text": "Because active sentences usually clarify who does what" },
+            { "id": "c", "text": "Because active voice hides owners" },
+            { "id": "d", "text": "Because readers dislike short sentences always" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Active voice makes agency and responsibility easier to see.",
+          "wrongExplanations": {
+            "a": "Passive voice is allowed when useful; it is not illegal.",
+            "c": "Hiding owners is a problem passive fog can cause.",
+            "d": "Short clear sentences are often welcome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "writing-checkpoint-2",
+      "title": "Checkpoint 2 — Emails, Tone, and Editing",
+      "intro": "Apply email structure, status writing, tone, hedging, and editing discipline.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Where should the ask usually appear in a work email?",
+          "options": [
+            { "id": "a", "text": "Buried after a long personal narrative" },
+            { "id": "b", "text": "Early—often in the first lines with purpose" },
+            { "id": "c", "text": "Only in an attachment filename" },
+            { "id": "d", "text": "Never; readers should guess" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Busy readers need the ask findable in seconds.",
+          "wrongExplanations": {
+            "a": "Buried asks are a top failure mode.",
+            "c": "Filename hides are unreliable.",
+            "d": "Guessing creates rework."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which status format aligns with the lesson?",
+          "options": [
+            { "id": "a", "text": "A full diary of every minute" },
+            { "id": "b", "text": "Clear signal such as Done/Doing/Blocked/Ask or RAG plus risk and decision needed" },
+            { "id": "c", "text": "No updates until crisis" },
+            { "id": "d", "text": "Only emojis without owners" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Status writing should provide signal, risks, and asks—not noise.",
+          "wrongExplanations": {
+            "a": "Diaries bury signal.",
+            "c": "Late updates create surprises.",
+            "d": "Owners and meaning still matter."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "When are hedge words appropriate?",
+          "options": [
+            { "id": "a", "text": "Whenever you want to avoid owning a clear recommendation you actually have" },
+            { "id": "b", "text": "When uncertainty is real and honesty requires nuance" },
+            { "id": "c", "text": "In every sentence as a style flex" },
+            { "id": "d", "text": "Never, even when facts are unknown" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Hedges serve truth; they should not replace courage when a recommendation is warranted.",
+          "wrongExplanations": {
+            "a": "Fear-based hedging creates mud.",
+            "c": "Constant hedges exhaust readers.",
+            "d": "False certainty is also a problem."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which editing question is essential?",
+          "options": [
+            { "id": "a", "text": "Can I add more buzzwords?" },
+            { "id": "b", "text": "Is the ask findable in about ten seconds?" },
+            { "id": "c", "text": "Did I remove all deadlines on purpose?" },
+            { "id": "d", "text": "Did I hide the owners?" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The ten-second ask test is a practical clarity gate.",
+          "wrongExplanations": {
+            "a": "Buzzwords reduce clarity.",
+            "c": "Deadlines often help action.",
+            "d": "Owners should be visible."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which rewrite is clearest?",
+          "options": [
+            { "id": "a", "text": "I was wondering if perhaps we might potentially revisit the timeline given various concerns." },
+            { "id": "b", "text": "I recommend moving the launch to May 12 because Legal needs two review days. Can you approve by Friday?" },
+            { "id": "c", "text": "Timeline stuff TBD somehow." },
+            { "id": "d", "text": "Per my last vibe check…" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The clear version states recommendation, reason, and ask with timing.",
+          "wrongExplanations": {
+            "a": "Fog without an ask.",
+            "c": "Too vague to act on.",
+            "d": "Not professional workplace clarity."
+          }
+        }
+      ]
+    },
+    {
+      "id": "writing-final",
+      "title": "Final Quiz — Genres, Norms, and Judgment",
+      "intro": "Use the full lesson. Focus on feedback, medium choice, inclusivity, and professional judgment.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What makes written feedback usable?",
+          "options": [
+            { "id": "a", "text": "Vague insults about quality" },
+            { "id": "b", "text": "Specific behavioral notes with impact and a clear request" },
+            { "id": "c", "text": "Public sarcasm" },
+            { "id": "d", "text": "No examples and no next step" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Usable feedback is specific, impact-aware, and actionable.",
+          "wrongExplanations": {
+            "a": "Insults do not teach.",
+            "c": "Sarcasm harms trust, especially in writing.",
+            "d": "Missing next steps stall improvement."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "When might a meeting beat a long email?",
+          "options": [
+            { "id": "a", "text": "Never; writing always wins" },
+            { "id": "b", "text": "When the topic is emotionally sensitive or needs rapid interactive clarification" },
+            { "id": "c", "text": "When you want no record of decisions ever" },
+            { "id": "d", "text": "When a simple FYI would have been enough" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Medium selection is part of craft; talk first for some conflicts, write for many updates.",
+          "wrongExplanations": {
+            "a": "Medium depends on stakes and content.",
+            "c": "Avoiding records can be irresponsible.",
+            "d": "Simple FYIs should stay written."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which practice supports inclusive workplace writing?",
+          "options": [
+            { "id": "a", "text": "Heavy idioms and unexplained acronyms for global audiences" },
+            { "id": "b", "text": "Plain language, defined acronyms, and descriptive links" },
+            { "id": "c", "text": "Gendered assumptions when irrelevant" },
+            { "id": "d", "text": "Tiny walls of text without headings" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Accessibility and inclusion start with plain, explicit language.",
+          "wrongExplanations": {
+            "a": "Idioms and jargon exclude people.",
+            "c": "Irrelevant gendered language should be avoided.",
+            "d": "Walls of text hurt scanning for everyone."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "How should you replace ‘ASAP’ in most cases?",
+          "options": [
+            { "id": "a", "text": "With more exclamation marks" },
+            { "id": "b", "text": "With a specific day and time, or a true flexible window" },
+            { "id": "c", "text": "With silence about timing" },
+            { "id": "d", "text": "With ‘whenever’ and hidden urgency later" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Precise timing creates fairness and clearer prioritization.",
+          "wrongExplanations": {
+            "a": "Punctuation is not a deadline.",
+            "c": "Missing timing creates uneven urgency.",
+            "d": "Hidden urgency breeds resentment."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What should meeting notes prioritize?",
+          "options": [
+            { "id": "a", "text": "A full transcript of jokes" },
+            { "id": "b", "text": "Decisions, action items with owners and dates, and open questions" },
+            { "id": "c", "text": "No actions so nobody is accountable" },
+            { "id": "d", "text": "Only attendance emojis" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Notes are a clarity product for decisions and follow-through.",
+          "wrongExplanations": {
+            "a": "Transcripts bury signal.",
+            "c": "Accountability is the point.",
+            "d": "Attendance alone does not move work."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which standard captures the course’s end goal?",
+          "options": [
+            { "id": "a", "text": "Write so a busy, well-meaning stranger can do the right next thing without a decoding meeting" },
+            { "id": "b", "text": "Write to display vocabulary regardless of action" },
+            { "id": "c", "text": "Write to win eloquence contests" },
+            { "id": "d", "text": "Write to keep asks mysterious" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Reader-action clarity is the professional standard taught throughout.",
+          "wrongExplanations": {
+            "b": "Display writing is a listed mistake.",
+            "c": "Eloquence is optional; clarity is not.",
+            "d": "Mystery fights the entire lesson."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "notion-checkpoint-1",
+      "title": "Checkpoint 1 — Pages, Blocks, and Databases",
+      "intro": "Check when to use pages versus databases and how properties work.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "When should you prefer a database over a single standalone page?",
+          "options": [
+            { "id": "a", "text": "When you will never create more than one related item" },
+            { "id": "b", "text": "When you have many similar items you need to filter, sort, and review" },
+            { "id": "c", "text": "When you want to disable headings forever" },
+            { "id": "d", "text": "When Notion is offline only" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Databases shine for repeated structured items with shared properties and views.",
+          "wrongExplanations": {
+            "a": "A one-off document is usually a page.",
+            "c": "Databases do not replace ordinary writing needs.",
+            "d": "Online/offline constraints are not the decision rule here."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is a Notion block?",
+          "options": [
+            { "id": "a", "text": "The basic unit of page content such as paragraphs, headings, lists, and embeds" },
+            { "id": "b", "text": "A paid invoice only" },
+            { "id": "c", "text": "A Git commit hash" },
+            { "id": "d", "text": "A forced full-screen advertisement" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Pages are composed of blocks that can be rearranged and transformed.",
+          "wrongExplanations": {
+            "b": "Billing is unrelated to the block concept.",
+            "c": "Commit hashes belong to Git, not Notion structure.",
+            "d": "Blocks are content units, not ads."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why start with fewer database properties than you think you need?",
+          "options": [
+            { "id": "a", "text": "Because Notion forbids more than two properties" },
+            { "id": "b", "text": "Because every property is a maintenance obligation and unused fields become noise" },
+            { "id": "c", "text": "Because filters cannot use properties" },
+            { "id": "d", "text": "Because titles are optional in databases" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Lean schemas are easier to keep accurate and actually use.",
+          "wrongExplanations": {
+            "a": "You can add many properties; restraint is about judgment.",
+            "c": "Filters depend heavily on properties.",
+            "d": "Title is a core required field for database items."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What are the recommended layers for a maintainable workspace?",
+          "options": [
+            { "id": "a", "text": "Only polished dashboards with no capture inbox" },
+            { "id": "b", "text": "Inbox for quick capture, working systems for weekly use, and slower-changing reference docs" },
+            { "id": "c", "text": "One infinite page with no structure at all" },
+            { "id": "d", "text": "Separate Notion accounts for every paragraph" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Capture first, structure second, polish third keeps systems usable under real workload.",
+          "wrongExplanations": {
+            "a": "Skipping capture leads to abandoned decorative systems.",
+            "c": "Zero structure does not scale for recurring work.",
+            "d": "That would create chaos, not clarity."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What is unique about a database item in Notion?",
+          "options": [
+            { "id": "a", "text": "It can only store a title and nothing else" },
+            { "id": "b", "text": "It is itself a page, so it can hold rich content beyond the row properties" },
+            { "id": "c", "text": "It cannot be filtered" },
+            { "id": "d", "text": "It permanently deletes related pages every hour" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Each item combines structured properties with a full page body for notes and details.",
+          "wrongExplanations": {
+            "a": "Items commonly include many properties plus page content.",
+            "c": "Filtering is a primary database feature.",
+            "d": "Nothing about items requires hourly deletion."
+          }
+        }
+      ]
+    },
+    {
+      "id": "notion-checkpoint-2",
+      "title": "Checkpoint 2 — Views, Templates, and Systems",
+      "intro": "Test views, templates, and practical work/study system design.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is a Notion view?",
+          "options": [
+            { "id": "a", "text": "A saved window onto the same database with its own layout, filters, and sorts" },
+            { "id": "b", "text": "A duplicate copy of every row stored separately forever" },
+            { "id": "c", "text": "A password for the workspace" },
+            { "id": "d", "text": "A type of image crop tool" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Views change presentation and focus while sharing the underlying data.",
+          "wrongExplanations": {
+            "b": "Views do not duplicate the whole database by default.",
+            "c": "Access control is separate from views.",
+            "d": "Views are database presentations, not image editors."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which view is often best for moving tasks across workflow stages?",
+          "options": [
+            { "id": "a", "text": "Board (kanban-style) grouped by status" },
+            { "id": "b", "text": "A random gallery of unrelated images only" },
+            { "id": "c", "text": "A page with no database at all" },
+            { "id": "d", "text": "An archived PDF printout" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Board views make status movement visual and tangible for task systems.",
+          "wrongExplanations": {
+            "b": "Galleries are better for visual cards, not stage movement.",
+            "c": "Workflow stages need structured properties and views.",
+            "d": "Printouts are static and hard to update."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What makes a good template?",
+          "options": [
+            { "id": "a", "text": "A three-page form nobody finishes" },
+            { "id": "b", "text": "A short structure that asks the questions you forget under pressure" },
+            { "id": "c", "text": "A template with fifty mandatory empty properties" },
+            { "id": "d", "text": "No headings and no prompts at all" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Templates reduce blank-page friction when they are short enough to use consistently.",
+          "wrongExplanations": {
+            "a": "Overlong templates get abandoned.",
+            "c": "Excess mandatory fields kill capture and completion.",
+            "d": "A template needs useful prompts to help."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "When should you add relations between databases?",
+          "options": [
+            { "id": "a", "text": "Immediately on day one for every page" },
+            { "id": "b", "text": "When navigation pain is real and connecting items will reduce repeated hunting" },
+            { "id": "c", "text": "Only after deleting all views" },
+            { "id": "d", "text": "Never, because relations are decorative only" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Relations are powerful but add complexity; introduce them when they solve a repeated problem.",
+          "wrongExplanations": {
+            "a": "Premature connection webs often confuse beginners.",
+            "c": "Views remain useful with or without relations.",
+            "d": "Relations can be highly functional for navigation and rollups."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What should a weekly review emphasize in a work Notion system?",
+          "options": [
+            { "id": "a", "text": "Adding more unused dashboard widgets" },
+            { "id": "b", "text": "What moved, what stalled, top outcomes next week, and what to archive" },
+            { "id": "c", "text": "Renaming every property for fun" },
+            { "id": "d", "text": "Duplicating all tasks into five identical databases" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Lightweight review maintains momentum and reduces false load from stale work.",
+          "wrongExplanations": {
+            "a": "Decorative complexity does not equal progress.",
+            "c": "Cosmetic renaming is rarely high-value weekly work.",
+            "d": "Duplication creates drift and double maintenance."
+          }
+        }
+      ]
+    },
+    {
+      "id": "notion-final",
+      "title": "Final Quiz — Collaboration, Dashboards, and Judgment",
+      "intro": "Apply maintainability, sharing, and anti-clutter judgment.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is the job of a good dashboard?",
+          "options": [
+            { "id": "a", "text": "Answer \"What should I do next?\" quickly with views you actually use" },
+            { "id": "b", "text": "Display every database you have ever created on one endless page" },
+            { "id": "c", "text": "Replace the need for titles" },
+            { "id": "d", "text": "Hide all deadlines intentionally" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Dashboards should reduce orientation time, not showcase unused complexity.",
+          "wrongExplanations": {
+            "b": "Airport-control-tower pages usually rot.",
+            "c": "Titles remain essential for navigation.",
+            "d": "Useful dashboards surface deadlines, they do not hide them."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why make capture cheap?",
+          "options": [
+            { "id": "a", "text": "Because hard capture forms ensure people never forget fields under stress" },
+            { "id": "b", "text": "Because if capture requires too much structure, people avoid capturing and the system starves" },
+            { "id": "c", "text": "Because Notion cannot store quick notes" },
+            { "id": "d", "text": "Because review is unnecessary if capture is perfect" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Reliable inputs beat perfect schemas. Sort during review, not during busy moments.",
+          "wrongExplanations": {
+            "a": "Heavy forms often reduce capture compliance.",
+            "c": "Quick notes are a core Notion use case.",
+            "d": "Review is still required to organize and prioritize."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What should teams agree on when sharing a Status property?",
+          "options": [
+            { "id": "a", "text": "That status values can mean anything to anyone" },
+            { "id": "b", "text": "Clear definitions so \"In progress\" means the same thing across people" },
+            { "id": "c", "text": "That status should be deleted weekly" },
+            { "id": "d", "text": "That only emojis are allowed as statuses with no names" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Shared language prevents fake progress and coordination failures.",
+          "wrongExplanations": {
+            "a": "Ambiguity creates false signals.",
+            "c": "Deleting status weekly destroys workflow continuity.",
+            "d": "Readable named statuses are clearer for most teams."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which monthly cleanup action best keeps systems healthy?",
+          "options": [
+            { "id": "a", "text": "Add ten new unused properties" },
+            { "id": "b", "text": "Archive completed work, remove ignored fields, and delete unused views" },
+            { "id": "c", "text": "Duplicate every dashboard" },
+            { "id": "d", "text": "Disable templates permanently" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Cleanup reduces noise so the remaining structure stays trustworthy.",
+          "wrongExplanations": {
+            "a": "More unused structure increases maintenance burden.",
+            "c": "Duplication multiplies drift.",
+            "d": "Useful templates should be refined, not discarded by default."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "How should Notion relate to other tools in a stack?",
+          "options": [
+            { "id": "a", "text": "Notion must replace calendars, email, code hosts, and everything else" },
+            { "id": "b", "text": "Decide which tool owns each object type and use Notion where flexible docs/databases help" },
+            { "id": "c", "text": "Never link out to other systems" },
+            { "id": "d", "text": "Copy every calendar event into Notion manually twice a day" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Mature productivity is tool pluralism with clear ownership, not forced monopoly.",
+          "wrongExplanations": {
+            "a": "Specialized tools often remain better for specialized jobs.",
+            "c": "Links and embeds can reduce context switching when used wisely.",
+            "d": "Manual double entry usually wastes time and creates drift."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "A beautiful dashboard has not been opened in a month. What should you conclude?",
+          "options": [
+            { "id": "a", "text": "It must still be valuable because it looks impressive" },
+            { "id": "b", "text": "Unused structure is likely clutter and should be simplified or removed" },
+            { "id": "c", "text": "You should add more widgets immediately" },
+            { "id": "d", "text": "Notion is broken" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Usage is the truth test. Decorative systems that are not opened are not helping.",
+          "wrongExplanations": {
+            "a": "Aesthetics without use are not productivity.",
+            "c": "Adding more unused complexity worsens the problem.",
+            "d": "The tool is fine; the system design needs pruning."
+          }
+        }
+      ]
+    }
+  ]
+}
