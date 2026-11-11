@@ -151,7 +151,7 @@ export default async function AccountPage({ searchParams }: Props) {
               label="Purchased lessons"
               value={String(library.purchasedLessons.length)}
             />
-            <Stat label="Catalog" value={`${library.catalogCount} lessons`} />
+            <Stat label="Catalog" value="Browse library" />
           </div>
         </section>
 

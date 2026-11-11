@@ -96,7 +96,7 @@ export default function HomePage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-ink-soft/80">
-              {all.length} lessons · {categories.length} topics · growing library
+              Deep lessons across {categories.length} topics · growing library
             </p>
           </div>
 
