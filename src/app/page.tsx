@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ContentCard } from "@/components/ContentCard";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -60,9 +61,19 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent-deep">
               Deep study, not skim culture
             </p>
-            <p className="mt-4 font-[family-name:var(--font-display)] text-[clamp(3rem,7vw,4.6rem)] leading-none tracking-[-0.05em] text-ink">
-              Syllaba
-            </p>
+            <div className="mt-5 flex items-center gap-4">
+              <Image
+                src="/brand/syllaba-mark.jpg"
+                alt="Syllaba logo"
+                width={56}
+                height={56}
+                className="rounded-[0.9rem] shadow-soft ring-1 ring-black/5"
+                priority
+              />
+              <p className="font-[family-name:var(--font-display)] text-[clamp(2.8rem,6.5vw,4.4rem)] leading-none tracking-[-0.05em] text-ink">
+                Syllaba
+              </p>
+            </div>
             <h1 className="mt-5 font-[family-name:var(--font-display)] text-[clamp(1.9rem,3.8vw,2.85rem)] leading-[1.08] tracking-[-0.035em] text-ink">
               Lessons worth sitting with.
             </h1>

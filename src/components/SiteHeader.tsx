@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
 
 const links = [
   { href: "/catalog", label: "Catalog" },
@@ -11,14 +12,7 @@ export function SiteHeader() {
   return (
     <header className="relative z-20 border-b border-[var(--line)] bg-[rgba(244,240,234,0.9)] backdrop-blur-md">
       <div className="shell flex items-center justify-between gap-6 py-3.5">
-        <Link href="/" className="group flex items-center gap-2.5">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-accent text-sm font-bold text-paper shadow-soft">
-            C
-          </span>
-          <span className="font-[family-name:var(--font-display)] text-xl font-semibold tracking-[-0.03em] text-ink">
-            Syllaba
-          </span>
-        </Link>
+        <BrandLogo />
 
         <nav className="flex items-center gap-0.5 sm:gap-1">
           {links.map((link) => (

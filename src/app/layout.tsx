@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   },
   description:
     "Warm, structured lessons with worked examples and interactive quizzes across AI, programming, data, business, and creative skills.",
+  icons: {
+    icon: "/brand/syllaba-mark.jpg",
+    apple: "/brand/syllaba-mark.jpg",
+  },
   openGraph: {
     title: "Syllaba",
     description:
@@ -20,6 +24,14 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "Syllaba",
     type: "website",
+    images: [
+      {
+        url: "/brand/syllaba-wordmark.jpg",
+        width: 1200,
+        height: 675,
+        alt: "Syllaba",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

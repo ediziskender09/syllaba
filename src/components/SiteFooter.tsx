@@ -1,18 +1,12 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export function SiteFooter() {
   return (
     <footer className="relative z-10 border-t border-[var(--line)] bg-ink text-paper">
       <div className="shell grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-1">
-          <div className="flex items-center gap-2.5">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-accent text-sm font-bold text-paper">
-              C
-            </span>
-            <p className="font-[family-name:var(--font-display)] text-xl tracking-[-0.03em]">
-              Syllaba
-            </p>
-          </div>
+          <BrandLogo tone="dark" />
           <p className="mt-4 max-w-xs font-[family-name:var(--font-body)] text-sm leading-relaxed text-paper/65">
             A quieter place for deep lessons — structure, practice, and quizzes that
             actually teach.
