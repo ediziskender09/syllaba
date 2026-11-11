@@ -63,17 +63,8 @@ export default async function LoginPage({ searchParams }: Props) {
           </p>
         ) : null}
 
-        <div className="mt-6">
-          <EmailAuthForm mode={mode} />
-        </div>
-
-        <div className="my-6 flex items-center gap-3">
-          <div className="h-px flex-1 bg-[var(--line)]" />
-          <span className="text-xs uppercase tracking-[0.14em] text-ink-soft/60">or</span>
-          <div className="h-px flex-1 bg-[var(--line)]" />
-        </div>
-
         <form
+          className="mt-6"
           action={async () => {
             "use server";
             await signIn("google", { redirectTo: callbackUrl });
@@ -87,6 +78,14 @@ export default async function LoginPage({ searchParams }: Props) {
             Continue with Google
           </button>
         </form>
+
+        <div className="my-6 flex items-center gap-3">
+          <div className="h-px flex-1 bg-[var(--line)]" />
+          <span className="text-xs uppercase tracking-[0.14em] text-ink-soft/60">or</span>
+          <div className="h-px flex-1 bg-[var(--line)]" />
+        </div>
+
+        <EmailAuthForm mode={mode} />
 
         <p className="mt-6 text-center text-xs leading-relaxed text-ink-soft/80">
           By continuing you agree to our{" "}
