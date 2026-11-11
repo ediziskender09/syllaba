@@ -53,12 +53,16 @@ export default async function PricingPage() {
             ))}
           </ul>
 
-          {access?.hasLibrary ? (
+          {access?.hasLibrary ||
+          access?.membershipPhase === "canceling" ||
+          access?.membershipPhase === "active" ? (
             <Link
               href="/account"
               className="mt-7 inline-flex justify-center rounded-xl bg-accent px-4 py-2.5 text-sm font-semibold text-paper transition hover:bg-accent-deep"
             >
-              Manage in account
+              {access.membershipPhase === "canceling"
+                ? "Manage cancellation"
+                : "Manage subscription"}
             </Link>
           ) : session?.user ? (
             <form action={subscribeLibrary} className="mt-7">
