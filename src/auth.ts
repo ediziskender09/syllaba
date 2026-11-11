@@ -8,7 +8,7 @@ import { prisma } from "@/lib/prisma";
 
 const credentialsSchema = z.object({
   email: z.string().email(),
-  password: z.string().min(8),
+  password: z.string().min(6),
 });
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -28,6 +28,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         const email = parsed.data.email.toLowerCase().trim();
         const user = await prisma.user.findUnique({ where: { email } });
         if (!user?.hashedPassword) return null;
+        if (!user.emailVerified) return null;
 
         const valid = await bcrypt.compare(parsed.data.password, user.hashedPassword);
         if (!valid) return null;

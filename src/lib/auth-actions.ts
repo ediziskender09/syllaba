@@ -4,17 +4,19 @@ import bcrypt from "bcryptjs";
 import { AuthError } from "next-auth";
 import { z } from "zod";
 import { signIn } from "@/auth";
+import { issueEmailVerification } from "@/lib/email-verification";
 import { prisma } from "@/lib/prisma";
 
 const credentialsSchema = z.object({
   email: z.string().email(),
-  password: z.string().min(8, "Password must be at least 8 characters"),
+  password: z.string().min(6, "Password must be at least 6 characters"),
   name: z.string().min(1).max(80).optional(),
 });
 
 export type AuthFormState = {
   ok: boolean;
   error?: string;
+  message?: string;
 };
 
 export async function registerWithEmail(
@@ -47,19 +49,19 @@ export async function registerWithEmail(
   });
 
   try {
-    await signIn("credentials", {
-      email,
-      password: parsed.data.password,
-      redirectTo: "/account",
-    });
-  } catch (error) {
-    if (error instanceof AuthError) {
-      return { ok: false, error: "Account created, but sign-in failed. Try signing in." };
-    }
-    throw error;
+    await issueEmailVerification(email);
+  } catch {
+    return {
+      ok: false,
+      error:
+        "Account created, but we couldn't send the verification email. Try resending from the sign-in page.",
+    };
   }
 
-  return { ok: true };
+  return {
+    ok: true,
+    message: "Check your inbox for a verification link before signing in.",
+  };
 }
 
 export async function loginWithEmail(
@@ -72,12 +74,22 @@ export async function loginWithEmail(
   });
 
   if (!parsed.success) {
-    return { ok: false, error: "Enter a valid email and password (min 8 characters)." };
+    return { ok: false, error: "Enter a valid email and password (min 6 characters)." };
+  }
+
+  const email = parsed.data.email.toLowerCase().trim();
+  const user = await prisma.user.findUnique({ where: { email } });
+
+  if (user?.hashedPassword && !user.emailVerified) {
+    return {
+      ok: false,
+      error: "Verify your email first. Check your inbox, or resend the link below.",
+    };
   }
 
   try {
     await signIn("credentials", {
-      email: parsed.data.email.toLowerCase().trim(),
+      email,
       password: parsed.data.password,
       redirectTo: "/account",
     });
@@ -89,4 +101,37 @@ export async function loginWithEmail(
   }
 
   return { ok: true };
+}
+
+export async function resendVerificationEmail(
+  _prev: AuthFormState,
+  formData: FormData,
+): Promise<AuthFormState> {
+  const email = String(formData.get("email") || "")
+    .toLowerCase()
+    .trim();
+
+  if (!z.string().email().safeParse(email).success) {
+    return { ok: false, error: "Enter a valid email address." };
+  }
+
+  const user = await prisma.user.findUnique({ where: { email } });
+  if (!user?.hashedPassword) {
+    return {
+      ok: true,
+      message: "If an unverified account exists for that email, we sent a new link.",
+    };
+  }
+
+  if (user.emailVerified) {
+    return { ok: true, message: "This email is already verified. You can sign in." };
+  }
+
+  try {
+    await issueEmailVerification(email);
+  } catch {
+    return { ok: false, error: "Couldn't send the email right now. Try again shortly." };
+  }
+
+  return { ok: true, message: "Verification email sent. Check your inbox." };
 }

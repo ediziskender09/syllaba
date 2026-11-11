@@ -34,8 +34,8 @@ export default async function LoginPage({ searchParams }: Props) {
           {mode === "register" ? "Create your account" : "Sign in to Syllaba"}
         </h1>
         <p className="mt-3 text-center font-[family-name:var(--font-body)] text-sm leading-relaxed text-ink-soft">
-          Use email and password, or continue with Google. Purchases will attach to
-          this account.
+          Use email and password (we&apos;ll send a verification link), or continue
+          with Google. Purchases attach to this account.
         </p>
 
         <div className="mt-6 grid grid-cols-2 gap-2 rounded-xl bg-paper p-1">
