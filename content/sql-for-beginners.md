@@ -6,7 +6,7 @@ category: "Data"
 type: course
 level: beginner
 tier: deep
-price: 7
+price: 4
 minutes: 200
 tags: [sql, databases, querying, analytics, joins, reporting]
 featured: true

@@ -6,7 +6,7 @@ category: "Programming"
 type: course
 level: beginner
 tier: deep
-price: 9
+price: 5
 minutes: 220
 tags: [python, programming basics, coding, variables, loops, functions]
 featured: true

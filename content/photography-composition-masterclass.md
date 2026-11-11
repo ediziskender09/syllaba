@@ -6,7 +6,7 @@ category: Creative
 type: course
 level: beginner
 tier: deep
-price: 5
+price: 3
 minutes: 140
 tags:
   - photography

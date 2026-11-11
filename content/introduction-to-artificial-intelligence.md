@@ -6,7 +6,7 @@ category: "AI"
 type: course
 level: beginner
 tier: deep
-price: 8
+price: 5
 minutes: 210
 tags: [artificial intelligence, machine learning, neural networks, data, automation, ethics]
 featured: true

@@ -6,7 +6,7 @@ category: "AI"
 type: course
 level: beginner
 tier: deep
-price: 7
+price: 4
 minutes: 200
 tags: [prompt engineering, generative AI, productivity, workflows, evaluation]
 featured: false

@@ -6,7 +6,7 @@ category: "Data"
 type: course
 level: beginner
 tier: deep
-price: 8
+price: 5
 minutes: 200
 tags: [excel, spreadsheets, formulas, data-analysis, dashboards, pivot-tables]
 featured: true

@@ -6,7 +6,7 @@ category: Security
 type: course
 level: beginner
 tier: deep
-price: 7
+price: 4
 minutes: 160
 tags:
   - Cybersecurity

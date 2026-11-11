@@ -8,7 +8,7 @@ export const metadata = {
 const plans = [
   {
     name: "Single lesson",
-    price: "$5–9",
+    price: "$3–5",
     period: "one-time",
     blurb: "Unlock one complete module with quizzes when you only need that skill.",
     points: [
@@ -22,7 +22,7 @@ const plans = [
   },
   {
     name: "Library subscription",
-    price: "$19",
+    price: "$12",
     period: "/ month",
     blurb: "One subscription. Full access to every lesson in the Syllaba library.",
     points: [

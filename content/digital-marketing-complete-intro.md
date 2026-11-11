@@ -6,7 +6,7 @@ category: Marketing
 type: course
 level: beginner
 tier: deep
-price: 6
+price: 4
 minutes: 160
 tags:
   - digital marketing

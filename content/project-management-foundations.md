@@ -6,7 +6,7 @@ category: Business
 type: course
 level: beginner
 tier: deep
-price: 6
+price: 4
 minutes: 150
 tags:
   - project management

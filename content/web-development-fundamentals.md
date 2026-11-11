@@ -6,7 +6,7 @@ category: Development
 type: course
 level: beginner
 tier: deep
-price: 7
+price: 5
 minutes: 160
 tags:
   - HTML
