@@ -63,7 +63,7 @@ export async function AuthNav() {
         Sign in
       </Link>
       <Link
-        href="/login"
+        href="/login?mode=register"
         className="rounded-xl bg-ink px-4 py-2 text-sm font-semibold text-paper transition hover:bg-accent-deep"
       >
         Create account

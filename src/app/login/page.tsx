@@ -16,6 +16,8 @@ type Props = {
     mode?: string;
     checkEmail?: string;
     email?: string;
+    verified?: string;
+    verifyError?: string;
   }>;
 };
 
@@ -25,6 +27,8 @@ export default async function LoginPage({ searchParams }: Props) {
   const callbackUrl = params.callbackUrl || "/account";
   const mode = params.mode === "register" ? "register" : "login";
   const checkEmail = params.checkEmail === "1";
+  const verified = params.verified === "1";
+  const verifyError = params.verifyError;
   const prefillEmail = params.email?.trim() || "";
 
   if (session?.user) {
@@ -69,6 +73,19 @@ export default async function LoginPage({ searchParams }: Props) {
           <p className="mt-5 rounded-xl border border-accent/25 bg-accent/10 px-4 py-3 text-center text-sm text-accent-deep">
             Account created. Check your email and open the verification link — you&apos;ll be
             signed in automatically.
+          </p>
+        ) : null}
+
+        {verified ? (
+          <p className="mt-5 rounded-xl border border-accent/25 bg-accent/10 px-4 py-3 text-center text-sm text-accent-deep">
+            Email verified. Sign in with your password to continue.
+          </p>
+        ) : null}
+
+        {verifyError ? (
+          <p className="mt-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-center text-sm text-red-800">
+            That verification link is invalid or expired. Sign in and resend a new link if
+            needed.
           </p>
         ) : null}
 
