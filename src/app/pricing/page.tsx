@@ -22,7 +22,7 @@ const plans = [
   },
   {
     name: "Library subscription",
-    price: "$12",
+    price: "$39.99",
     period: "/ month",
     blurb: "One subscription. Full access to every lesson in the Syllaba library.",
     points: [

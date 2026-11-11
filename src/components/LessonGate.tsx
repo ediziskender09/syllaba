@@ -38,7 +38,7 @@ export function LessonGate({
   const [owned, setOwned] = useState(false);
   const [plan, setPlan] = useState<"single" | "subscribe">("single");
 
-  const charge = useMemo(() => (plan === "single" ? price : 12), [plan, price]);
+  const charge = useMemo(() => (plan === "single" ? price : 39.99), [plan, price]);
 
   function buy() {
     setOwned(true);
@@ -243,7 +243,7 @@ export function LessonGate({
               <span className="text-xs text-paper/55">All lessons, cancel anytime</span>
             </span>
             <span className="text-lg font-semibold">
-              $12<span className="text-xs font-medium text-paper/55">/mo</span>
+              $39.99<span className="text-xs font-medium text-paper/55">/mo</span>
             </span>
           </button>
         </div>
