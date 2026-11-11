@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ContentCard } from "@/components/ContentCard";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { HeroPreview } from "@/components/HeroPreview";
-import { getAllContentMeta, getCategories, getFeaturedContent } from "@/lib/content";
+import { getAllContentMeta, getCategories } from "@/lib/content";
 
 const faqItems = [
   {
@@ -36,16 +36,20 @@ const faqItems = [
   },
   {
     q: "How often do you add lessons?",
-    a: "New modules are added regularly across high-demand skills. The catalog grows over time, and featured lessons highlight strong starting points.",
+    a: "New modules are added regularly across high-demand skills. The catalog grows over time, and every lesson stays listed in the full library.",
   },
 ];
 
 export default function HomePage() {
-  const featured = getFeaturedContent();
   const all = getAllContentMeta();
   const categories = getCategories();
-  const showcase = (featured.length ? featured : all).slice(0, 6);
-  const spotlight = showcase[0];
+  const spotlight = all[0];
+  const lessonsByCategory = categories.map((category) => ({
+    ...category,
+    lessons: all.filter(
+      (item) => item.category.toLowerCase() === category.name.toLowerCase(),
+    ),
+  }));
 
   return (
     <div>
@@ -78,21 +82,21 @@ export default function HomePage() {
               Lessons worth sitting with.
             </h1>
             <p className="mt-5 max-w-md font-[family-name:var(--font-body)] text-lg leading-relaxed text-ink-soft">
-              Long-form modules with worked examples and quizzes that explain every wrong
-              answer — written to finish, not skim.
+              {all.length} long-form lessons across {categories.length} topics — with worked
+              examples and quizzes that explain every wrong answer.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/catalog"
+                href="#library"
                 className="rounded-xl bg-ink px-6 py-3 text-sm font-semibold text-paper shadow-soft transition hover:bg-accent-deep"
               >
-                Explore catalog
+                Browse all {all.length} lessons
               </Link>
               <Link
-                href="/pricing"
+                href="/catalog"
                 className="rounded-xl border border-[var(--line)] bg-surface/80 px-6 py-3 text-sm font-semibold text-ink transition hover:border-accent/35"
               >
-                View pricing
+                Open full catalog
               </Link>
             </div>
           </div>
@@ -106,7 +110,7 @@ export default function HomePage() {
           {[
             "No fluff dashboards — just lessons built to study.",
             "Wrong answers come with explanations, not silence.",
-            "Buy one lesson, or subscribe for the full library.",
+            "One library subscription unlocks every lesson below.",
           ].map((line) => (
             <p
               key={line}
@@ -115,6 +119,76 @@ export default function HomePage() {
               {line}
             </p>
           ))}
+        </div>
+      </section>
+
+      <section id="library" className="scroll-mt-24 border-b border-[var(--line)] bg-[rgba(232,226,216,0.45)]">
+        <div className="shell py-16 md:py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-soft/60">
+                Full library
+              </p>
+              <h2 className="mt-3 font-[family-name:var(--font-display)] text-3xl tracking-[-0.03em] text-ink md:text-4xl">
+                Every Syllaba lesson, in one place
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-ink-soft">
+                {all.length} modules across {categories.length} subjects. Preview any lesson free,
+                then unlock with the library plan.
+              </p>
+            </div>
+            <Link
+              href="/catalog"
+              className="rounded-xl bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition hover:bg-accent-deep"
+            >
+              Search & filter catalog
+            </Link>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-2">
+            {categories.map((category) => (
+              <a
+                key={category.name}
+                href={`#topic-${category.name.toLowerCase().replace(/\s+/g, "-")}`}
+                className="rounded-lg border border-[var(--line)] bg-surface px-3 py-1.5 text-sm text-ink-soft transition hover:border-accent/35 hover:text-accent-deep"
+              >
+                {category.name}
+                <span className="ml-1.5 text-ink-soft/55">{category.count}</span>
+              </a>
+            ))}
+          </div>
+
+          <div className="mt-12 space-y-14">
+            {lessonsByCategory.map((group) => (
+              <div
+                key={group.name}
+                id={`topic-${group.name.toLowerCase().replace(/\s+/g, "-")}`}
+                className="scroll-mt-28"
+              >
+                <div className="flex items-end justify-between gap-3">
+                  <div>
+                    <h3 className="font-[family-name:var(--font-display)] text-2xl tracking-[-0.03em] text-ink">
+                      {group.name}
+                    </h3>
+                    <p className="mt-1 text-sm text-ink-soft">
+                      {group.count} {group.count === 1 ? "lesson" : "lessons"}
+                    </p>
+                  </div>
+                  <Link
+                    href={`/catalog?category=${encodeURIComponent(group.name)}`}
+                    className="text-sm font-semibold text-accent-deep hover:underline"
+                  >
+                    View in catalog
+                  </Link>
+                </div>
+                <div className="mt-6 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  {group.lessons.map((item) => (
+                    <ContentCard key={item.slug} item={item} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -132,13 +206,13 @@ export default function HomePage() {
           {[
             {
               step: "01",
-              title: "Preview the module",
-              body: "See outcomes, the table of contents, and a free sample before you pay.",
+              title: "Browse the library",
+              body: "Pick any lesson from the full catalog. Filter by topic or open a preview first.",
             },
             {
               step: "02",
-              title: "Unlock full access",
-              body: "Buy one cheap lesson, or subscribe for the full library.",
+              title: "Unlock the library",
+              body: "Subscribe once for access to every current lesson, plus new ones while active.",
             },
             {
               step: "03",
@@ -162,62 +236,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-[var(--line)] bg-[rgba(232,226,216,0.45)]">
-        <div className="shell py-16 md:py-20">
-          <div className="flex items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-soft/60">
-                Featured lessons
-              </p>
-              <h2 className="mt-3 font-[family-name:var(--font-display)] text-3xl tracking-[-0.03em] text-ink md:text-4xl">
-                Start with high-demand skills
-              </h2>
-            </div>
-            <Link
-              href="/catalog"
-              className="hidden text-sm font-semibold text-accent-deep hover:underline sm:inline"
-            >
-              View catalog
-            </Link>
-          </div>
-
-          <div className="mt-10 grid auto-rows-fr gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {showcase.map((item) => (
-              <ContentCard key={item.slug} item={item} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="shell py-12 md:py-14">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-soft/60">
-              Topics
-            </p>
-            <h2 className="mt-2 font-[family-name:var(--font-display)] text-2xl tracking-[-0.03em] text-ink">
-              Browse by subject
-            </h2>
-          </div>
-          <Link href="/catalog" className="text-sm font-semibold text-accent-deep hover:underline">
-            All lessons
-          </Link>
-        </div>
-
-        <div className="mt-5 flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <Link
-              key={category.name}
-              href={`/catalog?category=${encodeURIComponent(category.name)}`}
-              className="rounded-lg border border-[var(--line)] bg-surface px-3 py-1.5 text-sm text-ink-soft transition hover:border-accent/35 hover:text-accent-deep"
-            >
-              {category.name}
-              <span className="ml-1.5 text-ink-soft/55">{category.count}</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       <section className="border-t border-[var(--line)] bg-surface/80">
         <div className="shell py-16 md:py-20">
           <div className="mx-auto max-w-2xl text-center">
@@ -236,23 +254,24 @@ export default function HomePage() {
         <div className="overflow-hidden rounded-[1.85rem] bg-ink px-6 py-14 text-center text-paper shadow-lift md:px-12">
           <div className="mx-auto mb-6 h-1 w-16 rounded-full bg-glow/70" />
           <h2 className="mx-auto max-w-2xl font-[family-name:var(--font-display)] text-3xl tracking-[-0.03em] md:text-4xl">
-            Unlock a lesson. Finish it properly.
+            The whole library is ready to browse.
           </h2>
           <p className="mx-auto mt-4 max-w-xl font-[family-name:var(--font-body)] text-base leading-relaxed text-paper/65">
-            Browse the catalog, preview what you need, and unlock when you are ready to study.
+            {all.length} lessons are listed above and in the catalog. Preview freely, then
+            subscribe when you want full access.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
-              href="/catalog"
+              href="#library"
               className="rounded-xl bg-accent px-6 py-3 text-sm font-bold text-paper transition hover:bg-accent-deep"
             >
-              Browse lessons
+              See all lessons
             </Link>
             <Link
-              href="/pricing"
+              href="/catalog"
               className="rounded-xl border border-white/15 px-6 py-3 text-sm font-semibold text-paper transition hover:bg-white/5"
             >
-              See plans
+              Open catalog
             </Link>
           </div>
         </div>

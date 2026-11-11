@@ -35,10 +35,16 @@ export default async function CatalogPage({ searchParams }: Props) {
           Catalog
         </p>
         <h1 className="mt-2 font-[family-name:var(--font-display)] text-4xl tracking-[-0.04em] text-ink md:text-5xl">
-          Lesson catalog
+          All {all.length} lessons
         </h1>
         <p className="mt-4 text-base leading-relaxed text-ink-soft">
-          Preview any lesson for free. Unlock when you want the full module and quizzes.
+          Full Syllaba library — search or filter by topic. Preview any lesson free before you
+          unlock.
+        </p>
+        <p className="mt-2 text-sm text-ink-soft/80">
+          Showing {filtered.length} of {all.length}
+          {params.category ? ` in ${params.category}` : ""}
+          {params.q ? ` for “${params.q}”` : ""}.
         </p>
       </div>
 

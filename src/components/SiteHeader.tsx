@@ -3,7 +3,7 @@ import { AuthNav } from "@/components/AuthNav";
 import { BrandLogo } from "@/components/BrandLogo";
 
 const links = [
-  { href: "/catalog", label: "Catalog" },
+  { href: "/catalog", label: "All lessons" },
   { href: "/pricing", label: "Pricing" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -29,7 +29,7 @@ export function SiteHeader() {
             href="/catalog"
             className="rounded-xl px-3 py-2 text-sm font-medium text-ink-soft transition hover:bg-accent/10 hover:text-accent-deep md:hidden"
           >
-            Catalog
+            All lessons
           </Link>
           <div className="ml-1">
             <AuthNav />
