@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "excel-checkpoint-1",
+      "title": "Checkpoint 1 — Structure and Data Basics",
+      "intro": "Check whether you understand workbook architecture, rectangular data, and data types before formulas get complex.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Which workbook layout best reduces long-term errors?",
+          "options": [
+            { "id": "a", "text": "Put raw data, calculations, and charts mixed on one dense sheet" },
+            { "id": "b", "text": "Separate raw data, assumptions, analysis, and presentation onto clearly named sheets" },
+            { "id": "c", "text": "Hide everything important on a sheet named Sheet1" },
+            { "id": "d", "text": "Store assumptions only inside chart titles" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Separating layers makes refresh, audit, and collaboration much safer than mixing everything together.",
+          "wrongExplanations": {
+            "a": "Mixed sheets are hard to sort, refresh, and audit safely.",
+            "c": "Vague sheet names and hidden logic increase risk.",
+            "d": "Assumptions belong in labeled input cells or an Assumptions sheet."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What does rectangular data mean in Excel?",
+          "options": [
+            { "id": "a", "text": "Merged title cells above every table" },
+            { "id": "b", "text": "One header row, one field per column, and one record per row with no blank rows inside the block" },
+            { "id": "c", "text": "Two unrelated tables placed side by side" },
+            { "id": "d", "text": "A chart placed inside the source range" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Rectangular data is the foundation for reliable sorting, filtering, Tables, and PivotTables.",
+          "wrongExplanations": {
+            "a": "Merged headers often break sorting and references.",
+            "c": "Side-by-side tables create selection and analysis hazards.",
+            "d": "Charts belong on presentation sheets, not inside raw ranges."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why convert a range into an Excel Table?",
+          "options": [
+            { "id": "a", "text": "Because Tables prevent all business mistakes automatically" },
+            { "id": "b", "text": "Because Tables expand with new rows, keep formulas consistent, and support readable structured references" },
+            { "id": "c", "text": "Because Tables delete the need for headers" },
+            { "id": "d", "text": "Because Tables make absolute references illegal" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Tables improve maintenance and readability, especially as data grows.",
+          "wrongExplanations": {
+            "a": "Tables help structure work but do not replace judgment.",
+            "c": "Headers remain essential.",
+            "d": "Absolute references are still used for assumptions and parameters."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "A date column sorts like text instead of chronological order. What is the most likely issue?",
+          "options": [
+            { "id": "a", "text": "The chart type is wrong" },
+            { "id": "b", "text": "The dates are stored as text rather than real Excel dates" },
+            { "id": "c", "text": "PivotTables cannot use dates" },
+            { "id": "d", "text": "Absolute references disable sorting" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Text dates often sort alphabetically. Convert them to real date values for correct chronology.",
+          "wrongExplanations": {
+            "a": "Chart type does not control source sorting behavior.",
+            "c": "PivotTables can summarize dates when values are valid.",
+            "d": "Absolute references affect formula copying, not date sorting."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which statement about values versus formatting is true?",
+          "options": [
+            { "id": "a", "text": "Formatting changes the underlying calculated value automatically" },
+            { "id": "b", "text": "Excel calculates with values; formatting only changes how values appear" },
+            { "id": "c", "text": "Currency symbols typed into cells always remain true numbers" },
+            { "id": "d", "text": "Left-aligned numbers are always safer than right-aligned numbers" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Display format and stored value are different. Confusing them causes calculation errors.",
+          "wrongExplanations": {
+            "a": "Formatting usually changes appearance, not the stored value.",
+            "c": "Typed symbols can turn entries into text.",
+            "d": "Left alignment often signals text stored where numbers were expected."
+          }
+        }
+      ]
+    },
+    {
+      "id": "excel-checkpoint-2",
+      "title": "Checkpoint 2 — Formulas, References, and Cleaning",
+      "intro": "Apply core formula habits: references, cleaning helpers, and lookups.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Cell K2 holds a tax rate. Why is =H2*$K$2 better than =H2*K2 when copying down a column?",
+          "options": [
+            { "id": "a", "text": "Because relative references never work" },
+            { "id": "b", "text": "Because $K$2 stays locked on the tax rate while H2 moves row by row" },
+            { "id": "c", "text": "Because absolute references disable recalculation" },
+            { "id": "d", "text": "Because K2 must be text" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Absolute locking keeps every copied formula pointed at the same assumption cell.",
+          "wrongExplanations": {
+            "a": "Relative references are useful for row inputs like H2.",
+            "c": "Absolute references still recalculate normally.",
+            "d": "The tax rate should be numeric, not text."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which formula best standardizes a messy customer name for analysis while preserving the raw column?",
+          "options": [
+            { "id": "a", "text": "Overwrite the raw name cells manually with no history" },
+            { "id": "b", "text": "=PROPER(TRIM([@[Customer Name]]))" },
+            { "id": "c", "text": "=SUM([@[Customer Name]])" },
+            { "id": "d", "text": "=XLOOKUP([@[Customer Name]],A:A,A:A)" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Helper formulas like TRIM and PROPER clean visibly without destroying source values.",
+          "wrongExplanations": {
+            "a": "Silent overwrites remove auditability.",
+            "c": "SUM is for numbers, not names.",
+            "d": "A self-lookup does not clean spaces or casing."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What is the safest beginner default for XLOOKUP matching keys?",
+          "options": [
+            { "id": "a", "text": "Approximate match for every product code" },
+            { "id": "b", "text": "Exact match, with a clear not-found result" },
+            { "id": "c", "text": "Ignore missing keys entirely" },
+            { "id": "d", "text": "Always return the first column only" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Exact match with explicit not-found handling prevents silent wrong joins.",
+          "wrongExplanations": {
+            "a": "Approximate match is for ordered ranges, not ordinary codes.",
+            "c": "Missing keys should be visible for data quality review.",
+            "d": "XLOOKUP can return any chosen return column."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Why keep thresholds such as high-discount cutoffs on an Assumptions sheet?",
+          "options": [
+            { "id": "a", "text": "So nobody can ever change them" },
+            { "id": "b", "text": "So one labeled input can update many formulas safely and transparently" },
+            { "id": "c", "text": "Because Excel forbids numbers inside formulas" },
+            { "id": "d", "text": "Because PivotTables cannot read formulas" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Central assumptions make models easier to update, review, and trust.",
+          "wrongExplanations": {
+            "a": "Assumptions should be editable by design, with control and documentation.",
+            "c": "Excel allows hardcoded numbers, but they are harder to audit.",
+            "d": "PivotTables can summarize calculated fields from source Tables."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "A check formula returns SUM(Net)+SUM(Discount)-SUM(Gross) = 0. What does that mainly prove?",
+          "options": [
+            { "id": "a", "text": "The business strategy is optimal" },
+            { "id": "b", "text": "The workbook's revenue arithmetic is internally consistent" },
+            { "id": "c", "text": "Every lookup matched perfectly" },
+            { "id": "d", "text": "No filters are active" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Reconciliation checks validate internal arithmetic before presentation.",
+          "wrongExplanations": {
+            "a": "Consistency is not the same as strategic success.",
+            "c": "Lookup quality needs separate checks.",
+            "d": "Filter state must be checked independently."
+          }
+        }
+      ]
+    },
+    {
+      "id": "excel-final",
+      "title": "Final Quiz — Analysis, Dashboards, and Judgment",
+      "intro": "Use the full lesson. Focus on PivotTables, presentation, and professional judgment.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "In a PivotTable of net revenue by region, Excel shows Count instead of Sum. What should you do first?",
+          "options": [
+            { "id": "a", "text": "Accept Count because it looks similar" },
+            { "id": "b", "text": "Open Value Field Settings and set the aggregation to Sum after checking the source data types" },
+            { "id": "c", "text": "Delete the PivotTable permanently" },
+            { "id": "d", "text": "Convert revenue to text" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Wrong aggregations are common when source values are text or blank-heavy. Fix the summary settings and data types.",
+          "wrongExplanations": {
+            "a": "Count and Sum answer different questions.",
+            "c": "Deletion is unnecessary if settings can be corrected.",
+            "d": "Text conversion would worsen numeric aggregation."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which chart choice best compares monthly revenue trends across regions?",
+          "options": [
+            { "id": "a", "text": "A 3D pie chart" },
+            { "id": "b", "text": "A line chart with one line per region over months" },
+            { "id": "c", "text": "A single KPI card with no time axis" },
+            { "id": "d", "text": "Conditional formatting only" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Line charts make multi-series trends over time easy to compare.",
+          "wrongExplanations": {
+            "a": "Pie charts are poor for trends and 3D distorts perception.",
+            "c": "A KPI card cannot show comparative monthly movement.",
+            "d": "Formatting can highlight values but is not a trend comparison chart."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What belongs in a beginner dashboard notes panel?",
+          "options": [
+            { "id": "a", "text": "Secret macros with no explanation" },
+            { "id": "b", "text": "Data source, refresh date, key definitions, and known limitations" },
+            { "id": "c", "text": "Only decorative clip art" },
+            { "id": "d", "text": "Raw unfiltered transaction rows" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Notes create trust by documenting provenance and caveats.",
+          "wrongExplanations": {
+            "a": "Hidden unexplained automation undermines auditability.",
+            "c": "Decoration does not explain the numbers.",
+            "d": "Raw rows belong on data sheets, not the dashboard canvas."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Before a leadership meeting, which action is most important?",
+          "options": [
+            { "id": "a", "text": "Add more colors until the sheet looks busy" },
+            { "id": "b", "text": "Refresh PivotTables, confirm filters, reconcile key totals, and scan for errors" },
+            { "id": "c", "text": "Hardcode over any formula that looks inconvenient" },
+            { "id": "d", "text": "Delete the Assumptions sheet to save space" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A short audit checklist prevents presenting stale, filtered, or inconsistent numbers.",
+          "wrongExplanations": {
+            "a": "Visual noise does not equal readiness.",
+            "c": "Hardcoding hides logic and creates future errors.",
+            "d": "Assumptions documentation is part of trust."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why are ratios like discount rate risky to sum directly across rows?",
+          "options": [
+            { "id": "a", "text": "Because Excel cannot store percentages" },
+            { "id": "b", "text": "Because ratios are often non-additive; numerators and denominators should be aggregated first" },
+            { "id": "c", "text": "Because PivotTables forbid averages" },
+            { "id": "d", "text": "Because all ratios are already totals" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Additive measures can be summed; many ratios cannot. Aggregate components, then compute the ratio.",
+          "wrongExplanations": {
+            "a": "Excel stores percentages as numeric values.",
+            "c": "PivotTables can average, but average of ratios may still be misleading.",
+            "d": "A rate is not automatically a total."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which statement shows mature Excel judgment?",
+          "options": [
+            { "id": "a", "text": "If a chart looks polished, the analysis must be correct" },
+            { "id": "b", "text": "Structure, definitions, reconciliation, and clear presentation matter more than decorative complexity" },
+            { "id": "c", "text": "Hardcoding replaces the need for assumptions" },
+            { "id": "d", "text": "Raw data should be edited in place until it matches the desired story" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Reliable Excel work is a discipline of structure and verification, not visual flair.",
+          "wrongExplanations": {
+            "a": "Polish can hide wrong ranges or aggregations.",
+            "c": "Hardcoding makes updates and audits harder.",
+            "d": "Editing raw data to fit a narrative destroys trust."
+          }
+        }
+      ]
+    }
+  ]
+}

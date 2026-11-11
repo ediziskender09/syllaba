@@ -1,0 +1,460 @@
+{
+  "quizzes": [
+    {
+      "id": "aws-checkpoint-1",
+      "title": "Checkpoint 1 — Cloud Foundations",
+      "intro": "Cloud benefits, infrastructure, shared responsibility, IAM, and S3.",
+      "questions": [
+        {
+          "prompt": "A core cloud benefit is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Buying all capacity years ahead always"
+            },
+            {
+              "id": "b",
+              "text": "On-demand resources with elasticity and usage-based pricing"
+            },
+            {
+              "id": "c",
+              "text": "Security becoming entirely someone else’s problem"
+            },
+            {
+              "id": "d",
+              "text": "No network access needed"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Cloud provides on-demand, scalable access and pay-for-what-you-use economics.",
+          "wrongExplanations": {
+            "a": "Avoiding large upfront buys is a benefit. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Customers still own security in the cloud. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Cloud services are network-accessed. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "An Availability Zone is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "An email newsletter segment"
+            },
+            {
+              "id": "b",
+              "text": "Isolated capacity (data centers) inside a Region used for resilience"
+            },
+            {
+              "id": "c",
+              "text": "An S3 storage class name for images only"
+            },
+            {
+              "id": "d",
+              "text": "A billing currency code"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "AZs let you design for failure within a Region.",
+          "wrongExplanations": {
+            "a": "Unrelated marketing concept. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Storage classes are not AZs. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Currency codes are billing, not infrastructure. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Under shared responsibility, customers typically manage:",
+          "options": [
+            {
+              "id": "a",
+              "text": "AWS data-center cameras"
+            },
+            {
+              "id": "b",
+              "text": "Data, identities, access policies, and many service configurations"
+            },
+            {
+              "id": "c",
+              "text": "Manufacturing of AWS servers"
+            },
+            {
+              "id": "d",
+              "text": "Global backbone ownership"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "AWS secures the cloud; customers secure what they put in and configure.",
+          "wrongExplanations": {
+            "a": "Physical facilities are AWS’s responsibility. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Hardware manufacturing is AWS’s. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Global infrastructure is AWS’s. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Which IAM practice is best?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Daily root-user work"
+            },
+            {
+              "id": "b",
+              "text": "Least privilege, MFA, and roles for applications"
+            },
+            {
+              "id": "c",
+              "text": "Posting access keys in public chat"
+            },
+            {
+              "id": "d",
+              "text": "Disabling MFA for convenience"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Narrow permissions, MFA, and temporary credentials reduce risk.",
+          "wrongExplanations": {
+            "a": "Root should be rare and locked down. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Public key sharing causes breaches. Choose the option that matches the lesson’s core idea instead.",
+            "d": "MFA strengthens accounts. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Amazon S3 is best described as:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A managed relational SQL engine"
+            },
+            {
+              "id": "b",
+              "text": "Object storage for objects in buckets"
+            },
+            {
+              "id": "c",
+              "text": "A physical hardware keyboard"
+            },
+            {
+              "id": "d",
+              "text": "A subnet type inside VPC"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "S3 stores objects addressed by keys inside buckets.",
+          "wrongExplanations": {
+            "a": "Relational SQL is closer to RDS. Choose the option that matches the lesson’s core idea instead.",
+            "c": "S3 is a cloud service. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Subnets are networking constructs. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "aws-checkpoint-2",
+      "title": "Checkpoint 2 — Services and Controls",
+      "intro": "Compute, storage/databases, networking, and monitoring.",
+      "questions": [
+        {
+          "prompt": "Lambda is often a strong fit when:",
+          "options": [
+            {
+              "id": "a",
+              "text": "You need a fully managed custom OS with long-lived specialized daemons and no events"
+            },
+            {
+              "id": "b",
+              "text": "You run event/request-driven code and want less server management"
+            },
+            {
+              "id": "c",
+              "text": "You want to avoid IAM entirely"
+            },
+            {
+              "id": "d",
+              "text": "You must use a local optical drive"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Lambda shines for event-driven workloads with minimal server ops.",
+          "wrongExplanations": {
+            "a": "Heavy OS control often fits EC2 better. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Lambda still requires permissions. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Optical drives are irrelevant. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "EBS differs from S3 mainly because EBS is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A global CDN"
+            },
+            {
+              "id": "b",
+              "text": "Block storage typically attached to EC2"
+            },
+            {
+              "id": "c",
+              "text": "A document-oriented query language"
+            },
+            {
+              "id": "d",
+              "text": "An email delivery product"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "EBS volumes act like disks for instances; S3 is object storage via API.",
+          "wrongExplanations": {
+            "a": "CloudFront is the CDN. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Document DBs are a different category. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Email is another service family. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "A safer database pattern is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Publicly open to the world on all ports"
+            },
+            {
+              "id": "b",
+              "text": "Private placement with access only from application security groups"
+            },
+            {
+              "id": "c",
+              "text": "Passwords hard-coded in mobile apps"
+            },
+            {
+              "id": "d",
+              "text": "Never taking backups"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Private networks plus tight security groups limit exposure.",
+          "wrongExplanations": {
+            "a": "Wide-open DBs are a classic breach pattern. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Embedded passwords are unsafe. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Backups support recovery. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Security groups primarily act as:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Virtual firewalls for allowed traffic to resources"
+            },
+            {
+              "id": "b",
+              "text": "S3 lifecycle policies"
+            },
+            {
+              "id": "c",
+              "text": "Cost Explorer charts"
+            },
+            {
+              "id": "d",
+              "text": "Route 53 domain invoices"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Security groups control permitted inbound/outbound traffic for resources.",
+          "wrongExplanations": {
+            "b": "Lifecycle rules manage object transitions. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Cost Explorer is financial analysis. Choose the option that matches the lesson’s core idea instead.",
+            "d": "DNS billing is unrelated. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "CloudTrail is especially useful to answer:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only CPU percentage on one instance"
+            },
+            {
+              "id": "b",
+              "text": "Who made which API changes in the account"
+            },
+            {
+              "id": "c",
+              "text": "Which CSS class is used on a button"
+            },
+            {
+              "id": "d",
+              "text": "How to draw a VPC logo"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "CloudTrail records API activity for audit and investigation.",
+          "wrongExplanations": {
+            "a": "CPU metrics are CloudWatch territory. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Frontend CSS is not CloudTrail. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Diagrams are documentation, not CloudTrail. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "aws-final",
+      "title": "Final Quiz — Architecture Judgment",
+      "intro": "Apply service selection, security, cost, and reliability thinking.",
+      "questions": [
+        {
+          "prompt": "A static course marketing site with global visitors should often use:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A single oversized EC2 in one AZ with no CDN"
+            },
+            {
+              "id": "b",
+              "text": "S3 for objects plus CloudFront for delivery"
+            },
+            {
+              "id": "c",
+              "text": "Publicly open RDS as the web server"
+            },
+            {
+              "id": "d",
+              "text": "Root access keys in the browser"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Static assets fit object storage and edge caching well.",
+          "wrongExplanations": {
+            "a": "Single-AZ EC2 without CDN is fragile and often wasteful.",
+            "c": "RDS is a database, not a static web server.",
+            "d": "Browser-exposed root keys are catastrophic. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "Least privilege for a thumbnail Lambda reading bucket A and writing bucket B means:",
+          "options": [
+            {
+              "id": "a",
+              "text": "AdministratorAccess on the account"
+            },
+            {
+              "id": "b",
+              "text": "Only the specific s3 read/write actions on those bucket resources"
+            },
+            {
+              "id": "c",
+              "text": "s3:* on every bucket in every account"
+            },
+            {
+              "id": "d",
+              "text": "Disabling CloudTrail to hide actions"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Grant only required actions on required resources. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Admin rights are excessive. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Wildcard everything violates least privilege. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Disabling audit logging increases risk. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Multiple Availability Zones primarily help with:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Cheaper coffee in the office"
+            },
+            {
+              "id": "b",
+              "text": "Higher availability when one zone has issues"
+            },
+            {
+              "id": "c",
+              "text": "Deleting IAM permanently"
+            },
+            {
+              "id": "d",
+              "text": "Avoiding all monitoring"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Spreading capacity across AZs improves resilience to zone failure.",
+          "wrongExplanations": {
+            "a": "Unrelated perk. Choose the option that matches the lesson’s core idea instead.",
+            "c": "IAM remains essential. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Monitoring remains essential. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "A sudden AWS bill spike should first lead you to:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ignore it until next year"
+            },
+            {
+              "id": "b",
+              "text": "Inspect Cost Explorer/budgets, find expensive resources, and shut down waste"
+            },
+            {
+              "id": "c",
+              "text": "Create more untagged idle EC2 for fun"
+            },
+            {
+              "id": "d",
+              "text": "Disable MFA"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Cost visibility and cleanup are core cloud hygiene.",
+          "wrongExplanations": {
+            "a": "Ignoring spend causes worse surprises. Choose the option that matches the lesson’s core idea instead.",
+            "c": "More idle resources worsen the problem. Choose the option that matches the lesson’s core idea instead.",
+            "d": "MFA is unrelated to cost diagnosis. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Mature Cloud Practitioner thinking is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Memorizing logos without tradeoffs"
+            },
+            {
+              "id": "b",
+              "text": "Matching requirements to services while considering security, reliability, cost, and operations"
+            },
+            {
+              "id": "c",
+              "text": "Using public databases for convenience"
+            },
+            {
+              "id": "d",
+              "text": "Skipping budgets because cloud is cheap by magic"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Judgment means tradeoffs across architecture pillars, not trivia alone.",
+          "wrongExplanations": {
+            "a": "Logos without tradeoffs are shallow prep. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Public DBs for convenience is unsafe. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Budgets and FinOps habits matter. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    }
+  ]
+}

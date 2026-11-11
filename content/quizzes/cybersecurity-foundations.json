@@ -1,0 +1,460 @@
+{
+  "quizzes": [
+    {
+      "id": "cyber-checkpoint-1",
+      "title": "Checkpoint 1 — Risk and Identity",
+      "intro": "CIA, risk language, authentication, and passwords.",
+      "questions": [
+        {
+          "prompt": "The CIA triad stands for:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Cookies, Internet, Apps"
+            },
+            {
+              "id": "b",
+              "text": "Confidentiality, Integrity, Availability"
+            },
+            {
+              "id": "c",
+              "text": "Coding, Installation, Automation"
+            },
+            {
+              "id": "d",
+              "text": "Compliance, Invoices, Audits only"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "CIA organizes classic security goals: secrecy, trustworthiness of data, and reliable access.",
+          "wrongExplanations": {
+            "a": "Unrelated expansion of the acronym. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Those words are not the CIA triad. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Compliance matters but is not what CIA expands to."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "A vulnerability is best described as:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A guaranteed breach that already happened"
+            },
+            {
+              "id": "b",
+              "text": "A weakness that a threat could exploit"
+            },
+            {
+              "id": "c",
+              "text": "Any security tool you bought"
+            },
+            {
+              "id": "d",
+              "text": "A backup success report"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Vulnerabilities are weaknesses; risk appears when threats can exploit them against assets.",
+          "wrongExplanations": {
+            "a": "An exploited incident is an event/impact, not the definition of vulnerability.",
+            "c": "Tools are controls, not vulnerabilities. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Backups are controls/recovery assets. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Authentication differs from authorization because authentication:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Grants every permission automatically"
+            },
+            {
+              "id": "b",
+              "text": "Verifies identity, while authorization decides allowed actions"
+            },
+            {
+              "id": "c",
+              "text": "Deletes logs"
+            },
+            {
+              "id": "d",
+              "text": "Is identical to encryption"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "AuthN answers who you are; AuthZ answers what you may do.",
+          "wrongExplanations": {
+            "a": "Identity proof is not automatic full access. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Logging is separate. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Encryption protects data, not identity decisions. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Passwords should be stored as:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Plain text in a spreadsheet"
+            },
+            {
+              "id": "b",
+              "text": "Slow salted hashes designed for passwords"
+            },
+            {
+              "id": "c",
+              "text": "Reversible encryption with one shared key in the app UI"
+            },
+            {
+              "id": "d",
+              "text": "Browser localStorage for every user"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Password hashing with salt/work factor lets systems verify secrets without storing them directly.",
+          "wrongExplanations": {
+            "a": "Plain text is catastrophic if leaked. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Reversible storage is weaker for password verification use cases.",
+            "d": "Frontend storage is not a password database. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "MFA is valuable mainly because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "It makes passwords unnecessary forever in all systems"
+            },
+            {
+              "id": "b",
+              "text": "Stolen passwords alone are often not enough to break in"
+            },
+            {
+              "id": "c",
+              "text": "It replaces backups"
+            },
+            {
+              "id": "d",
+              "text": "It removes the need for patching"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "An extra factor raises attacker cost after credential theft.",
+          "wrongExplanations": {
+            "a": "Passwords often still exist alongside MFA. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Backups remain necessary. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Patching remains necessary. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "cyber-checkpoint-2",
+      "title": "Checkpoint 2 — Attacks and Defenses",
+      "intro": "Phishing, web risks, encryption, and least privilege.",
+      "questions": [
+        {
+          "prompt": "A strong phishing warning sign is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A calm expected receipt from a known vendor with no ask"
+            },
+            {
+              "id": "b",
+              "text": "Urgent pressure to click a strange link and enter credentials"
+            },
+            {
+              "id": "c",
+              "text": "A password manager autofill on a site you intentionally opened"
+            },
+            {
+              "id": "d",
+              "text": "HTTPS on a trusted bank domain you typed yourself"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Urgency plus unexpected credential requests are classic social-engineering tells.",
+          "wrongExplanations": {
+            "a": "Expected receipts are normal. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Autofill on intentional visits is not phishing by itself.",
+            "d": "Typed trusted HTTPS destinations are good practice. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "SQL injection risk is reduced by:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Trusting all client input"
+            },
+            {
+              "id": "b",
+              "text": "Parameterized queries / safe DB access patterns and server-side checks"
+            },
+            {
+              "id": "c",
+              "text": "Disabling HTTPS"
+            },
+            {
+              "id": "d",
+              "text": "Showing detailed DB errors to strangers"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Safe query construction and validation stop hostile input from becoming executable SQL.",
+          "wrongExplanations": {
+            "a": "Client input is hostile by default. Choose the option that matches the lesson’s core idea instead.",
+            "c": "HTTPS does not replace injection defenses. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Verbose errors help attackers. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Encryption primarily supports:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Faster CSS rendering"
+            },
+            {
+              "id": "b",
+              "text": "Confidentiality of data at rest or in transit when keys are protected"
+            },
+            {
+              "id": "c",
+              "text": "Automatic perfect authorization"
+            },
+            {
+              "id": "d",
+              "text": "Deleting the need for MFA"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Encryption protects secrecy; authorization and identity controls remain separate.",
+          "wrongExplanations": {
+            "a": "Encryption is unrelated to CSS. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Encrypted data can still be accessed by authorized app paths.",
+            "d": "MFA remains useful. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Least privilege reduces damage after compromise because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Attackers gain admin everywhere by default"
+            },
+            {
+              "id": "b",
+              "text": "The stolen account can access only what it needed for its job"
+            },
+            {
+              "id": "c",
+              "text": "Logs are turned off"
+            },
+            {
+              "id": "d",
+              "text": "Patches become unnecessary"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Narrow permissions limit how far an attacker can move with one account.",
+          "wrongExplanations": {
+            "a": "That outcome is what least privilege prevents. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Logging should increase, not stop. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Patching remains required. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "A publicly exposed storage bucket with private files should first be:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ignored until next quarter"
+            },
+            {
+              "id": "b",
+              "text": "Restricted immediately while preserving evidence and starting incident response"
+            },
+            {
+              "id": "c",
+              "text": "Shared more widely for convenience"
+            },
+            {
+              "id": "d",
+              "text": "Used as a marketing CDN without review"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Contain exposure fast, then investigate and notify as needed.",
+          "wrongExplanations": {
+            "a": "Delay worsens impact. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Wider sharing increases harm. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Sensitive private files are not casual CDN fodder."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "cyber-final",
+      "title": "Final Quiz — Security Judgment",
+      "intro": "Apply risk thinking across people, process, and technology.",
+      "questions": [
+        {
+          "prompt": "Defense in depth means:",
+          "options": [
+            {
+              "id": "a",
+              "text": "One magic tool replaces all other controls"
+            },
+            {
+              "id": "b",
+              "text": "Overlapping controls so one failure does not cause total loss"
+            },
+            {
+              "id": "c",
+              "text": "Never monitoring systems"
+            },
+            {
+              "id": "d",
+              "text": "Avoiding backups because encryption exists"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Layered controls raise attacker cost and reduce blast radius.",
+          "wrongExplanations": {
+            "a": "No single tool is enough. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Monitoring is part of depth. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Backups remain critical. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "After a suspected account takeover, a sensible early response is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Post the password in chat for teammates"
+            },
+            {
+              "id": "b",
+              "text": "Force logout/disable access, rotate credentials, preserve logs, communicate carefully"
+            },
+            {
+              "id": "c",
+              "text": "Delete all logs to reduce embarrassment"
+            },
+            {
+              "id": "d",
+              "text": "Disable MFA across the company"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Containment, credential hygiene, evidence, and communication are core IR moves.",
+          "wrongExplanations": {
+            "a": "Sharing passwords spreads compromise. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Logs are evidence. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Disabling MFA worsens security. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Ethical security practice requires:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Scanning any website that looks interesting"
+            },
+            {
+              "id": "b",
+              "text": "Authorization and legal scope before testing systems you do not own"
+            },
+            {
+              "id": "c",
+              "text": "Publishing customer data to prove a point"
+            },
+            {
+              "id": "d",
+              "text": "Skipping incident documentation"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Permission and scope separate professional testing from illegal access.",
+          "wrongExplanations": {
+            "a": "Curiosity without permission is not authorization. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Publishing private data is unethical/illegal. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Documentation supports learning and compliance. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Email accounts deserve special protection because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "They are never used for recovery"
+            },
+            {
+              "id": "b",
+              "text": "They often reset many other accounts if compromised"
+            },
+            {
+              "id": "c",
+              "text": "They cannot use MFA"
+            },
+            {
+              "id": "d",
+              "text": "They replace password managers"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Mailbox takeover frequently cascades into other services via recovery flows.",
+          "wrongExplanations": {
+            "a": "Email is commonly used for recovery. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Email can and should use MFA. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Password managers remain essential. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Mature security thinking is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Buying tools without process or ownership"
+            },
+            {
+              "id": "b",
+              "text": "Managing risk to assets with controls, monitoring, and response habits"
+            },
+            {
+              "id": "c",
+              "text": "Assuming breaches are impossible if you use HTTPS"
+            },
+            {
+              "id": "d",
+              "text": "Ignoring insider mistakes and accidents"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Security is ongoing risk management across people, process, and technology.",
+          "wrongExplanations": {
+            "a": "Tools without process fail. Choose the option that matches the lesson’s core idea instead.",
+            "c": "HTTPS helps but is not total safety. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Accidents and insiders matter. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    }
+  ]
+}

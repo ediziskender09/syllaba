@@ -1,0 +1,460 @@
+{
+  "quizzes": [
+    {
+      "id": "marketing-checkpoint-1",
+      "title": "Checkpoint 1 — Strategy and Audience",
+      "intro": "Positioning, segments, journey, and channel intent.",
+      "questions": [
+        {
+          "prompt": "Digital marketing is best understood as:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Random posting until something works"
+            },
+            {
+              "id": "b",
+              "text": "A system for reaching audiences, communicating value, and guiding action with measurement"
+            },
+            {
+              "id": "c",
+              "text": "Buying every ad tool immediately"
+            },
+            {
+              "id": "d",
+              "text": "Ignoring customer research"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Effective marketing connects audience, message, channels, and learning loops.",
+          "wrongExplanations": {
+            "a": "Randomness is not a strategy. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Tools follow strategy. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Research grounds relevance. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "A practical audience segment should include:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only a celebrity name"
+            },
+            {
+              "id": "b",
+              "text": "Who they are, desired outcome, obstacle, trust sources, and hesitations"
+            },
+            {
+              "id": "c",
+              "text": "A list of every human on Earth"
+            },
+            {
+              "id": "d",
+              "text": "No objections, because objections are negative"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Actionable segments capture jobs, barriers, and persuasion context.",
+          "wrongExplanations": {
+            "a": "Celebrity mentions are not segments. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Segments must be focused. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Objections are essential to address. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Matching content to journey stage means:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hard-selling every stranger immediately"
+            },
+            {
+              "id": "b",
+              "text": "Giving awareness, consideration, and decision audiences different jobs to do"
+            },
+            {
+              "id": "c",
+              "text": "Using one identical post on every platform forever"
+            },
+            {
+              "id": "d",
+              "text": "Avoiding measurement"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "People at different readiness levels need different information and asks.",
+          "wrongExplanations": {
+            "a": "Premature hard sells waste cold attention. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Platforms and stages differ. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Measurement is required. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "For urgent emergency plumbing demand, prioritize first:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A weekly lifestyle podcast only"
+            },
+            {
+              "id": "b",
+              "text": "High-intent search ads/presence"
+            },
+            {
+              "id": "c",
+              "text": "Aesthetic Instagram mood boards only"
+            },
+            {
+              "id": "d",
+              "text": "Billboards with no phone number"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Urgent intent aligns with search behavior close to the moment of need.",
+          "wrongExplanations": {
+            "a": "Podcasts are slow-burn brand, not emergency response. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Mood boards rarely capture emergency intent. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Missing the call-to-action wastes demand. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Strong positioning should be:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Vague enough to please everyone"
+            },
+            {
+              "id": "b",
+              "text": "Specific about audience, situation, benefit, and reason to believe"
+            },
+            {
+              "id": "c",
+              "text": "Copied word-for-word from a competitor homepage"
+            },
+            {
+              "id": "d",
+              "text": "Hidden from the landing page"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Clear positioning guides messaging across channels. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "If it is for everyone, it is for no one.",
+            "c": "Copying competitors erases differentiation. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Positioning should appear in customer-facing messaging. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "marketing-checkpoint-2",
+      "title": "Checkpoint 2 — Channels and Measurement",
+      "intro": "SEO, email, paid, analytics, and optimization.",
+      "questions": [
+        {
+          "prompt": "SEO at its core is about:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Keyword stuffing and tricks only"
+            },
+            {
+              "id": "b",
+              "text": "Aligning useful pages with real search intent and making them understandable"
+            },
+            {
+              "id": "c",
+              "text": "Buying followers"
+            },
+            {
+              "id": "d",
+              "text": "Avoiding page speed concerns"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Sustainable SEO serves intent with clear, crawlable, helpful pages.",
+          "wrongExplanations": {
+            "a": "Tricks decay and can harm trust. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Followers are not SEO. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Speed is part of modern SEO quality. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "Email marketing works best when:",
+          "options": [
+            {
+              "id": "a",
+              "text": "You buy scraped lists without consent"
+            },
+            {
+              "id": "b",
+              "text": "Permission is real and messages are relevant to segments"
+            },
+            {
+              "id": "c",
+              "text": "You never measure clicks or conversions"
+            },
+            {
+              "id": "d",
+              "text": "Every email uses fake urgency"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Consent plus relevance drive trust and performance. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Non-consensual lists damage deliverability and ethics. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Measurement guides improvement. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Fake urgency erodes trust. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "If ads get many clicks but few purchases, inspect first:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only how to raise spend immediately"
+            },
+            {
+              "id": "b",
+              "text": "Landing page congruence, offer, trust, and checkout friction"
+            },
+            {
+              "id": "c",
+              "text": "Deleting analytics"
+            },
+            {
+              "id": "d",
+              "text": "Changing the company logo randomly each hour"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A strong CTR with weak conversion points to post-click experience or offer fit.",
+          "wrongExplanations": {
+            "a": "Spending more amplifies a broken funnel. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Analytics diagnose the issue. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Random logo thrash is not diagnosis. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "A vanity metric problem is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Measuring revenue impact"
+            },
+            {
+              "id": "b",
+              "text": "Celebrating likes/reach that are disconnected from business goals"
+            },
+            {
+              "id": "c",
+              "text": "Tracking conversion rate"
+            },
+            {
+              "id": "d",
+              "text": "Using cohort retention"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Attention metrics matter only when tied to outcomes you care about.",
+          "wrongExplanations": {
+            "a": "Revenue impact is substantive. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Conversion is an outcome metric. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Retention quality matters. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Good optimization practice is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Changing audience, offer, creative, and page all at once every hour"
+            },
+            {
+              "id": "b",
+              "text": "Forming a hypothesis and testing meaningful changes with enough signal"
+            },
+            {
+              "id": "c",
+              "text": "Stopping after one slow day forever"
+            },
+            {
+              "id": "d",
+              "text": "Ignoring qualitative customer feedback"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Controlled learning beats chaotic tinkering. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Changing everything destroys attribution of cause. Choose the option that matches the lesson’s core idea instead.",
+            "c": "One day is rarely enough evidence. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Qualitative insight explains the “why.”. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "marketing-final",
+      "title": "Final Quiz — Marketing Judgment",
+      "intro": "Integrate strategy, channels, ethics, and learning loops.",
+      "questions": [
+        {
+          "prompt": "Before launching ads, the most valuable artifact is often:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A random GIF pack"
+            },
+            {
+              "id": "b",
+              "text": "Clear positioning, audience definition, offer, and measurement plan"
+            },
+            {
+              "id": "c",
+              "text": "A promise to never read results"
+            },
+            {
+              "id": "d",
+              "text": "Untracked discount codes everywhere"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Strategy artifacts prevent expensive confusion. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Creative without strategy underperforms. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Results reading is the point. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Untracked codes blind learning. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "Lifecycle/retention marketing matters because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Acquisition alone never leaks"
+            },
+            {
+              "id": "b",
+              "text": "Acquiring users into a leaky experience wastes growth spend"
+            },
+            {
+              "id": "c",
+              "text": "Email is illegal"
+            },
+            {
+              "id": "d",
+              "text": "SEO cannot support retention content"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Retention and activation determine whether acquisition creates value.",
+          "wrongExplanations": {
+            "a": "Buckets leak without retention. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Email is legal with consent. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Content can support retention. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Ethical marketing avoids:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Clear disclosures and honest claims"
+            },
+            {
+              "id": "b",
+              "text": "Dark patterns, fake scarcity, and hidden subscriptions"
+            },
+            {
+              "id": "c",
+              "text": "Easy opt-outs"
+            },
+            {
+              "id": "d",
+              "text": "Proof and testimonials with permission"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Manipulative patterns create legal and brand risk. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Honesty is ethical. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Easy opt-outs respect people. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Permissioned proof is legitimate. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Attribution models should be treated as:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Perfect metaphysical truth"
+            },
+            {
+              "id": "b",
+              "text": "Useful approximations that need multiple lenses and experiments when stakes are high"
+            },
+            {
+              "id": "c",
+              "text": "A reason to ignore landing pages"
+            },
+            {
+              "id": "d",
+              "text": "A replacement for customer interviews"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Attribution helps, but it is approximate; triangulate for big decisions.",
+          "wrongExplanations": {
+            "a": "No model is perfect truth. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Pages still matter. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Interviews still matter. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Mature marketing thinking combines:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Empathy for customers and evidence from measurement"
+            },
+            {
+              "id": "b",
+              "text": "Gut-only opinions with no tests"
+            },
+            {
+              "id": "c",
+              "text": "Tool purchases instead of messaging clarity"
+            },
+            {
+              "id": "d",
+              "text": "Identical tactics on every channel"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Empathy creates relevance; evidence improves outcomes. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Untested gut is fragile. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Clarity beats tool sprawl. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Channels have different contexts. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    }
+  ]
+}

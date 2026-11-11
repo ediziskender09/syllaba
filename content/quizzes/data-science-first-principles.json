@@ -1,0 +1,460 @@
+{
+  "quizzes": [
+    {
+      "id": "data-checkpoint-1",
+      "title": "Checkpoint 1 — Questions and Measurement",
+      "intro": "Decision framing, units, measurement, and exploration.",
+      "questions": [
+        {
+          "prompt": "Data science work should start with:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A random algorithm bake-off"
+            },
+            {
+              "id": "b",
+              "text": "A clear question tied to a decision"
+            },
+            {
+              "id": "c",
+              "text": "Deleting definitions so teams stay flexible"
+            },
+            {
+              "id": "d",
+              "text": "Maximizing chart count first"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Without a decision-focused question, analysis becomes aimless chart tourism.",
+          "wrongExplanations": {
+            "a": "Algorithms come after framing. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Definitions must be clearer, not vaguer. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Charts serve questions; they are not the goal."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "The unit of analysis is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Always a country"
+            },
+            {
+              "id": "b",
+              "text": "What one row/example represents in the dataset"
+            },
+            {
+              "id": "c",
+              "text": "Irrelevant if you have Python"
+            },
+            {
+              "id": "d",
+              "text": "The same as a neural network layer"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Grain/unit clarity prevents invalid joins and misleading aggregates.",
+          "wrongExplanations": {
+            "a": "Units vary by problem. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Tools do not remove conceptual grain issues. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Model layers are unrelated to analysis units. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Measurement quality matters because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Numbers are automatically meaningful"
+            },
+            {
+              "id": "b",
+              "text": "How reality becomes data shapes every later conclusion"
+            },
+            {
+              "id": "c",
+              "text": "Dashboards cannot be wrong"
+            },
+            {
+              "id": "d",
+              "text": "Missingness never biases results"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Bad definitions, sensors, or labels create confidently wrong analyses.",
+          "wrongExplanations": {
+            "a": "Numbers need definitions and context. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Dashboards inherit measurement errors. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Missingness often biases results. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Exploratory data analysis primarily helps you:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Skip data quality checks"
+            },
+            {
+              "id": "b",
+              "text": "Understand distributions, anomalies, and structure before modeling"
+            },
+            {
+              "id": "c",
+              "text": "Prove causation instantly"
+            },
+            {
+              "id": "d",
+              "text": "Hide uncertainty from stakeholders"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "EDA surfaces quality issues and patterns that inform trustworthy next steps.",
+          "wrongExplanations": {
+            "a": "Quality checks are part of exploration. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Causation needs stronger designs. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Hiding uncertainty is poor practice. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Correlation by itself means:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Guaranteed causation"
+            },
+            {
+              "id": "b",
+              "text": "An association that may or may not be causal"
+            },
+            {
+              "id": "c",
+              "text": "That experiments are unnecessary forever"
+            },
+            {
+              "id": "d",
+              "text": "That sampling bias is impossible"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Association can guide hypotheses and prediction but does not prove cause alone.",
+          "wrongExplanations": {
+            "a": "Causation requires stronger evidence. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Experiments remain valuable. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Bias can still exist. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "data-checkpoint-2",
+      "title": "Checkpoint 2 — Uncertainty and Models",
+      "intro": "Sampling, modeling, evaluation, leakage, and communication.",
+      "questions": [
+        {
+          "prompt": "A key reason samples can mislead is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Large n always guarantees no bias"
+            },
+            {
+              "id": "b",
+              "text": "Coverage/selection bias can omit important people or cases"
+            },
+            {
+              "id": "c",
+              "text": "Uncertainty disappears at n=30 always"
+            },
+            {
+              "id": "d",
+              "text": "Dashboards correct bias automatically"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Who is missing from the data can distort conclusions even with large samples.",
+          "wrongExplanations": {
+            "a": "Size does not cure biased frames. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Rules of thumb do not erase uncertainty. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Dashboards do not magically debias. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "A predictive model is most useful when:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Features would be unavailable at prediction time"
+            },
+            {
+              "id": "b",
+              "text": "It supports an action with honest evaluation on unseen data"
+            },
+            {
+              "id": "c",
+              "text": "It memorizes training rows only"
+            },
+            {
+              "id": "d",
+              "text": "Stakeholders never hear limitations"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Useful models generalize and connect to decisions under realistic constraints.",
+          "wrongExplanations": {
+            "a": "Unavailable features imply leakage or unusable models. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Memorization is overfitting. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Limitations belong in communication. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Data leakage is dangerous because it:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Always reduces accuracy in training"
+            },
+            {
+              "id": "b",
+              "text": "Makes offline metrics look great while real performance collapses"
+            },
+            {
+              "id": "c",
+              "text": "Improves production reliability automatically"
+            },
+            {
+              "id": "d",
+              "text": "Only affects CSS"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Leaked future information inflates test scores and fails in deployment.",
+          "wrongExplanations": {
+            "a": "Leakage usually inflates apparent performance. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Reliability falls, not rises. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Leakage is a data/modeling issue. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "If a team can act on only the top 200 risky customers, evaluate:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only overall accuracy on a 99% non-event class"
+            },
+            {
+              "id": "b",
+              "text": "Ranking quality / precision in the top 200 vs a baseline"
+            },
+            {
+              "id": "c",
+              "text": "Whether the chart is purple"
+            },
+            {
+              "id": "d",
+              "text": "Whether the model file is large"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Metrics should match the intervention capacity and business action.",
+          "wrongExplanations": {
+            "a": "Overall accuracy can hide useless rankings. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Chart color is irrelevant. Choose the option that matches the lesson’s core idea instead.",
+            "d": "File size is not an evaluation metric. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "A strong decision memo includes:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only the final number with no caveats"
+            },
+            {
+              "id": "b",
+              "text": "Recommendation, evidence, uncertainty/limitations, and next measurement"
+            },
+            {
+              "id": "c",
+              "text": "Hidden assumptions"
+            },
+            {
+              "id": "d",
+              "text": "A promise of perfect certainty"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Decision support requires clarity about confidence and follow-up measurement.",
+          "wrongExplanations": {
+            "a": "Caveats are essential. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Assumptions should be explicit. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Certainty theater is dishonest. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "data-final",
+      "title": "Final Quiz — Analytical Judgment",
+      "intro": "Apply first-principles thinking to realistic scenarios.",
+      "questions": [
+        {
+          "prompt": "“Analyze our sales data” should first be rewritten into:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A request for more chart themes"
+            },
+            {
+              "id": "b",
+              "text": "A decision-centered question with action, timeframe, and success definition"
+            },
+            {
+              "id": "c",
+              "text": "A demand to skip definitions"
+            },
+            {
+              "id": "d",
+              "text": "An order to train the deepest network available"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Framing creates analyzable, decision-relevant work. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Themes are secondary. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Definitions are required. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Model depth without framing is cargo cult. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "Customers who attend webinars renew more. Before claiming webinars cause renewals, consider:",
+          "options": [
+            {
+              "id": "a",
+              "text": "That correlation is always causation"
+            },
+            {
+              "id": "b",
+              "text": "Self-selection: attendees may already be more engaged"
+            },
+            {
+              "id": "c",
+              "text": "That experiments are impossible in business"
+            },
+            {
+              "id": "d",
+              "text": "That measurement definitions never matter"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Motivated/engaged customers may both attend and renew without the webinar causing renewal.",
+          "wrongExplanations": {
+            "a": "Correlation is not automatic causation. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Experiments are often possible. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Definitions always matter. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "A churn feature `days_until_cancellation` is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A perfect production feature"
+            },
+            {
+              "id": "b",
+              "text": "Leakage because it uses future information unavailable at prediction time"
+            },
+            {
+              "id": "c",
+              "text": "Required for all baselines"
+            },
+            {
+              "id": "d",
+              "text": "Unrelated to timelines"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "At prediction time you do not know days until a future cancellation.",
+          "wrongExplanations": {
+            "a": "It would not be available in true production scoring.",
+            "c": "Baselines should avoid leakage too. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Timing is central to leakage. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Class imbalance often makes raw accuracy misleading because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Rare events cannot matter"
+            },
+            {
+              "id": "b",
+              "text": "Predicting the majority class can look accurate while missing the rare cases you care about"
+            },
+            {
+              "id": "c",
+              "text": "Metrics are illegal"
+            },
+            {
+              "id": "d",
+              "text": "Train/test splits become unnecessary"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Majority-class classifiers inflate accuracy when positives are rare.",
+          "wrongExplanations": {
+            "a": "Rare events often matter most. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Metrics remain essential. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Validation remains essential. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Mature data science thinking is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Tools first, questions later"
+            },
+            {
+              "id": "b",
+              "text": "Clear questions, honest measurement, validation matched to actions, and transparent limits"
+            },
+            {
+              "id": "c",
+              "text": "Hiding uncertainty to persuade"
+            },
+            {
+              "id": "d",
+              "text": "Treating leakage as a performance feature"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "First principles prioritize decisions, evidence quality, and integrity.",
+          "wrongExplanations": {
+            "a": "Questions come before tools. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Persuasion without uncertainty is risky. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Leakage is a defect, not a feature. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "sql-checkpoint-1",
+      "title": "Checkpoint 1 — Relational Thinking and SELECT",
+      "intro": "Check tables, keys, filtering, and NULL basics before aggregation and joins.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is the best first question before writing a SQL query?",
+          "options": [
+            { "id": "a", "text": "Which chart colors look nicest?" },
+            { "id": "b", "text": "What should one row of the result represent (the grain)?" },
+            { "id": "c", "text": "How can I use SELECT * in production?" },
+            { "id": "d", "text": "Which table has the most columns?" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Grain defines the meaning of each result row and guides filters, joins, and aggregates.",
+          "wrongExplanations": {
+            "a": "Presentation comes after a correct logical result.",
+            "c": "SELECT * is for exploration, not careful production reports.",
+            "d": "Column count does not define the analytical question."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which statement about keys is correct?",
+          "options": [
+            { "id": "a", "text": "A foreign key uniquely identifies a row in its own table only" },
+            { "id": "b", "text": "A primary key uniquely identifies a row; a foreign key points to a row in another table" },
+            { "id": "c", "text": "Primary and foreign keys are interchangeable labels with no join impact" },
+            { "id": "d", "text": "Keys are only used for chart titles" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Primary keys identify rows; foreign keys encode relationships used in joins.",
+          "wrongExplanations": {
+            "a": "That describes a primary key, not a foreign key.",
+            "c": "Key roles are different and critical to correct joins.",
+            "d": "Keys are structural, not cosmetic."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which filter correctly finds rows where email is missing?",
+          "options": [
+            { "id": "a", "text": "WHERE email = NULL" },
+            { "id": "b", "text": "WHERE email IS NULL" },
+            { "id": "c", "text": "WHERE email == None" },
+            { "id": "d", "text": "WHERE email IS MISSING" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "SQL tests missing values with IS NULL / IS NOT NULL, not ordinary equality.",
+          "wrongExplanations": {
+            "a": "Equality with NULL does not behave as beginners expect.",
+            "c": "That is not SQL null syntax.",
+            "d": "IS MISSING is not standard SQL for this check."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Why is a half-open date range often safer for month filters?",
+          "options": [
+            { "id": "a", "text": "Because SQL cannot compare dates" },
+            { "id": "b", "text": "Because >= start and < next month handles timestamps more reliably than naive BETWEEN end-of-month bounds" },
+            { "id": "c", "text": "Because ORDER BY requires it" },
+            { "id": "d", "text": "Because joins forbid BETWEEN" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Half-open intervals avoid missing or double-counting timestamped events around day boundaries.",
+          "wrongExplanations": {
+            "a": "SQL compares dates routinely.",
+            "c": "Sorting is independent of this filtering pattern.",
+            "d": "BETWEEN can be used, but must be handled carefully with timestamps."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "When mixing AND and OR in WHERE, what should you do?",
+          "options": [
+            { "id": "a", "text": "Rely on memory of precedence and never use parentheses" },
+            { "id": "b", "text": "Use parentheses to make intended grouping explicit" },
+            { "id": "c", "text": "Replace all filters with SELECT *" },
+            { "id": "d", "text": "Put OR conditions only in ORDER BY" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Parentheses prevent logic mistakes when combining AND and OR.",
+          "wrongExplanations": {
+            "a": "Implicit precedence is easy to misread and misuse.",
+            "c": "SELECT * does not fix predicate logic.",
+            "d": "ORDER BY sorts; it does not replace WHERE logic."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sql-checkpoint-2",
+      "title": "Checkpoint 2 — Aggregation and CASE",
+      "intro": "Test GROUP BY, HAVING, aggregates, and conditional logic.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is the main difference between WHERE and HAVING?",
+          "options": [
+            { "id": "a", "text": "WHERE filters groups; HAVING filters rows before grouping" },
+            { "id": "b", "text": "WHERE filters rows before aggregation; HAVING filters groups after aggregation" },
+            { "id": "c", "text": "They are exact synonyms in all databases" },
+            { "id": "d", "text": "HAVING can only be used with SELECT *" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "WHERE restricts source rows; HAVING restricts aggregated groups.",
+          "wrongExplanations": {
+            "a": "That statement reverses the roles.",
+            "c": "They operate at different stages of query logic.",
+            "d": "HAVING is unrelated to requiring SELECT *."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which aggregate counts unique customers correctly?",
+          "options": [
+            { "id": "a", "text": "COUNT(*)" },
+            { "id": "b", "text": "COUNT(DISTINCT customer_id)" },
+            { "id": "c", "text": "SUM(customer_id)" },
+            { "id": "d", "text": "AVG(customer_id)" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "COUNT(DISTINCT ...) counts unique values of the chosen key.",
+          "wrongExplanations": {
+            "a": "COUNT(*) counts rows, including repeats.",
+            "c": "Summing IDs is not a customer count.",
+            "d": "Averaging IDs is meaningless for counting customers."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "In standard SQL, if you SELECT region and SUM(total_amount), what else is required?",
+          "options": [
+            { "id": "a", "text": "GROUP BY region" },
+            { "id": "b", "text": "ORDER BY only" },
+            { "id": "c", "text": "LIMIT 1 only" },
+            { "id": "d", "text": "UNION ALL" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Non-aggregated selected columns must be included in GROUP BY in standard SQL.",
+          "wrongExplanations": {
+            "b": "ORDER BY sorts results; it does not define groups.",
+            "c": "LIMIT restricts output size, not grouping correctness.",
+            "d": "UNION ALL stacks result sets; it is not the grouping rule."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What does CASE do in a SELECT list?",
+          "options": [
+            { "id": "a", "text": "Deletes rows from the table permanently" },
+            { "id": "b", "text": "Returns different values based on conditional logic" },
+            { "id": "c", "text": "Creates indexes automatically" },
+            { "id": "d", "text": "Forces every column to become text" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "CASE encodes conditional business rules into calculated fields.",
+          "wrongExplanations": {
+            "a": "SELECT CASE does not delete data.",
+            "c": "Indexes are schema objects, not CASE outputs.",
+            "d": "CASE return types depend on the expressions you write."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why can averaging deal-level take rates misstate company take rate?",
+          "options": [
+            { "id": "a", "text": "Because SQL cannot divide" },
+            { "id": "b", "text": "Because unequal deal sizes mean a weighted ratio of totals is usually required" },
+            { "id": "c", "text": "Because take rate is never a ratio" },
+            { "id": "d", "text": "Because GROUP BY forbids ratios" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Aggregate numerators and denominators first, then divide, for blended rates.",
+          "wrongExplanations": {
+            "a": "SQL supports division.",
+            "c": "Take rate is typically fees divided by GMV.",
+            "d": "GROUP BY can support ratio calculations after sums."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sql-final",
+      "title": "Final Quiz — Joins, Pitfalls, and Judgment",
+      "intro": "Apply join thinking, fan-out awareness, and analytical judgment.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "When should you prefer a LEFT JOIN from customers to orders?",
+          "options": [
+            { "id": "a", "text": "When you only want customers who definitely have matching orders" },
+            { "id": "b", "text": "When you want all customers, including those with no orders" },
+            { "id": "c", "text": "When you want to delete unmatched customers" },
+            { "id": "d", "text": "When primary keys are optional" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "LEFT JOIN keeps all left-side rows and fills nulls where the right side has no match.",
+          "wrongExplanations": {
+            "a": "That scenario usually calls for an INNER JOIN.",
+            "c": "Joins do not delete customers from the source table.",
+            "d": "Keys remain essential for correct matching."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is join fan-out?",
+          "options": [
+            { "id": "a", "text": "A chart formatting style" },
+            { "id": "b", "text": "Row multiplication from joining to a one-to-many relationship, which can inflate sums" },
+            { "id": "c", "text": "A type of index" },
+            { "id": "d", "text": "A mandatory ORDER BY clause" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Fan-out repeats left-side measures once per matching right-side row and can overstate totals.",
+          "wrongExplanations": {
+            "a": "Fan-out is a data logic issue, not a chart style.",
+            "c": "Indexes affect performance, not this definition.",
+            "d": "Ordering is unrelated to fan-out."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "After joining orders to payments, revenue suddenly triples. What should you do first?",
+          "options": [
+            { "id": "a", "text": "Publish the dashboard immediately" },
+            { "id": "b", "text": "Check whether the join multiplied order rows and aggregate to the correct grain before summing" },
+            { "id": "c", "text": "Replace all joins with SELECT *" },
+            { "id": "d", "text": "Assume the business tripled overnight" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Sudden magnitude shifts after joins often indicate grain breakage from fan-out.",
+          "wrongExplanations": {
+            "a": "Publishing without diagnosis risks major error.",
+            "c": "SELECT * does not fix grain problems.",
+            "d": "Validate before accepting dramatic changes."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Why are CTEs useful for beginners and teams?",
+          "options": [
+            { "id": "a", "text": "They make queries impossible to audit" },
+            { "id": "b", "text": "They stage readable intermediate logic such as filter, then join, then aggregate" },
+            { "id": "c", "text": "They replace the need for WHERE" },
+            { "id": "d", "text": "They automatically fix wrong keys" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "CTEs improve clarity by naming steps, which makes review and debugging easier.",
+          "wrongExplanations": {
+            "a": "Good CTEs improve auditability.",
+            "c": "You still need predicates where appropriate.",
+            "d": "Wrong keys must be fixed intentionally."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which habit best improves SQL trustworthiness?",
+          "options": [
+            { "id": "a", "text": "Never check row counts" },
+            { "id": "b", "text": "Define grain, test in layers, and reconcile key totals before presenting" },
+            { "id": "c", "text": "Hide definitions so nobody questions them" },
+            { "id": "d", "text": "Prefer the longest possible single-line query" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Trustworthy SQL is deliberate: clear grain, staged testing, and reconciliation.",
+          "wrongExplanations": {
+            "a": "Row counts catch fan-out and filter mistakes.",
+            "c": "Hidden definitions create confusion and conflict.",
+            "d": "Readable structure beats compressed cleverness."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "A query runs without error. What does that guarantee?",
+          "options": [
+            { "id": "a", "text": "The business metric is correct" },
+            { "id": "b", "text": "Only that the database could execute the statement—not that the logic matches the question" },
+            { "id": "c", "text": "All joins were one-to-one" },
+            { "id": "d", "text": "Nulls were handled correctly" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Execution success is necessary but not sufficient for analytical correctness.",
+          "wrongExplanations": {
+            "a": "Wrong logic can still execute.",
+            "c": "Engines do not require joins to be one-to-one.",
+            "d": "Null handling must be validated separately."
+          }
+        }
+      ]
+    }
+  ]
+}

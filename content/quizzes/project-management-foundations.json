@@ -1,0 +1,460 @@
+{
+  "quizzes": [
+    {
+      "id": "pm-checkpoint-1",
+      "title": "Checkpoint 1 — Defining Work",
+      "intro": "Projects, objectives, stakeholders, and scope.",
+      "questions": [
+        {
+          "prompt": "A project is best described as:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ongoing business-as-usual with no end"
+            },
+            {
+              "id": "b",
+              "text": "Temporary work to create a unique outcome with constraints"
+            },
+            {
+              "id": "c",
+              "text": "Any email thread"
+            },
+            {
+              "id": "d",
+              "text": "A permanent department"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Projects are temporary and outcome-oriented under time/cost/scope constraints.",
+          "wrongExplanations": {
+            "a": "BAU operations differ from projects. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Email is communication, not the definition. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Departments are ongoing structures. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "A strong objective is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "“Make onboarding better somehow”"
+            },
+            {
+              "id": "b",
+              "text": "Specific, time-bound, and measurable about the outcome"
+            },
+            {
+              "id": "c",
+              "text": "Hidden from stakeholders"
+            },
+            {
+              "id": "d",
+              "text": "Impossible to evaluate"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Clear objectives align teams and make success testable.",
+          "wrongExplanations": {
+            "a": "Vague goals create misalignment. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Objectives must be shared. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Evaluability is required. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "RACI primarily helps by:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Replacing all communication"
+            },
+            {
+              "id": "b",
+              "text": "Clarifying who is Responsible, Accountable, Consulted, and Informed"
+            },
+            {
+              "id": "c",
+              "text": "Deleting risks"
+            },
+            {
+              "id": "d",
+              "text": "Guaranteeing no dependencies"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Role clarity reduces dropped work and duplicate effort.",
+          "wrongExplanations": {
+            "a": "Communication remains necessary. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Risks still need management. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Dependencies still exist. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Scope creep is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Always free and harmless"
+            },
+            {
+              "id": "b",
+              "text": "Uncontrolled expansion of work beyond agreements"
+            },
+            {
+              "id": "c",
+              "text": "The same as risk identification"
+            },
+            {
+              "id": "d",
+              "text": "A scheduling buffer technique"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Unmanaged additions threaten time, cost, and quality. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Scope changes have tradeoffs. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Risk ID is different. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Buffers are schedule/contingency tools. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "When a stakeholder requests major new deliverables late, you should:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Silently absorb them with no discussion"
+            },
+            {
+              "id": "b",
+              "text": "Document impact and seek a decision on tradeoffs (scope/time/cost/quality)"
+            },
+            {
+              "id": "c",
+              "text": "Quit without communication"
+            },
+            {
+              "id": "d",
+              "text": "Hide the request from the sponsor"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Change control turns surprises into explicit choices. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Silent absorption creates failure modes. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Communication is the job. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Sponsors need visibility. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "pm-checkpoint-2",
+      "title": "Checkpoint 2 — Plans and Delivery",
+      "intro": "WBS, estimates, risk, communication, quality.",
+      "questions": [
+        {
+          "prompt": "A work breakdown structure helps by:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hiding work packages"
+            },
+            {
+              "id": "b",
+              "text": "Decomposing deliverables into manageable owned pieces"
+            },
+            {
+              "id": "c",
+              "text": "Removing the need for milestones"
+            },
+            {
+              "id": "d",
+              "text": "Guaranteeing perfect estimates"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Decomposition improves clarity, ownership, and estimating. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Visibility is the point. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Milestones still help. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Estimates remain uncertain but improve. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "Dependencies matter because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Tasks never wait on each other"
+            },
+            {
+              "id": "b",
+              "text": "One delayed predecessor can stall successors and the end date"
+            },
+            {
+              "id": "c",
+              "text": "They only exist in software projects"
+            },
+            {
+              "id": "d",
+              "text": "They replace communication"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Critical sequencing determines what actually moves the deadline.",
+          "wrongExplanations": {
+            "a": "Dependencies are common. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Every domain has dependencies. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Communication remains necessary. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "A useful risk entry includes:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only a witty name"
+            },
+            {
+              "id": "b",
+              "text": "Likelihood, impact, owner, trigger, and response approach"
+            },
+            {
+              "id": "c",
+              "text": "No owner so everyone owns it"
+            },
+            {
+              "id": "d",
+              "text": "A promise that risks cannot happen"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Actionable risk management needs ownership and responses. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Names alone do not manage risk. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Clear owners beat diffused ownership. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Risks can and do occur. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "A good status update emphasizes:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A diary of every keystroke"
+            },
+            {
+              "id": "b",
+              "text": "Outcome confidence, blockers/asks, and what changed"
+            },
+            {
+              "id": "c",
+              "text": "Only good news"
+            },
+            {
+              "id": "d",
+              "text": "Surprises at the deadline"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Leaders need decision-ready truth, not activity fog. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Activity diaries hide outcomes. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Bad news early is valuable. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Late surprises destroy trust. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Acceptance criteria should be:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Vague vibes"
+            },
+            {
+              "id": "b",
+              "text": "Specific and testable conditions for “done”"
+            },
+            {
+              "id": "c",
+              "text": "Written after launch only"
+            },
+            {
+              "id": "d",
+              "text": "Secret from the team"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Testable criteria reduce end-game arguments. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Vibes are not verifiable. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Criteria guide building before launch. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Teams need shared definitions. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "pm-final",
+      "title": "Final Quiz — Project Judgment",
+      "intro": "Apply foundations to realistic delivery decisions.",
+      "questions": [
+        {
+          "prompt": "“Launch a better onboarding process” should become:",
+          "options": [
+            {
+              "id": "a",
+              "text": "No change; vagueness is fine"
+            },
+            {
+              "id": "b",
+              "text": "A measurable objective with scope, date, and success metric"
+            },
+            {
+              "id": "c",
+              "text": "A permanent operations slogan"
+            },
+            {
+              "id": "d",
+              "text": "A risk register only"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Precision turns wishes into manageable projects. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Vagueness causes misalignment. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Projects need endings and metrics. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Risks support, but do not replace objectives. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "If design is done but development slips, the PM should:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hide the slip until launch day"
+            },
+            {
+              "id": "b",
+              "text": "Communicate impact early and present options"
+            },
+            {
+              "id": "c",
+              "text": "Blame individuals in public"
+            },
+            {
+              "id": "d",
+              "text": "Delete the plan"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Early honesty enables tradeoff decisions. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Hiding slips destroys trust. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Public blame harms culture. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Plans should be updated, not deleted. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Lessons learned sessions should be:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Blame theaters"
+            },
+            {
+              "id": "b",
+              "text": "Practical reviews of what to repeat and change next time"
+            },
+            {
+              "id": "c",
+              "text": "Skipped because teams are tired always"
+            },
+            {
+              "id": "d",
+              "text": "Kept only in private memory"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Closeout learning compounds organizational capability. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Blame blocks learning. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Tiredness is why short structured closeout matters. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Write learning down. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Choosing agile vs predictive approaches should depend on:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Fashionable buzzwords only"
+            },
+            {
+              "id": "b",
+              "text": "Uncertainty, requirement stability, and coordination needs"
+            },
+            {
+              "id": "c",
+              "text": "Avoiding all stakeholder contact"
+            },
+            {
+              "id": "d",
+              "text": "Eliminating acceptance criteria"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Method fit follows context, not ideology. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Buzzwords are not criteria. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Stakeholders remain central. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Acceptance criteria remain useful. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Mature project management is mainly about:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Micromanaging keystrokes"
+            },
+            {
+              "id": "b",
+              "text": "Creating clarity and coordination around temporary work"
+            },
+            {
+              "id": "c",
+              "text": "Maximizing meeting hours"
+            },
+            {
+              "id": "d",
+              "text": "Never updating the plan"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Clarity, coordination, and adaptive control are the craft.",
+          "wrongExplanations": {
+            "a": "Micromanagement is not the goal. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Meetings should earn their time. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Plans are living models. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    }
+  ]
+}

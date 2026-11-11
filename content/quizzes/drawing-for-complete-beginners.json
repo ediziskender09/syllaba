@@ -1,0 +1,460 @@
+{
+  "quizzes": [
+    {
+      "id": "drawing-checkpoint-1",
+      "title": "Checkpoint 1 — Seeing and Structure",
+      "intro": "Mindset, lines, shapes, and proportion.",
+      "questions": [
+        {
+          "prompt": "Beginner drawing improves most through:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Waiting until you feel talented"
+            },
+            {
+              "id": "b",
+              "text": "Deliberate observation, structure, and reviewed practice"
+            },
+            {
+              "id": "c",
+              "text": "Buying every pencil before learning"
+            },
+            {
+              "id": "d",
+              "text": "Avoiding fundamentals as boring"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Drawing is trained perception and control, not a talent lottery.",
+          "wrongExplanations": {
+            "a": "Waiting freezes progress. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Tools are secondary to seeing. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Fundamentals are the accelerator. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "Construction drawing emphasizes:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Tiny eyelashes before big shapes"
+            },
+            {
+              "id": "b",
+              "text": "Building subjects from simple forms like boxes, spheres, and cylinders"
+            },
+            {
+              "id": "c",
+              "text": "Skipping proportion checks"
+            },
+            {
+              "id": "d",
+              "text": "Pressing the darkest lines first always"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Simple forms create accurate scaffolds for complex subjects.",
+          "wrongExplanations": {
+            "a": "Details come after structure. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Proportion checks are essential. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Light construction comes first. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Proportion problems often come from:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Drawing features before measuring large height/width relationships"
+            },
+            {
+              "id": "b",
+              "text": "Using light construction lines"
+            },
+            {
+              "id": "c",
+              "text": "Checking alignments"
+            },
+            {
+              "id": "d",
+              "text": "Stepping back to compare"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Big-to-small measuring prevents features from drifting. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Large relationships should lead. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Light construction helps. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Stepping back helps. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Negative space practice helps because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only positive forms matter"
+            },
+            {
+              "id": "b",
+              "text": "Shapes of empty areas reveal proportion errors you miss in objects"
+            },
+            {
+              "id": "c",
+              "text": "It replaces value study forever"
+            },
+            {
+              "id": "d",
+              "text": "It forbids contour drawing"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Interlocking empty shapes provide fresh comparative measurements. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Both positive and negative matter. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Value study remains important. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Contour work still helps. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Line warmups are useful to:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Waste paper only"
+            },
+            {
+              "id": "b",
+              "text": "Loosen control, practice pressure, and prepare coordination"
+            },
+            {
+              "id": "c",
+              "text": "Guarantee finished masterpieces immediately"
+            },
+            {
+              "id": "d",
+              "text": "Replace observation"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Warmups build motor control before complex drawings. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "They are training, not waste. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Warmups prepare; they are not final art. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Observation remains central. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "drawing-checkpoint-2",
+      "title": "Checkpoint 2 — Light, Edges, Perspective",
+      "intro": "Value, shading, edges, and beginner perspective.",
+      "questions": [
+        {
+          "prompt": "Value creates form primarily by:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Using only outlines forever"
+            },
+            {
+              "id": "b",
+              "text": "Describing light and shadow relationships across surfaces"
+            },
+            {
+              "id": "c",
+              "text": "Avoiding contrast"
+            },
+            {
+              "id": "d",
+              "text": "Coloring randomly without light logic"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Light logic turns flat shapes into volumes. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Outlines alone flatten form. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Contrast organized by light is useful. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Random marks ignore form. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "A useful beginner shading habit is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Jumping to pure black everywhere immediately"
+            },
+            {
+              "id": "b",
+              "text": "Organizing big light/mid/dark masses before texture"
+            },
+            {
+              "id": "c",
+              "text": "Ignoring the light source"
+            },
+            {
+              "id": "d",
+              "text": "Making every edge identical and hard"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Large value structure must work before details. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Early pure black often muddies form. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Light direction governs shadows. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Edge variety matters. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Hard, soft, and lost edges matter because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Every boundary should be an equal outline"
+            },
+            {
+              "id": "b",
+              "text": "Edge quality describes light, focus, and contact with the environment"
+            },
+            {
+              "id": "c",
+              "text": "Edges are irrelevant to realism"
+            },
+            {
+              "id": "d",
+              "text": "Only ink outlines are correct"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Varied edges make drawings feel observed rather than sticker-like.",
+          "wrongExplanations": {
+            "a": "Uniform outlines flatten. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Edges are central to realism cues. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Many tools can create edge variety. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "In one-point perspective, parallel edges that recede:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Never change"
+            },
+            {
+              "id": "b",
+              "text": "Appear to converge toward a vanishing point on the eye-level horizon"
+            },
+            {
+              "id": "c",
+              "text": "Must curve into circles"
+            },
+            {
+              "id": "d",
+              "text": "Delete the horizon line concept"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Beginner perspective depends on horizon/eye level and vanishing points.",
+          "wrongExplanations": {
+            "a": "Receding parallels converge visually. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Circles/ellipses are a different topic. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Horizon remains foundational. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Texture should usually be:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Copied exhaustively everywhere at once"
+            },
+            {
+              "id": "b",
+              "text": "Suggested where it supports focus after form is established"
+            },
+            {
+              "id": "c",
+              "text": "Used to hide broken proportions"
+            },
+            {
+              "id": "d",
+              "text": "Applied uniformly like wallpaper across all planes"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Suggestion preserves form and directs attention. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Exhaustive texture often flattens. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Texture cannot rescue bad structure. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Uniform wallpaper ignores planes/light. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "drawing-final",
+      "title": "Final Quiz — Drawing Judgment",
+      "intro": "Apply a reliable process from observation to review.",
+      "questions": [
+        {
+          "prompt": "A reliable drawing process order is closest to:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Details first, structure never"
+            },
+            {
+              "id": "b",
+              "text": "Observe, block in, compare/correct, refine, shade, review"
+            },
+            {
+              "id": "c",
+              "text": "Shade texture first, then guess proportions"
+            },
+            {
+              "id": "d",
+              "text": "Skip review to save time"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Staged work prevents premature detail and builds accuracy.",
+          "wrongExplanations": {
+            "a": "Details last is safer. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Proportions before polish. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Review accelerates learning. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "When reviewing a drawing, prioritize:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Listing fifty insults"
+            },
+            {
+              "id": "b",
+              "text": "One or two high-impact issues such as proportion or value structure"
+            },
+            {
+              "id": "c",
+              "text": "Ignoring edges and placement"
+            },
+            {
+              "id": "d",
+              "text": "Only whether the pencil was expensive"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Focused critique creates the next practice target. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Harsh volume without focus stalls growth. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Edges/placement matter. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Tool price is not the lesson. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "A still-life final project success for beginners means:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Photoreal perfection"
+            },
+            {
+              "id": "b",
+              "text": "Clear attempt at structure, proportion, and consistent light/value"
+            },
+            {
+              "id": "c",
+              "text": "Tracing a photo secretly"
+            },
+            {
+              "id": "d",
+              "text": "Avoiding cylinders and boxes"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Fundamentals evidence beats impossible perfection standards. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Photorealism is not the beginner bar. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Tracing skips learning. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Basic forms are the point. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Plateaus are best handled by:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Quitting permanently"
+            },
+            {
+              "id": "b",
+              "text": "Changing constraints (time, scale, subject) and keeping reviewed practice"
+            },
+            {
+              "id": "c",
+              "text": "Never looking at older work"
+            },
+            {
+              "id": "d",
+              "text": "Buying gear instead of practicing"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Constraint changes and honest review restart progress. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Quitting ends learning. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Archives show growth. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Practice beats shopping. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Mature beginner mindset treats drawing as:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A fixed identity test"
+            },
+            {
+              "id": "b",
+              "text": "A set of trainable skills improved by seeing, structuring, and revising"
+            },
+            {
+              "id": "c",
+              "text": "Something only prodigies can start"
+            },
+            {
+              "id": "d",
+              "text": "A reason to avoid fundamentals"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Craft identity comes from practice loops, not destiny myths.",
+          "wrongExplanations": {
+            "a": "Skills are learned. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Anyone can start fundamentals. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Fundamentals unlock progress. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "quizzes": [
+    {
+      "id": "photo-checkpoint-1",
+      "title": "Checkpoint 1 — Framing and Attention",
+      "intro": "Subject, edges, thirds, and balance.",
+      "questions": [
+        {
+          "prompt": "Composition is mainly about:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Buying the newest camera body"
+            },
+            {
+              "id": "b",
+              "text": "Arranging elements so attention, meaning, and emotion become clearer"
+            },
+            {
+              "id": "c",
+              "text": "Only changing ISO"
+            },
+            {
+              "id": "d",
+              "text": "Deleting random pixels"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Composition is intentional arrangement within the frame. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Gear helps but is not composition itself. Choose the option that matches the lesson’s core idea instead.",
+            "c": "ISO is an exposure setting. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Random deletion is not composition craft. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "Scanning the edges of the frame helps you:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ignore distractions"
+            },
+            {
+              "id": "b",
+              "text": "Catch cut-off objects and bright distractions before they weaken the photo"
+            },
+            {
+              "id": "c",
+              "text": "Guarantee perfect focus"
+            },
+            {
+              "id": "d",
+              "text": "Replace the need for a subject"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Edge awareness removes accidental clutter that steals attention.",
+          "wrongExplanations": {
+            "a": "The point is to find and fix distractions.",
+            "c": "Focus is separate from edge hygiene. Choose the option that matches the lesson’s core idea instead.",
+            "d": "You still need a clear subject. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "The rule of thirds is best treated as:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A law of physics"
+            },
+            {
+              "id": "b",
+              "text": "A useful heuristic you can also break with intention"
+            },
+            {
+              "id": "c",
+              "text": "Always mandatory for every photo"
+            },
+            {
+              "id": "d",
+              "text": "A lens brand"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Placement tools guide attention; intention can justify other designs.",
+          "wrongExplanations": {
+            "a": "It is not physics. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Mandatory rules create stiff images. Choose the option that matches the lesson’s core idea instead.",
+            "d": "It is not a brand. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Visual weight refers to:",
+          "options": [
+            {
+              "id": "a",
+              "text": "The camera bag mass only"
+            },
+            {
+              "id": "b",
+              "text": "How strongly elements attract the eye through size, contrast, color, or isolation"
+            },
+            {
+              "id": "c",
+              "text": "Only shutter speed"
+            },
+            {
+              "id": "d",
+              "text": "File size on disk"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Heavier visual elements pull attention and affect balance.",
+          "wrongExplanations": {
+            "a": "Bag weight is unrelated. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Shutter speed is exposure/motion. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Disk size is not compositional weight. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Negative space can:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only ruin photographs"
+            },
+            {
+              "id": "b",
+              "text": "Give the subject room and shape mood"
+            },
+            {
+              "id": "c",
+              "text": "Replace lighting entirely"
+            },
+            {
+              "id": "d",
+              "text": "Force centering forever"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Empty or quiet areas can emphasize subjects and create calm or tension.",
+          "wrongExplanations": {
+            "a": "Used well, negative space strengthens images. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Light still matters. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Centering remains a choice. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "photo-checkpoint-2",
+      "title": "Checkpoint 2 — Depth, Light, Story",
+      "intro": "Lines, perspective, backgrounds, light, and storytelling.",
+      "questions": [
+        {
+          "prompt": "Leading lines are useful because they:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Always confuse viewers"
+            },
+            {
+              "id": "b",
+              "text": "Guide the eye toward a subject or through a scene"
+            },
+            {
+              "id": "c",
+              "text": "Replace focus"
+            },
+            {
+              "id": "d",
+              "text": "Delete backgrounds automatically"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Lines are compositional paths for attention. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Clear lines help, not confuse, when intentional. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Focus remains necessary. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Backgrounds still need control. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "Changing camera position often improves a photo by:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Keeping you glued to eye level only"
+            },
+            {
+              "id": "b",
+              "text": "Revealing cleaner backgrounds, stronger perspective, or better relationships"
+            },
+            {
+              "id": "c",
+              "text": "Guaranteeing more megapixels"
+            },
+            {
+              "id": "d",
+              "text": "Removing the need to decide a subject"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Height and angle changes are free creative tools.",
+          "wrongExplanations": {
+            "a": "Eye level is only one option. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Megapixels are unrelated to position. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Subject decision remains essential. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Background control matters because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Cameras only see the subject emotionally"
+            },
+            {
+              "id": "b",
+              "text": "The camera records everything; clutter competes with the subject"
+            },
+            {
+              "id": "c",
+              "text": "Backgrounds are invisible to lenses"
+            },
+            {
+              "id": "d",
+              "text": "Light never interacts with backgrounds"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Beginners often “see” the subject while the sensor captures distractions too.",
+          "wrongExplanations": {
+            "a": "Cameras are objective about the whole frame. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Backgrounds are recorded. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Backgrounds interact with light and contrast. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Side light often:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Flattens all texture"
+            },
+            {
+              "id": "b",
+              "text": "Reveals form through shadows and highlights"
+            },
+            {
+              "id": "c",
+              "text": "Deletes color"
+            },
+            {
+              "id": "d",
+              "text": "Forces silhouette always"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Angled light sculpts shape; front light flattens more often.",
+          "wrongExplanations": {
+            "a": "Flattening is more typical of flat front light.",
+            "c": "Color remains. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Silhouette is more a backlight story. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "A simple single-image story formula is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Gear list plus watermark"
+            },
+            {
+              "id": "b",
+              "text": "Subject + action + context"
+            },
+            {
+              "id": "c",
+              "text": "Maximum clutter + tiny subject"
+            },
+            {
+              "id": "d",
+              "text": "No intention + burst fire only"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Action and context make a subject specific and meaningful.",
+          "wrongExplanations": {
+            "a": "Gear lists are not stories. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Clutter dilutes story. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Intention beats mindless spraying. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "photo-final",
+      "title": "Final Quiz — Composition Judgment",
+      "intro": "Apply compositional decisions like a working beginner.",
+      "questions": [
+        {
+          "prompt": "A busy background behind a portrait is best improved by:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Accepting clutter as destiny"
+            },
+            {
+              "id": "b",
+              "text": "Moving, changing angle, simplifying backdrop, or using distance/light contrast"
+            },
+            {
+              "id": "c",
+              "text": "Always adding more props"
+            },
+            {
+              "id": "d",
+              "text": "Cropping into an unreadable fragment only"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Position and simplification are primary composition fixes. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Clutter is solvable. Choose the option that matches the lesson’s core idea instead.",
+            "c": "More props often worsen chaos. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Extreme crops can help but are not the only tool."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "Centering a subject is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Always wrong"
+            },
+            {
+              "id": "b",
+              "text": "A valid choice when it supports stability, symmetry, or intention"
+            },
+            {
+              "id": "c",
+              "text": "Required by camera law"
+            },
+            {
+              "id": "d",
+              "text": "Proof you ignored composition"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Centering can be strong when chosen, not when used by habit alone.",
+          "wrongExplanations": {
+            "a": "It is not always wrong. Choose the option that matches the lesson’s core idea instead.",
+            "c": "No camera law requires it. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Intentional centering is composition. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Editing relates to composition because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Capture intention never matters"
+            },
+            {
+              "id": "b",
+              "text": "Cropping and tonal emphasis can finish attention guidance"
+            },
+            {
+              "id": "c",
+              "text": "Editing can replace seeing entirely forever"
+            },
+            {
+              "id": "d",
+              "text": "Only presets matter"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Post-processing continues compositional decisions begun in-camera. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Capture intention still matters. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Seeing remains foundational. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Presets are not the whole craft. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Practicing one concept at a time helps because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "It slows learning"
+            },
+            {
+              "id": "b",
+              "text": "Deliberate repetition builds recognition speed for edges, balance, light, and layers"
+            },
+            {
+              "id": "c",
+              "text": "Professionals never practice"
+            },
+            {
+              "id": "d",
+              "text": "Rules must never be tested"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Focused drills turn concepts into perceptual habits. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "It accelerates skill. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Professionals practice constantly. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Testing and breaking rules requires mastery of them."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Mature compositional thinking is:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Collecting gear instead of seeing"
+            },
+            {
+              "id": "b",
+              "text": "Intentional choices about subject, frame, light, and exclusion"
+            },
+            {
+              "id": "c",
+              "text": "Never moving your feet"
+            },
+            {
+              "id": "d",
+              "text": "Treating every heuristic as unbreakable law"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Composition is decision-making under attention constraints. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Seeing beats gear collecting. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Movement is a primary tool. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Heuristics serve intention. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    }
+  ]
+}

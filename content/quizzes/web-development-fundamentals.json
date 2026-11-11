@@ -1,0 +1,460 @@
+{
+  "quizzes": [
+    {
+      "id": "web-checkpoint-1",
+      "title": "Checkpoint 1 — The Web Stack",
+      "intro": "Check whether you understand browsers, HTML, CSS, and JavaScript.",
+      "questions": [
+        {
+          "prompt": "Which statement best describes HTML’s primary role?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Controlling colors and spacing"
+            },
+            {
+              "id": "b",
+              "text": "Describing document structure and meaning"
+            },
+            {
+              "id": "c",
+              "text": "Storing production API secret keys"
+            },
+            {
+              "id": "d",
+              "text": "Routing packets on the internet"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "HTML describes structure and meaning so browsers and assistive technologies can interpret content.",
+          "wrongExplanations": {
+            "a": "Presentation is mainly CSS. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Secrets must not live in HTML. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Packet routing is networking, not HTML. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "After receiving HTML, a browser typically:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ignores CSS and JavaScript forever"
+            },
+            {
+              "id": "b",
+              "text": "Parses HTML, fetches assets, applies CSS, runs JS, and paints the page"
+            },
+            {
+              "id": "c",
+              "text": "Turns the page into a SQL table automatically"
+            },
+            {
+              "id": "d",
+              "text": "Uploads the user’s password vault"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Browsers parse markup, request linked assets, style content, execute scripts, and render pixels.",
+          "wrongExplanations": {
+            "a": "Linked CSS/JS are part of normal loading. Choose the option that matches the lesson’s core idea instead.",
+            "c": "HTML is not auto-converted into SQL tables. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Rendering does not upload password vaults. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Semantic HTML is important because it:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Forces every site to look identical"
+            },
+            {
+              "id": "b",
+              "text": "Improves accessibility, maintainability, and meaning beyond visuals"
+            },
+            {
+              "id": "c",
+              "text": "Replaces HTTPS"
+            },
+            {
+              "id": "d",
+              "text": "Disables JavaScript"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Semantic elements communicate structure to people and tools, which helps accessibility and maintenance.",
+          "wrongExplanations": {
+            "a": "Semantics do not force one visual design. Choose the option that matches the lesson’s core idea instead.",
+            "c": "HTTPS is separate transport security. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Semantics do not disable JavaScript. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Which CSS tool is generally best for true two-dimensional layouts?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only float hacks"
+            },
+            {
+              "id": "b",
+              "text": "CSS Grid"
+            },
+            {
+              "id": "c",
+              "text": "The blink element"
+            },
+            {
+              "id": "d",
+              "text": "HTTP status codes"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "CSS Grid is built for row-and-column layout together.",
+          "wrongExplanations": {
+            "a": "Floats are a weaker legacy approach for complex layouts.",
+            "c": "Blink is obsolete and unrelated. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Status codes are HTTP metadata. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "In frontend apps, “state” means:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A country border file"
+            },
+            {
+              "id": "b",
+              "text": "Information that can change and drive what the UI shows"
+            },
+            {
+              "id": "c",
+              "text": "A DNS record"
+            },
+            {
+              "id": "d",
+              "text": "A CSS reset only"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "State is mutable information such as selected items, open menus, or form values.",
+          "wrongExplanations": {
+            "a": "That is geography, not UI state. Choose the option that matches the lesson’s core idea instead.",
+            "c": "DNS maps names to addresses. Choose the option that matches the lesson’s core idea instead.",
+            "d": "A reset is styling, not app state. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "web-checkpoint-2",
+      "title": "Checkpoint 2 — Forms, Access, APIs",
+      "intro": "Apply forms, accessibility, responsive design, and fetching.",
+      "questions": [
+        {
+          "prompt": "Client-side form validation alone is limited because:",
+          "options": [
+            {
+              "id": "a",
+              "text": "It always breaks screen readers"
+            },
+            {
+              "id": "b",
+              "text": "Users can bypass browser checks, so servers must validate important data"
+            },
+            {
+              "id": "c",
+              "text": "Labels become illegal"
+            },
+            {
+              "id": "d",
+              "text": "CSS cannot load"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Client checks help UX, but authoritative validation must happen on the server.",
+          "wrongExplanations": {
+            "a": "Validation can be implemented accessibly. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Labels remain required good practice. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Validation does not block CSS. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "Which practice most improves accessibility?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Relying on color alone for errors"
+            },
+            {
+              "id": "b",
+              "text": "Using semantic HTML, keyboard access, and meaningful labels/alternatives"
+            },
+            {
+              "id": "c",
+              "text": "Removing focus outlines"
+            },
+            {
+              "id": "d",
+              "text": "Using “click here” everywhere"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Accessible experiences need structure, operable controls, and clear text.",
+          "wrongExplanations": {
+            "a": "Color-only cues exclude some users. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Focus visibility matters for keyboard users. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Vague link text fails out of context. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Mobile-first responsive design usually means:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Design only for desktops then crush the layout"
+            },
+            {
+              "id": "b",
+              "text": "Start from a usable small layout, then enhance at larger breakpoints"
+            },
+            {
+              "id": "c",
+              "text": "Ban CSS Grid"
+            },
+            {
+              "id": "d",
+              "text": "Create a separate domain for phones always"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Mobile-first begins with constrained layouts and progressively enhances.",
+          "wrongExplanations": {
+            "a": "Desktop-first shrinkage is often fragile. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Grid works well responsively. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Separate domains are rarely required. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Production API UI code should usually handle:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only success with no errors"
+            },
+            {
+              "id": "b",
+              "text": "Loading, empty, success, and failure states"
+            },
+            {
+              "id": "c",
+              "text": "Passwords in the query string"
+            },
+            {
+              "id": "d",
+              "text": "Ignoring status codes"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Network requests fail and return empty results; resilient UI plans for those cases.",
+          "wrongExplanations": {
+            "a": "Happy-path-only code breaks in production. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Secrets in URLs are unsafe. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Status codes are essential signals. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Why is assigning untrusted HTML with innerHTML risky?",
+          "options": [
+            {
+              "id": "a",
+              "text": "It always boosts SEO"
+            },
+            {
+              "id": "b",
+              "text": "It can enable XSS if malicious markup executes"
+            },
+            {
+              "id": "c",
+              "text": "It permanently deletes CSS"
+            },
+            {
+              "id": "d",
+              "text": "Browsers reject every string"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Untrusted HTML can introduce hostile script/markup; prefer safe text APIs when possible.",
+          "wrongExplanations": {
+            "a": "Unsafe HTML is not an SEO strategy. Choose the option that matches the lesson’s core idea instead.",
+            "c": "CSS is not permanently deleted. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Acceptance is not the same as safety. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    },
+    {
+      "id": "web-final",
+      "title": "Final Quiz — Web Judgment",
+      "intro": "Use the whole lesson. Focus on engineering judgment.",
+      "questions": [
+        {
+          "prompt": "A page is blank with no clear layout. Best first step?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Rewrite the whole site immediately"
+            },
+            {
+              "id": "b",
+              "text": "Inspect Console/Network evidence and isolate the failure"
+            },
+            {
+              "id": "c",
+              "text": "Disable HTTPS for everyone"
+            },
+            {
+              "id": "d",
+              "text": "Delete semantic tags"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Evidence-first debugging identifies JS errors, failed requests, or DOM/CSS issues quickly.",
+          "wrongExplanations": {
+            "a": "Rewrites without diagnosis waste time. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Disabling HTTPS is unsafe and irrelevant. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Semantic HTML is not the villain. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q1"
+        },
+        {
+          "prompt": "Which choice reflects professional fundamentals on a landing page?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ignore keyboard users if mouse works"
+            },
+            {
+              "id": "b",
+              "text": "Use semantic structure, responsive layout, and a clear primary action"
+            },
+            {
+              "id": "c",
+              "text": "Ship an uncompressed 5MB hero by default"
+            },
+            {
+              "id": "d",
+              "text": "Embed API secret keys in frontend JS"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Professionals combine meaning, responsiveness, clarity, and safety. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Keyboard access is part of quality. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Huge images hurt performance. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Frontend secrets are visible to users. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q2"
+        },
+        {
+          "prompt": "Flexbox is usually best when you need:",
+          "options": [
+            {
+              "id": "a",
+              "text": "A full two-dimensional magazine grid"
+            },
+            {
+              "id": "b",
+              "text": "One-dimensional alignment in a row/column (nav, button group, card footer)"
+            },
+            {
+              "id": "c",
+              "text": "Database ACID transactions"
+            },
+            {
+              "id": "d",
+              "text": "DNS failover"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Flexbox excels at one-dimensional distribution and alignment. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Grid is generally better for true 2D page grids.",
+            "c": "Databases are unrelated to Flexbox. Choose the option that matches the lesson’s core idea instead.",
+            "d": "DNS is networking infrastructure. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q3"
+        },
+        {
+          "prompt": "Progressive enhancement means:",
+          "options": [
+            {
+              "id": "a",
+              "text": "If JavaScript fails, the page may be useless"
+            },
+            {
+              "id": "b",
+              "text": "Start with a usable HTML/CSS baseline, then add richer behavior"
+            },
+            {
+              "id": "c",
+              "text": "Ship broken HTML and patch with ads"
+            },
+            {
+              "id": "d",
+              "text": "Support only one browser forever"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A usable baseline keeps content available even when scripts fail.",
+          "wrongExplanations": {
+            "a": "That attitude is the opposite of progressive enhancement.",
+            "c": "Broken foundations are not a strategy. Choose the option that matches the lesson’s core idea instead.",
+            "d": "The web is multi-browser. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q4"
+        },
+        {
+          "prompt": "Mature web thinking treats accessibility and performance as:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Optional polish after launch"
+            },
+            {
+              "id": "b",
+              "text": "Core product quality alongside features and security"
+            },
+            {
+              "id": "c",
+              "text": "Problems only frameworks solve magically"
+            },
+            {
+              "id": "d",
+              "text": "Replaced by client-only payment checks"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Quality attributes are requirements, not afterthoughts. That distinction is central to applying the lesson correctly.",
+          "wrongExplanations": {
+            "a": "Accessibility is not optional polish. Choose the option that matches the lesson’s core idea instead.",
+            "c": "Frameworks still need fundamentals. Choose the option that matches the lesson’s core idea instead.",
+            "d": "Payments need server-side enforcement. Choose the option that matches the lesson’s core idea instead."
+          },
+          "id": "q5"
+        }
+      ]
+    }
+  ]
+}

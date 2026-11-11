@@ -1,0 +1,365 @@
+{
+  "quizzes": [
+    {
+      "id": "ai-checkpoint-1",
+      "title": "Checkpoint 1 — What AI Actually Is",
+      "intro": "Check whether you can separate real AI concepts from hype before going deeper into learning systems.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Which statement best describes artificial intelligence?",
+          "options": [
+            { "id": "a", "text": "Software that is conscious and understands the world like a human" },
+            { "id": "b", "text": "A family of techniques that let computers perform tasks associated with intelligent behavior" },
+            { "id": "c", "text": "Any program that runs automatically on a schedule" },
+            { "id": "d", "text": "A single algorithm that solves every problem" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "AI is defined by capability, not consciousness. It covers systems that recognize patterns, predict, classify, generate, plan, or adapt.",
+          "wrongExplanations": {
+            "a": "Current AI systems do not have human-like consciousness or understanding, even when outputs look fluent.",
+            "c": "Automation can be simple rule-based scheduling; that alone is not AI.",
+            "d": "AI is a broad field with many methods, not one universal algorithm."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is the best relationship between AI, machine learning, and deep learning?",
+          "options": [
+            { "id": "a", "text": "They are three unrelated fields" },
+            { "id": "b", "text": "Deep learning contains AI, and AI contains machine learning" },
+            { "id": "c", "text": "AI is broadest; machine learning is one approach; deep learning is a subset of machine learning" },
+            { "id": "d", "text": "Machine learning is always generative AI" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "AI is the broad field. Machine learning learns from data. Deep learning uses multi-layer neural networks within machine learning.",
+          "wrongExplanations": {
+            "a": "They are nested related concepts, not unrelated fields.",
+            "b": "That nesting is reversed: AI contains ML, and ML contains deep learning.",
+            "d": "Machine learning includes many non-generative tasks like classification, ranking, and forecasting."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why does training data quality matter so much?",
+          "options": [
+            { "id": "a", "text": "Because models ignore data after deployment" },
+            { "id": "b", "text": "Because models learn patterns from examples, so biased or incomplete data shapes biased or weak behavior" },
+            { "id": "c", "text": "Because more rows always guarantee perfect accuracy" },
+            { "id": "d", "text": "Because AI systems invent correct labels automatically" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A model’s experience is its data. Poor, biased, leaked, or incomplete examples produce poor, biased, or misleading behavior.",
+          "wrongExplanations": {
+            "a": "Deployed models still reflect what they learned from training data.",
+            "c": "Volume helps only when data is relevant, representative, and correctly labeled.",
+            "d": "Labels and examples usually come from humans, sensors, or prior systems—not automatic perfect truth."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "A spreadsheet formula that always multiplies price by 1.18 is best described as:",
+          "options": [
+            { "id": "a", "text": "Deep learning" },
+            { "id": "b", "text": "Generative AI" },
+            { "id": "c", "text": "Traditional automation / fixed rules" },
+            { "id": "d", "text": "Unsupervised clustering" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Fixed formulas follow explicit rules. They are useful automation, but they are not learning systems.",
+          "wrongExplanations": {
+            "a": "Deep learning learns patterns from data using neural networks.",
+            "b": "Generative AI creates new content such as text or images.",
+            "d": "Clustering groups similar items; it does not apply a fixed tax multiplier."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What does it mean for a model to generalize?",
+          "options": [
+            { "id": "a", "text": "It memorizes every training example exactly" },
+            { "id": "b", "text": "It performs well on new examples it has not seen before" },
+            { "id": "c", "text": "It only works on the original training file" },
+            { "id": "d", "text": "It refuses to make predictions" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Generalization is the ability to apply learned patterns to fresh cases, which is the real goal of training.",
+          "wrongExplanations": {
+            "a": "Exact memorization is overfitting, not robust learning.",
+            "c": "That would mean the model failed to transfer beyond training examples.",
+            "d": "Prediction on new cases is usually the point of a deployed model."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which question best tests whether a product truly uses machine learning?",
+          "options": [
+            { "id": "a", "text": "Does the marketing page say “AI-powered”?" },
+            { "id": "b", "text": "Does the system learn patterns from data and improve predictions from examples rather than only fixed rules?" },
+            { "id": "c", "text": "Does it run in the cloud?" },
+            { "id": "d", "text": "Does it have a chatbot window?" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Machine learning is about learning from data. Branding, hosting location, and chat UI alone do not define ML.",
+          "wrongExplanations": {
+            "a": "Marketing labels are not technical evidence.",
+            "c": "Cloud hosting is an infrastructure choice, not a learning method.",
+            "d": "A chatbot can be rule-based, retrieval-based, generative, or a hybrid—UI alone proves little."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-checkpoint-2",
+      "title": "Checkpoint 2 — Tasks, Case Studies, and Limits",
+      "intro": "Apply AI task vocabulary and judge where systems are strong, weak, or risky.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Predicting next month’s sales number is mainly which task type?",
+          "options": [
+            { "id": "a", "text": "Classification" },
+            { "id": "b", "text": "Regression" },
+            { "id": "c", "text": "Clustering" },
+            { "id": "d", "text": "Image generation" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Regression predicts continuous numeric values such as sales, temperature, or delivery time.",
+          "wrongExplanations": {
+            "a": "Classification predicts categories/labels, not continuous amounts.",
+            "c": "Clustering groups similar items without predicting a sales number.",
+            "d": "Image generation creates pictures; it is not a sales forecast."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which example is generative AI?",
+          "options": [
+            { "id": "a", "text": "A filter that sorts emails into folders using fixed keywords" },
+            { "id": "b", "text": "A tool that drafts a product description from a short brief" },
+            { "id": "c", "text": "A thermostat set to 21°C" },
+            { "id": "d", "text": "A calculator computing tax" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Generative AI creates new content. Drafting product copy is a classic generation task.",
+          "wrongExplanations": {
+            "a": "Fixed keyword rules are traditional automation.",
+            "c": "A fixed temperature setting is not generative.",
+            "d": "A calculator applies arithmetic rules."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which is a core limitation of current language models?",
+          "options": [
+            { "id": "a", "text": "They never produce fluent text" },
+            { "id": "b", "text": "Fluency can hide false or outdated information" },
+            { "id": "c", "text": "They cannot be used for drafting" },
+            { "id": "d", "text": "They always cite perfect sources" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Models can sound confident while being wrong. Fluency is not the same as truth.",
+          "wrongExplanations": {
+            "a": "Modern language models are often highly fluent.",
+            "c": "Drafting is one of their strongest practical uses when verified.",
+            "d": "They do not reliably provide perfect citations."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "A medical imaging model should usually be treated as:",
+          "options": [
+            { "id": "a", "text": "A full replacement for clinicians" },
+            { "id": "b", "text": "A decision-support tool that still needs expert judgment" },
+            { "id": "c", "text": "Proof that AI has human understanding" },
+            { "id": "d", "text": "A system that cannot make false negatives" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "In high-stakes domains, AI can assist review and prioritization, but accountability and clinical judgment remain human.",
+          "wrongExplanations": {
+            "a": "Replacement is unsafe and usually not appropriate.",
+            "c": "Useful performance does not equal human understanding.",
+            "d": "Any model can miss cases; monitoring false negatives is critical."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which question is most useful before adopting an AI tool?",
+          "options": [
+            { "id": "a", "text": "Does the demo look impressive for 30 seconds?" },
+            { "id": "b", "text": "What data was it trained on, what is it optimized for, and how are errors handled?" },
+            { "id": "c", "text": "Does the vendor use the word revolutionary?" },
+            { "id": "d", "text": "Can it replace every employee immediately?" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Serious adoption depends on data, task fit, evaluation, and failure handling—not marketing language.",
+          "wrongExplanations": {
+            "a": "Short demos hide edge cases and failure modes.",
+            "c": "Marketing adjectives are not evidence.",
+            "d": "Immediate total replacement is rarely realistic or safe."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "In a fraud detection system, why are thresholds and review workflows so important?",
+          "options": [
+            { "id": "a", "text": "Because fraud models never make mistakes" },
+            { "id": "b", "text": "Because false declines and missed fraud have different costs, so score bands need human process design" },
+            { "id": "c", "text": "Because thresholds remove the need for monitoring" },
+            { "id": "d", "text": "Because all transactions should be blocked by default forever" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Fraud decisions are asymmetric: blocking good customers and missing real fraud both hurt. Thresholds map scores into actions with oversight.",
+          "wrongExplanations": {
+            "a": "Fraud models make errors and face adaptive attackers.",
+            "c": "Monitoring remains essential as behavior and attacks change.",
+            "d": "Blocking everything would destroy legitimate commerce."
+          }
+        },
+        {
+          "id": "q7",
+          "prompt": "A course recommender that only maximizes clicks may still be a poor learning product because:",
+          "options": [
+            { "id": "a", "text": "Clicks are illegal to measure" },
+            { "id": "b", "text": "Engagement metrics can diverge from mastery, sequencing quality, and long-term learner goals" },
+            { "id": "c", "text": "Recommenders cannot use user history" },
+            { "id": "d", "text": "Students never click useful courses" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Objective functions encode values. Click maximization can promote addictive or mismatched content instead of effective learning paths.",
+          "wrongExplanations": {
+            "a": "Clicks are commonly measured; legality is not the core issue here.",
+            "c": "User history is a standard recommender signal.",
+            "d": "Students do click useful courses; the issue is metric misalignment."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-final",
+      "title": "Final Quiz — AI Judgment",
+      "intro": "Use everything from the lesson. Focus on decisions, governance, and failure modes—not buzzwords.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "A company wants AI to “improve the business” with no clearer goal. What should happen first?",
+          "options": [
+            { "id": "a", "text": "Buy the most expensive model available" },
+            { "id": "b", "text": "Define a specific task, data sources, success metrics, and error costs" },
+            { "id": "c", "text": "Replace the whole analytics team" },
+            { "id": "d", "text": "Skip measurement because AI is inherently valuable" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Vague goals produce vague projects. Useful AI starts with a clear task and evaluation plan.",
+          "wrongExplanations": {
+            "a": "Cost does not define fitness for the problem.",
+            "c": "Replacement without a defined task is reckless.",
+            "d": "Without measurement you cannot know if the system helps."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which scenario most needs stronger safeguards?",
+          "options": [
+            { "id": "a", "text": "Movie recommendations" },
+            { "id": "b", "text": "Playlist sorting" },
+            { "id": "c", "text": "Loan approval scoring" },
+            { "id": "d", "text": "Emoji suggestion" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Loan decisions affect people’s finances and fairness. High-stakes domains need auditability, monitoring, and human accountability.",
+          "wrongExplanations": {
+            "a": "Wrong movie picks are low-cost errors.",
+            "b": "Playlist mistakes are inconvenient, not high-stakes.",
+            "d": "Emoji suggestions have tiny consequences."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "If a hiring model is trained on ten years of biased past decisions, the most likely risk is:",
+          "options": [
+            { "id": "a", "text": "The model becomes perfectly fair automatically" },
+            { "id": "b", "text": "The model may learn and scale historical bias" },
+            { "id": "c", "text": "Bias disappears because computers are neutral" },
+            { "id": "d", "text": "The model cannot use historical data at all" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Models learn from examples. Biased history can become encoded behavior unless actively audited and corrected.",
+          "wrongExplanations": {
+            "a": "Fairness is not automatic.",
+            "c": "Computers inherit the structure of their training data and labels.",
+            "d": "Historical data can be used, but must be handled carefully."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "A chatbot answers customer questions fluently but often invents policy details. What is the best immediate response?",
+          "options": [
+            { "id": "a", "text": "Trust fluency as proof of accuracy" },
+            { "id": "b", "text": "Constrain answers with approved sources, add escalation, and measure factual errors" },
+            { "id": "c", "text": "Remove all human support agents immediately" },
+            { "id": "d", "text": "Increase temperature so answers sound more creative" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Grounding, escalation paths, and error measurement turn a risky chatbot into a controlled support tool.",
+          "wrongExplanations": {
+            "a": "Fluency can conceal hallucinations.",
+            "c": "Removing humans increases risk when accuracy is weak.",
+            "d": "More creativity usually worsens factual reliability."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which statement shows mature AI thinking?",
+          "options": [
+            { "id": "a", "text": "AI is magic, so evaluation is unnecessary" },
+            { "id": "b", "text": "AI is useless because it is not human" },
+            { "id": "c", "text": "AI is a powerful tool whose value depends on task fit, data, metrics, and human oversight" },
+            { "id": "d", "text": "If a vendor demo works once, production success is guaranteed" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Mature judgment treats AI as a tool: useful when fit is good, dangerous when evaluation and oversight are missing.",
+          "wrongExplanations": {
+            "a": "Magic thinking skips accountability.",
+            "b": "Non-human methods can still be highly useful.",
+            "d": "Demos are not production proof."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Why can an accurate model still fail in a real workflow?",
+          "options": [
+            { "id": "a", "text": "Because accuracy numbers are the only thing that matters" },
+            { "id": "b", "text": "Because poor UX, alert fatigue, or misaligned incentives can stop people from using it well" },
+            { "id": "c", "text": "Because models never need monitoring" },
+            { "id": "d", "text": "Because users always follow model output perfectly" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "AI lives inside products and organizations. Workflow fit and human factors determine real outcomes.",
+          "wrongExplanations": {
+            "a": "Offline accuracy is necessary but not sufficient.",
+            "c": "Monitoring is essential after deployment.",
+            "d": "Users may ignore, overtrust, or misuse outputs."
+          }
+        },
+        {
+          "id": "q7",
+          "prompt": "Which checklist item is most important when deciding NOT to use machine learning yet?",
+          "options": [
+            { "id": "a", "text": "The team dislikes dashboards" },
+            { "id": "b", "text": "A transparent rule already solves the problem, or outcome data/labels and monitoring capacity are missing" },
+            { "id": "c", "text": "Competitors use the word AI in ads" },
+            { "id": "d", "text": "The dataset has more than one column" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Choosing not to use ML is mature when simpler methods work or when data and maintenance readiness are insufficient.",
+          "wrongExplanations": {
+            "a": "Dashboard preference is unrelated to ML readiness.",
+            "c": "Competitor marketing should not drive architecture.",
+            "d": "Having columns does not mean you have a solvable labeled learning problem."
+          }
+        }
+      ]
+    }
+  ]
+}

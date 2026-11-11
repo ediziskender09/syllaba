@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "prompt-checkpoint-1",
+      "title": "Checkpoint 1 — Prompt Basics and Framework",
+      "intro": "Check whether you understand what prompts are and how the five-part framework works.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is a prompt in generative AI?",
+          "options": [
+            { "id": "a", "text": "A secret password that unlocks a hidden model mode" },
+            { "id": "b", "text": "The instruction or input that steers the model toward a useful output" },
+            { "id": "c", "text": "A guarantee that the model cannot make mistakes" },
+            { "id": "d", "text": "Only a single-word keyword with no context" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A prompt is the input that communicates task, context, and standards to the model.",
+          "wrongExplanations": {
+            "a": "Prompting is communication design, not secret passwords.",
+            "c": "No prompt removes all possibility of error.",
+            "d": "Useful prompts often include context, constraints, and format."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which set best represents the five-part beginner framework?",
+          "options": [
+            { "id": "a", "text": "Goal, context, constraints, examples, output format" },
+            { "id": "b", "text": "Font, color, emoji, slogan, hashtag" },
+            { "id": "c", "text": "Password, token, seed, temperature only" },
+            { "id": "d", "text": "Guess, regenerate, ignore, publish" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Those five parts help diagnose and strengthen most beginner prompts.",
+          "wrongExplanations": {
+            "b": "Visual decoration is not the core prompting framework.",
+            "c": "Those are system parameters, not the communication framework.",
+            "d": "That is an anti-pattern, not a framework."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why does audience specification improve outputs?",
+          "options": [
+            { "id": "a", "text": "Because models refuse to write without an audience label" },
+            { "id": "b", "text": "Because audience changes vocabulary, examples, depth, and tone" },
+            { "id": "c", "text": "Because audience replaces the need for a goal" },
+            { "id": "d", "text": "Because audience guarantees factual accuracy" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Audience steers communication choices that make content usable for real readers.",
+          "wrongExplanations": {
+            "a": "Models can write without it, but often produce generic results.",
+            "c": "You still need a clear goal.",
+            "d": "Audience fit and factual accuracy are different issues."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which prompt is strongest?",
+          "options": [
+            { "id": "a", "text": "Write about AI." },
+            { "id": "b", "text": "Write a 700-word beginner article explaining AI with an analogy, three examples, limitations, calm tone, and H2 markdown headings." },
+            { "id": "c", "text": "Make it viral." },
+            { "id": "d", "text": "You are an expert. Do something impressive." }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The strong prompt specifies deliverable, audience level, structure, tone, and format.",
+          "wrongExplanations": {
+            "a": "Too broad and underspecified.",
+            "c": "Vague success criteria invite generic hype.",
+            "d": "Role theater without a concrete task is weak."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What is the main purpose of constraints in a prompt?",
+          "options": [
+            { "id": "a", "text": "To make the model fail intentionally" },
+            { "id": "b", "text": "To steer boundaries such as length, tone, forbidden content, and required elements" },
+            { "id": "c", "text": "To replace examples and goals" },
+            { "id": "d", "text": "To force the model to invent statistics" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Constraints are steering wheels that keep outputs usable and safer.",
+          "wrongExplanations": {
+            "a": "Constraints improve fit; they are not sabotage.",
+            "c": "Constraints complement goals and examples.",
+            "d": "Good constraints often forbid invented statistics."
+          }
+        }
+      ]
+    },
+    {
+      "id": "prompt-checkpoint-2",
+      "title": "Checkpoint 2 — Examples, Iteration, and Risk",
+      "intro": "Apply example design, revision discipline, evaluation, and hallucination awareness.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "When are few-shot examples most useful?",
+          "options": [
+            { "id": "a", "text": "When you want to avoid specifying any format forever" },
+            { "id": "b", "text": "When you need to teach a specific style, structure, or transformation" },
+            { "id": "c", "text": "When factual grounding is unnecessary in medicine" },
+            { "id": "d", "text": "When you have no goal at all" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Examples show the model what good output looks like more concretely than abstract adjectives.",
+          "wrongExplanations": {
+            "a": "Examples help format; they do not remove the need for clarity forever.",
+            "c": "High-stakes domains need grounding and review, not fewer safeguards.",
+            "d": "Examples cannot substitute for a missing goal."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which revision request is most effective?",
+          "options": [
+            { "id": "a", "text": "Try again." },
+            { "id": "b", "text": "Keep the structure, cut 20%, replace vague claims with concrete examples, and remove hype adjectives in paragraph two." },
+            { "id": "c", "text": "Make it better somehow." },
+            { "id": "d", "text": "Ignore all previous constraints." }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Specific critique preserves strengths and repairs exact weaknesses.",
+          "wrongExplanations": {
+            "a": "Too vague to guide a controlled revision.",
+            "c": "Better is undefined without criteria.",
+            "d": "Dropping constraints usually increases chaos."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What is a practical way to reduce hallucinations in factual tasks?",
+          "options": [
+            { "id": "a", "text": "Ask for more confidence and no sources" },
+            { "id": "b", "text": "Ground the prompt in approved notes and require unknowns to be stated rather than guessed" },
+            { "id": "c", "text": "Remove all constraints" },
+            { "id": "d", "text": "Request invented citations for credibility" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Grounding plus anti-guessing instructions reduce fluent fabrication risk.",
+          "wrongExplanations": {
+            "a": "Confidence without sources increases danger.",
+            "c": "Removing constraints invites uncontrolled invention.",
+            "d": "Invented citations are a classic failure mode."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Why use an evaluation rubric on AI outputs?",
+          "options": [
+            { "id": "a", "text": "Because fluent text is always correct" },
+            { "id": "b", "text": "Because rubrics check goal fit, constraints, faithfulness, and usefulness beyond surface polish" },
+            { "id": "c", "text": "Because rubrics replace human accountability" },
+            { "id": "d", "text": "Because rubrics make examples unnecessary in every case" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Rubrics protect you from mistaking fluency for quality.",
+          "wrongExplanations": {
+            "a": "Fluency can hide weak or false content.",
+            "c": "Humans remain accountable for high-stakes use.",
+            "d": "Examples and rubrics solve different problems."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What should a model do when the answer is not in provided notes?",
+          "options": [
+            { "id": "a", "text": "Guess confidently to be helpful" },
+            { "id": "b", "text": "State that it is not found or unknown, according to your constraint" },
+            { "id": "c", "text": "Invent a plausible citation" },
+            { "id": "d", "text": "Change the user goal silently" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Explicit unknown behavior is safer than helpful-sounding fabrication.",
+          "wrongExplanations": {
+            "a": "Confident guessing creates false trust.",
+            "c": "Fabricated citations are harmful.",
+            "d": "Silent goal changes break alignment."
+          }
+        }
+      ]
+    },
+    {
+      "id": "prompt-final",
+      "title": "Final Quiz — Workflows, Templates, and Judgment",
+      "intro": "Use the full lesson. Focus on workflows, templates, and responsible judgment.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Why break complex work into multi-step prompt workflows?",
+          "options": [
+            { "id": "a", "text": "Because models cannot follow any single instruction" },
+            { "id": "b", "text": "Because smaller stages are easier to specify, evaluate, and revise than one mega-prompt" },
+            { "id": "c", "text": "Because workflows forbid examples" },
+            { "id": "d", "text": "Because multi-step prompts eliminate all risk automatically" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Decomposition improves control and quality management across complex deliverables.",
+          "wrongExplanations": {
+            "a": "Models can follow single instructions; complex tasks still benefit from staging.",
+            "c": "Examples remain useful inside stages.",
+            "d": "Risk still requires grounding and review."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What belongs in a reusable prompt template?",
+          "options": [
+            { "id": "a", "text": "Only emojis and slogans" },
+            { "id": "b", "text": "Fields for goal, audience, context, constraints, sources, format, and evaluation criteria" },
+            { "id": "c", "text": "A demand to invent missing data" },
+            { "id": "d", "text": "A rule never to state uncertainty" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Reusable templates encode the framework so quality starts higher every time.",
+          "wrongExplanations": {
+            "a": "Decoration is not a template foundation.",
+            "c": "Templates should reduce invention risk, not encourage it.",
+            "d": "Stating uncertainty is often essential."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which statement shows mature prompt judgment?",
+          "options": [
+            { "id": "a", "text": "If it sounds fluent, ship it to customers immediately" },
+            { "id": "b", "text": "Match prompting method to task risk, evaluate outputs, and keep humans accountable for high-stakes use" },
+            { "id": "c", "text": "One mega-prompt should always do research, writing, and legal review" },
+            { "id": "d", "text": "Confidential data can be pasted anywhere if the prompt is polite" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Mature practice balances usefulness with evaluation, grounding, and responsibility.",
+          "wrongExplanations": {
+            "a": "Fluency is not a ship criteria.",
+            "c": "Complex and high-stakes work needs staged control and human review.",
+            "d": "Privacy and tool approval rules still apply."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "For a coding assistant prompt, what should you include?",
+          "options": [
+            { "id": "a", "text": "Only 'write code' with no language or examples" },
+            { "id": "b", "text": "Language, constraints, input/output examples, and edge cases" },
+            { "id": "c", "text": "A request to invent APIs that might exist" },
+            { "id": "d", "text": "No mention of failure behavior" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Precise technical briefs dramatically improve code usefulness and reduce fabrication.",
+          "wrongExplanations": {
+            "a": "Underspecified coding asks produce fragile results.",
+            "c": "Invented APIs are a common failure mode.",
+            "d": "Failure and edge-case behavior should be specified."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What is the best response when stakeholder requests are vague?",
+          "options": [
+            { "id": "a", "text": "Prompt the model immediately with the vague ask unchanged" },
+            { "id": "b", "text": "Translate the ask into a clear brief by clarifying audience, decision, scope, and definition of done" },
+            { "id": "c", "text": "Ask the model to invent stakeholder goals silently" },
+            { "id": "d", "text": "Skip evaluation because stakeholders are in a hurry" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Briefing clarity before prompting prevents fluent answers to the wrong problem.",
+          "wrongExplanations": {
+            "a": "Vague asks produce vague outputs.",
+            "c": "Silent invention of goals creates misalignment.",
+            "d": "Speed without clarity creates rework and risk."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which habit best turns prompting into durable skill?",
+          "options": [
+            { "id": "a", "text": "Collecting secret phrases without reviewing outputs" },
+            { "id": "b", "text": "Building templates and workflows, evaluating with rubrics, and recording failure modes" },
+            { "id": "c", "text": "Never saving successful prompts" },
+            { "id": "d", "text": "Assuming model updates remove the need for constraints" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Libraries, workflows, evaluation, and failure logs create compounding craft.",
+          "wrongExplanations": {
+            "a": "Secret phrases without evaluation are brittle.",
+            "c": "Successful prompts should be reused and refined.",
+            "d": "Better models still benefit from clear constraints and review."
+          }
+        }
+      ]
+    }
+  ]
+}

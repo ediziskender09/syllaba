@@ -1,0 +1,348 @@
+{
+  "quizzes": [
+    {
+      "id": "python-checkpoint-1",
+      "title": "Checkpoint 1 — How Python Runs and Stores Data",
+      "intro": "Confirm the basics: interpreters, values, types, variables, and simple expressions.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What does the Python interpreter do?",
+          "options": [
+            { "id": "a", "text": "It designs your program goals automatically" },
+            { "id": "b", "text": "It reads Python instructions and executes them" },
+            { "id": "c", "text": "It only checks spelling in comments" },
+            { "id": "d", "text": "It converts every program into a website" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The interpreter reads Python source and carries out the instructions on your machine.",
+          "wrongExplanations": {
+            "a": "You still define goals and logic; the interpreter executes what you write.",
+            "c": "Comments are ignored; the interpreter executes statements and expressions.",
+            "d": "Python can build many kinds of programs, not only websites."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which value is a float?",
+          "options": [
+            { "id": "a", "text": "\"3.14\"" },
+            { "id": "b", "text": "3.14" },
+            { "id": "c", "text": "True" },
+            { "id": "d", "text": "[3, 14]" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "3.14 without quotes is a floating-point number. Quoted text is a string.",
+          "wrongExplanations": {
+            "a": "Quotes make it a string, not a float.",
+            "c": "True is a boolean.",
+            "d": "Square brackets create a list."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "After `score = 10` then `score = score + 5`, what does `score` refer to?",
+          "options": [
+            { "id": "a", "text": "10" },
+            { "id": "b", "text": "15" },
+            { "id": "c", "text": "\"score + 5\"" },
+            { "id": "d", "text": "None" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Assignment evaluates the right-hand side and rebinds the name. 10 + 5 yields 15.",
+          "wrongExplanations": {
+            "a": "The second assignment replaces the old binding.",
+            "c": "Python stores the computed value, not the unevaluated text.",
+            "d": "The name still refers to a number, not None."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is the result of `20 / 4` in Python 3?",
+          "options": [
+            { "id": "a", "text": "5" },
+            { "id": "b", "text": "5.0" },
+            { "id": "c", "text": "\"5\"" },
+            { "id": "d", "text": "4" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "True division with `/` returns a float, so 20 / 4 is 5.0.",
+          "wrongExplanations": {
+            "a": "That would be an int; `/` yields a float in Python 3.",
+            "c": "Division returns a number, not a string.",
+            "d": "4 would be incorrect arithmetic for 20 divided by 4."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why does `\"Age: \" + 30` raise a TypeError?",
+          "options": [
+            { "id": "a", "text": "Because 30 is too large" },
+            { "id": "b", "text": "Because Python cannot concatenate str and int with +" },
+            { "id": "c", "text": "Because Age is a reserved keyword" },
+            { "id": "d", "text": "Because print was not used" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Convert with str(30) or use an f-string. + does not automatically mix text and integers.",
+          "wrongExplanations": {
+            "a": "Size is irrelevant here; types are the issue.",
+            "c": "\"Age: \" is just a string literal.",
+            "d": "The expression is invalid even before printing."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "If `a = [1, 2]` and `b = a`, then `b.append(3)`, what is `a`?",
+          "options": [
+            { "id": "a", "text": "[1, 2]" },
+            { "id": "b", "text": "[1, 2, 3]" },
+            { "id": "c", "text": "[3]" },
+            { "id": "d", "text": "Error: lists cannot be shared" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "a and b refer to the same list object, so an in-place append is visible through both names.",
+          "wrongExplanations": {
+            "a": "That would be true only if b were a separate copy.",
+            "c": "Append adds to the existing list; it does not replace it with [3].",
+            "d": "Python allows multiple names to reference one mutable object."
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-checkpoint-2",
+      "title": "Checkpoint 2 — Decisions and Loops",
+      "intro": "Check your understanding of conditionals, boolean logic, and repetition patterns.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "In an if/elif/else chain, which block runs?",
+          "options": [
+            { "id": "a", "text": "Every block whose condition is True" },
+            { "id": "b", "text": "Only the first matching block, then the chain stops" },
+            { "id": "c", "text": "Only the else block" },
+            { "id": "d", "text": "A random matching block" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Python checks top to bottom and executes the first matching branch in the chain.",
+          "wrongExplanations": {
+            "a": "Unlike separate independent if statements, elif/else are mutually exclusive in one chain.",
+            "c": "else runs only when no previous condition matched.",
+            "d": "Control flow is deterministic, not random."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What does `range(3)` iterate over?",
+          "options": [
+            { "id": "a", "text": "1, 2, 3" },
+            { "id": "b", "text": "0, 1, 2" },
+            { "id": "c", "text": "0, 1, 2, 3" },
+            { "id": "d", "text": "3, 2, 1" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "range(3) produces 0, 1, and 2. The end is exclusive and the default start is 0.",
+          "wrongExplanations": {
+            "a": "That would be range(1, 4).",
+            "c": "3 is not included because the stop value is exclusive.",
+            "d": "range does not reverse unless you set a negative step."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which loop is usually best when you do not know how many retries input validation will need?",
+          "options": [
+            { "id": "a", "text": "A for loop over range(0)" },
+            { "id": "b", "text": "A while loop that breaks on valid input" },
+            { "id": "c", "text": "An else-only chain with no loop" },
+            { "id": "d", "text": "A list literal" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "while is ideal when repetition depends on a condition that becomes true at an unknown time.",
+          "wrongExplanations": {
+            "a": "range(0) iterates nothing.",
+            "c": "Without a loop you cannot retry repeatedly.",
+            "d": "A list stores values; it does not repeat logic by itself."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is the accumulator pattern?",
+          "options": [
+            { "id": "a", "text": "Deleting all variables at the end of a program" },
+            { "id": "b", "text": "Initializing a value, then updating it as you loop over items" },
+            { "id": "c", "text": "Printing every line twice" },
+            { "id": "d", "text": "Converting all strings to booleans" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Examples include totaling scores, counting matches, or building a new list item by item.",
+          "wrongExplanations": {
+            "a": "Cleanup is unrelated to accumulation.",
+            "c": "Printing twice is not the accumulator idea.",
+            "d": "Type conversion is a different concept."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What does `continue` do inside a loop?",
+          "options": [
+            { "id": "a", "text": "Ends the entire program" },
+            { "id": "b", "text": "Skips the rest of the current iteration and goes to the next one" },
+            { "id": "c", "text": "Deletes the loop variable forever" },
+            { "id": "d", "text": "Converts the loop into a function" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "continue jumps to the next iteration. break, by contrast, exits the loop entirely.",
+          "wrongExplanations": {
+            "a": "continue does not terminate the program.",
+            "c": "The loop variable is not deleted forever.",
+            "d": "Functions are defined with def, not continue."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "For `items = []`, what does `if items:` do?",
+          "options": [
+            { "id": "a", "text": "Treats the empty list as falsey and skips the if block" },
+            { "id": "b", "text": "Always enters the if block" },
+            { "id": "c", "text": "Raises IndexError immediately" },
+            { "id": "d", "text": "Creates a new list with one None" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Empty lists are falsey in boolean context, so the if body is skipped.",
+          "wrongExplanations": {
+            "b": "Non-empty lists are truthy; empty lists are not.",
+            "c": "A boolean check on an empty list does not index it.",
+            "d": "The condition does not mutate the list."
+          }
+        }
+      ]
+    },
+    {
+      "id": "python-final",
+      "title": "Final Quiz — Functions, Errors, and Program Thinking",
+      "intro": "Bring it together: functions, returns, scope, debugging, and small-program design.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is the key difference between printing a value inside a function and returning it?",
+          "options": [
+            { "id": "a", "text": "They are identical in all cases" },
+            { "id": "b", "text": "print shows output to humans; return hands a value back to the caller for further use" },
+            { "id": "c", "text": "return can only send strings" },
+            { "id": "d", "text": "print stores the value in a global constant automatically" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "If you need the result later in the program, return it. Printing alone leaves the caller with None unless something is returned.",
+          "wrongExplanations": {
+            "a": "They serve different purposes and produce different caller behavior.",
+            "c": "Functions can return any object type.",
+            "d": "print does not create globals for you."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "A variable assigned inside a function is usually:",
+          "options": [
+            { "id": "a", "text": "Local to that function call" },
+            { "id": "b", "text": "Automatically available everywhere in every file" },
+            { "id": "c", "text": "Deleted from memory before the function starts" },
+            { "id": "d", "text": "Required to be uppercase" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Local scope keeps functions from accidentally interfering with each other. Pass inputs in and return outputs out.",
+          "wrongExplanations": {
+            "b": "That describes global behavior, which is not the default for assignments inside functions.",
+            "c": "The variable exists during the function execution.",
+            "d": "Uppercase is only a convention for constants, not a language requirement for locals."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "You see `ValueError: invalid literal for int() with base 10: '3.2'`. What is the most likely cause?",
+          "options": [
+            { "id": "a", "text": "int() cannot parse '3.2' because of the decimal point" },
+            { "id": "b", "text": "Python forbids all numbers" },
+            { "id": "c", "text": "The variable name int is missing" },
+            { "id": "d", "text": "You must use print before int" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Use float('3.2') if you need a decimal, or validate/reject non-integers if only whole numbers are allowed.",
+          "wrongExplanations": {
+            "b": "Python supports numbers extensively.",
+            "c": "int here is the built-in converter, not a missing variable definition of that kind.",
+            "d": "print is unrelated to conversion success."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which is the best first debugging step when a traceback appears?",
+          "options": [
+            { "id": "a", "text": "Delete the whole file and rewrite from memory" },
+            { "id": "b", "text": "Read the error type/message and jump to the reported line" },
+            { "id": "c", "text": "Ignore the traceback and keep adding features" },
+            { "id": "d", "text": "Wrap everything in a bare except: pass" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Tracebacks are diagnostic maps. Start with the final error and line number, then inspect related values.",
+          "wrongExplanations": {
+            "a": "Total rewrites waste information the traceback already gave you.",
+            "c": "Adding features on a broken base creates more failures.",
+            "d": "Swallowing all errors hides problems and makes debugging harder."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which function best follows a clear contract for beginners?",
+          "options": [
+            { "id": "a", "text": "A function named x that prints random things and also edits globals" },
+            { "id": "b", "text": "def average(scores): returns the mean of a non-empty numeric list (or errors clearly if empty)" },
+            { "id": "c", "text": "A function with no name that runs only when Python feels ready" },
+            { "id": "d", "text": "A function that requires the caller to guess whether it prints or returns" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Clear names, explicit inputs/outputs, and defined empty-input behavior make functions testable and reusable.",
+          "wrongExplanations": {
+            "a": "Vague names and hidden side effects create fragile code.",
+            "c": "Functions must be defined with names (unless using specialized anonymous forms intentionally).",
+            "d": "Callers should not have to guess the interface."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Before writing code for a tiny utility, what professional habit helps most?",
+          "options": [
+            { "id": "a", "text": "Write two sample inputs/outputs and note edge cases in plain English" },
+            { "id": "b", "text": "Choose the longest possible variable names with no plan" },
+            { "id": "c", "text": "Avoid running the program until it is 500 lines long" },
+            { "id": "d", "text": "Start by optimizing for million-row performance only" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Examples and edge cases clarify the goal. Then implement thinly, test, and refactor.",
+          "wrongExplanations": {
+            "b": "Names matter, but planning matters first.",
+            "c": "Frequent small runs catch errors early.",
+            "d": "Beginners should prioritize correctness and clarity before premature optimization."
+          }
+        },
+        {
+          "id": "q7",
+          "prompt": "In the flashcard quizzer design, why store each card as a dictionary with prompt and answer?",
+          "options": [
+            { "id": "a", "text": "Because dictionaries are the only type Python allows" },
+            { "id": "b", "text": "Because related fields stay together as one record, reducing parallel-list bugs" },
+            { "id": "c", "text": "Because dictionaries cannot be looped over" },
+            { "id": "d", "text": "Because input() requires dictionaries" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Keeping related fields together is a core data-modeling habit as programs grow beyond single values.",
+          "wrongExplanations": {
+            "a": "Python has many types; dictionaries are one useful choice for records.",
+            "c": "Dictionaries are commonly iterated with keys/values/items.",
+            "d": "input() returns a string; it does not require dictionary cards."
+          }
+        }
+      ]
+    }
+  ]
+}
