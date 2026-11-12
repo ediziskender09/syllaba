@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "stats-checkpoint-1",
+      "title": "Checkpoint 1 — Description, Averages, and Rates",
+      "intro": "Check foundational descriptive ideas before sampling, causation, and charts.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What should come before calculating statistics?",
+          "options": [
+            { "id": "a", "text": "A clear question, unit of observation, and decision the answer should support" },
+            { "id": "b", "text": "A chart with no labels" },
+            { "id": "c", "text": "A causal claim with no data" },
+            { "id": "d", "text": "Deleting inconvenient points immediately" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Bad questions produce elegant nonsense; clarify first.",
+          "wrongExplanations": {
+            "b": "Unlabeled charts mislead.",
+            "c": "Claims need evidence and design.",
+            "d": "Outliers need investigation, not reflex deletion."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "When is the median often more useful than the mean?",
+          "options": [
+            { "id": "a", "text": "Never; means always represent “typical” best" },
+            { "id": "b", "text": "When data are skewed or extreme values pull the mean" },
+            { "id": "c", "text": "Only for categorical colors like red/blue averages" },
+            { "id": "d", "text": "Only when you want to hide variation" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Medians resist outlier pull and often better match “typical” for skewed data.",
+          "wrongExplanations": {
+            "a": "Means are sensitive to extremes.",
+            "c": "Category labels are not averaged that way.",
+            "d": "Neither measure replaces reporting spread."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why does variation matter?",
+          "options": [
+            { "id": "a", "text": "Two datasets can share a mean yet feel very different in reliability" },
+            { "id": "b", "text": "Spread is irrelevant if an average exists" },
+            { "id": "c", "text": "Only the maximum value ever matters" },
+            { "id": "d", "text": "Variation proves causation" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Center without spread hides unpredictability and risk.",
+          "wrongExplanations": {
+            "b": "Averages alone are incomplete.",
+            "c": "Extremes are not the whole story.",
+            "d": "Variation is descriptive, not causal proof."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What question should you ask of every percentage?",
+          "options": [
+            { "id": "a", "text": "“Percent of what?” (what is the base?)" },
+            { "id": "b", "text": "“Can we remove the denominator?”" },
+            { "id": "c", "text": "“How do we make it sound bigger?”" },
+            { "id": "d", "text": "“Can we skip units?”" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Percentages mislead when bases differ or are hidden.",
+          "wrongExplanations": {
+            "b": "Denominators are essential.",
+            "c": "Drama is not literacy.",
+            "d": "Units and bases clarify meaning."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why can raw counts mislead compared with rates?",
+          "options": [
+            { "id": "a", "text": "Because exposure/denominators differ—e.g., returns should be per sale" },
+            { "id": "b", "text": "Because rates are never useful" },
+            { "id": "c", "text": "Because counting is unethical" },
+            { "id": "d", "text": "Because bigger counts always mean better quality" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Rates account for opportunity or volume; raw counts ignore exposure.",
+          "wrongExplanations": {
+            "b": "Rates are often the operational truth.",
+            "c": "Counting is fine with context.",
+            "d": "Volume can inflate counts without worse rates."
+          }
+        }
+      ]
+    },
+    {
+      "id": "stats-checkpoint-2",
+      "title": "Checkpoint 2 — Samples, Probability, and Causation",
+      "intro": "Test sampling intuition, uncertainty language, and correlation vs causation.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is the relationship between sample and population?",
+          "options": [
+            { "id": "a", "text": "A sample is the subset measured; a population is the full group of interest" },
+            { "id": "b", "text": "They are identical by definition always" },
+            { "id": "c", "text": "Populations are always smaller than samples" },
+            { "id": "d", "text": "Samples remove all uncertainty automatically" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Inference uses samples to learn about populations—with uncertainty.",
+          "wrongExplanations": {
+            "b": "They differ unless you measured everyone.",
+            "c": "Populations are the broader group.",
+            "d": "Uncertainty remains."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What does a huge biased sample do?",
+          "options": [
+            { "id": "a", "text": "Fix bias through size alone" },
+            { "id": "b", "text": "Remain biased—sometimes more confidently wrong" },
+            { "id": "c", "text": "Guarantee causation" },
+            { "id": "d", "text": "Eliminate the need for definitions" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Size reduces random noise but does not cure systematic bias.",
+          "wrongExplanations": {
+            "a": "Bias is not fixed by N alone.",
+            "c": "Design, not size alone, supports causal claims.",
+            "d": "Definitions remain essential."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What is the key warning about correlation?",
+          "options": [
+            { "id": "a", "text": "Correlation always proves causation" },
+            { "id": "b", "text": "Variables can move together without one causing the other" },
+            { "id": "c", "text": "Correlation is meaningless in all cases" },
+            { "id": "d", "text": "Only ice cream studies matter" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Association is not enough for cause; experiments and careful designs help.",
+          "wrongExplanations": {
+            "a": "This is a classic fallacy.",
+            "c": "Correlations can still be useful clues.",
+            "d": "The ice cream example is illustrative, not exclusive."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What helps A/B tests estimate causal effects?",
+          "options": [
+            { "id": "a", "text": "Random assignment to variants with predefined metrics and enough data" },
+            { "id": "b", "text": "Peeking once and declaring victory after an afternoon wiggle" },
+            { "id": "c", "text": "Changing many things with no metric plan" },
+            { "id": "d", "text": "Using only anecdotes from one power user" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Randomization plus disciplined metrics supports causal inference.",
+          "wrongExplanations": {
+            "b": "Early peeking and noise chasing mislead.",
+            "c": "Unplanned changes muddy causes.",
+            "d": "Anecdotes inform mechanism, not alone causal proof."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What should you look for with poll or estimate headlines?",
+          "options": [
+            { "id": "a", "text": "Only the single point number" },
+            { "id": "b", "text": "Uncertainty cues such as margin of error plus sample details" },
+            { "id": "c", "text": "Whether the chart is 3D enough" },
+            { "id": "d", "text": "Whether jargon intimidates questions away" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Point estimates without uncertainty feel falsely precise.",
+          "wrongExplanations": {
+            "a": "Single numbers under-inform.",
+            "c": "3D often distorts.",
+            "d": "Intimidation is unethical communication."
+          }
+        }
+      ]
+    },
+    {
+      "id": "stats-final",
+      "title": "Final Quiz — Charts, Ethics, and Careful Judgment",
+      "intro": "Use the full lesson. Focus on visualization honesty, metric definitions, and professional numeracy.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Which chart-reading habit is essential?",
+          "options": [
+            { "id": "a", "text": "Check axes, units, time range, and what is missing" },
+            { "id": "b", "text": "Trust truncated axes without question" },
+            { "id": "c", "text": "Prefer pie charts with dozens of slices always" },
+            { "id": "d", "text": "Ignore dual-axis distortions" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Axes and context determine whether a chart informs or manipulates.",
+          "wrongExplanations": {
+            "b": "Truncation can invent drama.",
+            "c": "Overloaded pies confuse.",
+            "d": "Dual axes often mislead when unexplained."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is the difference between percentage points and percent change?",
+          "options": [
+            { "id": "a", "text": "There is no difference" },
+            { "id": "b", "text": "A move from 10% to 12% is +2 percentage points and +20% relative" },
+            { "id": "c", "text": "Percentage points are only for temperature" },
+            { "id": "d", "text": "Relative percent change ignores the starting value" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Confusing points with relative percent causes bad decisions.",
+          "wrongExplanations": {
+            "a": "They differ and both should be named carefully.",
+            "c": "The distinction is general.",
+            "d": "Relative change depends on the baseline."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why write metric definitions?",
+          "options": [
+            { "id": "a", "text": "Ambiguous definitions create fake debates and garbage analysis" },
+            { "id": "b", "text": "Definitions slow teams down with no benefit" },
+            { "id": "c", "text": "“Engagement” is self-explanatory worldwide" },
+            { "id": "d", "text": "Software removes the need for meaning" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Operational definitions make numbers comparable and discussable.",
+          "wrongExplanations": {
+            "b": "Clarity saves thrash.",
+            "c": "Vague words hide disagreement.",
+            "d": "Tools do not replace judgment or definitions."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is an ethical statistics communication practice?",
+          "options": [
+            { "id": "a", "text": "Cherry-pick windows that flatter a story" },
+            { "id": "b", "text": "Disclose uncertainty and limits; do not use jargon to shut down questions" },
+            { "id": "c", "text": "Hide denominators" },
+            { "id": "d", "text": "Present noise wiggles as destinies" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Honest communication includes context and humility.",
+          "wrongExplanations": {
+            "a": "Cherry-picking is called out.",
+            "c": "Missing bases mislead.",
+            "d": "Signal vs noise discipline matters."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "How should AI be used with statistics?",
+          "options": [
+            { "id": "a", "text": "As an unchecked source of methods and certainty" },
+            { "id": "b", "text": "As a helper for summaries/plots while humans verify assumptions and critical claims" },
+            { "id": "c", "text": "To invent sample sizes" },
+            { "id": "d", "text": "To replace asking “compared to what?”" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Accountability for claims stays with you.",
+          "wrongExplanations": {
+            "a": "Models can overstate certainty.",
+            "c": "Fabrication is unethical.",
+            "d": "Core literacy questions remain required."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which habit best captures the course’s end goal?",
+          "options": [
+            { "id": "a", "text": "When you see a number, ask: Compared to what? Says who (sample)? What’s the spread or uncertainty?" },
+            { "id": "b", "text": "Treat every dashboard wiggle as a crisis narrative" },
+            { "id": "c", "text": "Equate correlation with proven cause" },
+            { "id": "d", "text": "Trust naked numbers without definitions" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Those three questions operationalize beginner statistical literacy.",
+          "wrongExplanations": {
+            "b": "Noise chasing is a mistake.",
+            "c": "Causation needs stronger evidence.",
+            "d": "Naked numbers under-inform."
+          }
+        }
+      ]
+    }
+  ]
+}

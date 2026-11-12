@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "react-checkpoint-1",
+      "title": "Checkpoint 1 — Components, JSX, and Props",
+      "intro": "Check whether you understand React’s declarative model, JSX basics, and props before state and effects.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What does “UI as a function of state” emphasize in React?",
+          "options": [
+            { "id": "a", "text": "You manually patch DOM nodes for every tiny change as the primary style" },
+            { "id": "b", "text": "You describe what the UI should look like for current data, and React updates the view to match" },
+            { "id": "c", "text": "State is illegal in React components" },
+            { "id": "d", "text": "React only works without JavaScript" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "React’s declarative model focuses on rendering UI from current state and props rather than hand-updating the DOM everywhere.",
+          "wrongExplanations": {
+            "a": "That describes classic imperative DOM scripting more than React’s core style.",
+            "c": "State is central to interactive React UIs.",
+            "d": "React is a JavaScript library for building UIs."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which JSX attribute correctly replaces the HTML class attribute?",
+          "options": [
+            { "id": "a", "text": "class" },
+            { "id": "b", "text": "className" },
+            { "id": "c", "text": "cssClass" },
+            { "id": "d", "text": "classnameProp" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "In JSX, className maps to the DOM class attribute because class is a reserved word in JavaScript.",
+          "wrongExplanations": {
+            "a": "class is invalid/confusing in JSX compared with className.",
+            "c": "cssClass is not the standard React JSX attribute.",
+            "d": "classnameProp is not the React convention."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "How should a child component treat props?",
+          "options": [
+            { "id": "a", "text": "As read-only inputs from the parent that should not be mutated" },
+            { "id": "b", "text": "As writable globals shared by every component automatically" },
+            { "id": "c", "text": "As CSS-only values that cannot hold text" },
+            { "id": "d", "text": "As a replacement for JavaScript functions" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Props flow down and should be treated as immutable inputs for predictable data flow.",
+          "wrongExplanations": {
+            "b": "Props are not automatic writable globals.",
+            "c": "Props can hold many value types, including text and objects.",
+            "d": "Props pass data; they do not replace functions as a language feature."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is a React component in the essentials sense used here?",
+          "options": [
+            { "id": "a", "text": "A database table" },
+            { "id": "b", "text": "A function that returns a description of UI (React elements)" },
+            { "id": "c", "text": "A CSS reset file" },
+            { "id": "d", "text": "A server-only SQL query" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Function components receive props and return elements describing the UI.",
+          "wrongExplanations": {
+            "a": "Databases are outside the component definition.",
+            "c": "CSS resets are styling concerns, not components.",
+            "d": "SQL queries are data-layer concerns, not React components."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why is composition with children often useful?",
+          "options": [
+            { "id": "a", "text": "Because it forces every component to fetch from an API" },
+            { "id": "b", "text": "Because a wrapper can provide structure without hard-coding its inner content" },
+            { "id": "c", "text": "Because children disable props permanently" },
+            { "id": "d", "text": "Because React forbids nesting components otherwise" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Passing children lets layout/wrapper components remain flexible about what they contain.",
+          "wrongExplanations": {
+            "a": "Composition does not require fetching.",
+            "c": "Children and props work together.",
+            "d": "Nesting components is normal and allowed."
+          }
+        }
+      ]
+    },
+    {
+      "id": "react-checkpoint-2",
+      "title": "Checkpoint 2 — State, Lists, and Forms",
+      "intro": "Test state updates, keys, controlled inputs, and lifting state.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What does useState give you?",
+          "options": [
+            { "id": "a", "text": "A CSS stylesheet injector only" },
+            { "id": "b", "text": "A state value and a setter that schedules a re-render with updated state" },
+            { "id": "c", "text": "A direct mutable reference that React never re-reads" },
+            { "id": "d", "text": "A replacement for HTML forms in the browser chrome" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "useState returns current state and a setter used to update UI over time.",
+          "wrongExplanations": {
+            "a": "useState is about component state, not injecting stylesheets.",
+            "c": "You should update through the setter rather than silent mutation.",
+            "d": "Forms still use input elements; React state can control them."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why avoid mutating arrays in state directly?",
+          "options": [
+            { "id": "a", "text": "Because React relies on updating state with new values/references to track changes reliably" },
+            { "id": "b", "text": "Because arrays are illegal in React" },
+            { "id": "c", "text": "Because mutation automatically deletes the component" },
+            { "id": "d", "text": "Because keys become CSS classes when you mutate" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Immutable updates (new arrays/objects) help React detect changes and keep UI in sync.",
+          "wrongExplanations": {
+            "b": "Arrays are commonly stored in state.",
+            "c": "Mutation does not delete components; it risks stale UI.",
+            "d": "Keys and CSS classes are separate concepts."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What should a list key usually represent?",
+          "options": [
+            { "id": "a", "text": "A stable unique identity for each item, ideally from your data" },
+            { "id": "b", "text": "A random value regenerated every render on purpose" },
+            { "id": "c", "text": "The component author’s first name" },
+            { "id": "d", "text": "The current mouse x-coordinate" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Stable unique keys help React reconcile list updates correctly.",
+          "wrongExplanations": {
+            "b": "Random keys every render defeat the purpose and cause remount churn.",
+            "c": "Author names are not item identities.",
+            "d": "Pointer position is unrelated to list identity."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What makes an input controlled in React?",
+          "options": [
+            { "id": "a", "text": "Its value is driven by React state and updated via onChange" },
+            { "id": "b", "text": "It has no value attribute and never fires events" },
+            { "id": "c", "text": "It is styled with inline CSS only" },
+            { "id": "d", "text": "It must be an uncontrolled file input forever" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Controlled inputs use state as the source of truth for the displayed value.",
+          "wrongExplanations": {
+            "b": "That would not be an interactive controlled field.",
+            "c": "Styling does not define controlled behavior.",
+            "d": "File inputs have special cases; the definition of controlled is broader."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "When should you lift state up?",
+          "options": [
+            { "id": "a", "text": "Whenever any component exists, always to the absolute root without thought" },
+            { "id": "b", "text": "When multiple children need to share and synchronize the same changing data" },
+            { "id": "c", "text": "Never; duplicated sibling state is always better" },
+            { "id": "d", "text": "Only for CSS hover effects" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Shared interactive data belongs in the closest common parent to keep one source of truth.",
+          "wrongExplanations": {
+            "a": "Lifting everything to the root creates unnecessary coupling.",
+            "c": "Duplicated state often drifts out of sync.",
+            "d": "Hover styling is not the main reason to lift React state."
+          }
+        }
+      ]
+    },
+    {
+      "id": "react-final",
+      "title": "Final Quiz — Effects, Hooks, and Judgment",
+      "intro": "Apply essentials to side effects, hook rules, and debugging judgment.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What belongs in useEffect rather than during pure render?",
+          "options": [
+            { "id": "a", "text": "Calculating a filtered list from props already in memory" },
+            { "id": "b", "text": "Fetching data, subscriptions, or other side effects that talk to the outside world" },
+            { "id": "c", "text": "Returning JSX" },
+            { "id": "d", "text": "Declaring a const for a derived boolean" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Effects synchronize with external systems; pure calculations should usually happen during render.",
+          "wrongExplanations": {
+            "a": "Derived filtering is typically computed while rendering.",
+            "c": "Returning JSX is the component’s render job.",
+            "d": "Derived booleans are normally computed in render."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why include values like slug in an effect dependency array when the effect uses them?",
+          "options": [
+            { "id": "a", "text": "So the effect re-runs when those reactive inputs change and stays consistent" },
+            { "id": "b", "text": "Because dependency arrays are only decorative comments" },
+            { "id": "c", "text": "To prevent JavaScript from parsing the file" },
+            { "id": "d", "text": "Because React forbids fetch outside dependency arrays forever" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Dependencies tell React when to re-run the effect so it uses current values.",
+          "wrongExplanations": {
+            "b": "Dependencies are meaningful, not comments.",
+            "c": "They do not affect parsing that way.",
+            "d": "Fetching can also happen in event handlers; dependencies are about effect correctness."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which hook usage violates the Rules of Hooks?",
+          "options": [
+            { "id": "a", "text": "Calling useState at the top level of a function component" },
+            { "id": "b", "text": "Calling useState inside a condition so it sometimes does not run" },
+            { "id": "c", "text": "Calling useEffect at the top level with a cleanup function" },
+            { "id": "d", "text": "Calling a custom hook unconditionally from a component" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Hooks must be called in the same order every render; conditional calls break that rule.",
+          "wrongExplanations": {
+            "a": "Top-level useState is correct.",
+            "c": "Top-level useEffect with cleanup is normal.",
+            "d": "Unconditional custom hooks are valid."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is a common reason to use a cancelled flag in a fetch effect?",
+          "options": [
+            { "id": "a", "text": "To style buttons with CSS modules" },
+            { "id": "b", "text": "To avoid applying stale responses or setting state after the request is no longer relevant" },
+            { "id": "c", "text": "To disable JSX permanently" },
+            { "id": "d", "text": "To convert props into CSS variables automatically" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Cleanup can mark work cancelled so late responses do not update the wrong UI state.",
+          "wrongExplanations": {
+            "a": "Styling is unrelated to fetch cancellation flags.",
+            "c": "JSX remains available.",
+            "d": "Props-to-CSS conversion is not what cancelled flags do."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why is storing a value that can be computed from existing state often a mistake?",
+          "options": [
+            { "id": "a", "text": "Because derived values are illegal in JavaScript" },
+            { "id": "b", "text": "Because mirrored state can drift out of sync; computing during render stays honest" },
+            { "id": "c", "text": "Because React cannot display computed strings" },
+            { "id": "d", "text": "Because useState only accepts objects" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Extra synchronized state creates opportunities for inconsistency; derive when possible.",
+          "wrongExplanations": {
+            "a": "Derived values are normal JavaScript.",
+            "c": "React can render computed strings easily.",
+            "d": "useState accepts many value types, including primitives."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "A button’s handler looks like onClick={handleSave()}. What is the likely problem?",
+          "options": [
+            { "id": "a", "text": "Nothing—this always waits for the click before calling" },
+            { "id": "b", "text": "handleSave runs during render, and onClick receives its return value instead of a click handler function" },
+            { "id": "c", "text": "React will convert it into a CSS animation" },
+            { "id": "d", "text": "It disables all hooks in the tree" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Including parentheses calls the function immediately during render unless you wrap it intentionally.",
+          "wrongExplanations": {
+            "a": "The call happens at render time, not on click.",
+            "c": "Event props are not CSS animations.",
+            "d": "This mistake does not disable the Rules of Hooks system-wide."
+          }
+        }
+      ]
+    }
+  ]
+}

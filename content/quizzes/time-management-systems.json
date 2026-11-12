@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "time-checkpoint-1",
+      "title": "Checkpoint 1 — Capture, Priorities, and Planning",
+      "intro": "Check foundations before focus, habits, and boundaries.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Why do systems beat motivation alone?",
+          "options": [
+            { "id": "a", "text": "Because motivation is always permanent" },
+            { "id": "b", "text": "Because systems provide defaults on ordinary days when mood is uneven" },
+            { "id": "c", "text": "Because systems remove the need for any priorities" },
+            { "id": "d", "text": "Because apps automatically know what matters" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Motivation is weather; systems are climate—repeatable rules that work on normal days.",
+          "wrongExplanations": {
+            "a": "Motivation fluctuates.",
+            "c": "Priorities remain essential.",
+            "d": "Apps store priorities; they do not create them."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is the difference between a project and a next action?",
+          "options": [
+            { "id": "a", "text": "They are the same thing" },
+            { "id": "b", "text": "A project needs multiple steps; a next action is a concrete doable step" },
+            { "id": "c", "text": "A next action is always a multi-month outcome" },
+            { "id": "d", "text": "Projects should never be broken down" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Lists fail when fuzzy projects sit where actions should be.",
+          "wrongExplanations": {
+            "a": "The lesson separates them on purpose.",
+            "c": "That describes a project, not a next action.",
+            "d": "Breakdown is how stuck projects move."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What does important versus urgent thinking emphasize?",
+          "options": [
+            { "id": "a", "text": "That every notification is equally strategic" },
+            { "id": "b", "text": "Protecting work aligned with goals, not only time pressure" },
+            { "id": "c", "text": "Ignoring all deadlines forever" },
+            { "id": "d", "text": "Letting other people’s emergencies always win by default" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Important work needs protection; urgency alone is a poor compass.",
+          "wrongExplanations": {
+            "a": "Notifications often fake urgency.",
+            "c": "Deadlines still matter; prioritization is not avoidance.",
+            "d": "Defaulting to others’ urgency is a failure mode."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What belongs in a weekly planning ritual?",
+          "options": [
+            { "id": "a", "text": "Clear inboxes, update projects, choose a few priorities, and place deep-work blocks" },
+            { "id": "b", "text": "Schedule forty equal priorities with no slack" },
+            { "id": "c", "text": "Skip the calendar entirely" },
+            { "id": "d", "text": "Switch productivity apps every weekend" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "A short weekly review resets commitments and protects what matters.",
+          "wrongExplanations": {
+            "b": "Overstuffed plans collapse.",
+            "c": "Calendar reality is required.",
+            "d": "Tool hopping is avoidance."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What is a common daily planning mistake?",
+          "options": [
+            { "id": "a", "text": "Choosing a realistic top three based on true free time" },
+            { "id": "b", "text": "Planning six hours of deep work on a day with four hours of meetings" },
+            { "id": "c", "text": "Leaving a little slack for interruptions" },
+            { "id": "d", "text": "Checking capture inboxes on a schedule" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Fantasy planning ignores calendar truth and creates failure spirals.",
+          "wrongExplanations": {
+            "a": "Realistic top threes are recommended.",
+            "c": "Slack is healthy.",
+            "d": "Scheduled processing supports a trusted system."
+          }
+        }
+      ]
+    },
+    {
+      "id": "time-checkpoint-2",
+      "title": "Checkpoint 2 — Focus, Energy, and Boundaries",
+      "intro": "Test focus design, habits, energy, and saying no.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "When focus fails, what should you do first according to the lesson?",
+          "options": [
+            { "id": "a", "text": "Only shame yourself harder" },
+            { "id": "b", "text": "Diagnose whether the blocker is unclear next steps, fear, boredom, exhaustion, or interruption" },
+            { "id": "c", "text": "Buy a new app immediately" },
+            { "id": "d", "text": "Add twelve more tasks" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Different diagnoses need different fixes; shame is not a schedule.",
+          "wrongExplanations": {
+            "a": "Self-contempt rarely starts the work.",
+            "c": "Tool switching is often avoidance.",
+            "d": "More tasks worsen overwhelm."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is energy management in this course?",
+          "options": [
+            { "id": "a", "text": "Treating all hours as identical" },
+            { "id": "b", "text": "Placing demanding work in higher-energy windows when possible" },
+            { "id": "c", "text": "Ignoring sleep as irrelevant" },
+            { "id": "d", "text": "Only counting steps on a tracker" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Hours differ in quality; match task difficulty to energy when you can.",
+          "wrongExplanations": {
+            "a": "Equal-hour thinking is incomplete.",
+            "c": "Sleep is infrastructure.",
+            "d": "Trackers alone are not the point."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "How should habits start?",
+          "options": [
+            { "id": "a", "text": "With an elaborate routine that needs a free weekend" },
+            { "id": "b", "text": "Tiny and stacked onto existing anchors" },
+            { "id": "c", "text": "By changing every habit on day one" },
+            { "id": "d", "text": "Only after buying premium stationery" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Tiny anchored habits survive; oversized launches fail.",
+          "wrongExplanations": {
+            "a": "Fragile complexity dies quickly.",
+            "c": "Too many changes overload willpower.",
+            "d": "Tools are optional; consistency is not."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is true about saying no?",
+          "options": [
+            { "id": "a", "text": "Time management without boundaries is incomplete" },
+            { "id": "b", "text": "Every yes has unlimited capacity behind it" },
+            { "id": "c", "text": "You should never renegotiate scope" },
+            { "id": "d", "text": "Calendars cannot fill with overcommitment" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Boundaries and renegotiation protect priorities and quality.",
+          "wrongExplanations": {
+            "b": "Capacity is finite.",
+            "c": "Scope negotiation is a core skill.",
+            "d": "Overcommitment shows up as burnout or quiet failure."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What is a healthy minimal tool stack?",
+          "options": [
+            { "id": "a", "text": "Seventeen apps with the same tasks duplicated" },
+            { "id": "b", "text": "Calendar for time, tasks for actions/projects, notes for reference" },
+            { "id": "c", "text": "Only memory and vibes" },
+            { "id": "d", "text": "A new system every Monday" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Separation of calendar, tasks, and notes keeps the system trustworthy.",
+          "wrongExplanations": {
+            "a": "Scatter destroys trust.",
+            "c": "Uncaptured commitments create anxiety.",
+            "d": "Tool hopping prevents mastery."
+          }
+        }
+      ]
+    },
+    {
+      "id": "time-final",
+      "title": "Final Quiz — Sustainability, Collaboration, and Judgment",
+      "intro": "Use the full lesson. Focus on recovery, metrics, collaboration, and durable practice.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "How should meetings be treated in a time system?",
+          "options": [
+            { "id": "a", "text": "As free and endless by default" },
+            { "id": "b", "text": "As expensive; ask for outcomes and decline message-worthy meetings when possible" },
+            { "id": "c", "text": "As replacements for all deep work" },
+            { "id": "d", "text": "As events that never need actions or owners" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Meeting discipline protects maker time and follow-through.",
+          "wrongExplanations": {
+            "a": "Meeting sprawl steals execution time.",
+            "c": "Deep work still needs protection.",
+            "d": "Actions and owners close loops."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What helps with procrastination according to the lesson?",
+          "options": [
+            { "id": "a", "text": "Only harsher self-criticism" },
+            { "id": "b", "text": "Smaller steps, timers, lower first-draft bars, and curiosity about the blocker" },
+            { "id": "c", "text": "Adding vague mega-tasks to the list" },
+            { "id": "d", "text": "Deleting the project silently and hoping" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Procrastination often hides emotion; practical unblocking beats shame.",
+          "wrongExplanations": {
+            "a": "Shame rarely schedules the work.",
+            "c": "Vagueness increases avoidance.",
+            "d": "Silent abandonment is not a system."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which metrics help evaluate a time system?",
+          "options": [
+            { "id": "a", "text": "Only how stressed you look" },
+            { "id": "b", "text": "Priority outcomes completed, protected deep-work hours, review consistency, and stress trends" },
+            { "id": "c", "text": "Number of apps installed" },
+            { "id": "d", "text": "How colorful the planner is" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Outcome and sustainability metrics beat vanity productivity theater.",
+          "wrongExplanations": {
+            "a": "Stress performance is not success.",
+            "c": "App count is a vanity metric.",
+            "d": "Aesthetics do not equal function."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What should a shutdown ritual include?",
+          "options": [
+            { "id": "a", "text": "Leaving every loop unnamed for mystery" },
+            { "id": "b", "text": "Capturing loose ends, setting tomorrow’s top priorities, and closing the day deliberately" },
+            { "id": "c", "text": "Starting five new projects at 11pm" },
+            { "id": "d", "text": "Checking every notification one last frantic time with no capture" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Shutdowns close loops and prepare future you.",
+          "wrongExplanations": {
+            "a": "Mystery messes sabotage tomorrow.",
+            "c": "Late sprawl breaks recovery.",
+            "d": "Uncaptured checking maintains anxiety."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "How should managers and makers think about schedules?",
+          "options": [
+            { "id": "a", "text": "Everyone thrives on identical fragmented days" },
+            { "id": "b", "text": "Maker work needs longer blocks; management often fragments—label days or half-days when you are both" },
+            { "id": "c", "text": "Makers never need communication windows" },
+            { "id": "d", "text": "Context collapse is the ideal forever state" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Mode clustering reduces switching costs when roles collide.",
+          "wrongExplanations": {
+            "a": "Role needs differ.",
+            "c": "Communication still matters; it can be batched.",
+            "d": "Always-available and always-creating burns people out."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which standard captures the course’s end goal?",
+          "options": [
+            { "id": "a", "text": "Manage time so your days reflect your priorities in writing—not only in wishes" },
+            { "id": "b", "text": "Collect systems forever without using one" },
+            { "id": "c", "text": "Fill every minute until burnout proves commitment" },
+            { "id": "d", "text": "Let urgency and inbox noise set every agenda" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Alignment between priorities and lived schedule is the real product of the system.",
+          "wrongExplanations": {
+            "b": "Tool collecting is a listed mistake.",
+            "c": "Intensity without sustainability fails.",
+            "d": "Default inbox agendas fight intentional work."
+          }
+        }
+      ]
+    }
+  ]
+}

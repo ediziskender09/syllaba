@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "nego-checkpoint-1",
+      "title": "Checkpoint 1 — Interests, BATNA, and Preparation",
+      "intro": "Check foundations before tactics, workplace scripts, and ethics deep dives.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is the difference between a position and an interest?",
+          "options": [
+            { "id": "a", "text": "They mean the same thing" },
+            { "id": "b", "text": "A position is a stated demand; an interest is the underlying why" },
+            { "id": "c", "text": "Interests are always dollar amounts only" },
+            { "id": "d", "text": "Positions are illegal in workplace talks" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Interests unlock options when positions deadlock.",
+          "wrongExplanations": {
+            "a": "The lesson separates them deliberately.",
+            "c": "Interests include stability, recognition, speed, risk, and more.",
+            "d": "Positions are normal; rigidity without interests is the problem."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is a BATNA?",
+          "options": [
+            { "id": "a", "text": "A bluff you invent with no plan" },
+            { "id": "b", "text": "Your best alternative if no agreement is reached" },
+            { "id": "c", "text": "Your opening joke" },
+            { "id": "d", "text": "A mandatory first concession" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "BATNA reality creates calm leverage; fabricated walk-aways collapse.",
+          "wrongExplanations": {
+            "a": "Fake alternatives damage trust and fail under pressure.",
+            "c": "Rapport helps but is not BATNA.",
+            "d": "Concessions are separate from alternatives."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why separate target and reservation points?",
+          "options": [
+            { "id": "a", "text": "So you can negotiate toward a target while protecting a walk-away line" },
+            { "id": "b", "text": "Because only one number should exist in your mind" },
+            { "id": "c", "text": "So you accept anything under social pressure" },
+            { "id": "d", "text": "Because reservation points replace preparation" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Targets stretch outcomes; reservations prevent harmful deals.",
+          "wrongExplanations": {
+            "b": "Knowing both improves discipline.",
+            "c": "Reservation exists to resist harmful pressure.",
+            "d": "Preparation still includes interests, questions, and trades."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What should a preparation checklist include?",
+          "options": [
+            { "id": "a", "text": "Only hoping charm will suffice" },
+            { "id": "b", "text": "Interests, BATNA, target/reservation, opening ask, trades, and questions" },
+            { "id": "c", "text": "A plan to lie about alternatives" },
+            { "id": "d", "text": "No written notes ever" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Structured prep beats unprepared charm.",
+          "wrongExplanations": {
+            "a": "Charm without prep is still unprepared.",
+            "c": "Ethics forbid fabricating alternatives.",
+            "d": "Writing prep improves clarity and calm."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What is a defensible anchor?",
+          "options": [
+            { "id": "a", "text": "An absurd number with no rationale meant only to shock" },
+            { "id": "b", "text": "An ambitious yet justified opening supported by data or scope facts" },
+            { "id": "c", "text": "Your reservation stated first every time" },
+            { "id": "d", "text": "Silence with no offer forever" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Anchors influence the zone when they are ambitious and credible.",
+          "wrongExplanations": {
+            "a": "Absurd theater destroys credibility.",
+            "c": "Leading with reservation often leaves value.",
+            "d": "Offers are part of negotiation; silence is a tactic, not a substitute for all anchors."
+          }
+        }
+      ]
+    },
+    {
+      "id": "nego-checkpoint-2",
+      "title": "Checkpoint 2 — Offers, Concessions, and Workplace Deals",
+      "intro": "Test packages, concessions, salary/scope talks, and process discipline.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Why use package offers when multiple issues exist?",
+          "options": [
+            { "id": "a", "text": "They reveal trade-offs and reduce deadlock on a single variable" },
+            { "id": "b", "text": "They hide all terms forever" },
+            { "id": "c", "text": "They ban questions" },
+            { "id": "d", "text": "They require burning the relationship" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Packages let parties trade across differently valued issues.",
+          "wrongExplanations": {
+            "b": "Clarity of terms still matters.",
+            "c": "Questions remain leverage.",
+            "d": "Good packages can protect relationships."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "How should concessions be handled?",
+          "options": [
+            { "id": "a", "text": "Spill large unilateral discounts quickly under silence" },
+            { "id": "b", "text": "Plan, pace, and trade concessions for something in return" },
+            { "id": "c", "text": "Never move under any circumstances" },
+            { "id": "d", "text": "Concede first on your reservation without a target" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Planned traded concessions teach counterparts you will not fold for free.",
+          "wrongExplanations": {
+            "a": "Rapid unilateral concessions invite waiting you out.",
+            "c": "Some movement is often needed for deals.",
+            "d": "Protect reservation; aim via target."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What is a strong response to an impossible scope/date ask?",
+          "options": [
+            { "id": "a", "text": "Silent despair until failure" },
+            { "id": "b", "text": "Present options across scope, time, and resources" },
+            { "id": "c", "text": "Promise everything with no plan" },
+            { "id": "d", "text": "Blame teammates publicly in the meeting" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Option triangles give decision makers workable choices.",
+          "wrongExplanations": {
+            "a": "Silence becomes missed deadlines.",
+            "c": "False promises create worse conflict later.",
+            "d": "Public blame harms process and trust."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "In salary talks, what should you clarify beyond base pay?",
+          "options": [
+            { "id": "a", "text": "Nothing; base is the only term" },
+            { "id": "b", "text": "Total compensation elements such as bonus, equity, benefits, and flexibility" },
+            { "id": "c", "text": "Only the office snack budget" },
+            { "id": "d", "text": "Whether you can skip getting terms in writing" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Total comp and related terms often matter as much as base salary.",
+          "wrongExplanations": {
+            "a": "Packages extend beyond base.",
+            "c": "Snacks are not the strategic core.",
+            "d": "Writing confirmation is essential."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What should you do after stating an offer?",
+          "options": [
+            { "id": "a", "text": "Keep talking until you discount yourself" },
+            { "id": "b", "text": "Stop and let silence invite a response" },
+            { "id": "c", "text": "Immediately reveal your reservation point" },
+            { "id": "d", "text": "Apologize for asking" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Silence is a tool; nervous fillers negotiate against yourself.",
+          "wrongExplanations": {
+            "a": "Filling air often lowers your own terms.",
+            "c": "Reservation is protected information.",
+            "d": "Clear asks do not require apology theater."
+          }
+        }
+      ]
+    },
+    {
+      "id": "nego-final",
+      "title": "Final Quiz — Ethics, Emotion, and Professional Judgment",
+      "intro": "Use the full lesson. Focus on ethics, hardball responses, confirmation, and practice habits.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Which statement matches ethical negotiation?",
+          "options": [
+            { "id": "a", "text": "Lie about alternatives and authority when useful" },
+            { "id": "b", "text": "Stay competitive without fabricating facts or hiding critical safety risks" },
+            { "id": "c", "text": "Exploit every information gap in ways your profession would condemn" },
+            { "id": "d", "text": "Never put agreements in writing" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Competitive does not mean dishonest; reputation is long-term BATNA.",
+          "wrongExplanations": {
+            "a": "Fabrication is unethical and brittle.",
+            "c": "Predatory exploitation is rejected in the lesson.",
+            "d": "Written confirmation prevents disputes."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "How can you respond to an aggressive anchor?",
+          "options": [
+            { "id": "a", "text": "Negotiate against yourself in shock immediately" },
+            { "id": "b", "text": "Pause, re-anchor with rationale, or explicitly reject the frame" },
+            { "id": "c", "text": "Accept it to be polite" },
+            { "id": "d", "text": "Ignore preparation and improvise insults" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Process discipline beats panic concessions.",
+          "wrongExplanations": {
+            "a": "Shock concessions are a trap.",
+            "c": "Politeness is not automatic acceptance.",
+            "d": "Insults burn value and relationships."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What does rapport do in negotiation?",
+          "options": [
+            { "id": "a", "text": "It requires you to concede every term" },
+            { "id": "b", "text": "It can improve information flow without replacing term clarity" },
+            { "id": "c", "text": "It makes BATNA irrelevant forever" },
+            { "id": "d", "text": "It means never saying no" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Warmth and firmness can coexist; niceness is not compliance.",
+          "wrongExplanations": {
+            "a": "Rapport ≠ folding.",
+            "c": "Alternatives still matter.",
+            "d": "Clear nos with options are professional."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Why confirm agreements in writing?",
+          "options": [
+            { "id": "a", "text": "To create “I thought we said…” disputes on purpose" },
+            { "id": "b", "text": "To make terms explicit and reduce misremembered deals" },
+            { "id": "c", "text": "Because oral deals are always more precise" },
+            { "id": "d", "text": "Only when you distrust everyone including yourself about snacks" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Written confirmations turn conversation into operable terms.",
+          "wrongExplanations": {
+            "a": "Writing prevents those disputes.",
+            "c": "Memory and chat dust are fragile.",
+            "d": "Confirmation is standard for meaningful terms."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What is a useful freelance negotiation practice?",
+          "options": [
+            { "id": "a", "text": "Leave revisions, payment, and scope undefined" },
+            { "id": "b", "text": "Define deliverables, timelines, payment schedule, and change-order impacts" },
+            { "id": "c", "text": "Start work with no deposit on risky new clients as a rule" },
+            { "id": "d", "text": "Accept every client regardless of misalignment" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Ambiguity becomes unpaid work; clear SOWs protect both sides.",
+          "wrongExplanations": {
+            "a": "Undefined terms create conflict.",
+            "c": "Deposits are often BATNA-smart.",
+            "d": "Walking away can be the right BATNA."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which standard captures the course’s end goal?",
+          "options": [
+            { "id": "a", "text": "Negotiate so both the terms and the relationship can survive the meeting" },
+            { "id": "b", "text": "Win every point even by lying" },
+            { "id": "c", "text": "Avoid all asks to stay comfortable" },
+            { "id": "d", "text": "Accept first offers by reflex" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Firm, fair, prepared negotiation balances outcomes and relationships.",
+          "wrongExplanations": {
+            "b": "Dishonesty is rejected.",
+            "c": "Avoidance is usually costly.",
+            "d": "First-offer reflex is a listed mistake."
+          }
+        }
+      ]
+    }
+  ]
+}

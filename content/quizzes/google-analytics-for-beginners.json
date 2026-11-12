@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "ga-checkpoint-1",
+      "title": "Checkpoint 1 — Purpose, GA4 Events, and Setup Thinking",
+      "intro": "Check whether you understand why analytics exists, GA4’s event model, and measurement planning before reports.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is the primary purpose of Google Analytics in beginner terms?",
+          "options": [
+            { "id": "a", "text": "To host website files instead of a web server" },
+            { "id": "b", "text": "To help you understand how people find and use a site or app so you can make better decisions" },
+            { "id": "c", "text": "To replace all customer support conversations permanently" },
+            { "id": "d", "text": "To design logos automatically" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Analytics measures behavior and acquisition to support learning and decisions—not to host sites or replace all qualitative work.",
+          "wrongExplanations": {
+            "a": "Hosting is a separate infrastructure concern.",
+            "c": "Support conversations remain valuable qualitative signal.",
+            "d": "Logo design is not an analytics function."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "How does GA4 primarily model user activity?",
+          "options": [
+            { "id": "a", "text": "As an event-based system where page views and actions are events with optional parameters" },
+            { "id": "b", "text": "As a spreadsheet that cannot record actions" },
+            { "id": "c", "text": "As a single permanent screenshot of the homepage only" },
+            { "id": "d", "text": "As CSS selectors exclusively" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "GA4 centers on events and parameters rather than the older hit model beginners may remember from UA lore.",
+          "wrongExplanations": {
+            "b": "GA4 records many action types as events.",
+            "c": "It continuously records streams of events, not one screenshot.",
+            "d": "CSS selectors may relate to tagging implementations, not the core data model."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What should you clarify before diving deep into fancy reports?",
+          "options": [
+            { "id": "a", "text": "The business questions, success actions, and metrics that would answer them" },
+            { "id": "b", "text": "The perfect chart color theme only" },
+            { "id": "c", "text": "How to send email addresses in every event parameter" },
+            { "id": "d", "text": "How to disable all QA checks forever" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "A measurement plan tied to questions prevents vanity reporting and missing conversion tracking.",
+          "wrongExplanations": {
+            "b": "Aesthetics do not define measurement value.",
+            "c": "Sending PII in parameters is a privacy anti-pattern.",
+            "d": "QA is essential for trustworthy data."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "In the Account → Property → Data stream hierarchy, what is a data stream?",
+          "options": [
+            { "id": "a", "text": "A source of event data (such as a website or app) feeding a GA4 property" },
+            { "id": "b", "text": "A legal contract that replaces privacy notices" },
+            { "id": "c", "text": "A type of paid social advertisement creative" },
+            { "id": "d", "text": "A CSS animation timeline" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Streams are the input channels—web or app—that send events into the property.",
+          "wrongExplanations": {
+            "b": "Privacy notices remain necessary; streams are technical data sources.",
+            "c": "Ad creatives are marketing assets, not GA streams.",
+            "d": "Animation timelines are unrelated."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why might enhanced measurement help beginners?",
+          "options": [
+            { "id": "a", "text": "It can automatically collect common web interactions like page views and certain clicks/scrolls when enabled" },
+            { "id": "b", "text": "It deletes the need for any business goals" },
+            { "id": "c", "text": "It guarantees perfect attribution in all cases" },
+            { "id": "d", "text": "It removes the requirement to respect consent laws" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Enhanced measurement covers many standard interactions, while custom events still capture product-specific successes.",
+          "wrongExplanations": {
+            "b": "Goals and key events still need human definition.",
+            "c": "Attribution remains imperfect and contextual.",
+            "d": "Privacy/consent obligations still apply."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ga-checkpoint-2",
+      "title": "Checkpoint 2 — Acquisition, Events, and Audiences",
+      "intro": "Test channel thinking, UTMs, key events, and audience basics.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What are UTM parameters primarily used for?",
+          "options": [
+            { "id": "a", "text": "Encrypting the entire website HTML" },
+            { "id": "b", "text": "Tagging campaign URLs so acquisition reports can attribute traffic more clearly" },
+            { "id": "c", "text": "Replacing HTTPS certificates monthly" },
+            { "id": "d", "text": "Deleting converting users from reports" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "UTMs encode source, medium, campaign, and related metadata for clearer acquisition analysis.",
+          "wrongExplanations": {
+            "a": "UTMs are not an encryption mechanism.",
+            "c": "Certificates are a security/ops concern.",
+            "d": "UTMs do not exist to delete converters."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why is inconsistent UTM naming harmful?",
+          "options": [
+            { "id": "a", "text": "It fragments channels/campaigns into misleading separate rows and weakens analysis" },
+            { "id": "b", "text": "It makes JSON illegal in GA4" },
+            { "id": "c", "text": "It automatically improves conversion rate" },
+            { "id": "d", "text": "It disables the Realtime report forever" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Variants like email vs Email vs e-mail split what should be one channel/campaign story.",
+          "wrongExplanations": {
+            "b": "UTM hygiene is unrelated to JSON legality.",
+            "c": "Inconsistency does not improve conversion rate.",
+            "d": "Realtime is not permanently disabled by bad UTMs."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What should a key event represent?",
+          "options": [
+            { "id": "a", "text": "Any trivial hover if it increases chart count" },
+            { "id": "b", "text": "A business-important action you want to optimize and report as a primary success signal" },
+            { "id": "c", "text": "Only server CPU temperature" },
+            { "id": "d", "text": "The color of the submit button exclusively" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Key events (conversions) should map to meaningful outcomes like signup or purchase—not noise.",
+          "wrongExplanations": {
+            "a": "Too many trivial conversions dilute focus.",
+            "c": "Infrastructure metrics belong in monitoring tools.",
+            "d": "Button color may be tested, but is not itself the key event definition."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "When evaluating a traffic channel, what pairing is most useful?",
+          "options": [
+            { "id": "a", "text": "Volume alone with no quality metrics" },
+            { "id": "b", "text": "Volume together with engagement/conversion quality signals" },
+            { "id": "c", "text": "Font choice of the channel name in reports" },
+            { "id": "d", "text": "Whether the channel name has an emoji" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "High volume with poor engagement can be less valuable than smaller high-intent traffic.",
+          "wrongExplanations": {
+            "a": "Volume without quality misleads prioritization.",
+            "c": "Typography of labels is irrelevant to performance.",
+            "d": "Emojis do not measure channel value."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What is an audience in GA4 beginner terms?",
+          "options": [
+            { "id": "a", "text": "A defined set of users who match behavioral or other conditions for analysis or remarketing use cases" },
+            { "id": "b", "text": "A random PDF export format" },
+            { "id": "c", "text": "A type of DNS record" },
+            { "id": "d", "text": "A replacement for HTTPS" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Audiences group users by conditions such as visited pricing or completed a lesson.",
+          "wrongExplanations": {
+            "b": "Exports are separate from audience definitions.",
+            "c": "DNS records are networking concepts.",
+            "d": "HTTPS remains a transport security concern."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ga-final",
+      "title": "Final Quiz — Quality, Privacy, and Decisions",
+      "intro": "Apply analytics judgment to QA, privacy, explorations, and decision-making.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Which issue is a classic data-quality problem after installing tags?",
+          "options": [
+            { "id": "a", "text": "Duplicate tags firing double pageviews or events" },
+            { "id": "b", "text": "Using consistent UTM names" },
+            { "id": "c", "text": "Writing a measurement plan before launch" },
+            { "id": "d", "text": "Checking DebugView during configuration" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Duplicate installations inflate metrics and distort decisions; the other options are healthy practices.",
+          "wrongExplanations": {
+            "b": "Consistent UTMs improve quality rather than harm it.",
+            "c": "Measurement plans improve focus and completeness.",
+            "d": "DebugView is part of good QA."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is a privacy-aware analytics habit?",
+          "options": [
+            { "id": "a", "text": "Sending emails and phone numbers in event parameters for convenience" },
+            { "id": "b", "text": "Minimizing unnecessary data collection and avoiding PII in event parameters" },
+            { "id": "c", "text": "Ignoring consent requirements if reports look nicer" },
+            { "id": "d", "text": "Tracking every keystroke on every form by default" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Ethical, compliant analytics collects what you need and avoids personal data in hits/parameters.",
+          "wrongExplanations": {
+            "a": "PII in parameters is a serious risk.",
+            "c": "Consent and legal requirements are not optional aesthetics.",
+            "d": "Excessive keystroke capture is invasive and usually unnecessary."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What makes a weekly analytics review useful?",
+          "options": [
+            { "id": "a", "text": "Listing every metric available without interpretation" },
+            { "id": "b", "text": "Connecting material changes to decisions or experiments with clear success criteria" },
+            { "id": "c", "text": "Changing UTM spelling each week intentionally" },
+            { "id": "d", "text": "Hiding tracking breaks from the team" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Reviews should produce actions: what changed, what we will try, and how we will judge success.",
+          "wrongExplanations": {
+            "a": "Metric museums without decisions waste time.",
+            "c": "Intentional inconsistency harms reporting.",
+            "d": "Tracking breaks should be surfaced and fixed."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "A metric spikes the day a new tag ships. What should you do first?",
+          "options": [
+            { "id": "a", "text": "Assume product-market fit overnight and triple spend immediately" },
+            { "id": "b", "text": "Check whether tracking/implementation changes, campaigns, or site issues explain the spike" },
+            { "id": "c", "text": "Delete the property" },
+            { "id": "d", "text": "Ignore all future data forever" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Suspicious spikes deserve QA and context checks before strategic reaction.",
+          "wrongExplanations": {
+            "a": "Unverified spikes are poor grounds for aggressive spend.",
+            "c": "Deletion does not diagnose the issue.",
+            "d": "Abandoning measurement throws away the learning system."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "When are explorations most helpful for beginners?",
+          "options": [
+            { "id": "a", "text": "After you have a clear question such as a funnel drop-off or campaign comparison to investigate" },
+            { "id": "b", "text": "Before you know what success means for the business" },
+            { "id": "c", "text": "As a substitute for fixing broken event collection" },
+            { "id": "d", "text": "Only for choosing button shadows" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Explorations are tools for targeted questions once basic collection and definitions exist.",
+          "wrongExplanations": {
+            "b": "Without success definitions, explorations wander.",
+            "c": "Broken collection must be fixed first; fancy analysis cannot repair missing events.",
+            "d": "Visual styling decisions need experiments/design judgment, not explorations alone."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Why treat GA numbers as directional under constraints rather than perfect absolute truth?",
+          "options": [
+            { "id": "a", "text": "Because consent, identity, modeling, filters, and implementation quality can all affect observed metrics" },
+            { "id": "b", "text": "Because GA cannot count events at all" },
+            { "id": "c", "text": "Because status codes from APIs overwrite analytics nightly" },
+            { "id": "d", "text": "Because UTM parameters delete historical data automatically" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Real-world measurement has limits; use GA for learning and decisions while validating critical claims.",
+          "wrongExplanations": {
+            "b": "GA counts events extensively; the issue is interpretation under constraints.",
+            "c": "API status codes do not nightly overwrite GA by default.",
+            "d": "UTMs do not auto-delete history."
+          }
+        }
+      ]
+    }
+  ]
+}

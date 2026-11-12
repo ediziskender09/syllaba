@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "api-checkpoint-1",
+      "title": "Checkpoint 1 — APIs, HTTP Methods, and Resources",
+      "intro": "Check whether you understand API contracts, method intent, and resource URL thinking.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "In beginner terms, what is an API?",
+          "options": [
+            { "id": "a", "text": "A contract that lets one program communicate with another in defined ways" },
+            { "id": "b", "text": "A type of monitor cable" },
+            { "id": "c", "text": "A CSS animation preset" },
+            { "id": "d", "text": "A physical server rack label only" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "APIs define how software talks—requests, responses, and rules—especially over HTTP on the web.",
+          "wrongExplanations": {
+            "b": "Cables are hardware, not application interfaces.",
+            "c": "CSS animations are unrelated to API contracts.",
+            "d": "While APIs may run on servers, the API itself is the interface contract."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which HTTP method is primarily used to read a resource without changing server state?",
+          "options": [
+            { "id": "a", "text": "DELETE" },
+            { "id": "b", "text": "GET" },
+            { "id": "c", "text": "PATCH" },
+            { "id": "d", "text": "PUT" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "GET is the standard safe read method for resources and collections.",
+          "wrongExplanations": {
+            "a": "DELETE removes resources.",
+            "c": "PATCH partially updates resources.",
+            "d": "PUT replaces resources."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which URL style best matches resource-oriented REST thinking for a lesson collection?",
+          "options": [
+            { "id": "a", "text": "/api/createLessonNowPlease" },
+            { "id": "b", "text": "/api/lessons" },
+            { "id": "c", "text": "/api/doSomethingRandom" },
+            { "id": "d", "text": "/api/runJavaScriptOnServer" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Collections are typically plural nouns; methods carry the verb.",
+          "wrongExplanations": {
+            "a": "Verb-heavy paths often lean RPC-style and duplicate what POST already means.",
+            "c": "Vague action paths hide the resource model.",
+            "d": "That describes an implementation urge, not a resource name."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What does it mean that a well-designed GET is safe/idempotent in practical beginner terms?",
+          "options": [
+            { "id": "a", "text": "Repeating the GET should not change server state as a side effect of reading" },
+            { "id": "b", "text": "GET always deletes duplicates automatically" },
+            { "id": "c", "text": "GET cannot return JSON" },
+            { "id": "d", "text": "GET requires a request body every time" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Reads should not mutate resources; that expectation powers caching and retries.",
+          "wrongExplanations": {
+            "b": "Deletion is not GET’s job.",
+            "c": "GET commonly returns JSON.",
+            "d": "GET requests typically omit bodies."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "In a typical HTTP API exchange, what does the server return after processing a request?",
+          "options": [
+            { "id": "a", "text": "An HTTP response with a status code and often headers and a body" },
+            { "id": "b", "text": "Only a CSS file forever" },
+            { "id": "c", "text": "A silent void with no status information by definition" },
+            { "id": "d", "text": "A Git commit hash exclusively" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Responses communicate outcome via status codes plus optional headers and bodies.",
+          "wrongExplanations": {
+            "b": "APIs may return many content types; not only CSS.",
+            "c": "HTTP responses include status information.",
+            "d": "Commit hashes are version-control concepts, not the general response definition."
+          }
+        }
+      ]
+    },
+    {
+      "id": "api-checkpoint-2",
+      "title": "Checkpoint 2 — Status Codes, JSON, and Auth Basics",
+      "intro": "Test status interpretation, JSON payloads, parameters, and authentication/authorization basics.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Which status code most clearly indicates a resource could not be found?",
+          "options": [
+            { "id": "a", "text": "200" },
+            { "id": "b", "text": "201" },
+            { "id": "c", "text": "404" },
+            { "id": "d", "text": "301" }
+          ],
+          "correctOptionId": "c",
+          "explanation": "404 Not Found signals the targeted resource is missing.",
+          "wrongExplanations": {
+            "a": "200 indicates success.",
+            "b": "201 indicates creation success.",
+            "d": "301 is a redirect, not a missing-resource error."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "How do 401 and 403 typically differ?",
+          "options": [
+            { "id": "a", "text": "They are exact synonyms in every API" },
+            { "id": "b", "text": "401 usually means authentication is missing/invalid; 403 means the caller is not allowed to perform the action" },
+            { "id": "c", "text": "403 means success and 401 means created" },
+            { "id": "d", "text": "401 means the JSON was pretty-printed" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "401 is about identity/credentials; 403 is about permission after identity is known (in common usage).",
+          "wrongExplanations": {
+            "a": "They communicate different problems in standard practice.",
+            "c": "That reverses success semantics.",
+            "d": "Pretty-printing is unrelated to status codes."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why should secret API keys not be embedded in public frontend code?",
+          "options": [
+            { "id": "a", "text": "Because browsers can be inspected and secrets would be exposed" },
+            { "id": "b", "text": "Because JSON cannot travel over HTTPS" },
+            { "id": "c", "text": "Because frontend code cannot make HTTP requests" },
+            { "id": "d", "text": "Because status codes stop working when keys exist" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Anything shipped to the browser can be viewed; keep privileged secrets on the server.",
+          "wrongExplanations": {
+            "b": "JSON over HTTPS is common and valid.",
+            "c": "Frontends make HTTP requests routinely.",
+            "d": "Keys do not disable status codes."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What are query parameters commonly used for on collection endpoints?",
+          "options": [
+            { "id": "a", "text": "Filtering, sorting, and pagination of results" },
+            { "id": "b", "text": "Replacing HTTPS with FTP automatically" },
+            { "id": "c", "text": "Deleting the server access logs by default" },
+            { "id": "d", "text": "Compiling TypeScript on the client" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Query strings refine collection reads without inventing a new resource path for every variation.",
+          "wrongExplanations": {
+            "b": "Query params do not switch protocols that way.",
+            "c": "They are not a log-deletion mechanism.",
+            "d": "Compilation is unrelated to query-string filtering."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why are consistent machine-readable error envelopes valuable?",
+          "options": [
+            { "id": "a", "text": "They let every client invent a different parsing strategy for fun" },
+            { "id": "b", "text": "They help clients handle failures uniformly instead of scraping random message strings" },
+            { "id": "c", "text": "They remove the need for status codes entirely" },
+            { "id": "d", "text": "They guarantee zero bugs in business logic" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A stable error shape with codes/fields makes robust client handling possible.",
+          "wrongExplanations": {
+            "a": "Consistency reduces inventiveness tax, not increases it.",
+            "c": "Status codes remain important signals.",
+            "d": "Error formats improve communication; they do not eliminate logic bugs."
+          }
+        }
+      ]
+    },
+    {
+      "id": "api-final",
+      "title": "Final Quiz — Evolution, Retries, and Judgment",
+      "intro": "Apply API judgment to pagination, retries, debugging, and real-world design tradeoffs.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Why do list endpoints usually need pagination?",
+          "options": [
+            { "id": "a", "text": "Because JSON cannot represent arrays" },
+            { "id": "b", "text": "Because datasets grow and returning everything in one response becomes slow and fragile" },
+            { "id": "c", "text": "Because HTTP forbids arrays without page numbers" },
+            { "id": "d", "text": "Because status codes only work on page 1" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Pagination keeps responses bounded as data scales.",
+          "wrongExplanations": {
+            "a": "JSON supports arrays.",
+            "c": "HTTP does not require page numbers by law of the protocol.",
+            "d": "Status codes work regardless of page index."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why can retrying a POST create problem without safeguards?",
+          "options": [
+            { "id": "a", "text": "Because POST can create a new resource on each attempt, risking duplicates" },
+            { "id": "b", "text": "Because POST can never send JSON" },
+            { "id": "c", "text": "Because servers ignore POST after the first millisecond always" },
+            { "id": "d", "text": "Because POST deletes pagination metadata automatically" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Non-idempotent creates may duplicate on network retries unless idempotency keys or constraints exist.",
+          "wrongExplanations": {
+            "b": "POST commonly carries JSON bodies.",
+            "c": "Servers process POST normally; the issue is duplicate side effects.",
+            "d": "POST does not inherently delete pagination metadata."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "curl succeeds but the browser frontend fails calling the same API. What is a common culprit?",
+          "options": [
+            { "id": "a", "text": "CORS restrictions in the browser that curl does not enforce the same way" },
+            { "id": "b", "text": "JSON being illegal in browsers" },
+            { "id": "c", "text": "HTTP methods not existing in browsers" },
+            { "id": "d", "text": "Status code 200 being impossible in browsers" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Browsers enforce cross-origin rules; tooling outside the browser may not show the same failure.",
+          "wrongExplanations": {
+            "b": "Browsers handle JSON constantly.",
+            "c": "Browsers support HTTP methods via XHR/fetch.",
+            "d": "200 responses are normal in browsers."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is a safer approach when evolving a public API used by external clients?",
+          "options": [
+            { "id": "a", "text": "Rename and remove fields freely with no notice" },
+            { "id": "b", "text": "Prefer additive changes, document deprecations, and version breaking changes carefully" },
+            { "id": "c", "text": "Change status code meanings weekly for creativity" },
+            { "id": "d", "text": "Put admin secrets in example snippets on the public docs homepage" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Compatibility and communication prevent breaking dependent clients.",
+          "wrongExplanations": {
+            "a": "Silent breaking changes punish integrators.",
+            "c": "Unstable semantics destroy trust.",
+            "d": "Publishing secrets is a security failure."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "When debugging a failed call, what should you inspect first among these options?",
+          "options": [
+            { "id": "a", "text": "The HTTP status code and whether the request URL/method/headers match the docs" },
+            { "id": "b", "text": "Only the favicon of the marketing site" },
+            { "id": "c", "text": "The laptop’s wallpaper color" },
+            { "id": "d", "text": "Whether the JSON keys are alphabetized for beauty" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Status plus request shape quickly separates client mistakes from server failures.",
+          "wrongExplanations": {
+            "b": "Favicons do not explain API failures.",
+            "c": "Wallpaper is unrelated.",
+            "d": "Key order in JSON objects is not the primary correctness signal."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "A response returns HTTP 200 with a body `{ \"ok\": false, \"error\": \"invalid price\" }`. What does that teach?",
+          "options": [
+            { "id": "a", "text": "Network transport succeeded, but you must still handle business-level failure in the body" },
+            { "id": "b", "text": "HTTP 200 always means the business operation succeeded" },
+            { "id": "c", "text": "The client should ignore the body forever" },
+            { "id": "d", "text": "Status codes are meaningless in REST" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Some APIs embed success flags in bodies; clients must interpret both status and payload—though clearer status usage is often better design.",
+          "wrongExplanations": {
+            "b": "This example shows 200 can still carry a failed business result.",
+            "c": "The body contains the failure detail.",
+            "d": "Status codes remain meaningful even when bodies add detail."
+          }
+        }
+      ]
+    }
+  ]
+}

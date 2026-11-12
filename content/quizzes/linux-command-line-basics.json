@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "linux-checkpoint-1",
+      "title": "Checkpoint 1 — Shell, Paths, and Navigation",
+      "intro": "Check whether you understand shells, path types, and basic navigation before file operations and pipes.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is a shell in beginner terms?",
+          "options": [
+            { "id": "a", "text": "A graphical image editor bundled with every website" },
+            { "id": "b", "text": "A program that interprets the commands you type in a terminal" },
+            { "id": "c", "text": "A type of hard disk partition only" },
+            { "id": "d", "text": "A CSS framework for servers" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The shell reads your commands and runs programs accordingly.",
+          "wrongExplanations": {
+            "a": "Image editors are separate applications.",
+            "c": "Partitions are storage concepts, not the shell itself.",
+            "d": "CSS frameworks are unrelated to the terminal shell."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which path is absolute?",
+          "options": [
+            { "id": "a", "text": "docs/intro.md" },
+            { "id": "b", "text": "/var/log/syslog" },
+            { "id": "c", "text": "../README.md" },
+            { "id": "d", "text": "./src" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Absolute paths start from the filesystem root `/`.",
+          "wrongExplanations": {
+            "a": "That relative path depends on the current directory.",
+            "c": "`..` makes this relative to the parent of the current directory.",
+            "d": "`./` explicitly means relative to the current directory."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What does pwd show?",
+          "options": [
+            { "id": "a", "text": "The password database for all users" },
+            { "id": "b", "text": "Your current working directory" },
+            { "id": "c", "text": "All environment variables permanently deleted" },
+            { "id": "d", "text": "The contents of every file on disk" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "pwd prints the present working directory—where relative paths start from.",
+          "wrongExplanations": {
+            "a": "pwd is not a password tool.",
+            "c": "pwd does not delete environment variables.",
+            "d": "Listing file contents is what tools like cat/less do for specific files."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What does cd .. do?",
+          "options": [
+            { "id": "a", "text": "Deletes the parent directory" },
+            { "id": "b", "text": "Moves you into the parent of the current directory" },
+            { "id": "c", "text": "Creates a new root filesystem" },
+            { "id": "d", "text": "Clears the terminal history only" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "`..` means the parent directory; cd changes into it.",
+          "wrongExplanations": {
+            "a": "cd navigates; it does not delete directories.",
+            "c": "It does not create filesystems.",
+            "d": "History clearing is a different action."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why is ls -la useful for beginners?",
+          "options": [
+            { "id": "a", "text": "It formats disks automatically" },
+            { "id": "b", "text": "It lists details and includes hidden dotfiles that ordinary ls may omit" },
+            { "id": "c", "text": "It emails the file list to your team" },
+            { "id": "d", "text": "It disables permissions on all files" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "`-l` adds details and `-a` shows hidden entries such as `.env` and `.git`.",
+          "wrongExplanations": {
+            "a": "ls does not format disks.",
+            "c": "It prints to the terminal; it does not email.",
+            "d": "Listing does not disable permissions."
+          }
+        }
+      ]
+    },
+    {
+      "id": "linux-checkpoint-2",
+      "title": "Checkpoint 2 — Files, Text, Permissions, and Pipes",
+      "intro": "Test file operations, inspection tools, chmod mindset, and command composition.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is the difference between > and >> when redirecting output?",
+          "options": [
+            { "id": "a", "text": "They are identical in all shells" },
+            { "id": "b", "text": "> overwrites a file; >> appends to a file" },
+            { "id": "c", "text": "> appends; >> always deletes the directory tree" },
+            { "id": "d", "text": ">> only works with images" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Single > truncates/overwrites; >> adds to the end.",
+          "wrongExplanations": {
+            "a": "Their overwrite versus append behavior differs importantly.",
+            "c": "That reverses the meanings and invents directory deletion.",
+            "d": "Redirection works with text streams generally, not only images."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What does the pipe | do?",
+          "options": [
+            { "id": "a", "text": "Deletes the left-hand command from disk" },
+            { "id": "b", "text": "Sends the standard output of one command to the standard input of the next" },
+            { "id": "c", "text": "Creates a graphical window for every command" },
+            { "id": "d", "text": "Converts files into PDFs automatically" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Pipes compose tools by connecting output to input.",
+          "wrongExplanations": {
+            "a": "Pipes do not delete programs.",
+            "c": "Pipes are text-stream connections, not GUI spawners.",
+            "d": "PDF conversion is unrelated to the pipe operator itself."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why is rm -r dangerous if used carelessly?",
+          "options": [
+            { "id": "a", "text": "Because it only prints filenames and never deletes" },
+            { "id": "b", "text": "Because recursive deletion can remove entire directory trees and often has no Trash undo" },
+            { "id": "c", "text": "Because it installs packages as root automatically" },
+            { "id": "d", "text": "Because it renames files to safer backups by default" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Recursive remove can wipe large trees quickly with little recovery on many systems.",
+          "wrongExplanations": {
+            "a": "rm deletes; it is not a dry-run printer by default.",
+            "c": "Package installs are a different class of commands.",
+            "d": "rm does not mean backup/rename."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is a beginner-friendly interpretation of chmod u+x script.sh?",
+          "options": [
+            { "id": "a", "text": "Delete the script for the user" },
+            { "id": "b", "text": "Add execute permission for the file owner so it can be run as a program" },
+            { "id": "c", "text": "Upload the script to the cloud" },
+            { "id": "d", "text": "Encrypt the script with a password prompt every time" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "`u+x` grants the owner execute permission, commonly needed for shell scripts.",
+          "wrongExplanations": {
+            "a": "chmod changes permissions; it does not delete the file.",
+            "c": "chmod is local permission change, not upload.",
+            "d": "chmod is not encryption."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Which tool is commonly used to search for matching lines inside files?",
+          "options": [
+            { "id": "a", "text": "grep" },
+            { "id": "b", "text": "mkdir" },
+            { "id": "c", "text": "pwd" },
+            { "id": "d", "text": "cd" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "grep filters lines that match a pattern; -R can search directories recursively.",
+          "wrongExplanations": {
+            "b": "mkdir creates directories.",
+            "c": "pwd prints the working directory.",
+            "d": "cd changes directories."
+          }
+        }
+      ]
+    },
+    {
+      "id": "linux-final",
+      "title": "Final Quiz — Processes, Environment, and Judgment",
+      "intro": "Apply command-line judgment to processes, PATH, sudo, and safe habits.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What does Ctrl+C typically do to a foreground terminal process?",
+          "options": [
+            { "id": "a", "text": "Copies the entire hard drive" },
+            { "id": "b", "text": "Interrupts the process" },
+            { "id": "c", "text": "Increases process priority permanently" },
+            { "id": "d", "text": "Formats /home" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Ctrl+C sends an interrupt signal to the foreground process in typical terminal setups.",
+          "wrongExplanations": {
+            "a": "It does not copy disks.",
+            "c": "It does not raise priority.",
+            "d": "It does not format directories."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is PATH used for?",
+          "options": [
+            { "id": "a", "text": "Listing directories the shell searches to find executable commands" },
+            { "id": "b", "text": "Storing only image assets for websites" },
+            { "id": "c", "text": "Disabling all permissions" },
+            { "id": "d", "text": "Replacing the need for file names" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "When you type a command, the shell looks through PATH entries to locate the program.",
+          "wrongExplanations": {
+            "b": "PATH is about executables, not website images.",
+            "c": "PATH does not disable permissions.",
+            "d": "You still use command and file names."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What is the safest beginner attitude toward sudo?",
+          "options": [
+            { "id": "a", "text": "Use it on every command so nothing ever fails" },
+            { "id": "b", "text": "Use it only when you understand why elevated privileges are required" },
+            { "id": "c", "text": "Never learn what it does" },
+            { "id": "d", "text": "Assume it undeletes any rm mistake automatically" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Elevation is powerful; understanding necessity reduces accidental system damage.",
+          "wrongExplanations": {
+            "a": "Blanket sudo increases risk and hides permission problems.",
+            "c": "You should understand it precisely because it is powerful.",
+            "d": "sudo does not provide a universal undelete for rm."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Before running a destructive command, which check is most essential?",
+          "options": [
+            { "id": "a", "text": "Confirming your working directory and exact target path" },
+            { "id": "b", "text": "Closing your eyes and typing faster" },
+            { "id": "c", "text": "Disabling all backups first" },
+            { "id": "d", "text": "Piping the command into rm -rf / without reading it" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Knowing where you are and what path you target prevents many catastrophic mistakes.",
+          "wrongExplanations": {
+            "b": "Speed without verification causes accidents.",
+            "c": "Backups are protection, not something to disable first.",
+            "d": "That is an example of extreme unsafe behavior."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What does kill PID typically attempt?",
+          "options": [
+            { "id": "a", "text": "To create a new user account named PID" },
+            { "id": "b", "text": "To send a signal to a process, by default requesting termination" },
+            { "id": "c", "text": "To print the manual for every package" },
+            { "id": "d", "text": "To change file ownership recursively" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "kill signals a process; the default signal asks it to terminate.",
+          "wrongExplanations": {
+            "a": "User creation is a different administrative task.",
+            "c": "Manual pages are read with man, not kill.",
+            "d": "Ownership changes use chown."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "A command fails with “No such file or directory,” but you are sure the file exists somewhere. What should you verify first?",
+          "options": [
+            { "id": "a", "text": "That relative vs absolute path and current directory (`pwd`) match your assumption" },
+            { "id": "b", "text": "That the internet is offline forever" },
+            { "id": "c", "text": "That all man pages are deleted" },
+            { "id": "d", "text": "That pipes are illegal on your system" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Most beginner path errors come from being in the wrong directory or using the wrong path form.",
+          "wrongExplanations": {
+            "b": "Network state is usually unrelated to local path resolution.",
+            "c": "Man pages are not the first suspect.",
+            "d": "Pipes remain valid in normal shells."
+          }
+        }
+      ]
+    }
+  ]
+}

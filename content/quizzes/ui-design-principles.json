@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "uiprinciples-checkpoint-1",
+      "title": "Checkpoint 1 — Hierarchy, Layout, and Clarity",
+      "intro": "Check foundational visual and usability principles before forms, patterns, and critique practice.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What is the primary aesthetic goal emphasized for UI?",
+          "options": [
+            { "id": "a", "text": "Trendiness even if tasks are confusing" },
+            { "id": "b", "text": "Clarity so users know what things are and what to do next" },
+            { "id": "c", "text": "Maximum decoration on every pixel" },
+            { "id": "d", "text": "Hiding all actions as a puzzle" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Professionals chase clarity; beauty that blocks tasks fails.",
+          "wrongExplanations": {
+            "a": "Trends without usability are insufficient.",
+            "c": "Decoration without hierarchy creates noise.",
+            "d": "Invisible interactivity is a failure mode."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "How is visual hierarchy created?",
+          "options": [
+            { "id": "a", "text": "By making everything equally bold" },
+            { "id": "b", "text": "Through size, weight, contrast, color, position, and spacing differences" },
+            { "id": "c", "text": "Only by adding more icons" },
+            { "id": "d", "text": "By removing the page title always" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Hierarchy orders attention; equal competition creates noise.",
+          "wrongExplanations": {
+            "a": "If everything is bold, nothing is.",
+            "c": "Icons alone do not create structure.",
+            "d": "Titles often support wayfinding and hierarchy."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What does proximity help with in layout?",
+          "options": [
+            { "id": "a", "text": "Grouping related items together" },
+            { "id": "b", "text": "Scattering related controls randomly" },
+            { "id": "c", "text": "Encoding meaning by color alone" },
+            { "id": "d", "text": "Removing alignment on purpose" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Related elements should sit together; space separates unrelated groups.",
+          "wrongExplanations": {
+            "b": "Random scatter hurts comprehension.",
+            "c": "Color-only encoding fails accessibility.",
+            "d": "Alignment creates calm."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Why is contrast important?",
+          "options": [
+            { "id": "a", "text": "Pale-on-pale text always looks more professional in real conditions" },
+            { "id": "b", "text": "Readable contrast helps users perceive text and essential controls, including in tough viewing conditions" },
+            { "id": "c", "text": "Contrast only matters for print posters" },
+            { "id": "d", "text": "Low contrast improves outdoor readability" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Low contrast is a common beginner failure that harms usability and accessibility.",
+          "wrongExplanations": {
+            "a": "Soft low contrast often fails in practice.",
+            "c": "UI screens need contrast too.",
+            "d": "Low contrast worsens outdoor reading."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What are signifiers in UI?",
+          "options": [
+            { "id": "a", "text": "Cues that communicate possible actions, like pressable-looking buttons" },
+            { "id": "b", "text": "Secret features with no visible cues" },
+            { "id": "c", "text": "Only backend database keys" },
+            { "id": "d", "text": "Decorative gradients with no meaning" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Signifiers help users discover affordances without hunting.",
+          "wrongExplanations": {
+            "b": "Invisible interactivity hurts usability.",
+            "c": "That is not a UI principle term here.",
+            "d": "Decoration without meaning does not signify action."
+          }
+        }
+      ]
+    },
+    {
+      "id": "uiprinciples-checkpoint-2",
+      "title": "Checkpoint 2 — Feedback, Forms, and Consistency",
+      "intro": "Test system status, errors, patterns, and interaction quality.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Why does feedback matter after actions?",
+          "options": [
+            { "id": "a", "text": "Silent interfaces make users repeat clicks or abandon tasks" },
+            { "id": "b", "text": "Users never need to know if a payment failed" },
+            { "id": "c", "text": "Every tiny save needs fireworks" },
+            { "id": "d", "text": "Feedback should only be color with no text" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Timely, proportionate feedback communicates system status.",
+          "wrongExplanations": {
+            "b": "Failures especially need clear next steps.",
+            "c": "Feedback should match stakes.",
+            "d": "Color alone is insufficient."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which error message is better?",
+          "options": [
+            { "id": "a", "text": "“Invalid input”" },
+            { "id": "b", "text": "“Enter a date like 2026-03-30”" },
+            { "id": "c", "text": "No message at all" },
+            { "id": "d", "text": "Blame the user with sarcasm" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Blame-free guidance that explains how to fix the problem aids recovery.",
+          "wrongExplanations": {
+            "a": "Too vague to act on.",
+            "c": "Silence blocks recovery.",
+            "d": "Sarcasm harms trust."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What does consistency across screens primarily reduce?",
+          "options": [
+            { "id": "a", "text": "Learning cost for similar actions" },
+            { "id": "b", "text": "The need for any hierarchy" },
+            { "id": "c", "text": "The need for labels" },
+            { "id": "d", "text": "Accessibility requirements" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Reusable patterns help users transfer knowledge.",
+          "wrongExplanations": {
+            "b": "Hierarchy remains essential.",
+            "c": "Labels still matter.",
+            "d": "Accessibility is not optional polish."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is a common forms mistake?",
+          "options": [
+            { "id": "a", "text": "Visible labels and helpful validation" },
+            { "id": "b", "text": "Placeholder-only labels and rude late errors" },
+            { "id": "c", "text": "Asking only for needed fields" },
+            { "id": "d", "text": "Grouping related fields" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Placeholder-only labels and poor validation hurt completion.",
+          "wrongExplanations": {
+            "a": "That is good practice.",
+            "c": "Minimizing fields is recommended.",
+            "d": "Grouping supports clarity."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "How should primary actions be treated?",
+          "options": [
+            { "id": "a", "text": "Visually dominant and verb-led, without five equal competitors" },
+            { "id": "b", "text": "Identical in weight to every other button" },
+            { "id": "c", "text": "Hidden behind icon-only mystery controls always" },
+            { "id": "d", "text": "Named “Submit” regardless of context" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "One clear primary CTA reduces choice paralysis.",
+          "wrongExplanations": {
+            "b": "Equal weight destroys hierarchy.",
+            "c": "Weak signifiers hurt discovery.",
+            "d": "Context-specific verbs are clearer."
+          }
+        }
+      ]
+    },
+    {
+      "id": "uiprinciples-final",
+      "title": "Final Quiz — Critique, Accessibility, and Judgment",
+      "intro": "Use the full lesson. Focus on accessibility, ethics, content realism, and professional critique.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Why design with realistic content instead of only lorem ipsum?",
+          "options": [
+            { "id": "a", "text": "Because edge lengths, errors, and empty states reveal whether layouts are honest" },
+            { "id": "b", "text": "Because fake text always proves usability" },
+            { "id": "c", "text": "Because content never affects UI" },
+            { "id": "d", "text": "Because long names never appear in products" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Content-first design exposes fragile layouts early.",
+          "wrongExplanations": {
+            "b": "Lorem can hide problems.",
+            "c": "Content and UI are partners.",
+            "d": "Real products have messy strings."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which critique is more useful?",
+          "options": [
+            { "id": "a", "text": "“I don’t like it.”" },
+            { "id": "b", "text": "“The primary CTA competes with three equal buttons, so hierarchy is unclear.”" },
+            { "id": "c", "text": "“Make it pop” with no principle" },
+            { "id": "d", "text": "“Add more gradients” as the only note" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Principle-tied, task-related critique is actionable.",
+          "wrongExplanations": {
+            "a": "Taste-only notes are weak.",
+            "c": "Vague directives do not teach fixes.",
+            "d": "Decoration is not a diagnosis."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What distinguishes dark patterns from honest persuasion?",
+          "options": [
+            { "id": "a", "text": "Dark patterns trick or hide exits; honest persuasion can highlight a plan without deception" },
+            { "id": "b", "text": "Any recommended plan is a dark pattern" },
+            { "id": "c", "text": "Dark patterns always increase long-term trust" },
+            { "id": "d", "text": "Ethics do not apply to UI" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Professionals avoid manipulative patterns that destroy trust.",
+          "wrongExplanations": {
+            "b": "Honest recommendations can be fair.",
+            "c": "Dark patterns erode trust and invite churn.",
+            "d": "Attention ethics are part of craft."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which accessibility practice is emphasized?",
+          "options": [
+            { "id": "a", "text": "Color as the only status signal" },
+            { "id": "b", "text": "Readable contrast, visible labels, and visible keyboard focus" },
+            { "id": "c", "text": "Placeholder-only forms for a cleaner look" },
+            { "id": "d", "text": "Tiny touch targets to save space" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Accessibility basics are quality requirements, not optional polish.",
+          "wrongExplanations": {
+            "a": "Color-only encoding fails many users.",
+            "c": "Placeholder-only labels are a mistake.",
+            "d": "Touch targets need adequate size."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What should component specs include beyond the happy path?",
+          "options": [
+            { "id": "a", "text": "Only the default pretty state" },
+            { "id": "b", "text": "States such as loading, error, disabled, focus, and empty where relevant" },
+            { "id": "c", "text": "No behavior notes for developers" },
+            { "id": "d", "text": "A single screenshot with no edge cases" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Incomplete states become inconsistent implementations and user confusion.",
+          "wrongExplanations": {
+            "a": "Happy path alone is incomplete.",
+            "c": "Behavior specs matter for engineering handoff.",
+            "d": "Edge cases break fake completeness."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which standard captures the course’s end goal?",
+          "options": [
+            { "id": "a", "text": "Design so a busy stranger can understand state and act without a guided tour" },
+            { "id": "b", "text": "Prioritize decoration over task success" },
+            { "id": "c", "text": "Copy trends without annotating principles" },
+            { "id": "d", "text": "Treat this as only a Figma click tutorial" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Principles-focused clarity is the course standard—not tool training.",
+          "wrongExplanations": {
+            "b": "Decoration-first is a mistake.",
+            "c": "Inspiration needs principle annotations.",
+            "d": "This course is explicitly not a Figma tutorial."
+          }
+        }
+      ]
+    }
+  ]
+}

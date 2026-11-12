@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "ts-checkpoint-1",
+      "title": "Checkpoint 1 — Why Types, Basics, and Functions",
+      "intro": "Check whether you understand TypeScript’s role, core annotations, and typed functions before objects and unions.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What does TypeScript primarily add on top of JavaScript?",
+          "options": [
+            { "id": "a", "text": "A brand-new browser runtime that replaces JavaScript engines" },
+            { "id": "b", "text": "A static type system and compiler checks that erase types when emitting JavaScript" },
+            { "id": "c", "text": "Automatic unit tests for every function" },
+            { "id": "d", "text": "A requirement that all variables must be global" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "TypeScript checks types at compile time and emits ordinary JavaScript with types erased.",
+          "wrongExplanations": {
+            "a": "Browsers and Node still run JavaScript; TypeScript compiles down to JS.",
+            "c": "Types help correctness but do not generate a full test suite.",
+            "d": "TypeScript does not force globals; modular scoped code remains best practice."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Why is any usually a poor default for beginners?",
+          "options": [
+            { "id": "a", "text": "Because any makes the compiler slower forever in every project" },
+            { "id": "b", "text": "Because any turns off useful checking for that value, removing much of TypeScript’s benefit" },
+            { "id": "c", "text": "Because any is illegal syntax in modern TypeScript" },
+            { "id": "d", "text": "Because any only works inside interfaces" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "any disables type checking for that value, which undermines the safety you adopted TypeScript for.",
+          "wrongExplanations": {
+            "a": "The main issue is lost safety, not a universal permanent slowdown claim.",
+            "c": "any is legal; it is just often unwise as a default.",
+            "d": "any can appear in many positions, which is part of the risk."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which habit matches “annotate boundaries, infer interiors”?",
+          "options": [
+            { "id": "a", "text": "Annotate every local variable and never annotate function parameters" },
+            { "id": "b", "text": "Type function inputs and important exported contracts, and let local inference stay clear where obvious" },
+            { "id": "c", "text": "Never write type annotations at all" },
+            { "id": "d", "text": "Only annotate comments, not code" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Boundaries such as parameters and exported APIs benefit most from explicit types; locals can often be inferred.",
+          "wrongExplanations": {
+            "a": "That reverses the guidance and often adds noise.",
+            "c": "Skipping annotations entirely weakens contracts at module edges.",
+            "d": "Comments are not a substitute for the type system."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "In function add(a: number, b: number): number, what is the : number after the parameter list?",
+          "options": [
+            { "id": "a", "text": "A required runtime cast performed by the browser" },
+            { "id": "b", "text": "The declared return type of the function" },
+            { "id": "c", "text": "A label for the first parameter only" },
+            { "id": "d", "text": "Syntax that disables inference project-wide" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The annotation after the parameter list documents and checks the function’s return type.",
+          "wrongExplanations": {
+            "a": "Type annotations are compile-time, not browser runtime casts.",
+            "c": "Parameter types appear beside each parameter, not after the whole list.",
+            "d": "A return annotation does not disable project-wide inference."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "How does unknown differ from any in beginner-friendly terms?",
+          "options": [
+            { "id": "a", "text": "unknown is identical to any in every way" },
+            { "id": "b", "text": "unknown forces you to narrow before using the value, while any largely disables checking" },
+            { "id": "c", "text": "unknown can only hold numbers" },
+            { "id": "d", "text": "any requires narrowing and unknown never does" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "unknown is a safer top type because you must prove more about the value before use.",
+          "wrongExplanations": {
+            "a": "They differ in how much checking remains.",
+            "c": "unknown can represent any value until narrowed.",
+            "d": "That reverses their behaviors."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ts-checkpoint-2",
+      "title": "Checkpoint 2 — Objects, Unions, and Generics",
+      "intro": "Test interfaces, optional fields, unions, narrowing, and lightweight generics.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What does an interface primarily describe in beginner TypeScript?",
+          "options": [
+            { "id": "a", "text": "A runtime database connection string" },
+            { "id": "b", "text": "A contract for an object’s shape, such as required properties and their types" },
+            { "id": "c", "text": "A CSS class name" },
+            { "id": "d", "text": "A Git commit message format" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Interfaces document and check object shapes across your program.",
+          "wrongExplanations": {
+            "a": "Connection strings are values, not interface definitions.",
+            "c": "CSS is unrelated to TypeScript interfaces.",
+            "d": "Commit messages are process conventions, not TS interfaces."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What does bio?: string mean on an object type?",
+          "options": [
+            { "id": "a", "text": "bio must always be provided and must be a string" },
+            { "id": "b", "text": "bio is optional; it may be omitted, and when present it should be a string" },
+            { "id": "c", "text": "bio is a method that deletes strings" },
+            { "id": "d", "text": "bio can only be null, never a string" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The ? marks an optional property that may be missing.",
+          "wrongExplanations": {
+            "a": "Required properties omit the ?.",
+            "c": "Optional properties are fields, not delete methods.",
+            "d": "The declared type here is string when present, not only-null."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why are string literal unions useful for status fields?",
+          "options": [
+            { "id": "a", "text": "They allow any random string without feedback" },
+            { "id": "b", "text": "They restrict values to a known set like \"draft\" | \"published\" and catch invalid statuses" },
+            { "id": "c", "text": "They replace the need for functions" },
+            { "id": "d", "text": "They only work inside JSON files, not TypeScript" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Literal unions encode allowed states so typos and illegal statuses fail type-checking.",
+          "wrongExplanations": {
+            "a": "A plain string allows any text; unions narrow the set.",
+            "c": "Unions complement functions; they do not replace them.",
+            "d": "Unions are a TypeScript type-system feature."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What is narrowing?",
+          "options": [
+            { "id": "a", "text": "Deleting unused CSS" },
+            { "id": "b", "text": "Using checks so TypeScript can treat a broader type as a more specific type in a branch" },
+            { "id": "c", "text": "Compressing JavaScript bundles only" },
+            { "id": "d", "text": "Renaming interfaces automatically" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Narrowing refines unions or wide types through typeof checks, equality checks, and similar guards.",
+          "wrongExplanations": {
+            "a": "CSS cleanup is unrelated.",
+            "c": "Bundling is a build concern, not type narrowing.",
+            "d": "Renaming is refactoring, not the definition of narrowing."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What do generics primarily help preserve?",
+          "options": [
+            { "id": "a", "text": "Runtime encryption keys" },
+            { "id": "b", "text": "Type relationships between inputs and outputs without hard-coding one concrete type" },
+            { "id": "c", "text": "Only CSS color tokens" },
+            { "id": "d", "text": "Git branch names" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Generics keep specificity—for example first<T>(items: T[]) returns T | undefined for whatever T you passed.",
+          "wrongExplanations": {
+            "a": "Generics are a type-system tool, not an encryption feature.",
+            "c": "They are not limited to styling tokens.",
+            "d": "Version control naming is unrelated."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ts-final",
+      "title": "Final Quiz — Tooling, Boundaries, and Judgment",
+      "intro": "Apply TypeScript judgment to config mindset, DOM/async boundaries, and common pitfalls.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Why can casting response.json() as Lesson be risky?",
+          "options": [
+            { "id": "a", "text": "Because TypeScript assertions validate JSON field-by-field at runtime automatically" },
+            { "id": "b", "text": "Because assertions are compile-time only and do not prove the network payload actually matches Lesson" },
+            { "id": "c", "text": "Because fetch cannot return JSON in browsers" },
+            { "id": "d", "text": "Because Lesson interfaces cannot describe objects" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A cast tells the compiler to trust you; invalid runtime JSON can still arrive.",
+          "wrongExplanations": {
+            "a": "Assertions do not perform runtime validation by themselves.",
+            "c": "fetch can return JSON; the issue is trust versus proof.",
+            "d": "Interfaces commonly describe object shapes."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is a practical reason teams enable strict compiler options?",
+          "options": [
+            { "id": "a", "text": "To make null and implicit any issues harder to ignore so bugs surface earlier" },
+            { "id": "b", "text": "To forbid writing any functions" },
+            { "id": "c", "text": "To replace the need for code reviews" },
+            { "id": "d", "text": "To guarantee zero production incidents forever" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Strict settings catch more incomplete handling—especially around null and implicit any—before runtime.",
+          "wrongExplanations": {
+            "b": "You can still write functions; strictness changes checking rules.",
+            "c": "Reviews remain valuable.",
+            "d": "No compiler setting guarantees perfect production outcomes."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Why might document.querySelector(\"#save\") need careful null handling?",
+          "options": [
+            { "id": "a", "text": "Because querySelector always throws if the id exists" },
+            { "id": "b", "text": "Because it may return null when the element is missing, and TypeScript models that possibility" },
+            { "id": "c", "text": "Because DOM APIs cannot be used in TypeScript files" },
+            { "id": "d", "text": "Because #save is an invalid CSS selector by definition" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Missing elements yield null; typed DOM APIs push you to handle that case.",
+          "wrongExplanations": {
+            "a": "Missing elements typically return null rather than always throwing.",
+            "c": "TypeScript supports DOM typings in browser projects.",
+            "d": "An id selector like #save is normal CSS selector syntax."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which approach best matches gradual migration from JavaScript?",
+          "options": [
+            { "id": "a", "text": "Rewrite every file with advanced generics before shipping anything" },
+            { "id": "b", "text": "Convert files step by step, type important boundaries first, and tighten strictness over time" },
+            { "id": "c", "text": "Delete all tests so types can replace them" },
+            { "id": "d", "text": "Ban interfaces and use only any" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Incremental adoption keeps the product moving while types improve the riskiest contracts first.",
+          "wrongExplanations": {
+            "a": "Boiling the ocean stalls teams and is unnecessary for value.",
+            "c": "Types complement tests; they do not fully replace them.",
+            "d": "That removes the benefit of migration."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "When TypeScript shows a cascade of errors after one bad interface field, what should you do first?",
+          "options": [
+            { "id": "a", "text": "Ignore all messages and add any on every line" },
+            { "id": "b", "text": "Fix the earliest structural issue, then reassess remaining diagnostics" },
+            { "id": "c", "text": "Disable the language service permanently" },
+            { "id": "d", "text": "Convert the file back to CSS" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "One root shape mistake often causes many follow-on errors; fixing structure first reduces noise.",
+          "wrongExplanations": {
+            "a": "Blanketing any hides the real problem.",
+            "c": "The language service is how you get live feedback.",
+            "d": "CSS is unrelated to repairing type errors."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "A function type-checks and compiles, but users still see wrong data. What does that guarantee?",
+          "options": [
+            { "id": "a", "text": "Business logic and runtime inputs are necessarily correct" },
+            { "id": "b", "text": "Only that the code is consistent with the declared types—logic, validation, or assumptions may still be wrong" },
+            { "id": "c", "text": "All network payloads were schema-validated" },
+            { "id": "d", "text": "No further testing is ever needed" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Type safety is not proof of correct business behavior or trustworthy external data.",
+          "wrongExplanations": {
+            "a": "Well-typed wrong logic still compiles.",
+            "c": "Compilation does not imply runtime schema validation.",
+            "d": "Tests and product checks remain essential."
+          }
+        }
+      ]
+    }
+  ]
+}

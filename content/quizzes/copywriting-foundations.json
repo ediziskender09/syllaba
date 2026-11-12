@@ -1,0 +1,297 @@
+{
+  "quizzes": [
+    {
+      "id": "copy-checkpoint-1",
+      "title": "Checkpoint 1 — Audience, Offer, and Core Persuasion",
+      "intro": "Check foundations before CTAs, ethics, and advanced practice.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What should come before polishing adjectives in copy?",
+          "options": [
+            { "id": "a", "text": "A clear sense of audience and offer" },
+            { "id": "b", "text": "As many buzzwords as possible" },
+            { "id": "c", "text": "A fake countdown timer" },
+            { "id": "d", "text": "Removing the call to action" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Audience and offer clarity make persuasion possible; adjectives cannot rescue a muddy offer.",
+          "wrongExplanations": {
+            "b": "Buzzwords create hype without understanding.",
+            "c": "Fake urgency is an ethics and trust problem, not a foundation.",
+            "d": "CTAs matter later; they are not the first planning step."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "What is the difference between a feature and a benefit?",
+          "options": [
+            { "id": "a", "text": "They are identical terms" },
+            { "id": "b", "text": "A feature is what something has or does; a benefit is why that matters to the reader" },
+            { "id": "c", "text": "A benefit is always a technical specification" },
+            { "id": "d", "text": "Features are unethical by definition" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Strong copy translates features into meaningful outcomes while keeping some features as proof.",
+          "wrongExplanations": {
+            "a": "The lesson treats them as distinct and complementary.",
+            "c": "Specifications are closer to features.",
+            "d": "Features are useful when translated and evidenced."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "Which headline approach best matches the lesson?",
+          "options": [
+            { "id": "a", "text": "Clever wording that hides the offer" },
+            { "id": "b", "text": "A specific promise or audience-problem line that earns the next sentence" },
+            { "id": "c", "text": "Only the company founding year" },
+            { "id": "d", "text": "A wall of synonyms" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Headlines should earn attention from the right reader with clarity and relevance.",
+          "wrongExplanations": {
+            "a": "Cleverness without clarity is a listed failure mode.",
+            "c": "Company history rarely belongs in the hero headline.",
+            "d": "Synonym stuffing is not persuasive structure."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "What belongs in the persuasion stack?",
+          "options": [
+            { "id": "a", "text": "Attention, relevance, value, proof, objections, and action" },
+            { "id": "b", "text": "Only jokes and no ask" },
+            { "id": "c", "text": "Feature dumps with zero outcomes" },
+            { "id": "d", "text": "Hiding pricing forever as a principle" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "The stack is a drafting spine from attention through a clear next step.",
+          "wrongExplanations": {
+            "b": "Entertainment without action is not conversion copy.",
+            "c": "Feature dumps without translation underperform.",
+            "d": "Transparency about cost is often necessary for trust."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "Why does specificity beat hype?",
+          "options": [
+            { "id": "a", "text": "Because vague superlatives are always legally required" },
+            { "id": "b", "text": "Because concrete claims are more believable and useful to the reader" },
+            { "id": "c", "text": "Because readers dislike examples" },
+            { "id": "d", "text": "Because specifics remove the need for proof" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Specific promises help readers test fit and trust; empty hype does not.",
+          "wrongExplanations": {
+            "a": "Superlatives are not a legal requirement of good copy.",
+            "c": "Examples and concreteness help comprehension.",
+            "d": "Specifics still need ethical proof."
+          }
+        }
+      ]
+    },
+    {
+      "id": "copy-checkpoint-2",
+      "title": "Checkpoint 2 — CTAs, Proof, and Ethical Conversion",
+      "intro": "Test calls to action, proof, objections, and ethics.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "What makes a stronger CTA?",
+          "options": [
+            { "id": "a", "text": "Vague labels like “Submit” or “Click here” with no context" },
+            { "id": "b", "text": "A clear action that names the value, matched to commitment level" },
+            { "id": "c", "text": "Five equally loud primary buttons" },
+            { "id": "d", "text": "No CTA so readers guess" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "CTAs should instruct and fit how much commitment the reader is ready for.",
+          "wrongExplanations": {
+            "a": "Vague buttons hide the next step.",
+            "c": "Competing CTAs create friction.",
+            "d": "Conversion copy needs an explicit ask."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which proof is strongest?",
+          "options": [
+            { "id": "a", "text": "“Great product!” with no detail" },
+            { "id": "b", "text": "A specific result with context, such as cutting onboarding from 9 days to 4" },
+            { "id": "c", "text": "Invented testimonials" },
+            { "id": "d", "text": "Unverifiable “#1 in the universe” claims" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Specific, contextual proof builds belief; vague or fake proof undermines trust.",
+          "wrongExplanations": {
+            "a": "Vague praise is weak social proof.",
+            "c": "Fabrication is unethical and risky.",
+            "d": "Undefended superlatives are hype."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What is message match?",
+          "options": [
+            { "id": "a", "text": "Using different promises in ads and landing pages on purpose" },
+            { "id": "b", "text": "Keeping the ad promise consistent with what the landing page delivers" },
+            { "id": "c", "text": "Matching font sizes only" },
+            { "id": "d", "text": "Removing all CTAs after the ad click" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Message match reduces bounce from paid or promotional traffic.",
+          "wrongExplanations": {
+            "a": "Mismatch creates distrust and wasted spend.",
+            "c": "Visual details matter less than promise consistency here.",
+            "d": "Pages still need clear actions."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "Which practice is ethical persuasion?",
+          "options": [
+            { "id": "a", "text": "Fake scarcity countdowns with no real limit" },
+            { "id": "b", "text": "Honest limits, clear pricing/cancellation, and truthful outcomes" },
+            { "id": "c", "text": "Shame-based panic as the default strategy" },
+            { "id": "d", "text": "Hiding who testimonials come from when rules require disclosure" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Sustainable conversion respects truth and reader autonomy.",
+          "wrongExplanations": {
+            "a": "Fake urgency erodes trust.",
+            "c": "Predatory emotional pressure is called out as unethical.",
+            "d": "Disclosure and honesty matter for proof."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "How should objections be handled in copy?",
+          "options": [
+            { "id": "a", "text": "Ignore them until angry support tickets appear" },
+            { "id": "b", "text": "Answer major hesitations near decisions with FAQs, comparisons, and honest boundaries" },
+            { "id": "c", "text": "Mock the reader for hesitating" },
+            { "id": "d", "text": "Claim every product is for everyone" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Objection handling builds trust and reduces friction before the ask.",
+          "wrongExplanations": {
+            "a": "Late answers cost conversions and goodwill.",
+            "c": "Mockery is not professional persuasion.",
+            "d": "Clear “not for you if…” can increase fit."
+          }
+        }
+      ]
+    },
+    {
+      "id": "copy-final",
+      "title": "Final Quiz — Craft, Editing, and Judgment",
+      "intro": "Use the full lesson. Focus on research, editing, collaboration, and professional standards.",
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Where should voice-of-customer language often come from?",
+          "options": [
+            { "id": "a", "text": "Only internal roadmap jargon" },
+            { "id": "b", "text": "Support tickets, sales calls, reviews, and customer conversations" },
+            { "id": "c", "text": "Random dictionary words" },
+            { "id": "d", "text": "Competitor insults only" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Customer language research outperforms internal jargon for resonance.",
+          "wrongExplanations": {
+            "a": "Roadmap language often mismatches buyer words.",
+            "c": "Random words ignore audience reality.",
+            "d": "Fair positioning beats straw-man insults."
+          }
+        },
+        {
+          "id": "q2",
+          "prompt": "Which editing question is essential for copy?",
+          "options": [
+            { "id": "a", "text": "Can I add more unverifiable hype?" },
+            { "id": "b", "text": "Is the offer obvious in about ten seconds?" },
+            { "id": "c", "text": "Did I remove the CTA on purpose?" },
+            { "id": "d", "text": "Did I make the audience unrecognizable?" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The ten-second offer test is a practical clarity gate taught in the lesson.",
+          "wrongExplanations": {
+            "a": "Undefended hype is a mistake.",
+            "c": "CTAs should be clear.",
+            "d": "Audience recognition is required."
+          }
+        },
+        {
+          "id": "q3",
+          "prompt": "What is a soft CTA example?",
+          "options": [
+            { "id": "a", "text": "“Buy now” as the only option for cold traffic always" },
+            { "id": "b", "text": "“Watch a 90-second demo” or “See pricing” when commitment should be lower" },
+            { "id": "c", "text": "No link anywhere" },
+            { "id": "d", "text": "“Submit” with no context" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Soft CTAs match earlier awareness and lower risk tolerance.",
+          "wrongExplanations": {
+            "a": "Hard CTAs too early are a common mistake.",
+            "c": "There should still be a next step.",
+            "d": "Vague buttons are weak."
+          }
+        },
+        {
+          "id": "q4",
+          "prompt": "How should AI assistants be used in copywriting?",
+          "options": [
+            { "id": "a", "text": "As the final authority on claims and tone with no review" },
+            { "id": "b", "text": "As a brainstorming aid while humans remain accountable for truth and judgment" },
+            { "id": "c", "text": "To invent testimonials automatically" },
+            { "id": "d", "text": "To replace customer research entirely" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "AI can draft alternatives; accountability stays with the writer.",
+          "wrongExplanations": {
+            "a": "Unreviewed AI output risks false claims.",
+            "c": "Invented proof is unethical.",
+            "d": "Customer language still requires real research."
+          }
+        },
+        {
+          "id": "q5",
+          "prompt": "What should a pricing page usually clarify?",
+          "options": [
+            { "id": "a", "text": "Cute plan names with no who-it-is-for guidance" },
+            { "id": "b", "text": "Who each plan is for, key differences, and how billing/trials work" },
+            { "id": "c", "text": "Only a mysterious “Contact us” for every ordinary buyer" },
+            { "id": "d", "text": "No mention of annual versus monthly options when both exist" }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Clear plan fit and billing details reduce friction and distrust.",
+          "wrongExplanations": {
+            "a": "Meaningless names confuse buyers.",
+            "c": "Gatekeeping ordinary pricing often hurts conversion.",
+            "d": "Billing clarity matters."
+          }
+        },
+        {
+          "id": "q6",
+          "prompt": "Which standard captures the course’s end goal?",
+          "options": [
+            { "id": "a", "text": "Write so a busy stranger can tell what you offer, why it matters for them, and what to do next" },
+            { "id": "b", "text": "Write to maximize cleverness even if the offer is hidden" },
+            { "id": "c", "text": "Write only for the founder’s ego" },
+            { "id": "d", "text": "Write hype that cannot be defended" }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Reader-clear offers and actions are the professional standard throughout.",
+          "wrongExplanations": {
+            "b": "Cleverness without clarity is a failure mode.",
+            "c": "Founder-centric copy is a listed mistake.",
+            "d": "Undefended hype fights the lesson."
+          }
+        }
+      ]
+    }
+  ]
+}
